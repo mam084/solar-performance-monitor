@@ -49,12 +49,17 @@ def peek(site: Site, nrows: int = 2000) -> dict[Path, pd.DataFrame]:
     return {p: _to_wide(_read(p, nrows=nrows)) for p in files}
 
 
-def load_site(site: Site, columns: dict[str, str | list[str]] | None = None) -> pd.DataFrame:
-    """Load a site's data with canonical column names.
+def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
+              freq: str | None = "15min") -> pd.DataFrame:
+    """Load a site's data with canonical column names, on a regular `freq` time grid.
 
     `columns` maps canonical names to raw column names (defaults to the mapping in
     sites.yaml). A list of raw columns is combined: summed for ac_power (e.g. several
     inverters), averaged for everything else (e.g. several irradiance sensors).
+
+    Files often use different intervals (e.g. 1-min irradiance, 15-min meter), so each
+    file is averaged onto the `freq` grid before merging. Averaging power over an
+    interval keeps energy correct. Pass freq=None to keep raw timestamps.
     """
     columns = columns or site.mapped_columns
     if not columns:
@@ -73,10 +78,14 @@ def load_site(site: Site, columns: dict[str, str | list[str]] | None = None) -> 
         cols = [c for c in head if c in wanted]
         if cols:
             frames.append(_to_wide(_read(path, columns=[TIME_COL, *cols])))
+    if freq:
+        # Each frame is binned to the grid, labelled by interval start.
+        frames = [f.resample(freq).mean() for f in frames]
     if not frames:
         raise ValueError(f"None of {sorted(wanted)} found in {site.raw_dir}")
 
-    raw = pd.concat(frames, axis=0).groupby(level=0).first()  # merge files that share timestamps
+    # Files can overlap (e.g. a full-history file plus a per-year file); first non-null value wins.
+    raw = pd.concat(frames, axis=0).groupby(level=0).first()
 
     out = pd.DataFrame(index=raw.index)
     for name, src in columns.items():

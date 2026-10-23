@@ -11,6 +11,7 @@ Usage:
     python -m solarmon.ingest ls pvdaq/parquet/                # browse the bucket
     python -m solarmon.ingest download 4902 --start 2016-01-01 --end 2016-12-31
     python -m solarmon.ingest download 2107 --dry-run          # see what would download
+    python -m solarmon.ingest download 2107 --include meter irradiance environment
 """
 
 from __future__ import annotations
@@ -94,10 +95,16 @@ def local_path(site: Site, key: str) -> Path:
 
 
 def download_site(system_id: int, fmt: str = "parquet", start: date | None = None,
-                  end: date | None = None, dry_run: bool = False) -> list[Path]:
+                  end: date | None = None, dry_run: bool = False,
+                  include: list[str] | None = None) -> list[Path]:
+    """Download a site. `include` keeps only files whose name contains one of the given
+    substrings (metadata is always kept), e.g. include=["meter", "irradiance", "environment"]."""
     site = get_site(system_id)
     client = s3_client()
     objs = site_objects(site, fmt, start, end, client)
+    if include:
+        objs = [o for o in objs if "/metadata/" in o["Key"]
+                or any(s in o["Key"].rsplit("/", 1)[-1] for s in include)]
     total_mb = sum(o["Size"] for o in objs) / 1e6
     print(f"[{site.system_id}] {site.name}: {len(objs)} files, {total_mb:,.1f} MB")
     if site.source == "prize" and (start or end):
@@ -142,13 +149,15 @@ def main(argv=None):
     dl.add_argument("--start", type=_date, help="YYYY-MM-DD (basic sites only)")
     dl.add_argument("--end", type=_date, help="YYYY-MM-DD (basic sites only)")
     dl.add_argument("--dry-run", action="store_true")
+    dl.add_argument("--include", nargs="+", metavar="TEXT",
+                    help="only files whose name contains any of these, e.g. --include meter irradiance environment")
 
     args = p.parse_args(argv)
     if args.cmd == "ls":
         for x in list_prefixes(args.prefix):
             print(x)
     else:
-        download_site(args.system_id, args.format, args.start, args.end, args.dry_run)
+        download_site(args.system_id, args.format, args.start, args.end, args.dry_run, args.include)
 
 
 if __name__ == "__main__":

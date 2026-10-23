@@ -112,3 +112,18 @@ def test_partition_parsing_and_local_paths(site):
     key = "pvdaq/parquet/pvdata/system_id=9999/year=2016/month=3/day=7/system_9999__date_2016_03_07.parquet"
     assert str(ingest.partition_date(key)) == "2016-03-07"
     assert ingest.local_path(site, key) == site.raw_dir / "year=2016/month=3/day=7/system_9999__date_2016_03_07.parquet"
+
+
+def test_load_aligns_mixed_intervals(site):
+    """1-min irradiance and 15-min meter files should merge onto one 15-min grid."""
+    site.raw_dir.mkdir(parents=True)
+    t1 = pd.date_range("2020-04-01 10:00", periods=30, freq="1min")
+    pd.DataFrame({"measured_on": t1, "poa_irradiance_o_1": range(30)}).to_csv(
+        site.raw_dir / "irradiance.csv", index=False)
+    t15 = pd.date_range("2020-04-01 10:00", periods=2, freq="15min")
+    pd.DataFrame({"measured_on": t15, "meter_power_kw": [60.0, 62.0]}).to_csv(
+        site.raw_dir / "meter.csv", index=False)
+    df = load.load_site(site, {"ac_power": "meter_power_kw", "poa_irradiance": "poa_irradiance_o_1"})
+    assert len(df) == 2
+    assert df["poa_irradiance"].tolist() == [7.0, 22.0]  # mean of minutes 0-14 and 15-29
+    assert df["ac_power_kw"].tolist() == [60.0, 62.0]

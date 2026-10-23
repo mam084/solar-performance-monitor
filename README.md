@@ -53,7 +53,7 @@ pip install -e ".[dev]"
 
 # 1. See what's available, then download a site (try --dry-run first to check the size)
 python -m solarmon.ingest download 2107 --dry-run
-python -m solarmon.ingest download 2107
+python -m solarmon.ingest download 2107 --include meter irradiance environment
 python -m solarmon.ingest download 4902 --start 2016-01-01 --end 2016-12-31
 
 # 2. See which sensors the site has and get a suggested column mapping
