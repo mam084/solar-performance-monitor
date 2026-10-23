@@ -143,3 +143,28 @@ def test_peek_reports_unparseable_file_instead_of_crashing(site):
     pd.DataFrame({"a": [1], "b": [2]}).to_csv(site.raw_dir / "weird.csv", index=False)
     out = load.peek(site)
     assert isinstance(next(iter(out.values())), KeyError)
+
+
+def test_interval_end_timestamps_and_unit_conversion(site):
+    """Interval-end stamps shift back one step; °F and mph convert to °C and m/s."""
+    site.raw_dir.mkdir(parents=True)
+    site.timestamps = "end"
+    site.units = {"ambient_temp": "F", "wind_speed": "mph"}
+    t15 = pd.date_range("2020-04-01 10:15", periods=2, freq="15min")
+    pd.DataFrame({"measured_on": t15, "meter_kw": [60.0, 62.0], "amb": [50.0, 68.0], "wind": [10.0, 10.0]}).to_csv(
+        site.raw_dir / "meter.csv", index=False)
+    t5 = pd.date_range("2020-04-01 10:05", periods=6, freq="5min")
+    pd.DataFrame({"measured_on": t5, "poa": [100.0, 200, 300, 400, 500, 600]}).to_csv(
+        site.raw_dir / "irr.csv", index=False)
+    df = load.load_site(site, {"ac_power": "meter_kw", "poa_irradiance": "poa",
+                               "ambient_temp": "amb", "wind_speed": "wind"})
+    assert str(df.index[0].time()) == "10:00:00"
+    assert df["poa_irradiance"].tolist() == [200.0, 500.0]  # 10:05-10:15 and 10:20-10:30 stamps
+    assert df["ac_power_kw"].tolist() == [60.0, 62.0]
+    assert df["ambient_temp"].tolist() == pytest.approx([10.0, 20.0])
+    assert df["wind_speed"].iloc[0] == pytest.approx(4.4704)
+
+
+def test_guess_finds_meter_output_column():
+    assert guess(["meter_revenue_grade_ac_output_meter_149578"])["ac_power"] == [
+        "meter_revenue_grade_ac_output_meter_149578"]

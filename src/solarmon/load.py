@@ -14,6 +14,14 @@ import pandas as pd
 from .config import Site
 
 TIME_COL = "measured_on"
+
+# Converters from raw units to the units the model expects (°C, m/s, kW, W/m²)
+UNIT_CONVERSIONS = {
+    "F": lambda x: (x - 32.0) * 5.0 / 9.0,
+    "mph": lambda x: x * 0.44704,
+    "km/h": lambda x: x / 3.6,
+    "W": lambda x: x / 1000.0,
+}
 # Other names the timestamp column goes by in some PVDAQ exports, in order of preference.
 TIME_CANDIDATES = ("measured_on", "timestamp", "datetime", "date_time", "time", "local_time",
                    "utc_measured_on", "timestamp_utc", "date")
@@ -75,7 +83,7 @@ def peek(site: Site, nrows: int = 2000) -> dict[Path, pd.DataFrame | Exception]:
 
 
 def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
-              freq: str | None = "15min") -> pd.DataFrame:
+              freq: str | None = "15min", timestamps: str | None = None) -> pd.DataFrame:
     """Load a site's data with canonical column names, on a regular `freq` time grid.
 
     `columns` maps canonical names to raw column names (defaults to the mapping in
@@ -85,7 +93,15 @@ def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
     Files often use different intervals (e.g. 1-min irradiance, 15-min meter), so each
     file is averaged onto the `freq` grid before merging. Averaging power over an
     interval keeps energy correct. Pass freq=None to keep raw timestamps.
+
+    If the site's raw timestamps mark the END of each interval (`timestamps: end` in
+    sites.yaml, or the `timestamps` argument), each file is shifted back by its own
+    interval first, so a 15-min meter reading stamped 00:15 lands in the 00:00 bin
+    alongside the irradiance measured over the same minutes.
+
+    Columns listed under `units` in sites.yaml are converted to °C, m/s and kW.
     """
+    timestamps = timestamps or site.timestamps
     columns = columns or site.mapped_columns
     if not columns:
         raise ValueError(
@@ -103,6 +119,8 @@ def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
         cols = [c for c in head if c in wanted]
         if cols:
             frames.append(_to_wide(_read(path, columns=[find_time_col(head), *cols])))
+    if timestamps == "end":
+        frames = [f.set_axis(f.index - _step(f)) for f in frames]
     if freq:
         # Each frame is binned to the grid, labelled by interval start.
         frames = [f.resample(freq).mean() for f in frames]
@@ -121,9 +139,23 @@ def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
         block = raw[present]
         out[name] = block.sum(axis=1, min_count=1) if name == "ac_power" else block.mean(axis=1)
 
+    for name, unit in site.units.items():
+        if name in out:
+            if unit not in UNIT_CONVERSIONS:
+                raise ValueError(f"Unknown unit {unit!r} for {name}; known: {sorted(UNIT_CONVERSIONS)}")
+            out[name] = UNIT_CONVERSIONS[unit](out[name])
+
     if "ac_power" in out:
-        out["ac_power_kw"] = to_kw(out.pop("ac_power"), site.dc_capacity_kw)
+        explicit = "ac_power" in site.units
+        out["ac_power_kw"] = out.pop("ac_power") if explicit else to_kw(out["ac_power"], site.dc_capacity_kw)
+        out = out.drop(columns="ac_power", errors="ignore")
     return out
+
+
+def _step(df: pd.DataFrame) -> pd.Timedelta:
+    """A file's typical sampling interval (ignores gaps like nights or outages)."""
+    d = df.index.to_series().diff().dropna()
+    return d.mode().iloc[0] if len(d) else pd.Timedelta(0)
 
 
 def to_kw(power: pd.Series, dc_capacity_kw: float) -> pd.Series:

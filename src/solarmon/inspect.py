@@ -17,7 +17,8 @@ from .load import peek
 # Keyword patterns for guessing which raw column is which canonical signal.
 # These are suggestions only. Always sanity-check the values before trusting them.
 PATTERNS = {
-    "ac_power": [r"ac_power", r"inv.*power", r"real_power", r"meter.*power", r"(?<!dc_)power"],
+    "ac_power": [r"ac_power", r"ac_output", r"inv.*power", r"real_power", r"meter.*power",
+                 r"(?<!dc_)power", r"meter"],
     "poa_irradiance": [r"poa", r"plane.?of.?array", r"pyranometer.*tilt"],
     "module_temp": [r"module.*temp", r"back.?of.?module", r"bom_temp", r"panel.*temp"],
     "ambient_temp": [r"ambient", r"air.?temp"],
@@ -40,6 +41,32 @@ def guess(columns: list[str]) -> dict[str, list[str]]:
                 break  # earlier patterns are more specific; stop at the first that matches
         out[name] = hits
     return out
+
+
+def unit_hints(df: pd.DataFrame) -> list[str]:
+    """Flag values whose range suggests non-SI units."""
+    hints = []
+    for c in df.select_dtypes("number").columns:
+        med, mx = df[c].median(), df[c].max()
+        if re.search(r"ambient|air.?temp", c, re.I) and med > 40:
+            hints.append(f"{c}: median {med:.0f} looks like °F -> add `ambient_temp: F` under units")
+        if re.search(r"module.*temp|bom", c, re.I) and med > 50:
+            hints.append(f"{c}: median {med:.0f} looks like °F -> add `module_temp: F` under units")
+        if re.search(r"wind.?speed", c, re.I) and mx > 15:
+            hints.append(f"{c}: max {mx:.0f} is high for m/s; probably mph -> add `wind_speed: mph`")
+    return hints
+
+
+def timestamp_hint(df: pd.DataFrame) -> str | None:
+    """If the earliest timestamp of a day sits one interval after midnight, stamps are likely interval-end."""
+    idx = df.index
+    if len(idx) < 3:
+        return None
+    step = idx.to_series().diff().mode().iloc[0]
+    first = idx[0] - idx[0].normalize()
+    if first == step:
+        return f"first stamp is {idx[0].time()} with a {step} interval: likely interval-END timestamps"
+    return None
 
 
 def describe(df: pd.DataFrame) -> pd.DataFrame:
@@ -72,6 +99,9 @@ def main(argv=None):
         print(f"\n=== {path.relative_to(site.raw_dir)}  ({len(df.columns)} columns, "
               f"{df.index.min()} -> {df.index.max()})")
         print(describe(df).to_string())
+        for h in unit_hints(df) + [timestamp_hint(df)]:
+            if h:
+                print(f"  hint: {h}")
         all_cols.extend(df.columns)
 
     print("\n--- suggested mapping for config/sites.yaml (check before using) ---")

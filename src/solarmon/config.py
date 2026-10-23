@@ -30,6 +30,10 @@ class Site:
     azimuth: float
     years_available: list[int]
     columns: dict[str, str | None] = field(default_factory=dict)
+    # Raw units for columns that aren't SI, e.g. {"ambient_temp": "F", "wind_speed": "mph"}
+    units: dict[str, str] = field(default_factory=dict)
+    # Whether a raw timestamp marks the start or the end of its averaging interval
+    timestamps: str = "start"
 
     @property
     def raw_dir(self) -> Path:
@@ -48,7 +52,8 @@ def load_sites(path: Path = CONFIG_PATH) -> dict[int, Site]:
     for sid, cfg in raw.items():
         cfg = dict(cfg)
         cols = cfg.pop("columns", None) or {}
-        sites[int(sid)] = Site(system_id=int(sid), columns=cols, **cfg)
+        units = cfg.pop("units", None) or {}
+        sites[int(sid)] = Site(system_id=int(sid), columns=cols, units=units, **cfg)
     return sites
 
 

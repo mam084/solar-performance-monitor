@@ -7,6 +7,10 @@
 #
 # columns: maps our canonical names to the raw column names in that site's files.
 # Leave as null until you've run `python -m solarmon.inspect <id>` and picked the right sensors.
+#
+# units (optional): raw units for non-SI columns; converted on load. Known: F, mph, km/h, W
+# timestamps (optional): "start" (default) or "end", whether a raw timestamp marks the
+#   start or end of the interval it averages over
 
 sites:
   2107:
@@ -21,13 +25,17 @@ sites:
     mount: fixed
     tilt: 25
     azimuth: 180
-    years_available: [2017, 2024]
+    years_available: [2017, 2025]
+    timestamps: end   # meter stamped 00:15, 00:30, ... -> each value covers the 15 min before it
     columns:
-      ac_power: null
-      poa_irradiance: null
-      module_temp: null
-      ambient_temp: null
-      wind_speed: null
+      ac_power: meter_revenue_grade_ac_output_meter_149578   # revenue meter, kW AC
+      poa_irradiance: poa_irradiance_o_149574                # W/m², 5-min
+      module_temp: null                                      # no module temp sensor at this site
+      ambient_temp: ambient_temperature_o_149575
+      wind_speed: wind_speed_o_149576
+    units:
+      ambient_temp: F
+      wind_speed: mph
 
   4902:
     name: NIST Ground Array
