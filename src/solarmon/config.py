@@ -1,0 +1,59 @@
+"""Site configuration: load the fleet definition from config/sites.yaml."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from pathlib import Path
+
+import yaml
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+CONFIG_PATH = REPO_ROOT / "config" / "sites.yaml"
+DATA_DIR = REPO_ROOT / "data"
+
+CANONICAL_COLUMNS = ("ac_power", "poa_irradiance", "module_temp", "ambient_temp", "wind_speed")
+
+
+@dataclass
+class Site:
+    system_id: int
+    name: str
+    location: str
+    source: str  # "prize" or "basic"
+    latitude: float
+    longitude: float
+    elevation_m: float
+    timezone: str
+    dc_capacity_kw: float
+    mount: str  # "fixed" or "single_axis"
+    tilt: float
+    azimuth: float
+    years_available: list[int]
+    columns: dict[str, str | None] = field(default_factory=dict)
+
+    @property
+    def raw_dir(self) -> Path:
+        return DATA_DIR / "raw" / str(self.system_id)
+
+    @property
+    def mapped_columns(self) -> dict[str, str]:
+        """Canonical name -> raw column, for the columns that have been mapped."""
+        return {k: v for k, v in self.columns.items() if v}
+
+
+def load_sites(path: Path = CONFIG_PATH) -> dict[int, Site]:
+    with open(path) as f:
+        raw = yaml.safe_load(f)["sites"]
+    sites = {}
+    for sid, cfg in raw.items():
+        cfg = dict(cfg)
+        cols = cfg.pop("columns", None) or {}
+        sites[int(sid)] = Site(system_id=int(sid), columns=cols, **cfg)
+    return sites
+
+
+def get_site(system_id: int) -> Site:
+    sites = load_sites()
+    if system_id not in sites:
+        raise KeyError(f"System {system_id} is not in {CONFIG_PATH.name}. Known: {sorted(sites)}")
+    return sites[system_id]

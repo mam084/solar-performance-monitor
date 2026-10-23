@@ -1,0 +1,25 @@
+# Data stays local; it's re-downloadable from NREL's public bucket
+data/
+*.parquet
+*.csv
+!config/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Secrets (Anthropic API key arrives in phase 3)
+.env
+.streamlit/secrets.toml
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

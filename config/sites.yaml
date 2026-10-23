@@ -1,0 +1,110 @@
+# Starter fleet for the solar performance monitor.
+# Metadata comes from NREL's PVDAQ systems index (systems_20250729.csv).
+#
+# source:
+#   prize -> 2023 DOE Solar Data Prize site (CSV files under pvdaq/2023-solar-data-prize/<id>_OEDI/data/)
+#   basic -> standard PVDAQ site (daily files under pvdaq/<fmt>/pvdata/system_id=<id>/year=/month=/day=/)
+#
+# columns: maps our canonical names to the raw column names in that site's files.
+# Leave as null until you've run `python -m solarmon.inspect <id>` and picked the right sensors.
+
+sites:
+  2107:
+    name: Farm Solar Array
+    location: Arbuckle, CA
+    source: prize
+    latitude: 38.996306
+    longitude: -122.134111
+    elevation_m: 10
+    timezone: America/Los_Angeles
+    dc_capacity_kw: 893
+    mount: fixed
+    tilt: 25
+    azimuth: 180
+    years_available: [2017, 2024]
+    columns:
+      ac_power: null
+      poa_irradiance: null
+      module_temp: null
+      ambient_temp: null
+      wind_speed: null
+
+  4902:
+    name: NIST Ground Array
+    location: Gaithersburg, MD
+    source: basic
+    latitude: 39.1319
+    longitude: -77.2141
+    elevation_m: 138
+    timezone: America/New_York
+    dc_capacity_kw: 270.7
+    mount: fixed
+    tilt: 20
+    azimuth: 180
+    years_available: [2014, 2018]
+    columns:
+      ac_power: null
+      poa_irradiance: null
+      module_temp: null
+      ambient_temp: null
+      wind_speed: null
+
+  4903:
+    name: NIST Roof Array
+    location: Gaithersburg, MD
+    source: basic
+    latitude: 39.1354
+    longitude: -77.2156
+    elevation_m: 149
+    timezone: America/New_York
+    dc_capacity_kw: 73.7
+    mount: fixed
+    tilt: 10
+    azimuth: 180
+    years_available: [2014, 2018]
+    columns:
+      ac_power: null
+      poa_irradiance: null
+      module_temp: null
+      ambient_temp: null
+      wind_speed: null
+
+  1430:
+    name: NREL Mesa 1-axis
+    location: Golden, CO
+    source: basic
+    latitude: 39.7438
+    longitude: -105.1779
+    elevation_m: 1831
+    timezone: America/Denver
+    dc_capacity_kw: 720.72
+    mount: single_axis
+    tilt: 0
+    azimuth: 180
+    years_available: [2008, 2024]
+    columns:
+      ac_power: null
+      poa_irradiance: null
+      module_temp: null
+      ambient_temp: null
+      wind_speed: null
+
+  1367:
+    name: City of Henderson Aquatic Complex
+    location: Henderson, NV
+    source: basic
+    latitude: 36.033
+    longitude: -114.9516
+    elevation_m: 660
+    timezone: America/Los_Angeles
+    dc_capacity_kw: 277.16
+    mount: fixed
+    tilt: 12
+    azimuth: 172
+    years_available: [2013, 2020]
+    columns:
+      ac_power: null
+      poa_irradiance: null
+      module_temp: null
+      ambient_temp: null
+      wind_speed: null
