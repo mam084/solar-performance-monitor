@@ -13,6 +13,9 @@
 #   start or end of the interval it averages over
 # utc_files (optional): filename substrings of files logged in UTC; converted to local
 #   time (DST-aware). Verify with qa.file_timing() in notebook 01.
+# file_offsets_h (optional): {filename substring: hours to add}, for files whose clock is
+#   off by a fixed amount. Find the amount with qa.lag_scan(df, by="month").
+# ac_capacity_kw (optional): inverter AC limit; inferred from the data if null
 
 sites:
   2107:
@@ -28,10 +31,14 @@ sites:
     tilt: 25
     azimuth: 180
     years_available: [2017, 2025]
-    # Lag scan (notebook 01): interval-start alignment fits 2017-2023 best; the newer
-    # per-year irradiance files are logged in UTC (7.5 h lag, irradiance into the night).
+    # Timing (notebook 01): interval-start stamps align 2017-2023 best. The 2025
+    # irradiance file is logged in UTC (7.5 h lag; irradiance ran into the night).
+    # irradiance_data_2024 (Jan 2024) is local time but its peak looks ~1.5 h late:
+    # pin down the exact offset with the monthly lag scan, then add it below.
     timestamps: start
-    utc_files: [irradiance_data_2024, irradiance_15m_data_2025]
+    utc_files: [irradiance_15m_data_2025]
+    file_offsets_h: {}   # e.g. {irradiance_data_2024: -1.5}
+    ac_capacity_kw: null # inferred from the clipping ceiling (~705 kW in the scatter)
     columns:
       ac_power: meter_revenue_grade_ac_output_meter_149578   # revenue meter, kW AC
       poa_irradiance: poa_irradiance_o_149574                # W/m², 5-min

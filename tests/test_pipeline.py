@@ -211,9 +211,36 @@ def test_utc_file_converted_to_local_and_flagged_by_file_timing(site):
 
     t = file_timing(site)
     assert t.loc[("irradiance_2024.csv", "poa_irradiance"), "looks_right"] == "CHECK"
+    assert t.loc[("irradiance_2024.csv", "poa_irradiance"), "offset_h"] == pytest.approx(7, abs=0.5)
+    assert abs(t.loc[("meter.csv", "ac_power"), "offset_h"]) < 0.3
 
     site.utc_files = ["irradiance_2024"]
     t = file_timing(site)
     assert (t["looks_right"] == "yes").all()
     out = load.load_site(site)
     assert out["ac_power_kw"].corr(out["poa_irradiance"]) > 0.95
+
+
+def test_calibration_keeps_the_real_inverter_ceiling(site):
+    """Regression: scaling after the inverter shrank the clipping ceiling (590 vs 700 kW at 2107)."""
+    from solarmon.expected import dc_power_kw, inverter_ac_kw
+    df = synthetic_frame(site, days=60, outage_day=59)
+    df["poa_irradiance"] *= 1.3  # sunny enough to clip often
+    true_ac_cap, true_scale = 70.0, 0.8
+    df["ac_power_kw"] = inverter_ac_kw(dc_power_kw(df, site) * true_scale, true_ac_cap)
+    out = expected_ac_kw(df, site)
+    assert out.attrs["ac_capacity_kw"] == pytest.approx(true_ac_cap, rel=0.01)
+    assert out.attrs["scale"] == pytest.approx(true_scale, abs=0.01)
+    assert out["expected_ac_kw"].max() == pytest.approx(true_ac_cap, rel=0.01)
+    clipped = df["ac_power_kw"] >= 0.99 * true_ac_cap
+    assert clipped.sum() > 100
+    assert (out.loc[clipped, "expected_ac_kw"] >= 0.95 * true_ac_cap).mean() > 0.95
+
+
+def test_file_offset_shifts_one_file(site):
+    site.raw_dir.mkdir(parents=True)
+    ts = pd.date_range("2020-01-10 10:00", periods=2, freq="15min")
+    pd.DataFrame({"measured_on": ts, "poa": [500.0, 600.0]}).to_csv(site.raw_dir / "irr_2024.csv", index=False)
+    site.file_offsets_h = {"irr_2024": -1.5}
+    f = load.load_file(site, site.raw_dir / "irr_2024.csv", {"poa"})
+    assert str(f.index[0]) == "2020-01-10 08:30:00"

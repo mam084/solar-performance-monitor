@@ -4,9 +4,10 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
+import pvlib
 
 from .config import Site
-from .load import is_utc_file, load_file, raw_files
+from .load import load_file, raw_files
 
 
 def clean(df: pd.DataFrame, site: Site) -> pd.DataFrame:
@@ -42,8 +43,9 @@ def lag_scan(df: pd.DataFrame, max_hours: float = 12, by: str | None = None) -> 
     i.e. the irradiance clock runs behind and should be shifted earlier by that many hours.
 
     by: None for the whole record, "year" to check each year separately (catches files
-        with different time bases), or "dst" to compare summer vs winter (catches a
-        daylight-saving mismatch between files).
+        with different time bases), "month" to pinpoint exactly when an offset starts
+        and stops, or "dst" to compare summer vs winter (catches a daylight-saving
+        mismatch between files).
     """
     step = df.index.to_series().diff().mode().iloc[0]
     n = int(pd.Timedelta(hours=max_hours) / step)
@@ -53,11 +55,13 @@ def lag_scan(df: pd.DataFrame, max_hours: float = 12, by: str | None = None) -> 
         groups = {"all": df}
     elif by == "year":
         groups = dict(tuple(df.groupby(df.index.year)))
+    elif by == "month":
+        groups = dict(tuple(df.groupby(df.index.strftime("%Y-%m"))))
     elif by == "dst":
         summer = df.index.month.isin([4, 5, 6, 7, 8, 9, 10])
         groups = {"Apr–Oct (DST)": df[summer], "Nov–Mar (standard)": df[~summer]}
     else:
-        raise ValueError("by must be None, 'year' or 'dst'")
+        raise ValueError("by must be None, 'year', 'month' or 'dst'")
 
     rows = []
     for name, g in groups.items():
@@ -79,14 +83,30 @@ def hourly_profile(df: pd.DataFrame) -> pd.DataFrame:
     return h / h.max()
 
 
+def solar_noon_h(index: pd.DatetimeIndex, site: Site) -> float:
+    """Average local clock time (hours) of solar noon over the days in `index`, DST-aware."""
+    days = pd.DatetimeIndex(index.normalize().unique())
+    if len(days) == 0:
+        return np.nan
+    eot_min = pvlib.solarposition.equation_of_time_spencer71(days.dayofyear)
+    utc_offset_h = np.array([d.tz_localize(site.timezone, nonexistent="shift_forward",
+                                           ambiguous=False).utcoffset().total_seconds() / 3600
+                             for d in days])
+    noon = 12 - site.longitude / 15 - np.asarray(eot_min) / 60 + utc_offset_h
+    return float(np.mean(noon))
+
+
 def file_timing(site: Site) -> pd.DataFrame:
     """When does each file's signal peak, on the clock the loader puts it on?
 
     Checks every raw file against the sun, so a file on the wrong clock (e.g. UTC)
     stands out on its own instead of being averaged in with correct files.
-    Sunlight-driven signals (power, POA) should centre near solar noon (~12-13h
-    local, later in daylight-saving months); air temperature peaks mid-afternoon
-    (~14-17h). `centroid_h` is the energy-weighted average hour of the daily curve.
+
+    For sunlight-driven signals (power, POA), `centroid_h` is the energy-weighted
+    average time of the daily curve, which should sit near solar noon for the
+    file's dates (`solar_noon_h`, local clock). `offset_h` is the difference; more
+    than ~0.75 h either way is flagged. Air temperature and wind have no sharp
+    solar anchor, so they're checked by peak hour (mid-afternoon is normal).
     """
     by_raw = {}
     for name, src in site.columns.items():
@@ -95,15 +115,34 @@ def file_timing(site: Site) -> pd.DataFrame:
     rows = []
     for path in raw_files(site):
         f = load_file(site, path, set(by_raw))
+        if f.empty:
+            continue
+        noon = solar_noon_h(f.index, site)
         for col in f.columns:
-            prof = f[col].groupby(f.index.hour).mean()
             name = by_raw[col]
+            # Hour buckets: value at h covers h..h+1, so its centre is h + 0.5
+            prof = f[col].groupby(f.index.hour + 0.5).mean()
             sun = name in ("ac_power", "poa_irradiance")
-            w = prof.clip(lower=0) if sun else None
-            centroid = float((w * w.index).sum() / w.sum()) if sun and w.sum() > 0 else np.nan
-            peak = int(prof.idxmax())
-            ok = (11 <= centroid <= 14) if sun else (13 <= peak <= 18)
-            rows.append({"file": path.name, "signal": name, "utc_converted": is_utc_file(site, path),
-                         "peak_hour": peak, "centroid_h": round(centroid, 2),
-                         "looks_right": "yes" if ok else "CHECK"})
+            if sun:
+                w = prof.clip(lower=0)
+                # Circular mean: a curve shifted past midnight wraps around instead of
+                # being averaged across the whole day
+                ang = 2 * np.pi * np.asarray(w.index) / 24
+                if w.sum() > 0:
+                    c = np.arctan2((w * np.sin(ang)).sum(), (w * np.cos(ang)).sum())
+                    centroid = float(c * 24 / (2 * np.pi) % 24)
+                else:
+                    centroid = np.nan
+                offset = (centroid - noon + 12) % 24 - 12  # signed, within ±12 h
+                ok = abs(offset) <= 0.75
+            else:
+                centroid = offset = np.nan
+                ok = 13 <= int(prof.idxmax()) <= 18
+            rows.append({
+                "file": path.name, "signal": name,
+                "dates": f"{f.index.min():%Y-%m-%d} to {f.index.max():%Y-%m-%d}",
+                "peak_hour": int(prof.idxmax()), "centroid_h": round(centroid, 2),
+                "solar_noon_h": round(noon, 2) if sun else np.nan,
+                "offset_h": round(offset, 2), "looks_right": "yes" if ok else "CHECK",
+            })
     return pd.DataFrame(rows).set_index(["file", "signal"])

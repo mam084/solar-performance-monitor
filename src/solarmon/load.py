@@ -150,7 +150,8 @@ def load_file(site: Site, path: Path, wanted: set[str], timestamps: str | None =
     """One raw file's wanted columns, on the site's local clock with interval-start stamps.
 
     Applies, in order: UTC -> local conversion for files listed under `utc_files`
-    (DST-aware), then the interval-end shift if `timestamps` is "end".
+    (DST-aware), any fixed `file_offsets_h`, then the interval-end shift if
+    `timestamps` is "end".
     Returns an empty frame if the file has none of the wanted columns.
     """
     timestamps = timestamps or site.timestamps
@@ -168,6 +169,9 @@ def load_file(site: Site, path: Path, wanted: set[str], timestamps: str | None =
         local = f.index.tz_localize("UTC").tz_convert(site.timezone).tz_localize(None)
         f = f.set_axis(local)
         f = f[~f.index.duplicated()]  # the repeated hour when clocks fall back
+    for key, hours in site.file_offsets_h.items():
+        if key in path.name:
+            f = f.set_axis(f.index + pd.Timedelta(hours=hours))
     if timestamps == "end":
         f = f.set_axis(f.index - _step(f))
     return f

@@ -36,6 +36,10 @@ class Site:
     timestamps: str = "start"
     # Filename substrings of files logged in UTC rather than local time
     utc_files: list[str] = field(default_factory=list)
+    # Filename substring -> hours to add to that file's timestamps (fixed clock errors)
+    file_offsets_h: dict[str, float] = field(default_factory=dict)
+    # Inverter AC output limit (kW); inferred from the data's clipping ceiling if unset
+    ac_capacity_kw: float | None = None
 
     @property
     def raw_dir(self) -> Path:
@@ -56,7 +60,9 @@ def load_sites(path: Path = CONFIG_PATH) -> dict[int, Site]:
         cols = cfg.pop("columns", None) or {}
         units = cfg.pop("units", None) or {}
         utc = cfg.pop("utc_files", None) or []
-        sites[int(sid)] = Site(system_id=int(sid), columns=cols, units=units, utc_files=utc, **cfg)
+        offsets = cfg.pop("file_offsets_h", None) or {}
+        sites[int(sid)] = Site(system_id=int(sid), columns=cols, units=units, utc_files=utc,
+                               file_offsets_h=offsets, **cfg)
     return sites
 
 
