@@ -66,6 +66,9 @@ def main(argv=None):
     all_cols = []
     pd.set_option("display.max_rows", 500, "display.width", 140)
     for path, df in samples.items():
+        if isinstance(df, Exception):
+            print(f"\n=== {path.relative_to(site.raw_dir)}  !! could not parse: {df}")
+            continue
         print(f"\n=== {path.relative_to(site.raw_dir)}  ({len(df.columns)} columns, "
               f"{df.index.min()} -> {df.index.max()})")
         print(describe(df).to_string())

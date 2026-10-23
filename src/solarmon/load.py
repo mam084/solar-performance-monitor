@@ -14,6 +14,21 @@ import pandas as pd
 from .config import Site
 
 TIME_COL = "measured_on"
+# Other names the timestamp column goes by in some PVDAQ exports, in order of preference.
+TIME_CANDIDATES = ("measured_on", "timestamp", "datetime", "date_time", "time", "local_time",
+                   "utc_measured_on", "timestamp_utc", "date")
+
+
+def find_time_col(columns) -> str:
+    """Pick the timestamp column, case-insensitively. Raises with the header if none is found."""
+    lower = {str(c).strip().lower(): c for c in columns}
+    for name in TIME_CANDIDATES:
+        if name in lower:
+            return lower[name]
+    for key, orig in lower.items():  # fall back to anything that looks like a time column
+        if any(w in key for w in ("measured", "time", "date")):
+            return orig
+    raise KeyError(f"no timestamp column found; columns are: {list(columns)[:15]}")
 
 
 def raw_files(site: Site) -> list[Path]:
@@ -31,22 +46,32 @@ def _read(path: Path, columns: list[str] | None = None, nrows: int | None = None
 
 def _to_wide(df: pd.DataFrame) -> pd.DataFrame:
     """Normalise one file to wide format indexed by timestamp."""
+    tcol = find_time_col(df.columns)
     if {"metric_id", "value"} <= set(df.columns):
-        df = df.pivot_table(index=TIME_COL, columns="metric_id", values="value", aggfunc="mean")
+        df = df.pivot_table(index=tcol, columns="metric_id", values="value", aggfunc="mean")
         df.columns = [f"metric_{c}" for c in df.columns]
     else:
-        df = df.set_index(TIME_COL)
+        df = df.set_index(tcol)
     df.index = pd.to_datetime(df.index)
     return df.sort_index()
 
 
-def peek(site: Site, nrows: int = 2000) -> dict[Path, pd.DataFrame]:
-    """First rows of each file. Cheap way to see which sensors a site has."""
+def peek(site: Site, nrows: int = 2000) -> dict[Path, pd.DataFrame | Exception]:
+    """First rows of each file. Cheap way to see which sensors a site has.
+
+    A file that can't be parsed maps to the exception instead of stopping the whole peek.
+    """
     files = raw_files(site)
     # Basic sites have one file per day; one sample day is enough to see the columns.
     if site.source == "basic" and files:
         files = files[len(files) // 2 : len(files) // 2 + 1]
-    return {p: _to_wide(_read(p, nrows=nrows)) for p in files}
+    out = {}
+    for p in files:
+        try:
+            out[p] = _to_wide(_read(p, nrows=nrows))
+        except Exception as e:  # noqa: BLE001 - report and keep going
+            out[p] = e
+    return out
 
 
 def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
@@ -77,7 +102,7 @@ def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
             continue
         cols = [c for c in head if c in wanted]
         if cols:
-            frames.append(_to_wide(_read(path, columns=[TIME_COL, *cols])))
+            frames.append(_to_wide(_read(path, columns=[find_time_col(head), *cols])))
     if freq:
         # Each frame is binned to the grid, labelled by interval start.
         frames = [f.resample(freq).mean() for f in frames]

@@ -127,3 +127,19 @@ def test_load_aligns_mixed_intervals(site):
     assert len(df) == 2
     assert df["poa_irradiance"].tolist() == [7.0, 22.0]  # mean of minutes 0-14 and 15-29
     assert df["ac_power_kw"].tolist() == [60.0, 62.0]
+
+
+def test_load_finds_alternate_timestamp_column(site):
+    site.raw_dir.mkdir(parents=True)
+    ts = pd.date_range("2020-04-01 10:00", periods=2, freq="15min")
+    pd.DataFrame({"Timestamp": ts, "meter_power_kw": [60.0, 62.0], "poa_w_m2": [800.0, 810.0]}).to_csv(
+        site.raw_dir / "meter_2025.csv", index=False)
+    df = load.load_site(site, {"ac_power": "meter_power_kw", "poa_irradiance": "poa_w_m2"})
+    assert df["ac_power_kw"].tolist() == [60.0, 62.0]
+
+
+def test_peek_reports_unparseable_file_instead_of_crashing(site):
+    site.raw_dir.mkdir(parents=True)
+    pd.DataFrame({"a": [1], "b": [2]}).to_csv(site.raw_dir / "weird.csv", index=False)
+    out = load.peek(site)
+    assert isinstance(next(iter(out.values())), KeyError)
