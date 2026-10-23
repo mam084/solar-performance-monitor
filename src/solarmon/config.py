@@ -34,6 +34,8 @@ class Site:
     units: dict[str, str] = field(default_factory=dict)
     # Whether a raw timestamp marks the start or the end of its averaging interval
     timestamps: str = "start"
+    # Filename substrings of files logged in UTC rather than local time
+    utc_files: list[str] = field(default_factory=list)
 
     @property
     def raw_dir(self) -> Path:
@@ -53,7 +55,8 @@ def load_sites(path: Path = CONFIG_PATH) -> dict[int, Site]:
         cfg = dict(cfg)
         cols = cfg.pop("columns", None) or {}
         units = cfg.pop("units", None) or {}
-        sites[int(sid)] = Site(system_id=int(sid), columns=cols, units=units, **cfg)
+        utc = cfg.pop("utc_files", None) or []
+        sites[int(sid)] = Site(system_id=int(sid), columns=cols, units=units, utc_files=utc, **cfg)
     return sites
 
 

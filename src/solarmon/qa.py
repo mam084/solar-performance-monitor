@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 
 from .config import Site
+from .load import is_utc_file, load_file, raw_files
 
 
 def clean(df: pd.DataFrame, site: Site) -> pd.DataFrame:
@@ -76,3 +77,33 @@ def hourly_profile(df: pd.DataFrame) -> pd.DataFrame:
     """
     h = df.groupby(df.index.hour)[["ac_power_kw", "poa_irradiance"]].mean()
     return h / h.max()
+
+
+def file_timing(site: Site) -> pd.DataFrame:
+    """When does each file's signal peak, on the clock the loader puts it on?
+
+    Checks every raw file against the sun, so a file on the wrong clock (e.g. UTC)
+    stands out on its own instead of being averaged in with correct files.
+    Sunlight-driven signals (power, POA) should centre near solar noon (~12-13h
+    local, later in daylight-saving months); air temperature peaks mid-afternoon
+    (~14-17h). `centroid_h` is the energy-weighted average hour of the daily curve.
+    """
+    by_raw = {}
+    for name, src in site.columns.items():
+        for c in ([src] if isinstance(src, str) else (src or [])):
+            by_raw[c] = name
+    rows = []
+    for path in raw_files(site):
+        f = load_file(site, path, set(by_raw))
+        for col in f.columns:
+            prof = f[col].groupby(f.index.hour).mean()
+            name = by_raw[col]
+            sun = name in ("ac_power", "poa_irradiance")
+            w = prof.clip(lower=0) if sun else None
+            centroid = float((w * w.index).sum() / w.sum()) if sun and w.sum() > 0 else np.nan
+            peak = int(prof.idxmax())
+            ok = (11 <= centroid <= 14) if sun else (13 <= peak <= 18)
+            rows.append({"file": path.name, "signal": name, "utc_converted": is_utc_file(site, path),
+                         "peak_hour": peak, "centroid_h": round(centroid, 2),
+                         "looks_right": "yes" if ok else "CHECK"})
+    return pd.DataFrame(rows).set_index(["file", "signal"])

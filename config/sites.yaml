@@ -11,6 +11,8 @@
 # units (optional): raw units for non-SI columns; converted on load. Known: F, mph, km/h, W
 # timestamps (optional): "start" (default) or "end", whether a raw timestamp marks the
 #   start or end of the interval it averages over
+# utc_files (optional): filename substrings of files logged in UTC; converted to local
+#   time (DST-aware). Verify with qa.file_timing() in notebook 01.
 
 sites:
   2107:
@@ -26,7 +28,10 @@ sites:
     tilt: 25
     azimuth: 180
     years_available: [2017, 2025]
-    timestamps: end   # meter stamped 00:15, 00:30, ... -> each value covers the 15 min before it
+    # Lag scan (notebook 01): interval-start alignment fits 2017-2023 best; the newer
+    # per-year irradiance files are logged in UTC (7.5 h lag, irradiance into the night).
+    timestamps: start
+    utc_files: [irradiance_data_2024, irradiance_15m_data_2025]
     columns:
       ac_power: meter_revenue_grade_ac_output_meter_149578   # revenue meter, kW AC
       poa_irradiance: poa_irradiance_o_149574                # W/m², 5-min

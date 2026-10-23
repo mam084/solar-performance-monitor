@@ -94,6 +94,9 @@ def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
     file is averaged onto the `freq` grid before merging. Averaging power over an
     interval keeps energy correct. Pass freq=None to keep raw timestamps.
 
+    Files listed under `utc_files` in sites.yaml are converted from UTC to the site's
+    local clock first.
+
     If the site's raw timestamps mark the END of each interval (`timestamps: end` in
     sites.yaml, or the `timestamps` argument), each file is shifted back by its own
     interval first, so a 15-min meter reading stamped 00:15 lands in the 00:00 bin
@@ -110,17 +113,8 @@ def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
         )
     wanted = {c for v in columns.values() for c in ([v] if isinstance(v, str) else v)}
 
-    frames = []
-    for path in raw_files(site):
-        head = _read(path, nrows=1).columns
-        if {"metric_id", "value"} <= set(head):
-            frames.append(_to_wide(_read(path)).filter(items=wanted))
-            continue
-        cols = [c for c in head if c in wanted]
-        if cols:
-            frames.append(_to_wide(_read(path, columns=[find_time_col(head), *cols])))
-    if timestamps == "end":
-        frames = [f.set_axis(f.index - _step(f)) for f in frames]
+    frames = [f for path in raw_files(site)
+              if not (f := load_file(site, path, wanted, timestamps)).empty]
     if freq:
         # Each frame is binned to the grid, labelled by interval start.
         frames = [f.resample(freq).mean() for f in frames]
@@ -150,6 +144,37 @@ def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
         out["ac_power_kw"] = out.pop("ac_power") if explicit else to_kw(out["ac_power"], site.dc_capacity_kw)
         out = out.drop(columns="ac_power", errors="ignore")
     return out
+
+
+def load_file(site: Site, path: Path, wanted: set[str], timestamps: str | None = None) -> pd.DataFrame:
+    """One raw file's wanted columns, on the site's local clock with interval-start stamps.
+
+    Applies, in order: UTC -> local conversion for files listed under `utc_files`
+    (DST-aware), then the interval-end shift if `timestamps` is "end".
+    Returns an empty frame if the file has none of the wanted columns.
+    """
+    timestamps = timestamps or site.timestamps
+    head = _read(path, nrows=1).columns
+    if {"metric_id", "value"} <= set(head):
+        f = _to_wide(_read(path)).filter(items=wanted)
+    else:
+        cols = [c for c in head if c in wanted]
+        if not cols:
+            return pd.DataFrame()
+        f = _to_wide(_read(path, columns=[find_time_col(head), *cols]))
+    if f.empty:
+        return f
+    if is_utc_file(site, path):
+        local = f.index.tz_localize("UTC").tz_convert(site.timezone).tz_localize(None)
+        f = f.set_axis(local)
+        f = f[~f.index.duplicated()]  # the repeated hour when clocks fall back
+    if timestamps == "end":
+        f = f.set_axis(f.index - _step(f))
+    return f
+
+
+def is_utc_file(site: Site, path: Path) -> bool:
+    return any(s in path.name for s in site.utc_files)
 
 
 def _step(df: pd.DataFrame) -> pd.Timedelta:

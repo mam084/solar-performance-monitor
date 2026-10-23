@@ -71,16 +71,20 @@ def fit_scale(actual_kw: pd.Series, model_kw: pd.Series, poa: pd.Series) -> floa
 def expected_ac_kw(df: pd.DataFrame, site: Site, reference: slice | None = None) -> pd.DataFrame:
     """Add `expected_ac_kw` to a site frame. `reference` is a time slice of known-good data.
 
-    If no reference is given, the first 60 days where power AND irradiance both exist
-    are used (sensors often come online at different times).
+    If no reference is given, the first 60 days where power and every model input
+    (irradiance, temperature) exist are used, since sensors often come online at
+    different times.
     Returns a copy with columns: pvwatts_ac_kw, expected_ac_kw, and attrs['scale'].
     """
     out = df.copy()
     out["pvwatts_ac_kw"] = pvwatts_ac_kw(out, site)
     if reference is None:
-        usable = (out["poa_irradiance"] > MIN_POA_FOR_FIT) & out["ac_power_kw"].notna()
+        # Every model input must exist (irradiance AND temperature), not just power + POA
+        usable = ((out["poa_irradiance"] > MIN_POA_FOR_FIT) & out["ac_power_kw"].notna()
+                  & (out["pvwatts_ac_kw"] > 0))
         if not usable.any():
-            raise ValueError("No periods with both power and irradiance data; check the column mapping.")
+            raise ValueError("No periods where power, irradiance and temperature all exist; "
+                             "check the column mapping.")
         start = usable.idxmax()  # first usable timestamp
         reference = slice(start, start + pd.Timedelta(days=60))
     ref = out.loc[reference]

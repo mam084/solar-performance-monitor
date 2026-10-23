@@ -194,3 +194,26 @@ def test_default_reference_skips_period_without_irradiance(site):
     out = expected_ac_kw(df, site)
     assert out.attrs["reference"][0].startswith("2020-05-11")
     assert out.attrs["scale"] == pytest.approx(0.92, abs=0.01)
+
+
+def test_utc_file_converted_to_local_and_flagged_by_file_timing(site):
+    """A UTC-logged file lands on the local clock; file_timing confirms it peaks near noon."""
+    from solarmon.qa import file_timing
+    site.raw_dir.mkdir(parents=True)
+    df = synthetic_frame(site, days=20, outage_day=19)
+    local = df.index.tz_localize(None)
+    utc = df.index.tz_convert("UTC").tz_localize(None)
+    pd.DataFrame({"measured_on": local, "meter_kw": df["ac_power_kw"].values}).to_csv(
+        site.raw_dir / "meter.csv", index=False)
+    pd.DataFrame({"measured_on": utc, "poa": df["poa_irradiance"].values}).to_csv(
+        site.raw_dir / "irradiance_2024.csv", index=False)
+    site.columns = {"ac_power": "meter_kw", "poa_irradiance": "poa"}
+
+    t = file_timing(site)
+    assert t.loc[("irradiance_2024.csv", "poa_irradiance"), "looks_right"] == "CHECK"
+
+    site.utc_files = ["irradiance_2024"]
+    t = file_timing(site)
+    assert (t["looks_right"] == "yes").all()
+    out = load.load_site(site)
+    assert out["ac_power_kw"].corr(out["poa_irradiance"]) > 0.95
