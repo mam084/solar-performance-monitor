@@ -168,3 +168,29 @@ def test_interval_end_timestamps_and_unit_conversion(site):
 def test_guess_finds_meter_output_column():
     assert guess(["meter_revenue_grade_ac_output_meter_149578"])["ac_power"] == [
         "meter_revenue_grade_ac_output_meter_149578"]
+
+
+def test_lag_scan_finds_injected_offset(site):
+    from solarmon.qa import lag_scan
+    df = synthetic_frame(site, days=30, outage_day=29)
+    shifted = df.copy()
+    shifted["poa_irradiance"] = df["poa_irradiance"].shift(4)  # POA stamps 1 hour late
+    assert lag_scan(df, max_hours=3).loc["all", "best_lag_h"] == 0.0
+    assert lag_scan(shifted, max_hours=3).loc["all", "best_lag_h"] == 1.0
+
+
+def test_clean_removes_impossible_values(site):
+    from solarmon.qa import clean
+    df = pd.DataFrame({"ac_power_kw": [50.0, 500.0, -2.0], "poa_irradiance": [800.0, 2000.0, -5.0]})
+    out = clean(df, site)  # site is 100 kW
+    assert out["ac_power_kw"].tolist()[0] == 50.0 and np.isnan(out["ac_power_kw"][1])
+    assert out["ac_power_kw"][2] == 0.0
+    assert np.isnan(out["poa_irradiance"][1]) and out["poa_irradiance"][2] == 0.0
+
+
+def test_default_reference_skips_period_without_irradiance(site):
+    df = synthetic_frame(site, days=120, outage_day=110)
+    df.loc[:"2020-05-10", "poa_irradiance"] = np.nan  # irradiance sensor comes online later
+    out = expected_ac_kw(df, site)
+    assert out.attrs["reference"][0].startswith("2020-05-11")
+    assert out.attrs["scale"] == pytest.approx(0.92, abs=0.01)
