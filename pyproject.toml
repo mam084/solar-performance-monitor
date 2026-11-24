@@ -18,6 +18,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+warehouse = ["snowflake-connector-python[pandas]>=3.0"]
 app = ["streamlit>=1.40", "plotly>=5.20", "anthropic>=0.40"]
 dev = ["pytest", "jupyter", "streamlit>=1.40", "plotly>=5.20", "anthropic>=0.40"]
 

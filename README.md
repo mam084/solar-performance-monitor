@@ -105,6 +105,12 @@ The app only reads `data/processed/`, which is small and committed, so it deploy
 
 Approval decisions are saved to `data/processed/<id>/decisions.json`, which is git-ignored. On Streamlit Cloud that file lasts until the app restarts; a durable store is part of phase 4.
 
+## Further reading
+
+- [`docs/scaling.md`](docs/scaling.md): approach, results, and how this runs daily across a full fleet
+- [`warehouse/`](warehouse/): Snowflake schema (raw → staging → marts) that `python -m solarmon.warehouse push` loads
+- [`deploy/github-actions/daily-pipeline.yml`](deploy/github-actions/daily-pipeline.yml): scheduled daily run, ready to enable
+
 ## Repo layout
 
 ```
@@ -123,6 +129,10 @@ src/solarmon/
   demo.py                synthetic site history with injected, labelled faults
   backtest.py            detector accuracy over many simulated histories
   preflight.py           checks a site's raw data and names the sites.yaml fix for each problem
+  warehouse.py           shapes outputs into the Snowflake tables and loads them
+warehouse/               Snowflake DDL: setup, raw + staging, marts
+deploy/github-actions/   daily pipeline workflow (template)
+docs/scaling.md          scaling and operations write-up
 streamlit_app.py         fleet overview, site detail, ticket approval queue
 data/processed/          pipeline outputs the app reads (committed, ~1.5 MB per site)
 notebooks/               exploration, one notebook per question
@@ -146,10 +156,12 @@ tests/                   offline tests on synthetic data
   - [x] Claude drafts tickets from flagged events with evidence (template fallback offline)
   - [x] Streamlit approval queue with edit, reject-with-reason, audit history and export
 - [ ] **Phase 4: Productionize**
-  - [ ] Snowflake as the warehouse (raw → staging → marts)
-  - [ ] Scheduled daily runs (GitHub Actions: download, `pipeline build`, commit `data/processed/`)
+  - [x] Snowflake schema (raw → staging → marts) and loader, column-checked against the DDL in tests
+  - [ ] Snowflake as the live store (run `warehouse/*.sql`, then `solarmon.warehouse push all`)
+  - [x] Scheduled daily run written (`deploy/github-actions/daily-pipeline.yml`)
+  - [ ] Enable it: copy to `.github/workflows/` and allow Actions to write
   - [ ] Durable store for approval decisions
-  - [ ] Write-up on scaling to a full fleet
+  - [x] Write-up on scaling to a full fleet ([`docs/scaling.md`](docs/scaling.md))
 
 ## Data
 
