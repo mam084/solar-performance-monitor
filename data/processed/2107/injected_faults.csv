@@ -1,0 +1,8 @@
+kind,start,end,note
+outage,2024-02-05,2024-02-06,"Inverter ground-fault trip, reset by technician on day 2"
+partial_outage,2024-03-31,2024-04-15,"1 of 4 inverters offline (failed IGBT), ~25% loss"
+soiling,2024-06-04,2024-08-08,"Dry-season dust build-up, cleared by first autumn rain"
+sensor_fault,2024-09-02,2024-09-22,"POA pyranometer soiled/drifting, reads ~14% low"
+curtailment,2024-10-22,2024-10-29,"Utility export limit at 60% of AC capacity, midday"
+data_gap,2024-11-21,2024-11-23,Data logger cellular modem offline
+partial_outage,2024-12-26,2024-12-31,"String combiner fuse blown, ~12% loss"

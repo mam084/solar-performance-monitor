@@ -1,0 +1,10 @@
+# Streamlit Community Cloud installs this. The app only reads processed data,
+# so it doesn't need the ingestion stack (boto3).
+streamlit>=1.40
+pandas>=2.0
+numpy
+pyarrow
+plotly>=5.20
+pyyaml
+pvlib>=0.11
+anthropic>=0.40

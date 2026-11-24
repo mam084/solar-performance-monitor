@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "solarmon"
-version = "0.1.0"
+version = "0.2.0"
 description = "Solar performance monitor: expected vs actual PV output, underperformance detection, and agent-drafted maintenance tickets."
 requires-python = ">=3.10"
 dependencies = [
@@ -18,7 +18,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "jupyter"]
+app = ["streamlit>=1.40", "plotly>=5.20", "anthropic>=0.40"]
+dev = ["pytest", "jupyter", "streamlit>=1.40", "plotly>=5.20", "anthropic>=0.40"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

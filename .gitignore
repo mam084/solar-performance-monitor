@@ -1,8 +1,13 @@
 # Data stays local; it's re-downloadable from NREL's public bucket
-data/
+data/*
 *.parquet
 *.csv
 !config/*.csv
+# ...except the small processed outputs the app reads (rebuilt by `solarmon.pipeline`)
+!data/processed/
+!data/processed/**
+# Reviewer decisions from a local run of the app
+data/processed/**/decisions.json
 
 # Python
 __pycache__/
