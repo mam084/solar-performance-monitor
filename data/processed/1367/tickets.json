@@ -1,0 +1,67 @@
+[
+  {
+    "ticket_id": "T-1367-2024-02-05-sensor_fault",
+    "event_id": "1367-2024-02-05-sensor_fault",
+    "site_id": 1367,
+    "kind": "sensor_fault",
+    "title": "City of Henderson Aquatic Complex: irradiance sensor fault (2024-02-05 to 2024-02-25)",
+    "priority": "P3",
+    "summary": "Irradiance sensor fault detected at City of Henderson Aquatic Complex (Henderson, NV) over 21 day(s), 2024-02-05 to 2024-02-25.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 1.14 during the event (1.00 = healthy).",
+      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    ],
+    "likely_causes": [
+      "Dirty or shaded pyranometer",
+      "Sensor drift / out of calibration",
+      "Sensor knocked out of plane"
+    ],
+    "recommended_actions": [
+      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
+      "Cross-check its readings against a second on-site sensor or satellite irradiance",
+      "Recalibrate or replace the sensor if the offset persists",
+      "Treat performance numbers for this window as unreliable until fixed"
+    ],
+    "parts_and_tools": [
+      "Spare pyranometer / reference cell",
+      "Bubble level and inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-24T23:19:00Z",
+    "status": "pending_review"
+  },
+  {
+    "ticket_id": "T-1367-2024-11-26-soiling",
+    "event_id": "1367-2024-11-26-soiling",
+    "site_id": 1367,
+    "kind": "soiling",
+    "title": "City of Henderson Aquatic Complex: soiling / gradual loss (ongoing)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at City of Henderson Aquatic Complex (Henderson, NV) over 36 day(s), ongoing. Estimated cost so far: $337.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,810 kWh (10% of expected), about $337.",
+      "The decline appears to have started around 2024-11-23, 3 days before it crossed the alert threshold.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-24T23:19:00Z",
+    "status": "pending_review"
+  }
+]

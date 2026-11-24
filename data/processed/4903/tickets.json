@@ -1,0 +1,65 @@
+[
+  {
+    "ticket_id": "T-4903-2024-04-27-soiling",
+    "event_id": "4903-2024-04-27-soiling",
+    "site_id": 4903,
+    "kind": "soiling",
+    "title": "NIST Roof Array: soiling / gradual loss (2024-04-27 to 2024-05-15)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NIST Roof Array (Gaithersburg, MD) over 19 day(s), 2024-04-27 to 2024-05-15. Estimated cost so far: $80.",
+    "evidence": [
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
+      "Estimated energy lost: 670 kWh (10% of expected), about $80.",
+      "The decline appears to have started around 2024-04-04, 23 days before it crossed the alert threshold.",
+      "Performance recovered to 1.00 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-24T23:19:02Z",
+    "status": "pending_review"
+  },
+  {
+    "ticket_id": "T-4903-2024-08-23-data_gap",
+    "event_id": "4903-2024-08-23-data_gap",
+    "site_id": 4903,
+    "kind": "data_gap",
+    "title": "NIST Roof Array: monitoring data gap (2024-08-23 to 2024-08-24)",
+    "priority": "P4",
+    "summary": "Monitoring data gap detected at NIST Roof Array (Gaithersburg, MD) over 2 day(s), 2024-08-23 to 2024-08-24.",
+    "evidence": [
+      "No meter readings during daylight; output during this window is unknown."
+    ],
+    "likely_causes": [
+      "Data-logger power loss",
+      "Network or cellular modem outage",
+      "Logger storage full"
+    ],
+    "recommended_actions": [
+      "Check data-logger power and network/modem connectivity",
+      "Back-fill the gap from inverter internal logs or the revenue meter",
+      "Confirm the site was producing during the gap (meter totals)"
+    ],
+    "parts_and_tools": [
+      "Spare cellular modem / SIM"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-24T23:19:02Z",
+    "status": "pending_review"
+  }
+]

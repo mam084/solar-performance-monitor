@@ -4,12 +4,13 @@ Compares each solar site's **actual** output with the output its **weather says 
 
 Built on NREL's public [PVDAQ](https://data.openei.org/submissions/4568) dataset: real production and on-site weather sensor data from PV systems across the US.
 
-> **Status: v0.2, first live version.** The full loop runs end to end: physics baseline, fault detection and classification, agent-drafted tickets, and a Streamlit approval queue. The hosted app currently runs on a labelled **demo dataset** for site 2107 (physics-based weather with injected faults); real PVDAQ data swaps in with one command. See the [roadmap](#roadmap).
+> **Status: v0.2, first live version.** The full loop runs end to end: physics baseline, fault detection and classification, agent-drafted tickets, and a Streamlit approval queue. The hosted app currently runs on a labelled **demo dataset** for all five sites (physics-based weather for each site's location and mounting, with injected faults); real PVDAQ data swaps in with one command. See the [roadmap](#roadmap).
 
-**What v0.2 does, on the demo site (Arbuckle, CA, 893 kW):**
+**What it does on the demo fleet:**
 
-- Predicts 15-minute output within **2.9% nRMSE** on healthy days (target was < 5%)
-- Backtest over 60 simulated site-years: **210 of 210** injected faults found and labelled correctly, **1** false alarm. Abrupt faults are flagged the day they start; soiling about 3 weeks in, with the start of the slide traced back
+- Predicts 15-minute output within **2.8–3.1% nRMSE** on healthy days at every site (target was < 5%)
+- Backtest over 300 simulated site-years (5 sites × 30 weather seeds × 2 years): **480 of 480** injected faults found, **478** labelled correctly, **1** false alarm. Abrupt faults are flagged the day they start; soiling about 3 weeks in, with the start of the slide traced back
+- Recognises seven fault types, including tracker stalls on the single-axis site
 - Drafts a maintenance ticket per event (template offline, Claude with an API key) and logs every approve / edit / reject with who did it
 
 ## Why this problem
@@ -42,6 +43,7 @@ flowchart LR
    | Partial outage | Abrupt step down, then flat (an inverter, string or fuse) |
    | Soiling / gradual loss | Slow slide over weeks, often reset by rain or a wash |
    | Curtailment | Normal mornings and evenings, capped at midday on sunny days |
+   | Tracker stall | The reverse: fine at midday, short in the morning and evening (rows parked flat) |
    | Irradiance sensor fault | Output *above* what the sensor allows, or no sensor data |
    | Monitoring data gap | No meter readings in daylight |
 
@@ -80,13 +82,14 @@ python -m solarmon.inspect 2107
 # 3. Explore and build the baseline
 jupyter notebook notebooks/01_site_eda.ipynb
 
-# 4. Run the full pipeline (writes data/processed/2107/), then open the app
+# 4. Check the raw data (mapping, file clocks, coverage, calibration), then run the pipeline
+python -m solarmon.preflight 2107
 python -m solarmon.pipeline build 2107            # add --claude to draft tickets with Claude
 streamlit run streamlit_app.py
 
 # No data yet? Build the demo site instead, and backtest the detector
-python -m solarmon.pipeline build 2107 --demo
-python -m solarmon.backtest --seeds 30
+python -m solarmon.pipeline build all --demo
+python -m solarmon.backtest --seeds 30 --site all
 
 # Tests run on synthetic data, so no download is needed
 pytest
@@ -119,8 +122,9 @@ src/solarmon/
   pipeline.py            raw -> expected -> PI -> events -> tickets -> data/processed/
   demo.py                synthetic site history with injected, labelled faults
   backtest.py            detector accuracy over many simulated histories
+  preflight.py           checks a site's raw data and names the sites.yaml fix for each problem
 streamlit_app.py         fleet overview, site detail, ticket approval queue
-data/processed/          pipeline outputs the app reads (committed, ~2 MB per site)
+data/processed/          pipeline outputs the app reads (committed, ~1.5 MB per site)
 notebooks/               exploration, one notebook per question
 tests/                   offline tests on synthetic data
 ```
@@ -131,9 +135,10 @@ tests/                   offline tests on synthetic data
   - [x] Repo, ingestion, and loader for both PVDAQ data layouts
   - [x] PVWatts expected-output model with calibration, plus a daily performance index
   - [x] Validated on the demo site: 2.9% nRMSE on healthy days
-  - [ ] Run `pipeline build 2107` on the real data and confirm < 5% nRMSE (pin down the Jan 2024 irradiance offset first, see `config/sites.yaml`)
+  - [ ] Run `preflight 2107`, then `pipeline build 2107` on the real data and confirm < 5% nRMSE (pin down the Jan 2024 irradiance offset first, see `config/sites.yaml`)
 - [ ] **Phase 2: Fleet + detection**
-  - [x] Underperformance detection and event classification, backtested on injected faults (210/210 over 60 site-years)
+  - [x] Underperformance detection and event classification, backtested on injected faults (480/480 found over 300 site-years)
+  - [x] Demo histories for all 5 sites, including single-axis tracker physics
   - [ ] Backtest on real, logged events at site 2107
   - [ ] All 5 sites ingested and mapped
   - [ ] ML residual model (gradient boosting on weather and time features)

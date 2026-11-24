@@ -1,0 +1,71 @@
+[
+  {
+    "id": "4903-2024-04-27-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 4903,
+    "kind": "soiling",
+    "start": "2024-04-27",
+    "end": "2024-05-15",
+    "days": 19,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.941,
+    "pi_during": 0.898,
+    "energy_lost_kwh": 670.5,
+    "est_cost_usd": 80.46,
+    "loss_pct": 10.137,
+    "evidence": {
+      "baseline_pi": 0.998,
+      "daily_pi": {
+        "2024-04-27": 0.913,
+        "2024-04-28": 0.93,
+        "2024-04-29": 0.903,
+        "2024-04-30": 0.904,
+        "2024-05-01": 0.897,
+        "2024-05-02": 0.924,
+        "2024-05-03": 0.903,
+        "2024-05-04": 0.927,
+        "2024-05-05": 0.886,
+        "2024-05-06": 0.905,
+        "2024-05-07": 0.879,
+        "2024-05-08": 0.914,
+        "2024-05-09": 0.883,
+        "2024-05-10": 0.898,
+        "2024-05-11": 0.878,
+        "2024-05-12": 0.874,
+        "2024-05-13": 0.886,
+        "2024-05-14": 0.855,
+        "2024-05-15": 0.855
+      },
+      "step_drop": 0.025,
+      "trend_per_day": -0.003,
+      "trend_30d_per_day": -0.0025,
+      "shape_gap": -0.009,
+      "decline_began": "2024-04-04",
+      "recovered_to": 0.997,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 23
+    }
+  },
+  {
+    "id": "4903-2024-08-23-data_gap",
+    "label": "Monitoring data gap",
+    "site_id": 4903,
+    "kind": "data_gap",
+    "start": "2024-08-23",
+    "end": "2024-08-24",
+    "days": 2,
+    "active": false,
+    "severity": "low",
+    "pi_before": 0.992,
+    "pi_during": null,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 1.017,
+      "daily_pi": {},
+      "reason": "No meter readings during daylight; output during this window is unknown."
+    }
+  }
+]

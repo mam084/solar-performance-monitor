@@ -1,0 +1,54 @@
+{
+  "site": {
+    "system_id": 1367,
+    "name": "City of Henderson Aquatic Complex",
+    "location": "Henderson, NV",
+    "latitude": 36.033,
+    "longitude": -114.9516,
+    "timezone": "America/Los_Angeles",
+    "dc_capacity_kw": 277.16,
+    "mount": "fixed",
+    "tilt": 12,
+    "azimuth": 172
+  },
+  "source": "demo",
+  "built_at": "2026-11-24T23:19:00Z",
+  "data_start": "2023-01-01",
+  "data_end": "2024-12-31",
+  "calibration_scale": 0.8795,
+  "ac_capacity_kw": 208.4,
+  "reference_window": [
+    "2023-01-01 08:00:00",
+    "2024-01-01 08:00:00"
+  ],
+  "nrmse_healthy_pct": 2.88,
+  "price_usd_kwh": 0.12,
+  "n_events": 2,
+  "backtest": {
+    "faults_injected": 2,
+    "detected": 2,
+    "correct_kind": 2,
+    "false_alarms": 0,
+    "median_delay_days": 5.0,
+    "rows": [
+      {
+        "true_kind": "sensor_fault",
+        "start": "2024-02-05",
+        "end": "2024-02-25",
+        "detected": true,
+        "detected_kind": "sensor_fault",
+        "correct_kind": true,
+        "delay_days": 0
+      },
+      {
+        "true_kind": "soiling",
+        "start": "2024-11-16",
+        "end": "2024-12-31",
+        "detected": true,
+        "detected_kind": "soiling",
+        "correct_kind": true,
+        "delay_days": 10
+      }
+    ]
+  }
+}

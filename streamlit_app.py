@@ -134,7 +134,7 @@ with st.sidebar:
     if not have:
         st.error("No processed data yet. Run `python -m solarmon.pipeline build 2107 --demo`.")
         st.stop()
-    site_id = st.selectbox("Site", have, format_func=lambda i: f"{i} · {sites[i].name}" if i in sites else str(i))
+    site_id = st.selectbox("Site", have, index=have.index(2107) if 2107 in have else 0, format_func=lambda i: f"{i} · {sites[i].name}" if i in sites else str(i))
     reviewer = st.text_input("Your name (for the approval log)", value=st.session_state.get("reviewer", ""))
     st.session_state["reviewer"] = reviewer
     st.divider()
@@ -145,11 +145,12 @@ meta, events, daily, intraday = outputs(site_id)
 sdir = site_dir(site_id)
 site = meta["site"]
 
+n_demo = sum(outputs(i)[0]["source"] == "demo" for i in have)
 if meta["source"] == "demo":
-    st.info("**Demo data.** This site's weather is physics-based (real sun position, tilt and "
-            "climate for its location) and its faults are injected, so you can check the detector "
-            "against the truth. Real PVDAQ data swaps in with one command; see the Method tab.",
-            icon="🧪")
+    who = "every site" if n_demo == len(have) else "this site"
+    st.info(f"**Demo data** for {who}. The weather is physics-based (each site's real sun position, "
+            "mounting and climate) and the faults are injected, so the detector can be checked against "
+            "the truth. Real PVDAQ data swaps in with one command; see the Method tab.", icon="🧪")
 
 tab_fleet, tab_site, tab_queue, tab_method = st.tabs(
     ["Fleet overview", "Site detail", "Ticket queue", "Method"])
@@ -175,15 +176,14 @@ with tab_fleet:
             "Size (kW DC)": m["site"]["dc_capacity_kw"], "Data through": m["data_end"],
             "PI, last 30 days": round(recent.median(), 3) if len(recent) else None,
             "Active issues": ", ".join(e["label"] for e in active) or "None",
-            "Tickets awaiting review": sum(t["status"] == "pending_review" for t in tk),
-            "Source": "Demo" if m["source"] == "demo" else "PVDAQ",
+            "Awaiting review": sum(t["status"] == "pending_review" for t in tk),
         })
     for sid, s in sites.items():
         if sid not in have:
             rows.append({"Site": f"{sid} · {s.name}", "Location": s.location,
                          "Size (kW DC)": s.dc_capacity_kw, "Data through": "",
                          "PI, last 30 days": None, "Active issues": "Not yet onboarded",
-                         "Tickets awaiting review": None, "Source": ""})
+                         "Awaiting review": None})
 
     c = st.columns(4)
     c[0].metric("Sites monitored", f"{len(have)} of {len(sites)}")

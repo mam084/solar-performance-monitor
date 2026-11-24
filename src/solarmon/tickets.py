@@ -67,6 +67,15 @@ PLAYBOOK = {
         ],
         "parts": ["Spare pyranometer / reference cell", "Bubble level and inclinometer"],
     },
+    "tracker_stall": {
+        "actions": [
+            "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+            "Compare reported vs commanded row angles to find which rows are stuck",
+            "Clear any wind or snow stow left active; reset the controller",
+            "On site: inspect drive motors, slew gears and row power supplies on stuck rows",
+        ],
+        "parts": ["Spare tracker motor / controller board", "Inclinometer"],
+    },
     "data_gap": {
         "actions": [
             "Check data-logger power and network/modem connectivity",
@@ -133,6 +142,9 @@ def _evidence_lines(event: dict) -> list[str]:
                      f"{ev.get('decline_lead_days', '?')} days before it crossed the alert threshold.")
     if ev.get("recovered_to") is not None:
         lines.append(f"Performance recovered to {ev['recovered_to']:.2f} of baseline in the week after.")
+    if ev.get("shape_gap") is not None and event["kind"] == "tracker_stall":
+        lines.append(f"Morning and evening output ran {-100 * ev['shape_gap']:.0f} points further below "
+                     "expectation than midday output.")
     if ev.get("shape_gap") is not None and event["kind"] == "curtailment":
         lines.append(f"Midday output ran {100 * ev['shape_gap']:.0f} points further below expectation "
                      "than morning and evening output.")
@@ -171,6 +183,8 @@ def _likely_causes(kind: str) -> list[str]:
         "curtailment": ["Utility export limit", "Inverter or plant-controller power setpoint",
                         "Inverter clipping from an incorrect AC rating setting"],
         "sensor_fault": ["Dirty or shaded pyranometer", "Sensor drift / out of calibration", "Sensor knocked out of plane"],
+        "tracker_stall": ["Tracker controller fault or lost communications", "Stow mode left active after high wind",
+                          "Failed drive motor or row power supply"],
         "data_gap": ["Data-logger power loss", "Network or cellular modem outage", "Logger storage full"],
     }.get(kind, [])
 

@@ -17,6 +17,8 @@ frame it came from. Three steps:
    soiling            gradual slide, often reset by rain or a wash
    curtailment        normal in the morning/evening, capped at midday
                       (loss concentrated in high-output intervals)
+   tracker_stall      the reverse: fine at midday, short in the morning and evening
+                      (single-axis rows parked flat)
    =================  =========================================================
 
 Each event carries the evidence a technician (or the ticket agent) needs: dates,
@@ -35,7 +37,7 @@ LOW_DEV = 0.93
 HIGH_DEV = 1.10
 CAPPED_DEV = 0.97  # a capped day needs only a small shortfall: its shape is the tell
 CAPPED_SHAPE_GAP = 0.12
-MIN_DAYS = {"outage": 1, "low": 3, "high": 3, "capped": 2, "data_gap": 1, "no_irradiance": 2}
+MIN_DAYS = {"outage": 1, "low": 3, "high": 3, "capped": 2, "stalled": 2, "data_gap": 1, "no_irradiance": 2}
 DARK_DAY_KWH_M2 = 1.0  # days with less sunlight than this are too noisy to judge
 DEFAULT_PRICE_USD_KWH = 0.12
 
@@ -45,6 +47,7 @@ KIND_LABELS = {
     "soiling": "Soiling / gradual loss",
     "curtailment": "Curtailment / output cap",
     "sensor_fault": "Irradiance sensor fault",
+    "tracker_stall": "Tracker stall",
     "data_gap": "Monitoring data gap",
 }
 
@@ -149,6 +152,8 @@ def flag_days(d: pd.DataFrame) -> pd.Series:
     f[d["dev"] > HIGH_DEV] = "high"
     # Output capped at midday (fine morning and evening): only shows on sunny days
     f[(d["dev"] < CAPPED_DEV) & (d["shape_gap"] > CAPPED_SHAPE_GAP) & d["judged"]] = "capped"
+    # The reverse shape: short in the morning and evening, fine at midday (trackers parked flat)
+    f[(d["dev"] < CAPPED_DEV) & (d["shape_gap"] < -CAPPED_SHAPE_GAP) & d["judged"]] = "stalled"
     f[(d["dev"] < OUTAGE_DEV) & d["judged"]] = "outage"
     f[~d["judged"] & (d["dev"] < OUTAGE_DEV)] = "outage"  # zero output is zero on any day
     f[d["poa_coverage"] < 0.5] = "no_irradiance"
@@ -168,7 +173,7 @@ def _runs(flags: pd.Series, kind: str, max_gap: int) -> list[tuple[pd.Timestamp,
             last, gap = day, 0
         elif start is not None:
             gap += 1
-            tolerate = f in neutral or (f == "ok" and kind in ("low", "high", "capped"))
+            tolerate = f in neutral or (f == "ok" and kind in ("low", "high", "capped", "stalled"))
             if not tolerate or gap > max_gap:
                 runs.append((start, last))
                 start, gap = None, 0
@@ -185,7 +190,7 @@ def detect_events(out: pd.DataFrame, daily: pd.DataFrame, site_id: int,
     last_day = d.index[d["flag"] != "none"].max()
 
     events = []
-    for flag, gap in (("outage", 0), ("low", 2), ("high", 2), ("capped", 3), ("data_gap", 0),
+    for flag, gap in (("outage", 0), ("low", 2), ("high", 2), ("capped", 3), ("stalled", 3), ("data_gap", 0),
                       ("no_irradiance", 1)):
         for s, e in _runs(d["flag"], flag, gap):
             n = (e - s).days + 1
@@ -242,6 +247,12 @@ def _build_event(d, s, e, flag, site_id, last_day, price, force_kind: str | None
         evidence["reason"] = ("Output matches expectation in the morning and evening but is capped at midday on "
                               "sunny days, which points to an export limit or inverter power setpoint rather "
                               "than lost capacity.")
+    elif flag == "stalled":
+        kind = "tracker_stall"
+        evidence["shape_gap"] = _r(win.loc[win["flag"] == "stalled", "shape_gap"].median())
+        evidence["stalled_days"] = int((win["flag"] == "stalled").sum())
+        evidence["reason"] = ("Output holds up at midday but falls short in the morning and evening, the "
+                              "signature of tracker rows that stopped following the sun (parked or stuck).")
     elif flag == "no_irradiance":
         kind = "sensor_fault"
         evidence["reason"] = "The site produced power but the irradiance sensor reported nothing."
@@ -260,8 +271,8 @@ def _build_event(d, s, e, flag, site_id, last_day, price, force_kind: str | None
     if kind in ("data_gap", "sensor_fault"):
         lost_kwh, loss_pct = 0.0, None  # unknown / no production lost
     else:
-        if kind == "curtailment" and flag == "capped":
-            lost = lost[win["flag"] == "capped"]  # the in-between days weren't capped
+        if flag in ("capped", "stalled"):
+            lost = lost[win["flag"] == flag]  # the in-between (cloudy) days weren't affected
         lost_kwh = float(lost.sum())
         loss_pct = _r(100 * lost_kwh / expected_total) if expected_total > 0 else None
 
@@ -334,6 +345,8 @@ def _severity(kind: str, loss_pct: float | None, days: int, active: bool) -> str
         return "medium" if (loss_pct or 0) >= 6 else "low"
     if kind == "sensor_fault":
         return "medium"
+    if kind == "tracker_stall":
+        return "high" if active else "medium"
     if kind == "data_gap":
         return "medium" if days >= 3 or active else "low"
     return "low"  # curtailment: usually external, confirm with the utility

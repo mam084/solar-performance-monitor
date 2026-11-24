@@ -1,0 +1,101 @@
+[
+  {
+    "ticket_id": "T-4902-2024-03-06-outage",
+    "event_id": "4902-2024-03-06-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2024-03-06 to 2024-03-06)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2024-03-06 to 2024-03-06. Estimated cost so far: $165.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,375 kWh (100% of expected), about $165."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-24T23:19:01Z",
+    "status": "pending_review"
+  },
+  {
+    "ticket_id": "T-4902-2024-05-15-sensor_fault",
+    "event_id": "4902-2024-05-15-sensor_fault",
+    "site_id": 4902,
+    "kind": "sensor_fault",
+    "title": "NIST Ground Array: irradiance sensor fault (2024-05-15 to 2024-05-21)",
+    "priority": "P3",
+    "summary": "Irradiance sensor fault detected at NIST Ground Array (Gaithersburg, MD) over 7 day(s), 2024-05-15 to 2024-05-21.",
+    "evidence": [
+      "Irradiance was recorded for only 0% of producing intervals.",
+      "The site produced power but the irradiance sensor reported nothing."
+    ],
+    "likely_causes": [
+      "Dirty or shaded pyranometer",
+      "Sensor drift / out of calibration",
+      "Sensor knocked out of plane"
+    ],
+    "recommended_actions": [
+      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
+      "Cross-check its readings against a second on-site sensor or satellite irradiance",
+      "Recalibrate or replace the sensor if the offset persists",
+      "Treat performance numbers for this window as unreliable until fixed"
+    ],
+    "parts_and_tools": [
+      "Spare pyranometer / reference cell",
+      "Bubble level and inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-24T23:19:01Z",
+    "status": "pending_review"
+  },
+  {
+    "ticket_id": "T-4902-2024-09-12-partial_outage",
+    "event_id": "4902-2024-09-12-partial_outage",
+    "site_id": 4902,
+    "kind": "partial_outage",
+    "title": "NIST Ground Array: partial outage (2024-09-12 to 2024-10-02)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 21 day(s), 2024-09-12 to 2024-10-02. Estimated cost so far: $707.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.74 during the event (1.00 = healthy).",
+      "Estimated energy lost: 5,891 kWh (27% of expected), about $707.",
+      "Roughly 26% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-24T23:19:01Z",
+    "status": "pending_review"
+  }
+]

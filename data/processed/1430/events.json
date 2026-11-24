@@ -1,0 +1,88 @@
+[
+  {
+    "id": "1430-2024-04-25-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2024-04-25",
+    "end": "2024-05-04",
+    "days": 10,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.004,
+    "pi_during": 0.78,
+    "energy_lost_kwh": 11450.7,
+    "est_cost_usd": 1374.08,
+    "loss_pct": 22.87,
+    "evidence": {
+      "baseline_pi": 1.006,
+      "daily_pi": {
+        "2024-04-25": 0.805,
+        "2024-04-26": 0.804,
+        "2024-04-27": 0.768,
+        "2024-04-28": 0.783,
+        "2024-04-29": 0.759,
+        "2024-04-30": 0.769,
+        "2024-05-01": 0.773,
+        "2024-05-02": 0.792,
+        "2024-05-03": 0.778,
+        "2024-05-04": 0.8
+      },
+      "shape_gap": -0.388,
+      "stalled_days": 10,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2024-05-06-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2024-05-06",
+    "end": "2024-05-10",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.013,
+    "pi_during": 0.793,
+    "energy_lost_kwh": 5670.3,
+    "est_cost_usd": 680.44,
+    "loss_pct": 22.085,
+    "evidence": {
+      "baseline_pi": 1.008,
+      "daily_pi": {
+        "2024-05-06": 0.827,
+        "2024-05-07": 0.769,
+        "2024-05-08": 0.802,
+        "2024-05-09": 0.778,
+        "2024-05-10": 0.793
+      },
+      "shape_gap": -0.386,
+      "stalled_days": 5,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2024-10-12-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2024-10-12",
+    "end": "2024-10-13",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.992,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 7904.5,
+    "est_cost_usd": 948.54,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 1.007,
+      "daily_pi": {
+        "2024-10-12": 0.0,
+        "2024-10-13": 0.0
+      }
+    }
+  }
+]

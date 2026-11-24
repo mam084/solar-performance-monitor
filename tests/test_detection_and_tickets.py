@@ -150,3 +150,28 @@ def test_review_log_keeps_edits_and_history(built):
     assert [h["status"] for h in t["history"]] == ["approved", "pending_review"]
     # Drafts on disk are never modified
     assert json.loads((d / "tickets.json").read_text())[0]["status"] == "pending_review"
+
+
+@pytest.mark.parametrize("system_id", [4902, 4903, 1430, 1367])
+def test_every_fleet_site_demo_is_detected_and_labelled(system_id):
+    """Each site has its own climate and faults; 1430 is a single-axis tracker."""
+    site = get_site(system_id)
+    df, faults = make_demo(site)
+    out = expected_ac_kw(df, site)
+    events, _ = detect_events(out, daily_performance(out), site.system_id)
+    truth = pd.DataFrame([f.__dict__ for f in faults])
+    bt = backtest(events, truth)
+    assert bt["correct_kind"].all(), bt
+    assert false_alarms(events, truth) == []
+
+
+def test_tracker_stall_ticket_uses_tracker_playbook():
+    site = get_site(1430)
+    df, _ = make_demo(site)
+    out = expected_ac_kw(df, site)
+    events, _ = detect_events(out, daily_performance(out), site.system_id)
+    stall = next(e for e in events if e.kind == "tracker_stall").to_dict()
+    from solarmon.pipeline import site_dict
+    t = template_ticket(stall, site_dict(site))
+    assert any("tracker controller" in a.lower() for a in t["recommended_actions"])
+    assert stall["evidence"]["shape_gap"] < -0.12

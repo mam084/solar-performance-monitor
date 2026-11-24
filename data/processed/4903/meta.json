@@ -1,0 +1,54 @@
+{
+  "site": {
+    "system_id": 4903,
+    "name": "NIST Roof Array",
+    "location": "Gaithersburg, MD",
+    "latitude": 39.1354,
+    "longitude": -77.2156,
+    "timezone": "America/New_York",
+    "dc_capacity_kw": 73.7,
+    "mount": "fixed",
+    "tilt": 10,
+    "azimuth": 180
+  },
+  "source": "demo",
+  "built_at": "2026-11-24T23:19:02Z",
+  "data_start": "2023-01-01",
+  "data_end": "2024-12-31",
+  "calibration_scale": 0.8799,
+  "ac_capacity_kw": 53.9,
+  "reference_window": [
+    "2023-01-01 08:45:00",
+    "2024-01-01 08:45:00"
+  ],
+  "nrmse_healthy_pct": 3.08,
+  "price_usd_kwh": 0.12,
+  "n_events": 2,
+  "backtest": {
+    "faults_injected": 2,
+    "detected": 2,
+    "correct_kind": 2,
+    "false_alarms": 0,
+    "median_delay_days": 16.0,
+    "rows": [
+      {
+        "true_kind": "soiling",
+        "start": "2024-03-26",
+        "end": "2024-05-15",
+        "detected": true,
+        "detected_kind": "soiling",
+        "correct_kind": true,
+        "delay_days": 32
+      },
+      {
+        "true_kind": "data_gap",
+        "start": "2024-08-23",
+        "end": "2024-08-24",
+        "detected": true,
+        "detected_kind": "data_gap",
+        "correct_kind": true,
+        "delay_days": 0
+      }
+    ]
+  }
+}

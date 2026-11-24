@@ -1,0 +1,102 @@
+[
+  {
+    "ticket_id": "T-1430-2024-04-25-tracker_stall",
+    "event_id": "1430-2024-04-25-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2024-04-25 to 2024-05-04)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 10 day(s), 2024-04-25 to 2024-05-04. Estimated cost so far: $1,374.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.78 during the event (1.00 = healthy).",
+      "Estimated energy lost: 11,451 kWh (23% of expected), about $1,374.",
+      "Morning and evening output ran 39 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-24T23:19:01Z",
+    "status": "pending_review"
+  },
+  {
+    "ticket_id": "T-1430-2024-05-06-tracker_stall",
+    "event_id": "1430-2024-05-06-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2024-05-06 to 2024-05-10)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2024-05-06 to 2024-05-10. Estimated cost so far: $680.",
+    "evidence": [
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
+      "Estimated energy lost: 5,670 kWh (22% of expected), about $680.",
+      "Morning and evening output ran 39 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-24T23:19:01Z",
+    "status": "pending_review"
+  },
+  {
+    "ticket_id": "T-1430-2024-10-12-outage",
+    "event_id": "1430-2024-10-12-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2024-10-12 to 2024-10-13)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2024-10-12 to 2024-10-13. Estimated cost so far: $949.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 7,904 kWh (100% of expected), about $949."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-24T23:19:01Z",
+    "status": "pending_review"
+  }
+]

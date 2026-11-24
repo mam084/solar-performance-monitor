@@ -11,6 +11,7 @@ Writes everything the app needs to data/processed/<id>/, small enough to commit:
 Usage:
     python -m solarmon.pipeline build 2107            # real PVDAQ data in data/raw/2107
     python -m solarmon.pipeline build 2107 --demo     # synthetic data with injected faults
+    python -m solarmon.pipeline build all --demo      # every site in sites.yaml
     python -m solarmon.pipeline build 2107 --claude   # draft tickets with Claude (needs ANTHROPIC_API_KEY)
     python -m solarmon.pipeline build 2107 --reference 2018-03-01 2019-02-28
 """
@@ -139,13 +140,15 @@ def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
     b = sub.add_parser("build", help="run the pipeline for one site")
-    b.add_argument("system_id", type=int)
+    b.add_argument("system_id", help="a system id, or 'all'")
     b.add_argument("--demo", action="store_true", help="use synthetic data with injected faults")
     b.add_argument("--claude", action="store_true", help="draft tickets with Claude")
     b.add_argument("--reference", nargs=2, metavar=("START", "END"), help="known-good calibration window")
     args = p.parse_args(argv)
     ref = slice(*args.reference) if args.reference else None
-    build(args.system_id, demo=args.demo, reference=ref, use_claude=args.claude)
+    ids = sorted(config.load_sites()) if args.system_id == "all" else [int(args.system_id)]
+    for sid in ids:
+        build(sid, demo=args.demo, reference=ref, use_claude=args.claude)
 
 
 if __name__ == "__main__":

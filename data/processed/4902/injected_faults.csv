@@ -1,0 +1,4 @@
+kind,start,end,note
+outage,2024-03-06,2024-03-06,Utility feeder outage after a storm
+sensor_fault,2024-05-15,2024-05-21,Pyranometer cable cut by mowing crew: no irradiance data
+partial_outage,2024-09-12,2024-10-02,"1 of 4 inverters offline (failed IGBT), ~25% loss"
