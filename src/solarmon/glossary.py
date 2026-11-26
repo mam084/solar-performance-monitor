@@ -102,10 +102,9 @@ GLOSSARY: dict[str, dict[str, str]] = {
             "A reviewer's decision, saved with their name, the time, any edits and (for rejections) the reason."),
     },
     "Data": {
-        "Real data": "Measured data from NREL's public PVDAQ archive (CC BY 4.0), refreshed by a daily job.",
-        "Demo data": (
-            "Simulated data for the site's real location and mounting, with known faults planted in it, used "
-            "where the real data can't be used yet. It's labelled wherever it appears."),
+        "Where the data comes from": (
+            "Measured data from NREL's public PVDAQ archive (CC BY 4.0), checked for new files every morning "
+            "by a scheduled job. Some sites' public records ended years ago; their numbers describe that period."),
     },
 }
 

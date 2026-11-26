@@ -190,7 +190,7 @@ def plain_summary(meta: dict, events: list[dict]) -> str:
         parts[-1] += "."
     ongoing = [e for e in events if e["active"]]
     if ongoing:
-        when = "when the data ends" if meta["source"] != "demo" else "at the end of the data"
+        when = "when the data ends"
         parts.append(f"Still going {when}: {', '.join(e['label'].lower() for e in ongoing)}.")
     h = meta.get("health") or {}
     if h.get("chronic_shortfall_pct", 0) >= 3.5:
@@ -198,6 +198,85 @@ def plain_summary(meta: dict, events: list[dict]) -> str:
                      f"its own best** (~{money(h['chronic_shortfall_usd_per_year'])} a year), which no single "
                      "day's alert would catch.")
     return " ".join(parts)
+
+
+# --------------------------------------------------------------------------- guided tour
+
+TOUR_TITLES = ["Welcome", "Start with the summary", "The quiet loss", "Read the chart",
+               "Zoom in on one problem", "Then act on it"]
+
+
+def tour_text(step: int) -> str:
+    """Tour copy, filled from the live results so it stays true after each data update."""
+    meta, events, _, _ = outputs(2107)
+    h = meta.get("health") or {}
+    years = int(meta["data_end"][:4]) - int(meta["data_start"][:4]) + 1
+    costly = max(events, key=lambda e: e["est_cost_usd"]) if events else None
+    others = [outputs(i)[0].get("health", {}).get("chronic_shortfall_pct") for i in have if i != 2107]
+    others = [x for x in others if x is not None]
+    peer = (f"The other sites in the **All sites** tab sit at {min(others):.0f}–{max(others):.0f}%, about what "
+            "measurement noise alone produces." if others else "")
+    when = (f"{pd.Timestamp(costly['start']):%B %Y}" if costly else "")
+    return [
+        "This app watches a solar farm the way an operations team would. Every 15 minutes it works out what "
+        "the site **should** have produced from that moment's sunlight and temperature, compares it with what "
+        "it **did** produce, and turns the gaps into maintenance tickets for a person to approve. This tour "
+        f"uses the **Farm Solar Array in Arbuckle, California**: {years} years of real data. It takes about a "
+        "minute.",
+        "These sentences sum up the site in plain words: how many problems were found, what they cost, and the "
+        "biggest one. The four numbers below them each have a ⓘ you can hover for a definition.",
+        f"**Everyday shortfall** is this site's most interesting finding. Even on days with no alert, it produces "
+        f"about {h.get('chronic_shortfall_pct', 0):.0f}% less than on its best days, roughly "
+        f"{money(round(h.get('chronic_shortfall_usd_per_year', 0), -3))} a year (the second number just below). Each day's loss is too small to alert on, so "
+        f"a day-by-day monitor would never flag it. {peer}",
+        "Each dot is one day: what the site produced as a share of what it should have. **100% means on "
+        "target**, whatever the weather, because the expectation uses the same day's sunlight. The shaded bands "
+        "are problems the monitor found; hover the ▼ above one for details."
+        + (f" The costliest problem on record started in {when}." if costly else "")
+        + " Use the buttons above the chart to look further back.",
+        (f"Here's the costliest problem up close ({costly['label'].lower()}, {span(costly['start'], costly['end'])}), "
+         "15 minutes at a time. " if costly else "")
+        + "Orange is what the site should have produced, blue what it did. The evidence on the right explains, "
+        "in plain words, why the monitor named it what it did. Pick any other problem from the list.",
+        "Every problem becomes a draft maintenance ticket: what happened, likely causes, and steps for a "
+        "technician. Open the **Tickets** tab to review one: edit it, approve it, or reject it with a reason. "
+        "Nothing is dispatched without a person's approval. Stuck on a term? **Help & glossary** defines all of "
+        "them. That's the tour.",
+    ][step]
+
+
+def _set_tour(step):
+    st.session_state["tour"] = step
+    st.session_state["tour_scrolled"] = None
+    if step == 0:
+        st.session_state["site_pick"] = 2107
+        st.session_state["range_pick"] = "Last year"
+        st.session_state.pop("tour_ev_set", None)
+
+
+def tour_callout(step: int) -> None:
+    """Show tour step `step` here, next to the part of the page it explains."""
+    if st.session_state.get("tour") != step:
+        return
+    # Anchor sits a little above the callout so it isn't hidden under the app's top bar
+    st.markdown(f'<div id="tour-step-{step}" style="position:relative; top:-90px"></div>', unsafe_allow_html=True)
+    title, text = TOUR_TITLES[step], tour_text(step)
+    with st.container(border=True):
+        st.markdown(f"**🧭 Tour · step {step + 1} of {len(TOUR_TITLES)} · {title}**")
+        st.markdown(text)
+        b = st.columns([1, 1, 1, 3])
+        if step > 0:
+            b[0].button("← Back", key=f"tour_back_{step}", on_click=_set_tour, args=(step - 1,))
+        if step < len(TOUR_TITLES) - 1:
+            b[1].button("Next →", key=f"tour_next_{step}", type="primary", on_click=_set_tour, args=(step + 1,))
+            b[2].button("End tour", key=f"tour_end_{step}", on_click=_set_tour, args=(None,))
+        else:
+            b[1].button("Finish", key=f"tour_end_{step}", type="primary", on_click=_set_tour, args=(None,))
+    if st.session_state.get("tour_scrolled") != step:
+        st.session_state["tour_scrolled"] = step
+        # Bring the step into view (the page is long; later steps sit far below the fold)
+        st.iframe(f"<script>const el = window.parent.document.getElementById('tour-step-{int(step)}');"
+                  "if (el) { el.scrollIntoView({behavior: 'smooth', block: 'start'}); }</script>", height=1)
 
 
 # --------------------------------------------------------------------------- page
@@ -210,23 +289,36 @@ with st.sidebar:
     st.caption("Compares what each solar site produced with what the weather says it should have, "
                "flags problems, and drafts maintenance tickets for a person to approve.")
     if not have:
-        st.error("No processed data yet. Run `python -m solarmon.pipeline build 2107 --demo`.")
+        st.error("No processed data yet. Run `python -m solarmon.update`.")
         st.stop()
     reviewer = st.text_input("Your name", value=st.session_state.get("reviewer", ""),
                              help="Saved with any ticket you approve or reject.")
     st.session_state["reviewer"] = reviewer
     st.divider()
-    st.caption("New here? The **Help & glossary** tab explains every term, and most labels have a ⓘ "
-               "you can hover.")
+    st.button("🧭 Take the 1-minute tour", width="stretch", on_click=_set_tour, args=(0,))
+    st.caption("The **Help & glossary** tab explains every term, and most labels have a ⓘ you can hover.")
     st.caption("Data: NREL PVDAQ (CC BY 4.0) · "
                "[Source code](https://github.com/mam084/solar-performance-monitor)")
 
-tab_fleet, tab_site, tab_tickets, tab_help = st.tabs(["Fleet", "Site", "Tickets", "Help & glossary"])
+# Widget defaults live in session state (the tour also sets them; Streamlit doesn't allow both)
+st.session_state.setdefault("site_pick", 2107 if 2107 in have else have[0])
+st.session_state.setdefault("range_pick", "Last year")
+if st.session_state["site_pick"] not in have:
+    st.session_state["site_pick"] = have[0]
+
+# First visit: offer the tour (once per session)
+if "tour" not in st.session_state:
+    st.session_state["tour"] = None
+    st.session_state["tour_offered"] = False
+
+tab_site, tab_tickets, tab_fleet, tab_help = st.tabs(["Site", "Tickets", "All sites", "Help & glossary"])
 
 # --------------------------------------------------------------------------- fleet
 
 with tab_fleet:
     st.subheader("All sites at a glance")
+    st.caption("The same pipeline run on every site with usable public data. Comparing them is what shows "
+               "Farm Solar Array's everyday shortfall is unusual.")
     all_tickets, rows, n_ongoing = [], [], 0
     for sid in have:
         m, evs, dly, _ = outputs(sid)
@@ -240,7 +332,7 @@ with tab_fleet:
         short = h.get("chronic_shortfall_pct")
         rows.append({
             "Site": f"{m['site']['name']}, {m['site']['location']}",
-            "Data": f"{'Demo' if m['source'] == 'demo' else 'Real'} {m['data_start'][:4]}–{m['data_end'][:4]}",
+            "Data": f"{m['data_start'][:4]}–{m['data_end'][:4]}",
             "Size (kW)": m["site"]["dc_capacity_kw"],
             "Recent performance": f"{recent.median():.0%}" if len(recent) else "",
             "Everyday shortfall": f"{short:.0f}%" if short is not None else "",
@@ -248,16 +340,9 @@ with tab_fleet:
             "Ongoing": ", ".join(e["label"] for e in ongoing) or "—",
             "Waiting": sum(t["status"] == "pending_review" for t in tk),
         })
-    for sid, s in sites.items():
-        if sid not in have:
-            rows.append({"Site": f"{s.name}, {s.location}", "Data": "Not yet available",
-                         "Size (kW)": s.dc_capacity_kw, "Recent performance": "", "Everyday shortfall": "",
-                         "Problems": 0, "Ongoing": "—", "Waiting": 0})
 
     c = st.columns(4)
-    n_real = sum(outputs(i)[0]["source"] != "demo" for i in have)
-    c[0].metric("Sites", f"{len(have)}", help=f"{n_real} on real NREL data, {len(have) - n_real} on demo data. "
-                + define("Demo data"))
+    c[0].metric("Sites", f"{len(have)}", help=define("Where the data comes from"))
     c[1].metric("Problems found", sum(r["Problems"] for r in rows), help=define("Problem (event)"))
     c[2].metric("Ongoing when data ends", n_ongoing, help=define("Ongoing"))
     c[3].metric("Tickets waiting for review", sum(t["status"] == "pending_review" for t in all_tickets),
@@ -266,7 +351,7 @@ with tab_fleet:
         pd.DataFrame(rows), hide_index=True, width="stretch",
         column_config={
             "Size (kW)": st.column_config.NumberColumn(format="%.0f", help=define("Size (kW DC)")),
-            "Data": st.column_config.TextColumn(help="Real NREL data or labelled demo data, and the years covered."),
+            "Data": st.column_config.TextColumn(help="Years covered by the site's public data."),
             "Recent performance": st.column_config.TextColumn(
                 help="Median over the last 30 days of the site's data. " + define("Performance (actual ÷ expected)")),
             "Everyday shortfall": st.column_config.TextColumn(help=define("Everyday shortfall")),
@@ -281,9 +366,19 @@ with tab_fleet:
 # --------------------------------------------------------------------------- site
 
 with tab_site:
+    if st.session_state["tour"] is None and not st.session_state.get("tour_offered"):
+        with st.container(border=True):
+            c = st.columns([5, 1.3, 1])
+            c[0].markdown("**New here?** A one-minute tour walks through what this monitor found at a real "
+                          "California solar farm.")
+            if c[1].button("🧭 Take the tour", type="primary", key="offer_tour", on_click=_set_tour, args=(0,)):
+                st.session_state["tour_offered"] = True
+            if c[2].button("No thanks", key="dismiss_tour"):
+                st.session_state["tour_offered"] = True
+                st.rerun()
+    tour_callout(0)
     names = {i: (outputs(i)[0]["site"]["name"] + f" ({i})") for i in have}
-    site_id = st.selectbox("Site", have, index=have.index(2107) if 2107 in have else 0,
-                           format_func=lambda i: names[i], key="site_pick")
+    site_id = st.selectbox("Site", have, format_func=lambda i: names[i], key="site_pick")
     meta, events, daily, intraday = outputs(site_id)
     site = meta["site"]
     health = meta.get("health") or {}
@@ -293,12 +388,14 @@ with tab_site:
                f"{'demo data' if meta['source'] == 'demo' else 'real data from NREL'}, "
                f"{span(meta['data_start'], meta['data_end'])}")
     if meta["source"] == "demo":
-        st.info("**Demo data.** " + define("Demo data"), icon="🧪")
+        st.info("**Simulated data** for testing, with planted faults.", icon="🧪")
 
+    tour_callout(1)
     st.markdown(plain_summary(meta, events))
 
     lost_kwh = sum(e["energy_lost_kwh"] for e in events)
     lost_usd = sum(e["est_cost_usd"] for e in events)
+    tour_callout(2)
     c = st.columns(4)
     acc = health.get("nrmse_full_health_pct")
     c[0].metric("Prediction accuracy", f"±{acc:.1f}%" if acc is not None else f"±{meta['nrmse_healthy_pct']:.1f}%",
@@ -323,10 +420,11 @@ with tab_site:
                             + (f"  \n  _Suggested fix:_ {ck['fix']}" if ck.get("fix") else ""))
 
     # ---- performance over time
+    tour_callout(3)
     st.markdown("#### Performance over time")
     last = daily["pi"].dropna().index.max()
     first = daily.index.min()
-    choice = st.segmented_control("Show", list(RANGES), default="Last year", key="range_pick")
+    choice = st.segmented_control("Show", list(RANGES), key="range_pick")
     days = RANGES.get(choice or "Last year")
     start = first if days is None else max(first, last - pd.Timedelta(days=days))
     st.plotly_chart(performance_chart(daily, events, start, last), width="stretch")
@@ -361,6 +459,11 @@ with tab_site:
         st.caption("A blank loss means the true output is unknown (sensor faults and data gaps).")
 
         # ---- one problem up close
+        tour_callout(4)
+        if st.session_state.get("tour") == 4 and not st.session_state.get("tour_ev_set"):
+            costliest = max(range(len(newest)), key=lambda i: newest[i]["est_cost_usd"])
+            st.session_state[f"ev_pick_{site_id}"] = costliest
+            st.session_state["tour_ev_set"] = True
         st.markdown("#### Look at one problem up close")
         pick = st.selectbox("Problem", range(len(newest)), key=f"ev_pick_{site_id}",
                             format_func=lambda i: f"{newest[i]['label']} · {span(newest[i]['start'], newest[i]['end'])}"
@@ -413,6 +516,8 @@ with tab_site:
                        f"a detected problem it's ±{meta['nrmse_healthy_pct']:.1f}%: the difference is the plant's "
                        "own small, scattered losses, not the model.")
         st.markdown("\n\n".join(txt))
+
+    tour_callout(5)
 
     if meta.get("backtest"):
         with st.expander("How well does the detector find planted faults?"):

@@ -4,7 +4,7 @@ Compares each solar site's **actual** output with the output its **weather says 
 
 Built on NREL's public [PVDAQ](https://data.openei.org/submissions/4568) dataset: real production and on-site weather sensor data from PV systems across the US.
 
-> **Status: v0.4.** The full loop runs end to end: physics baseline, ML residual layer, fault detection and classification, agent-drafted tickets, and a Streamlit approval queue. **Four of the five sites run on real PVDAQ data**, all within the 5% model-error target on full-health days (a healthy site's chronic shortfall from measurement noise alone is ~2.5%), refreshed automatically by a scheduled job; site 1367 stays on a labelled **demo dataset** until its irradiance channel can be trusted. See the [roadmap](#roadmap).
+> **Status: v0.5.** The full loop runs end to end: physics baseline, ML residual layer, fault detection and classification, agent-drafted tickets, and a Streamlit approval queue. Everything in the app is **real PVDAQ data**, refreshed automatically by a scheduled job. The app leads with **site 2107** (Farm Solar Array, Arbuckle CA) and a one-minute guided tour; three more real sites show how it holds up elsewhere. All four are within the 5% model-error target on full-health days (a healthy site's chronic shortfall from measurement noise alone is ~2.5%). Site 1367 isn't shown: its irradiance channel can't be trusted yet. See the [roadmap](#roadmap).
 
 | Site | Data | Model error, full-health days | Chronic shortfall | Events | Notes |
 |---|---|---|---|---|---|
@@ -12,7 +12,6 @@ Built on NREL's public [PVDAQ](https://data.openei.org/submissions/4568) dataset
 | 4902 NIST Ground, MD (fixed) | 2014–2018 | 3.3% (ML adopted) | 2.5% | 31 | 8 snow events; logger on standard time |
 | 4903 NIST Roof, MD (fixed) | 2014–2018 | 2.7% | 2.1% | 20 | 9 snow events |
 | 1430 NREL Mesa, CO (tracker) | 2009–2017 | 4.4% (ML adopted) | 3.0% | 112 | 41 snow events; one of two inverters metered |
-| 1367 Henderson, NV (fixed) | demo | — | — | 2 | POA channel unusable, see `config/sites.yaml` |
 
 **What it does on the demo fleet:**
 
