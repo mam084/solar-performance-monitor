@@ -1,0 +1,59 @@
+{
+  "fingerprint": "26d57addd27173dd",
+  "code": "2860cfa383787e79",
+  "built_at": "2026-11-26T20:01:21Z",
+  "files": 10,
+  "total_mb": 39.1,
+  "listing": [
+    {
+      "key": "pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_environment_15m_data_2025.csv",
+      "size": 2521011,
+      "etag": "e776c85f703669b5471ee05b8da5364a"
+    },
+    {
+      "key": "pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_environment_data.csv",
+      "size": 7700486,
+      "etag": "286ac747afe0d75dde017f08461cd74d"
+    },
+    {
+      "key": "pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_environment_data_2024.csv",
+      "size": 1179362,
+      "etag": "af7053661b435c472b6364dbee785975"
+    },
+    {
+      "key": "pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_irradiance_15m_data_2025.csv",
+      "size": 2818717,
+      "etag": "a3f8570fc39bfdd5e15d0b726105f780"
+    },
+    {
+      "key": "pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_irradiance_data.csv",
+      "size": 13990782,
+      "etag": "9d4fe945687c41663a157014c430270a"
+    },
+    {
+      "key": "pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_irradiance_data_2024.csv",
+      "size": 1933523,
+      "etag": "dfc6ece108987440b828d866d4723d39"
+    },
+    {
+      "key": "pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_meter_15m_data.csv",
+      "size": 6319525,
+      "etag": "c34649c57c9c327f52df483b2e9abbf3"
+    },
+    {
+      "key": "pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_meter_15m_data_2024.csv",
+      "size": 849109,
+      "etag": "50a01441dbc9bb67107cb49e843c5420"
+    },
+    {
+      "key": "pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_meter_15m_data_2025.csv",
+      "size": 1770717,
+      "etag": "5343e752851d76d23cec86e02428c83f"
+    },
+    {
+      "key": "pvdaq/2023-solar-data-prize/2107_OEDI/metadata/2107_system_metadata.json",
+      "size": 64652,
+      "etag": "ce3659dc8784c6fb46f65f9c63d970c2"
+    }
+  ]
+}
