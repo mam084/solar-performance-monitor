@@ -8,8 +8,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2014-10-25 to 2014-10-26. Estimated cost so far: $323.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,695 kWh (100% of expected), about $323."
+      "The site produced 96% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 2,695 kWh lost (100% of what was expected over these days), worth roughly $323 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -28,7 +28,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -40,8 +40,9 @@
     "priority": "P4",
     "summary": "Snow cover detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2015-01-06 to 2015-01-07. Estimated cost so far: $121.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,004 kWh (97% of expected), about $121.",
+      "The site produced 97% of its expected output in the two weeks before, and 2% during this problem (100% = producing what the weather allows).",
+      "It started right after freezing weather (a day that peaked at -2 \u00b0C), and output trickled on rather than stopping.",
+      "About 1,004 kWh lost (97% of what was expected over these days), worth roughly $121 at $0.12/kWh.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -59,7 +60,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -71,8 +72,9 @@
     "priority": "P4",
     "summary": "Snow cover detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-01-21 to 2015-01-21. Estimated cost so far: $14.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.03 during the event (1.00 = healthy).",
-      "Estimated energy lost: 115 kWh (59% of expected), about $14.",
+      "The site produced 96% of its expected output in the two weeks before, and 3% during this problem (100% = producing what the weather allows).",
+      "It started right after freezing weather (a day that peaked at 1 \u00b0C), and output trickled on rather than stopping.",
+      "About 115 kWh lost (59% of what was expected over these days), worth roughly $14 at $0.12/kWh.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -90,7 +92,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -102,8 +104,9 @@
     "priority": "P4",
     "summary": "Snow cover detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-01-27 to 2015-01-27. Estimated cost so far: $86.",
     "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
-      "Estimated energy lost: 714 kWh (98% of expected), about $86.",
+      "The site produced 94% of its expected output in the two weeks before, and 2% during this problem (100% = producing what the weather allows).",
+      "It started right after freezing weather (a day that peaked at -1 \u00b0C), and output trickled on rather than stopping.",
+      "About 714 kWh lost (98% of what was expected over these days), worth roughly $86 at $0.12/kWh.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -121,7 +124,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -133,9 +136,10 @@
     "priority": "P4",
     "summary": "Snow cover detected at NIST Ground Array (Gaithersburg, MD) over 3 day(s), 2015-01-28 to 2015-01-30. Estimated cost so far: $181.",
     "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.38 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,506 kWh (55% of expected), about $181.",
-      "Roughly 49% of capacity appears offline, from the size of the step.",
+      "The site produced 94% of its expected output in the two weeks before, and 38% during this problem (100% = producing what the weather allows).",
+      "It started right after freezing weather (a day that peaked at -1 \u00b0C), and output trickled on rather than stopping.",
+      "About 1,506 kWh lost (55% of what was expected over these days), worth roughly $181 at $0.12/kWh.",
+      "The size of the drop suggests roughly 49% of the array went offline.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -153,7 +157,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -165,8 +169,9 @@
     "priority": "P4",
     "summary": "Snow cover detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2015-02-17 to 2015-02-18. Estimated cost so far: $341.",
     "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,842 kWh (96% of expected), about $341.",
+      "The site produced 94% of its expected output in the two weeks before, and 4% during this problem (100% = producing what the weather allows).",
+      "It started right after freezing weather (a day that peaked at -10 \u00b0C), and output trickled on rather than stopping.",
+      "About 2,842 kWh lost (96% of what was expected over these days), worth roughly $341 at $0.12/kWh.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -184,7 +189,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -196,8 +201,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-02-20 to 2015-02-20. Estimated cost so far: $194.",
     "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,620 kWh (100% of expected), about $194."
+      "The site produced 94% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 1,620 kWh lost (100% of what was expected over these days), worth roughly $194 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -216,7 +221,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -228,8 +233,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-02-24 to 2015-02-24. Estimated cost so far: $189.",
     "evidence": [
-      "Performance index fell from 0.95 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,578 kWh (100% of expected), about $189."
+      "The site produced 95% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 1,578 kWh lost (100% of what was expected over these days), worth roughly $189 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -248,7 +253,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -260,8 +265,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-03-06 to 2015-03-06. Estimated cost so far: $209.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,743 kWh (100% of expected), about $209."
+      "The site produced 97% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 1,743 kWh lost (100% of what was expected over these days), worth roughly $209 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -280,7 +285,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -292,8 +297,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-03-29 to 2015-03-29. Estimated cost so far: $220.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,834 kWh (100% of expected), about $220."
+      "The site produced 96% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 1,834 kWh lost (100% of what was expected over these days), worth roughly $220 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -312,7 +317,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -324,8 +329,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 3 day(s), 2015-04-18 to 2015-04-20. Estimated cost so far: $484.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 4,032 kWh (100% of expected), about $484."
+      "The site produced 97% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 4,032 kWh lost (100% of what was expected over these days), worth roughly $484 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -344,7 +349,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -356,9 +361,9 @@
     "priority": "P3",
     "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 9 day(s), 2015-05-07 to 2015-05-15. Estimated cost so far: $39.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.89 during the event (1.00 = healthy).",
-      "Estimated energy lost: 325 kWh (3% of expected), about $39.",
-      "Roughly 11% of capacity appears offline, from the size of the step.",
+      "The site produced 96% of its expected output in the two weeks before, and 89% during this problem (100% = producing what the weather allows).",
+      "About 325 kWh lost (3% of what was expected over these days), worth roughly $39 at $0.12/kWh.",
+      "The size of the drop suggests roughly 11% of the array went offline.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -379,7 +384,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -391,9 +396,9 @@
     "priority": "P3",
     "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 8 day(s), 2015-06-13 to 2015-06-20. Estimated cost so far: $64.",
     "evidence": [
-      "Performance index fell from 0.95 in the two weeks before to a median of 0.88 during the event (1.00 = healthy).",
-      "Estimated energy lost: 531 kWh (5% of expected), about $64.",
-      "Roughly 10% of capacity appears offline, from the size of the step.",
+      "The site produced 95% of its expected output in the two weeks before, and 88% during this problem (100% = producing what the weather allows).",
+      "About 531 kWh lost (5% of what was expected over these days), worth roughly $64 at $0.12/kWh.",
+      "The size of the drop suggests roughly 10% of the array went offline.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -414,7 +419,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -426,8 +431,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 8 day(s), 2015-08-26 to 2015-09-02. Estimated cost so far: $1,189.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 9,909 kWh (99% of expected), about $1,189."
+      "The site produced 98% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 9,909 kWh lost (99% of what was expected over these days), worth roughly $1,189 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -446,7 +451,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -458,8 +463,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-09-08 to 2015-09-08. Estimated cost so far: $162.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,349 kWh (100% of expected), about $162."
+      "The site produced 96% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 1,349 kWh lost (100% of what was expected over these days), worth roughly $162 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -478,7 +483,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -490,8 +495,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2015-10-24 to 2015-10-25. Estimated cost so far: $141.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,171 kWh (100% of expected), about $141."
+      "The site produced 97% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 1,171 kWh lost (100% of what was expected over these days), worth roughly $141 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -510,7 +515,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -522,8 +527,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 4 day(s), 2015-11-03 to 2015-11-06. Estimated cost so far: $444.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,699 kWh (100% of expected), about $444."
+      "The site produced 97% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 3,699 kWh lost (100% of what was expected over these days), worth roughly $444 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -542,7 +547,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -554,8 +559,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2015-11-08 to 2015-11-09. Estimated cost so far: $187.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,556 kWh (100% of expected), about $187."
+      "The site produced 96% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 1,556 kWh lost (100% of what was expected over these days), worth roughly $187 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -574,7 +579,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -586,8 +591,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 8 day(s), 2015-11-11 to 2015-11-18. Estimated cost so far: $408.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,403 kWh (100% of expected), about $408."
+      "The site produced 96% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 3,403 kWh lost (100% of what was expected over these days), worth roughly $408 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -606,7 +611,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -618,8 +623,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 9 day(s), 2015-11-20 to 2015-11-28. Estimated cost so far: $620.",
     "evidence": [
-      "Median performance index during the event: 0.00.",
-      "Estimated energy lost: 5,168 kWh (100% of expected), about $620."
+      "During this problem the site produced 0% of its expected output (100% = producing what the weather allows).",
+      "About 5,168 kWh lost (100% of what was expected over these days), worth roughly $620 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -638,7 +643,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -650,8 +655,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-12-03 to 2015-12-03. Estimated cost so far: $130.",
     "evidence": [
-      "Median performance index during the event: 0.02.",
-      "Estimated energy lost: 1,082 kWh (98% of expected), about $130."
+      "During this problem the site produced 2% of its expected output (100% = producing what the weather allows).",
+      "About 1,082 kWh lost (98% of what was expected over these days), worth roughly $130 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -670,7 +675,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -682,8 +687,9 @@
     "priority": "P4",
     "summary": "Snow cover detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2016-01-24 to 2016-01-25. Estimated cost so far: $276.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,300 kWh (96% of expected), about $276.",
+      "The site produced 97% of its expected output in the two weeks before, and 4% during this problem (100% = producing what the weather allows).",
+      "It started right after freezing weather (a day that peaked at -3 \u00b0C), and output trickled on rather than stopping.",
+      "About 2,300 kWh lost (96% of what was expected over these days), worth roughly $276 at $0.12/kWh.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -701,7 +707,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -713,9 +719,10 @@
     "priority": "P3",
     "summary": "Snow cover detected at NIST Ground Array (Gaithersburg, MD) over 6 day(s), 2016-01-26 to 2016-01-31. Estimated cost so far: $201.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.69 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,676 kWh (28% of expected), about $201.",
-      "Roughly 35% of capacity appears offline, from the size of the step.",
+      "The site produced 97% of its expected output in the two weeks before, and 69% during this problem (100% = producing what the weather allows).",
+      "It started right after freezing weather (a day that peaked at 0 \u00b0C), and output trickled on rather than stopping.",
+      "About 1,676 kWh lost (28% of what was expected over these days), worth roughly $201 at $0.12/kWh.",
+      "The size of the drop suggests roughly 35% of the array went offline.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -733,7 +740,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -745,9 +752,9 @@
     "priority": "P2",
     "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 5 day(s), 2016-02-09 to 2016-02-13. Estimated cost so far: $86.",
     "evidence": [
-      "Performance index fell from 0.95 in the two weeks before to a median of 0.84 during the event (1.00 = healthy).",
-      "Estimated energy lost: 714 kWh (15% of expected), about $86.",
-      "Roughly 16% of capacity appears offline, from the size of the step.",
+      "The site produced 95% of its expected output in the two weeks before, and 84% during this problem (100% = producing what the weather allows).",
+      "About 714 kWh lost (15% of what was expected over these days), worth roughly $86 at $0.12/kWh.",
+      "The size of the drop suggests roughly 16% of the array went offline.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -768,7 +775,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -780,8 +787,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2016-04-16 to 2016-04-17. Estimated cost so far: $673.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 5,608 kWh (100% of expected), about $673."
+      "The site produced 100% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 5,608 kWh lost (100% of what was expected over these days), worth roughly $673 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -800,7 +807,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -812,10 +819,10 @@
     "priority": "P3",
     "summary": "Soiling / gradual loss detected at NIST Ground Array (Gaithersburg, MD) over 10 day(s), 2016-04-18 to 2016-04-27. Estimated cost so far: $422.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.82 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,520 kWh (27% of expected), about $422.",
-      "The decline appears to have started around 2016-04-14, 4 days before it crossed the alert threshold.",
-      "Performance recovered to 0.90 of baseline in the week after.",
+      "The site produced 100% of its expected output in the two weeks before, and 82% during this problem (100% = producing what the weather allows).",
+      "About 3,520 kWh lost (27% of what was expected over these days), worth roughly $422 at $0.12/kWh.",
+      "The slide seems to have started around 2016-04-14, 4 days before it was big enough to raise an alert.",
+      "In the week after, output recovered to 90% of the site's normal level.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
     ],
     "likely_causes": [
@@ -834,7 +841,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -846,8 +853,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2016-05-04 to 2016-05-04. Estimated cost so far: $42.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.12 during the event (1.00 = healthy).",
-      "Estimated energy lost: 349 kWh (65% of expected), about $42."
+      "The site produced 99% of its expected output in the two weeks before, and 12% during this problem (100% = producing what the weather allows).",
+      "About 349 kWh lost (65% of what was expected over these days), worth roughly $42 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -866,7 +873,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -878,8 +885,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 4 day(s), 2016-10-14 to 2016-10-17. Estimated cost so far: $853.",
     "evidence": [
-      "Performance index fell from 1.01 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 7,105 kWh (97% of expected), about $853."
+      "The site produced 101% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 7,105 kWh lost (97% of what was expected over these days), worth roughly $853 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -898,7 +905,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -910,8 +917,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2017-05-28 to 2017-05-29. Estimated cost so far: $212.",
     "evidence": [
-      "Performance index fell from 1.04 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,765 kWh (92% of expected), about $212."
+      "The site produced 104% of its expected output in the two weeks before, and 6% during this problem (100% = producing what the weather allows).",
+      "About 1,765 kWh lost (92% of what was expected over these days), worth roughly $212 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -930,7 +937,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -942,8 +949,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2017-10-21 to 2017-10-22. Estimated cost so far: $282.",
     "evidence": [
-      "Performance index fell from 1.10 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,350 kWh (100% of expected), about $282."
+      "The site produced 110% of its expected output in the two weeks before, and 0% during this problem (100% = producing what the weather allows).",
+      "About 2,350 kWh lost (100% of what was expected over these days), worth roughly $282 at $0.12/kWh."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -962,7 +969,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   },
   {
@@ -974,8 +981,9 @@
     "priority": "P4",
     "summary": "Snow cover detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2017-12-10 to 2017-12-10. Estimated cost so far: $58.",
     "evidence": [
-      "Performance index fell from 1.05 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
-      "Estimated energy lost: 486 kWh (95% of expected), about $58.",
+      "The site produced 105% of its expected output in the two weeks before, and 7% during this problem (100% = producing what the weather allows).",
+      "It started right after freezing weather (a day that peaked at 1 \u00b0C), and output trickled on rather than stopping.",
+      "About 486 kWh lost (95% of what was expected over these days), worth roughly $58 at $0.12/kWh.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -993,7 +1001,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:34:43Z",
+    "drafted_at": "2026-11-26T22:58:06Z",
     "status": "historical"
   }
 ]
