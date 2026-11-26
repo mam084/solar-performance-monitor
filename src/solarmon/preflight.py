@@ -189,10 +189,15 @@ def run(site: Site, df: pd.DataFrame | None = None) -> tuple[list[Check], pd.Dat
                for y, g in out.groupby(out.index.year) if healthy.loc[g.index].any()}
     by_year = {y: v for y, v in by_year.items() if pd.notna(v)}
     worst = max(by_year, key=by_year.get) if by_year else None
-    checks.append(Check("accuracy", PASS if nrmse < 5 else WARN,
-                        f"nRMSE on healthy days {nrmse:.1f}% (target < 5%)"
+    from .health import assess
+    h = assess(out, d, 0.12)
+    full = h.get("nrmse_full_health_pct")
+    score = full if full is not None and pd.notna(full) else nrmse
+    checks.append(Check("accuracy", PASS if score < 5 else WARN,
+                        (f"model error on full-health days {full:.1f}% (target < 5%); " if full is not None else "")
+                        + f"nRMSE on all event-free days {nrmse:.1f}%"
                         + (f"; worst year {worst}: {by_year[worst]:.1f}%" if worst else ""),
-                        "" if nrmse < 5 else
+                        "" if score < 5 else
                         f"a single bad year usually means a clock or sensor problem in that year's files"))
     return checks, cov
 

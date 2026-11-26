@@ -148,19 +148,22 @@ def file_timing(site: Site) -> pd.DataFrame:
     return pd.DataFrame(rows).set_index(["file", "signal"])
 
 
-def trim_to_sensor_start(df: pd.DataFrame, min_coverage: float = 0.3) -> pd.DataFrame:
+def trim_to_sensor_start(df: pd.DataFrame, min_coverage: float = 0.8) -> pd.DataFrame:
     """Drop the stretch before the irradiance sensor came online.
 
     Some sites logged power for months before their irradiance sensor was installed
     (site 2107: all of 2017 until November). That period can't be modelled, and left in
-    it reads as one long sensor fault. Starts at the first week with irradiance in at
-    least `min_coverage` of intervals.
+    it reads as one long sensor fault. A new sensor also tends to report patchily for a
+    while, so this waits for sustained coverage: the first 30 days in which irradiance is
+    present for at least `min_coverage` of the daylight intervals (those with power).
     """
-    cov = df["poa_irradiance"].notna().resample("D").mean().rolling(7, min_periods=7).mean()
+    producing = df["ac_power_kw"] > 0.02 * df["ac_power_kw"].quantile(0.99)
+    have = df["poa_irradiance"].notna()[producing]
+    cov = have.groupby(have.index.normalize()).mean().asfreq("D").rolling(30, min_periods=20).mean()
     ok = cov[cov >= min_coverage]
     if ok.empty:
         return df
-    start = ok.index[0] - pd.Timedelta(days=6)
+    start = ok.index[0] - pd.Timedelta(days=29)
     out = df.loc[start:]
     out.attrs = dict(df.attrs, trimmed_before=str(start.date()) if start > df.index[0] else None)
     return out

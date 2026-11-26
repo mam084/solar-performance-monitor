@@ -91,6 +91,9 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
     healthy = pd.Series(out.index.normalize().isin(healthy_days), index=out.index)
     nrmse_healthy = rmse_pct(out["ac_power_kw"], out["expected_ac_kw"], out["poa_irradiance"], only=healthy)
 
+    from .health import assess
+    health = assess(out, d, DEFAULT_PRICE_USD_KWH)
+
     sd = site_dict(site)
     event_dicts = [e.to_dict() for e in events]
     # Only recent or ongoing events need someone to act; older ones are history
@@ -121,6 +124,7 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
         "n_events": len(events),
         "ticket_window_days": TICKET_WINDOW_DAYS,
         "ml": ml_report,
+        "health": health,
     }
     if preflight is not None:
         meta["preflight"] = preflight
@@ -152,6 +156,11 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
         print(f"[{site.system_id}] {site.name} ({source}): {meta['data_start']} to {meta['data_end']}")
         print(f"  scale {meta['calibration_scale']:.3f}, AC limit {meta['ac_capacity_kw']:.0f} kW, "
               f"nRMSE on healthy days {meta['nrmse_healthy_pct']:.1f}%")
+        if health.get("nrmse_full_health_pct") is not None:
+            print(f"  model error on full-health days {health['nrmse_full_health_pct']:.1f}%"
+                  + (f", chronic shortfall {health['chronic_shortfall_pct']:.1f}% "
+                     f"(~{health['chronic_shortfall_mwh_per_year']:,.0f} MWh/yr)"
+                     if "chronic_shortfall_pct" in health else ""))
         print(f"  ML residual model: {'adopted' if ml_report['adopted'] else 'not adopted'} "
               f"({ml_report.get('reason', '')})")
         for e in events:

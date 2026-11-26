@@ -203,15 +203,38 @@ with tab_site:
     st.caption(f"{site['dc_capacity_kw']:,.0f} kW DC · {site['mount'].replace('_', '-')} mount, "
                f"{site['tilt']}° tilt · data {meta['data_start']} to {meta['data_end']}")
     c = st.columns(4)
-    c[0].metric("Model error, healthy days", f"{meta['nrmse_healthy_pct']:.1f}%",
-                help="nRMSE of 15-min expected vs actual power on days with no detected event. Target < 5%.")
-    c[1].metric("Calibration scale", f"{meta['calibration_scale']:.3f}",
-                help="Fit on the reference window: real-world losses vs the nameplate PVWatts model.")
+    health = meta.get("health") or {}
+    if health.get("nrmse_full_health_pct") is not None:
+        c[0].metric("Model error, full-health days", f"{health['nrmse_full_health_pct']:.1f}%",
+                    help=f"15-min error on {health.get('full_health_days', 0)} clear days when the site was at its own "
+                         f"best level. On every day without a detected event it's {meta['nrmse_healthy_pct']:.1f}%: "
+                         "the difference is the plant's own small, scattered losses, not the model. Target < 5%.")
+    else:
+        c[0].metric("Model error, healthy days", f"{meta['nrmse_healthy_pct']:.1f}%",
+                    help="nRMSE of 15-min expected vs actual power on days with no detected event. Target < 5%.")
+    if "chronic_shortfall_pct" in health:
+        c[1].metric("Chronic shortfall", f"{health['chronic_shortfall_pct']:.1f}%",
+                    help=f"On days with no detected event, output still fell this far short of the site's own best "
+                         f"clear-day level: losses too small or scattered to alert on. About "
+                         f"{health['chronic_shortfall_mwh_per_year']:,.0f} MWh "
+                         f"(${health['chronic_shortfall_usd_per_year']:,.0f}) a year. Measurement noise alone "
+                         "gives a healthy site about 2-3%, so only the excess is real loss.")
+    else:
+        c[1].metric("Calibration scale", f"{meta['calibration_scale']:.3f}")
     c[2].metric("Inverter AC limit", f"{meta['ac_capacity_kw']:,.0f} kW")
     c[3].metric("Events detected", len(events))
+    if "chronic_shortfall_pct" in health and health["chronic_shortfall_pct"] >= 3:
+        by_year = health.get("chronic_shortfall_by_year_pct", {})
+        trend = ", ".join(f"{y}: {v:.0f}%" for y, v in by_year.items())
+        st.info(f"**Below its best on ordinary days.** Even without a detected event, this site typically produces "
+                f"{health['chronic_shortfall_pct']:.1f}% less than on its best clear days, about "
+                f"**{health['chronic_shortfall_mwh_per_year']:,.0f} MWh (${health['chronic_shortfall_usd_per_year']:,.0f}) "
+                f"a year**, against about 2-3% for a healthy site from measurement noise alone. On clear days "
+                f"the low ones look like a share of capacity offline (the whole curve scaled down), not a cap. "
+                f"By year: {trend}.", icon="📉")
 
     ml = meta.get("ml") or {}
-    layers = "PVWatts physics → learned daily-shape correction"
+    layers = f"PVWatts physics (scale {meta['calibration_scale']:.3f}) → learned daily-shape correction"
     if ml.get("adopted"):
         layers += " → ML residual model"
     detail = ""
@@ -246,8 +269,10 @@ with tab_site:
                                     "Est. cost ($)": st.column_config.NumberColumn(format="$%,.0f"),
                                     "PI during": st.column_config.NumberColumn(format="%.2f")})
 
-        pick = st.selectbox("Inspect an event", range(len(events)),
-                            format_func=lambda i: f"{events[i]['start']} · {events[i]['label']}")
+        newest_first = list(range(len(events)))[::-1]
+        pick = st.selectbox("Inspect an event", newest_first,
+                            format_func=lambda i: f"{events[i]['start']} · {events[i]['label']}"
+                                                  + (" · ongoing" if events[i]["active"] else ""))
         ev = events[pick]
         s = pd.Timestamp(ev["start"]) - pd.Timedelta(days=2)
         e = min(pd.Timestamp(ev["start"]) + pd.Timedelta(days=5), pd.Timestamp(ev["end"]) + pd.Timedelta(days=2))
@@ -255,6 +280,12 @@ with tab_site:
         st.markdown(f"**Actual vs expected power, {s:%b %d} to {e:%b %d}** · "
                     "the gap between the lines is the problem")
         st.plotly_chart(intraday_chart(intraday, s, e), width="stretch")
+        w = intraday.loc[s:e]
+        producing = w["ac_power_kw"] > 1
+        missing = w.loc[producing, "expected_ac_kw"].isna().mean() if producing.any() else 0
+        if missing > 0.2:
+            st.warning(f"No expected line for {missing:.0%} of this window: the irradiance sensor wasn't reporting, "
+                       "and expected output is computed from it.", icon="📡")
         st.caption(ev["evidence"].get("reason", ""))
 
     if meta.get("backtest"):
