@@ -40,10 +40,18 @@ class Site:
     file_offsets_h: dict[str, float] = field(default_factory=dict)
     # Inverter AC output limit (kW); inferred from the data's clipping ceiling if unset
     ac_capacity_kw: float | None = None
+    # Share of the array the mapped power channel covers, e.g. 0.5 when only one of two
+    # equal inverters is metered. The model sizes itself to this share of dc_capacity_kw.
+    metered_fraction: float = 1.0
 
     @property
     def raw_dir(self) -> Path:
         return DATA_DIR / "raw" / str(self.system_id)
+
+    @property
+    def metered_dc_kw(self) -> float:
+        """DC capacity behind the mapped power channel."""
+        return self.dc_capacity_kw * self.metered_fraction
 
     @property
     def mapped_columns(self) -> dict[str, str]:

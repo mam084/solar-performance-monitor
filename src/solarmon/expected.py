@@ -45,7 +45,7 @@ def cell_temperature(df: pd.DataFrame) -> pd.Series:
 def dc_power_kw(df: pd.DataFrame, site: Site) -> pd.Series:
     """Uncalibrated PVWatts DC power (kW) from POA irradiance and cell temperature."""
     poa = df["poa_irradiance"].clip(lower=0)
-    dc = pvlib.pvsystem.pvwatts_dc(poa, cell_temperature(df), pdc0=site.dc_capacity_kw * 1000.0,
+    dc = pvlib.pvsystem.pvwatts_dc(poa, cell_temperature(df), pdc0=site.metered_dc_kw * 1000.0,
                                    gamma_pdc=GAMMA_PDC)
     return (dc / 1000.0).rename("model_dc_kw")
 
@@ -64,12 +64,12 @@ def ac_capacity(df: pd.DataFrame, site: Site) -> float:
     if site.ac_capacity_kw:
         return float(site.ac_capacity_kw)
     observed = df["ac_power_kw"].quantile(0.999)
-    return float(observed) if observed > 0 else site.dc_capacity_kw / DC_AC_RATIO
+    return float(observed) if observed > 0 else site.metered_dc_kw / DC_AC_RATIO
 
 
 def pvwatts_ac_kw(df: pd.DataFrame, site: Site) -> pd.Series:
     """Uncalibrated PVWatts AC estimate (kW), with an inverter sized at DC/1.2."""
-    ac_cap = site.ac_capacity_kw or site.dc_capacity_kw / DC_AC_RATIO
+    ac_cap = site.ac_capacity_kw or site.metered_dc_kw / DC_AC_RATIO
     return inverter_ac_kw(dc_power_kw(df, site), ac_cap).rename("pvwatts_ac_kw")
 
 

@@ -19,7 +19,7 @@ def clean(df: pd.DataFrame, site: Site) -> pd.DataFrame:
     out = df.copy()
     if "ac_power_kw" in out:
         p = out["ac_power_kw"]
-        out["ac_power_kw"] = p.where(p <= 1.2 * site.dc_capacity_kw).clip(lower=0)
+        out["ac_power_kw"] = p.where(p <= 1.2 * site.metered_dc_kw).clip(lower=0)
     if "poa_irradiance" in out:
         g = out["poa_irradiance"]
         out["poa_irradiance"] = g.where(g <= 1500).clip(lower=0)

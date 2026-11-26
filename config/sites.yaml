@@ -62,12 +62,13 @@ sites:
     tilt: 20
     azimuth: 180
     years_available: [2014, 2018]
+    # PVDAQ metrics table (data/processed/4902/inspect.md). 1-min data.
     columns:
-      ac_power: null
-      poa_irradiance: null
-      module_temp: null
-      ambient_temp: null
-      wind_speed: null
+      ac_power: metric_82633        # PwrMtrP_kW_Avg, revenue meter, kW (peaks ~246 kW)
+      poa_irradiance: metric_82622  # SEWSPOAIrrad_Wm2_Avg, plane of array, W/m2
+      module_temp: metric_82621     # SEWSModuleTemp_C_Avg
+      ambient_temp: metric_82620    # SEWSAmbientTemp_C_Avg
+      wind_speed: metric_82665      # WindSpeedAve_ms
 
   4903:
     name: NIST Roof Array
@@ -82,12 +83,13 @@ sites:
     tilt: 10
     azimuth: 180
     years_available: [2014, 2018]
+    # PVDAQ metrics table (data/processed/4903/inspect.md). 1-min data.
     columns:
-      ac_power: null
-      poa_irradiance: null
-      module_temp: null
-      ambient_temp: null
-      wind_speed: null
+      ac_power: metric_82754        # PwrMtrP_kW_Avg, revenue meter, kW (peaks ~67 kW)
+      poa_irradiance: metric_82743  # SEWSPOAIrrad_Wm2_Avg, plane of array, W/m2
+      module_temp: metric_82742     # SEWSModuleTemp_C_Avg
+      ambient_temp: metric_82741    # SEWSAmbientTemp_C_Avg
+      wind_speed: metric_82777      # WindSpeedAve_ms
 
   1430:
     name: NREL Mesa 1-axis
@@ -101,13 +103,16 @@ sites:
     mount: single_axis
     tilt: 0
     azimuth: 180
-    years_available: [2008, 2024]
+    years_available: [2008, 2017]
+    # 720 kW DC on two 333 kW inverters (NREL fact sheet FS-6A4-44785). The power channel
+    # peaks ~316 kW, i.e. one inverter's half of the array; it's labelled W but reads kW.
+    metered_fraction: 0.5
     columns:
-      ac_power: null
-      poa_irradiance: null
-      module_temp: null
-      ambient_temp: null
-      wind_speed: null
+      ac_power: metric_5074         # ac_power
+      poa_irradiance: metric_5041   # poa_irradiance, W/m2
+      module_temp: metric_5043      # module_temp, C
+      ambient_temp: metric_5042     # ambient_temp, C
+      wind_speed: metric_5044       # wind_speed, m/s
 
   1367:
     name: City of Henderson Aquatic Complex
@@ -122,6 +127,10 @@ sites:
     tilt: 12
     azimuth: 172
     years_available: [2013, 2020]
+    # Not mapped yet: the POA channel (metric_4195) peaks at ~27 on a June day in Henderson,
+    # so its scaling is unknown; temperatures (metric_4193/4194) are in kelvin (unit: K).
+    # Power would be metric_3091 (W, sum of three inverters). Stays on demo data until the
+    # irradiance can be trusted or replaced with satellite irradiance.
     columns:
       ac_power: null
       poa_irradiance: null

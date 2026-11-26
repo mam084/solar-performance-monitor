@@ -21,6 +21,7 @@ UNIT_CONVERSIONS = {
     "mph": lambda x: x * 0.44704,
     "km/h": lambda x: x / 3.6,
     "W": lambda x: x / 1000.0,
+    "K": lambda x: x - 273.15,
 }
 # Other names the timestamp column goes by in some PVDAQ exports, in order of preference.
 TIME_CANDIDATES = ("measured_on", "timestamp", "datetime", "date_time", "time", "local_time",
@@ -141,7 +142,7 @@ def load_site(site: Site, columns: dict[str, str | list[str]] | None = None,
 
     if "ac_power" in out:
         explicit = "ac_power" in site.units
-        out["ac_power_kw"] = out.pop("ac_power") if explicit else to_kw(out["ac_power"], site.dc_capacity_kw)
+        out["ac_power_kw"] = out.pop("ac_power") if explicit else to_kw(out["ac_power"], site.metered_dc_kw)
         out = out.drop(columns="ac_power", errors="ignore")
     return out
 

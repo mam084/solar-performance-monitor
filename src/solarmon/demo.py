@@ -142,7 +142,7 @@ def make_demo(site: Site, start: str = "2023-01-01", end: str = "2025-01-01",
     df = weather(site, start, end, seed)
     faults = faults if faults is not None else default_faults(df.index[0], df.index[-1], site.system_id)
     clim = CLIMATE.get(site.system_id, DEFAULT_CLIMATE)
-    ac_cap = site.ac_capacity_kw or clim.get("ac_kw") or site.dc_capacity_kw / 1.25
+    ac_cap = site.ac_capacity_kw or clim.get("ac_kw") or site.metered_dc_kw / 1.25
 
     years = (df.index - df.index[0]) / pd.Timedelta(days=365.25)
     health = HEALTHY_SCALE * (1 - DEGRADATION_PER_YEAR * np.asarray(years))

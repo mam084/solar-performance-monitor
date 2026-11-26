@@ -91,7 +91,7 @@ def test_failed_preflight_keeps_previous_outputs(bucket, monkeypatch):
 
 def test_unmapped_site_gets_a_column_report_once(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "DATA_DIR", tmp_path)
-    site = get_site(4902)
+    site = get_site(1367)
     calls = []
 
     def fake_download(system_id, start=None, end=None, **kw):
@@ -109,14 +109,14 @@ def test_unmapped_site_gets_a_column_report_once(tmp_path, monkeypatch):
     monkeypatch.setattr(update, "metric_names", lambda site, client=None: (pd.DataFrame(
         {"metric_id": [1, 2], "sensor_name": ["ac_power_inv_1", "poa_irradiance_wm2"], "units": ["W", "W/m2"]}), []))
 
-    r = update.update_site(4902)
+    r = update.update_site(1367)
     assert r["status"] == "skipped" and "column report" in r["detail"]
-    text = (tmp_path / "processed" / "4902" / "inspect.md").read_text()
+    text = (tmp_path / "processed" / "1367" / "inspect.md").read_text()
     assert "2015, 2016, 2017" in text and "ac_power_inv_1" in text and "suggested mapping" in text
     assert "What each metric is" in text and "W/m2" in text
     assert calls[0][0].year == 2016  # a middle year
 
-    assert "column report" not in update.update_site(4902)["detail"]  # only once
+    assert "column report" not in update.update_site(1367)["detail"]  # only once
     assert len(calls) == 1
 
 
