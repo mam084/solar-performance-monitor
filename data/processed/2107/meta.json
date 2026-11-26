@@ -12,7 +12,7 @@
     "azimuth": 180
   },
   "source": "pvdaq",
-  "built_at": "2026-11-26T20:37:42Z",
+  "built_at": "2026-11-26T20:43:06Z",
   "data_start": "2017-11-02",
   "data_end": "2025-12-31",
   "calibration_scale": 0.8186,
@@ -26,10 +26,20 @@
     0.565,
     1.444
   ],
-  "nrmse_healthy_pct": 12.94,
+  "nrmse_healthy_pct": 9.88,
   "price_usd_kwh": 0.12,
-  "n_events": 39,
+  "n_events": 42,
   "ticket_window_days": 45,
+  "ml": {
+    "adopted": true,
+    "holdout_start": "2023-12-17",
+    "train_rows": 70599,
+    "holdout_nrmse_physics": 12.17,
+    "holdout_nrmse_ml": 10.33,
+    "holdout_daily_scatter_physics": 0.0493,
+    "holdout_daily_scatter_ml": 0.0475,
+    "reason": "beat physics on held-out data on both 15-min error and daily scatter"
+  },
   "preflight": [
     {
       "name": "raw files",
