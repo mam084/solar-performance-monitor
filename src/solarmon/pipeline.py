@@ -45,7 +45,8 @@ def site_dict(site: Site) -> dict:
 
 
 def build(system_id: int, demo: bool = False, reference: slice | None = None,
-          use_claude: bool = False, out_dir: Path | None = None, verbose: bool = True) -> dict:
+          use_claude: bool = False, out_dir: Path | None = None, verbose: bool = True,
+          preflight: list[dict] | None = None) -> dict:
     site = get_site(system_id)
     truth = None
     if demo:
@@ -87,6 +88,8 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
         "price_usd_kwh": DEFAULT_PRICE_USD_KWH,
         "n_events": len(events),
     }
+    if preflight is not None:
+        meta["preflight"] = preflight
     if truth is not None:
         bt = backtest(events, truth)
         meta["backtest"] = {

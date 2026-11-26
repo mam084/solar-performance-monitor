@@ -210,6 +210,13 @@ with tab_site:
     c[2].metric("Inverter AC limit", f"{meta['ac_capacity_kw']:,.0f} kW")
     c[3].metric("Events detected", len(events))
 
+    warns = [c for c in meta.get("preflight", []) if c["status"] != "PASS"]
+    if warns:
+        with st.expander(f"⚠️ {len(warns)} data check(s) need attention for this site"):
+            for c in warns:
+                st.markdown(f"- **{c['name']}**: {c['detail']}" + (f"  \n  _Fix:_ {c['fix']}" if c.get("fix") else ""))
+    if meta["source"] != "demo":
+        st.caption(f"Last rebuilt {meta['built_at'][:16].replace('T', ' ')} UTC by the scheduled data update.")
     st.markdown("**Daily performance index** · shaded spans are detected events, numbered as in the table below")
     st.plotly_chart(pi_chart(daily, events), width="stretch")
 

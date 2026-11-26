@@ -1,0 +1,76 @@
+# Keeps the app's data current without anyone downloading anything by hand.
+#
+# Daily, and whenever the site config or pipeline code changes on main:
+#   1. Ask NREL's public S3 bucket what files exist for each mapped site (seconds).
+#   2. If nothing changed since the last build (files, config, code), stop there.
+#   3. Otherwise download what's missing, run preflight, rebuild, run the tests,
+#      and commit data/processed/. Streamlit Cloud redeploys from that commit.
+#
+# A site whose preflight fails keeps its previous outputs; the run summary says why.
+# Run it by hand from the Actions tab ("Run workflow"), with "force" to rebuild anyway.
+
+name: update-data
+
+on:
+  schedule:
+    - cron: "17 14 * * *"   # daily, 06:17 Pacific standard time
+  push:
+    branches: [main]
+    paths:
+      - "config/sites.yaml"
+      - "src/solarmon/**"
+      - ".github/workflows/update-data.yml"
+  workflow_dispatch:
+    inputs:
+      sites:
+        description: "Space-separated system ids, or 'auto' for every mapped site"
+        default: "auto"
+      force:
+        description: "Rebuild even if nothing changed"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # to commit the refreshed data/processed/
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -e ".[dev]"
+
+      - name: Check NREL and rebuild what changed
+        env:
+          SITES: ${{ github.event.inputs.sites || 'auto' }}
+          FORCE: ${{ github.event.inputs.force == 'true' && '--force' || '' }}
+        run: python -m solarmon.update --sites "$SITES" $FORCE
+
+      - name: Tests
+        run: pytest -q
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Data update $(date -u +%Y-%m-%d)"
+          # Someone may have pushed while this ran; data/processed is only written here
+          git pull --rebase origin main
+          git push origin HEAD:main

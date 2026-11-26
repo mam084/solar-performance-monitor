@@ -101,15 +101,30 @@ The app only reads `data/processed/`, which is small and committed, so it deploy
 
 1. On [share.streamlit.io](https://share.streamlit.io), create an app from this repo, branch `main`, file `streamlit_app.py`.
 2. Optional: under *Settings → Secrets*, add `ANTHROPIC_API_KEY = "..."` to turn on **Redraft with Claude**.
-3. To publish new results, rerun the pipeline locally and commit `data/processed/`; the app redeploys on push.
+3. New data arrives on its own: see [Keeping the data current](#keeping-the-data-current).
 
 Approval decisions are saved to `data/processed/<id>/decisions.json`, which is git-ignored. On Streamlit Cloud that file lasts until the app restarts; a durable store is part of phase 4.
+
+
+## Keeping the data current
+
+Nobody needs to download data by hand. The [`update-data`](.github/workflows/update-data.yml) GitHub Actions job runs daily, and on any push to `main` that changes `config/sites.yaml` or the pipeline code:
+
+1. For every site with a real column mapping, it lists the site's files in NREL's public bucket.
+2. It compares a fingerprint of that listing, the site's config and the pipeline code with the one saved at the last build (`data/processed/<id>/source_manifest.json`). If nothing changed, it stops.
+3. Otherwise it downloads only the missing files, runs `preflight`, rebuilds, runs the tests and commits `data/processed/`. Streamlit Cloud redeploys from that commit.
+
+A site that fails preflight keeps its previous outputs; preflight warnings show up in the app under the site's chart. To run it now, or force a rebuild, use **Actions → update-data → Run workflow**. The same thing locally: `python -m solarmon.update`.
+
+Onboarding a new site is a config change: add its column mapping to `sites.yaml`, push, and the job builds it. Sites without a mapping stay on demo data.
+
+GitHub pauses scheduled workflows in a repo with no commits for 60 days; re-enable it from the Actions tab if that happens.
 
 ## Further reading
 
 - [`docs/scaling.md`](docs/scaling.md): approach, results, and how this runs daily across a full fleet
 - [`warehouse/`](warehouse/): Snowflake schema (raw → staging → marts) that `python -m solarmon.warehouse push` loads
-- [`deploy/github-actions/daily-pipeline.yml`](deploy/github-actions/daily-pipeline.yml): scheduled daily run, ready to enable
+- [`.github/workflows/update-data.yml`](.github/workflows/update-data.yml): the scheduled data update (see [Keeping the data current](#keeping-the-data-current))
 
 ## Repo layout
 
@@ -129,9 +144,10 @@ src/solarmon/
   demo.py                synthetic site history with injected, labelled faults
   backtest.py            detector accuracy over many simulated histories
   preflight.py           checks a site's raw data and names the sites.yaml fix for each problem
+  update.py              scheduled update: fingerprint, download, preflight, build
   warehouse.py           shapes outputs into the Snowflake tables and loads them
 warehouse/               Snowflake DDL: setup, raw + staging, marts
-deploy/github-actions/   daily pipeline workflow (template)
+.github/workflows/       update-data.yml: scheduled data update
 docs/scaling.md          scaling and operations write-up
 streamlit_app.py         fleet overview, site detail, ticket approval queue
 data/processed/          pipeline outputs the app reads (committed, ~1.5 MB per site)
@@ -158,8 +174,7 @@ tests/                   offline tests on synthetic data
 - [ ] **Phase 4: Productionize**
   - [x] Snowflake schema (raw → staging → marts) and loader, column-checked against the DDL in tests
   - [ ] Snowflake as the live store (run `warehouse/*.sql`, then `solarmon.warehouse push all`)
-  - [x] Scheduled daily run written (`deploy/github-actions/daily-pipeline.yml`)
-  - [ ] Enable it: copy to `.github/workflows/` and allow Actions to write
+  - [x] Scheduled data update (GitHub Actions): rebuilds only when NREL's files, the site config or the code change
   - [ ] Durable store for approval decisions
   - [x] Write-up on scaling to a full fleet ([`docs/scaling.md`](docs/scaling.md))
 

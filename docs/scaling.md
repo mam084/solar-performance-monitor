@@ -84,7 +84,7 @@ Rough size at 1,000 sites: about 35 million rows a year in the 15-minute mart. R
 5. **Review**: dispatchers work the queue by priority, with ongoing issues first.
 6. **Hand off** approved tickets to the work-order system (ServiceNow, Maximo, or whatever the operator uses) through its API. That integration is the only part that should ever create real work.
 
-A ready-to-enable GitHub Actions version of steps 1–4 is in `deploy/github-actions/daily-pipeline.yml`.
+Steps 1–4 run today as a GitHub Actions job (`.github/workflows/update-data.yml`). It fingerprints each site's source files, config and code, and only downloads and rebuilds when one of them changed, so a quiet day costs one S3 listing per site.
 
 ### What gets harder at scale, and the plan for each
 
@@ -104,4 +104,4 @@ A ready-to-enable GitHub Actions version of steps 1–4 is in `deploy/github-act
 2. The other four sites onboarded and mapped.
 3. An ML residual model on top of the physics baseline, kept only if it beats it on held-out healthy days.
 4. Snowflake as the store, with approvals moved to the decisions table.
-5. Scheduled daily runs.
+5. Ticket drafting only for events not seen before, so a daily rebuild doesn't redraft (or reset) existing tickets.
