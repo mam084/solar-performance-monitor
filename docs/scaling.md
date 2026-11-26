@@ -81,6 +81,17 @@ Two honest limits remain:
 
 The demo backtest moved slightly with these changes: 477 of 480 faults found (was 480), 4 false alarms in 300 site-years (was 1), and soiling caught later. That's the price of a detector that holds up on real data.
 
+## Does ML help? Only where it earns it
+
+An ML layer (gradient boosting on the actual/expected ratio, from irradiance, its one-hour average, temperature and sun position) sits on top of the physics. It trains only on days the detector called healthy. It's adopted per site only if, trained on the first three quarters of the record, it beats physics on the last quarter on **both** 15-minute error and the day-to-day scatter of the performance index, by at least 3%.
+
+| Site | Held-out 15-min error | Held-out daily scatter | Adopted? |
+|---|---|---|---|
+| 2107 (real) | 12.2% → 10.3% | 4.9% → 4.7% | yes |
+| Demo sites | no better | no better | no: physics already explains synthetic data |
+
+Daily scatter is the number that matters for detection, because alert thresholds scale with it. At 2107, ML tightens the alert line from about 0.80 to 0.84 of baseline. It's a real but modest gain. Most of what's left is a single sensor and a large array seeing different clouds, which no model of that one sensor can remove.
+
 ## Scaling to a fleet
 
 ### Compute is not the bottleneck
@@ -122,8 +133,8 @@ Steps 1–4 run today as a GitHub Actions job (`.github/workflows/update-data.ym
 
 ## What's next
 
-1. Real data for site 2107: preflight, build, and compare the detected events with the record.
-2. The other four sites onboarded and mapped.
-3. An ML residual model on top of the physics baseline, kept only if it beats it on held-out healthy days.
+1. Compare site 2107's detected events with its maintenance records, if the owner will share them.
+2. The other four sites onboarded and mapped from the column reports the update job writes.
+3. A second irradiance source (satellite) to cut the point-sensor error that physics and ML both leave behind.
 4. Snowflake as the store, with approvals moved to the decisions table.
 5. Ticket drafting only for events not seen before, so a daily rebuild doesn't redraft (or reset) existing tickets.

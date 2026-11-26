@@ -210,6 +210,19 @@ with tab_site:
     c[2].metric("Inverter AC limit", f"{meta['ac_capacity_kw']:,.0f} kW")
     c[3].metric("Events detected", len(events))
 
+    ml = meta.get("ml") or {}
+    layers = "PVWatts physics → learned daily-shape correction"
+    if ml.get("adopted"):
+        layers += " → ML residual model"
+    detail = ""
+    if "holdout_nrmse_physics" in ml:
+        detail = (f" On held-out data from {ml['holdout_start']}: 15-min error "
+                  f"{ml['holdout_nrmse_physics']:.1f}% with physics, {ml['holdout_nrmse_ml']:.1f}% with ML; "
+                  f"daily scatter {100 * ml['holdout_daily_scatter_physics']:.1f}% vs "
+                  f"{100 * ml['holdout_daily_scatter_ml']:.1f}%.")
+    st.caption(f"**Model:** {layers}. ML layer {'adopted' if ml.get('adopted') else 'not used'}: "
+               f"{ml.get('reason', 'not evaluated')}.{detail}")
+
     warns = [c for c in meta.get("preflight", []) if c["status"] != "PASS"]
     if warns:
         with st.expander(f"⚠️ {len(warns)} data check(s) need attention for this site"):

@@ -24,6 +24,8 @@ import json
 import os
 from pathlib import Path
 
+import pandas as pd
+
 from . import config
 from .config import Site, get_site, load_sites
 
@@ -75,6 +77,56 @@ def inspect_path(site: Site) -> Path:
     return config.DATA_DIR / "processed" / str(site.system_id) / "inspect.md"
 
 
+REPORT_VERSION = 2  # bump to regenerate every column report
+
+
+def metric_names(site: Site, client=None) -> tuple[pd.DataFrame | None, list[str]]:
+    """PVDAQ's metrics table for a basic site: metric_id -> sensor name, common name, units.
+
+    Basic sites name their columns metric_<id>; this table says what each one measures.
+    Looks under the bucket's metadata folders for a per-system file, or a single shared
+    file filtered to this system. Returns (table or None, notes on where it looked).
+    """
+    import re
+    import tempfile
+
+    from . import ingest
+
+    client = client or ingest.s3_client()
+    notes = []
+    for root in ("pvdaq/parquet/metrics/", "pvdaq/csv/metrics/", "pvdaq/parquet/metadata/", "pvdaq/csv/metadata/"):
+        try:
+            keys = [o["Key"] for o in ingest.list_keys(root, client) if not o["Key"].endswith("/")]
+        except Exception as e:  # noqa: BLE001
+            notes.append(f"{root}: {type(e).__name__}")
+            continue
+        notes.append(f"{root}: {len(keys)} files")
+        mine = [k for k in keys if re.search(rf"(?<!\d){site.system_id}(?!\d)", k.rsplit("/", 1)[-1])]
+        candidates = mine or (keys if 0 < len(keys) <= 5 else [])
+        candidates = [k for k in candidates if "metric" in k.lower() or mine]
+        for key in candidates:
+            with tempfile.TemporaryDirectory() as tmp:
+                local = Path(tmp) / key.rsplit("/", 1)[-1]
+                client.download_file(ingest.BUCKET, key, str(local))
+                if local.suffix == ".parquet":
+                    df = pd.read_parquet(local)
+                elif local.suffix == ".json":
+                    raw = json.loads(local.read_text())
+                    rows = raw.get("Metrics") or raw.get("metrics") if isinstance(raw, dict) else raw
+                    df = pd.DataFrame(rows if isinstance(rows, list) else list((rows or {}).values()))
+                else:
+                    df = pd.read_csv(local)
+            df.columns = [str(c).lower() for c in df.columns]
+            if "system_id" in df.columns:
+                df = df[df["system_id"].astype(str) == str(site.system_id)]
+            if "metric_id" in df.columns and len(df):
+                notes.append(f"metrics from {key}")
+                keep = [c for c in ("metric_id", "sensor_name", "common_name", "units", "raw_units")
+                        if c in df.columns]
+                return df[keep].sort_values("metric_id").reset_index(drop=True), notes
+    return None, notes
+
+
 def inspect_unmapped(site: Site, client=None, sample_days: int = 14) -> bool:
     """For a site with no mapping yet: download two weeks of data and commit a column report.
 
@@ -88,9 +140,9 @@ def inspect_unmapped(site: Site, client=None, sample_days: int = 14) -> bool:
     from .inspect import report
 
     dest = inspect_path(site)
-    if dest.exists():
+    if dest.exists() and f"report v{REPORT_VERSION}" in dest.read_text():
         return False
-    lines = [f"# Column report: {site.system_id} {site.name}", ""]
+    lines = [f"# Column report: {site.system_id} {site.name}", "", f"_report v{REPORT_VERSION}_", ""]
     if site.source == "basic":
         base = f"pvdaq/parquet/pvdata/system_id={site.system_id}/"
         years = sorted(int(p.rstrip("/").split("=")[-1]) for p in list_prefixes(base, client) if "year=" in p)
@@ -104,12 +156,32 @@ def inspect_unmapped(site: Site, client=None, sample_days: int = 14) -> bool:
         start = date(year, 6, 1)
         download_site(site.system_id, start=start, end=start + timedelta(days=sample_days - 1))
         lines.append(f"Sample: {start} to {start + timedelta(days=sample_days - 1)}")
+        names, notes = metric_names(site, client)
+        lines += ["", "## What each metric is", ""]
+        if names is not None:
+            lines += [names.to_markdown(index=False) if _has_tabulate() else "```\n" + names.to_string(index=False) + "\n```"]
+        else:
+            lines.append("No metrics table found. Looked in: " + "; ".join(notes))
+            try:
+                top = list_prefixes("pvdaq/parquet/", client)
+                lines.append("\nTop-level folders in pvdaq/parquet/: " + ", ".join(top[:40]))
+            except Exception:  # noqa: BLE001
+                pass
     else:
         download_site(site.system_id, include=INCLUDE)
-    lines += ["", "```", report(site).strip(), "```", ""]
+    # Long-format daily files: read a whole day per file, not just the first night-time hour
+    lines += ["", "## Columns in the sample", "", "```", report(site, nrows=300_000).strip(), "```", ""]
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text("\n".join(lines))
     return True
+
+
+def _has_tabulate() -> bool:
+    try:
+        import tabulate  # noqa: F401
+        return True
+    except ImportError:
+        return False
 
 
 def update_site(system_id: int, force: bool = False, client=None) -> dict:

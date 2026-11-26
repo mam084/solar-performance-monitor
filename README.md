@@ -11,7 +11,7 @@ Built on NREL's public [PVDAQ](https://data.openei.org/submissions/4568) dataset
 - **Real data, site 2107:** about 40 events over eight years: outages, irradiance-sensor dropouts, and a two-month partial outage in summer 2025. 15-min model error on healthy days is about 13%; daily PI, which detection uses, scatters about 8%. See [what the real data taught us](docs/scaling.md#what-the-real-data-taught-us)
 - **Demo fleet:** 2.6–2.9% nRMSE on healthy days. Backtest over 300 simulated site-years (5 sites × 30 weather seeds × 2 years): **477 of 480** injected faults found, **474** labelled correctly, **4** false alarms. Abrupt faults are flagged the day they start; soiling about 5 weeks in, with the start of the slide traced back
 - Recognises seven fault types, including tracker stalls on the single-axis site
-- Drafts a maintenance ticket per event (template offline, Claude with an API key) and logs every approve / edit / reject with who did it
+- Drafts a maintenance ticket per event (template offline, Claude with an API key). Recent and ongoing events go to the review queue; older ones are filed under History. Every approve / edit / reject is logged with who did it
 
 ## Why this problem
 
@@ -33,7 +33,7 @@ flowchart LR
 ```
 
 1. **Ingest.** Download a site's files from NREL's public S3 bucket (no AWS account needed).
-2. **Expected output.** NREL's PVWatts model (via [`pvlib`](https://pvlib-python.readthedocs.io/)) turns the site's own plane-of-array irradiance and module temperature into an expected AC power. A single scale factor, fit on a known-good reference window, calibrates it to that site's real-world losses. *(Phase 2 adds an ML model on the residuals to learn site-specific quirks the physics misses.)*
+2. **Expected output.** NREL's PVWatts model (via [`pvlib`](https://pvlib-python.readthedocs.io/)) turns the site's own plane-of-array irradiance and module temperature into an expected AC power. A single scale factor, fit on a known-good reference window, calibrates it to that site's real-world losses. On top of that, an ML residual model (gradient boosting on irradiance, its one-hour average, temperature and sun position) learns what physics misses. Each site gets it **only if it beats physics on held-out data** (the last quarter of the record) on both 15-minute error and daily scatter. Site 2107 adopts it (held-out error 12.2% → 10.3%); the demo sites don't, because there's nothing systematic left to learn.
 3. **Performance index (PI).** Daily actual energy ÷ expected energy. A healthy site sits near 1.0 regardless of weather.
 4. **Detection.** First, a correction learned from the site's own history (its normal actual/expected ratio by month and half-hour) removes biases that repeat every day, such as a sensor angled differently from the panels. Each day's PI is then compared with a rolling baseline (the median of recent days, recomputed without flagged days so a long fault doesn't become the new normal), with alert thresholds scaled to how noisy that site is. Runs of flagged days become events, classified by shape:
 
@@ -144,7 +144,8 @@ src/solarmon/
   demo.py                synthetic site history with injected, labelled faults
   backtest.py            detector accuracy over many simulated histories
   preflight.py           checks a site's raw data and names the sites.yaml fix for each problem
-  update.py              scheduled update: fingerprint, download, preflight, build
+  update.py              scheduled update: fingerprint, download, preflight, build; column reports for unmapped sites
+  ml.py                  ML residual model with a held-out adoption test
   warehouse.py           shapes outputs into the Snowflake tables and loads them
 warehouse/               Snowflake DDL: setup, raw + staging, marts
 .github/workflows/       update-data.yml: scheduled data update
@@ -162,13 +163,15 @@ tests/                   offline tests on synthetic data
   - [x] PVWatts expected-output model with calibration, plus a daily performance index
   - [x] Validated on the demo site: 2.9% nRMSE on healthy days
   - [x] Real data for site 2107 built by the scheduled job; learned daily-shape correction, sensor-start trim and site-scaled thresholds added after the first run
-  - [ ] Bring real-data model error down (13% at 15 min): a second irradiance source or the ML residual model
+  - [x] ML residual layer adopted at 2107 on held-out data (12.2% → 10.3% at 15 min)
+  - [ ] A second irradiance source (satellite) to cut the remaining point-sensor error
 - [ ] **Phase 2: Fleet + detection**
   - [x] Underperformance detection and event classification, backtested on injected faults (477/480 found over 300 site-years)
   - [x] Demo histories for all 5 sites, including single-axis tracker physics
   - [ ] Backtest on real, logged events at site 2107
   - [ ] All 5 sites ingested and mapped
-  - [ ] ML residual model (gradient boosting on weather and time features)
+  - [x] ML residual model (gradient boosting), adopted per site only if it beats physics on held-out data
+  - [x] Column reports for unmapped sites written by the update job (`data/processed/<id>/inspect.md`)
 - [x] **Phase 3: Ticket agent + approval UI**
   - [x] Claude drafts tickets from flagged events with evidence (template fallback offline)
   - [x] Streamlit approval queue with edit, reject-with-reason, audit history and export

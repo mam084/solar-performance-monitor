@@ -106,12 +106,34 @@ def test_unmapped_site_gets_a_column_report_once(tmp_path, monkeypatch):
     monkeypatch.setattr(ingest, "list_prefixes",
                         lambda prefix, client=None: [prefix + f"year={y}/" for y in (2015, 2016, 2017)])
     monkeypatch.setattr(ingest, "download_site", fake_download)
+    monkeypatch.setattr(update, "metric_names", lambda site, client=None: (pd.DataFrame(
+        {"metric_id": [1, 2], "sensor_name": ["ac_power_inv_1", "poa_irradiance_wm2"], "units": ["W", "W/m2"]}), []))
 
     r = update.update_site(4902)
     assert r["status"] == "skipped" and "column report" in r["detail"]
     text = (tmp_path / "processed" / "4902" / "inspect.md").read_text()
     assert "2015, 2016, 2017" in text and "ac_power_inv_1" in text and "suggested mapping" in text
+    assert "What each metric is" in text and "W/m2" in text
     assert calls[0][0].year == 2016  # a middle year
 
     assert "column report" not in update.update_site(4902)["detail"]  # only once
     assert len(calls) == 1
+
+
+def test_metric_names_from_a_per_system_file(tmp_path, monkeypatch):
+    table = pd.DataFrame({"system_id": [4902, 4902, 9999], "metric_id": [82592, 82666, 1],
+                          "sensor_name": ["ac_power", "poa", "x"], "units": ["kW", "W/m2", "?"]})
+    src = tmp_path / "metrics__system_4902__part000.parquet"
+    table.to_parquet(src)
+    monkeypatch.setattr(ingest, "list_keys", lambda prefix, client=None: (
+        [{"Key": "pvdaq/parquet/metrics/metrics__system_4902__part000.parquet"},
+         {"Key": "pvdaq/parquet/metrics/metrics__system_49020__part000.parquet"}]
+        if prefix == "pvdaq/parquet/metrics/" else []))
+
+    class Fake:
+        def download_file(self, bucket, key, dest):
+            assert key.endswith("system_4902__part000.parquet")
+            shutil.copy(src, dest)
+
+    names, notes = update.metric_names(get_site(4902), client=Fake())
+    assert list(names["metric_id"]) == [82592, 82666] and "units" in names.columns

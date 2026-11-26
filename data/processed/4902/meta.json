@@ -12,7 +12,7 @@
     "azimuth": 180
   },
   "source": "demo",
-  "built_at": "2026-11-26T20:36:25Z",
+  "built_at": "2026-11-26T20:41:06Z",
   "data_start": "2023-01-01",
   "data_end": "2024-12-31",
   "calibration_scale": 0.879,
@@ -30,6 +30,16 @@
   "price_usd_kwh": 0.12,
   "n_events": 3,
   "ticket_window_days": 45,
+  "ml": {
+    "adopted": false,
+    "holdout_start": "2024-07-02",
+    "train_rows": 20448,
+    "holdout_nrmse_physics": 2.87,
+    "holdout_nrmse_ml": 2.91,
+    "holdout_daily_scatter_physics": 0.0235,
+    "holdout_daily_scatter_ml": 0.023,
+    "reason": "didn't beat physics on held-out data by at least 3% on both 15-min error and daily scatter"
+  },
   "backtest": {
     "faults_injected": 3,
     "detected": 3,

@@ -49,7 +49,7 @@ def site_dict(site: Site) -> dict:
 
 def build(system_id: int, demo: bool = False, reference: slice | None = None,
           use_claude: bool = False, out_dir: Path | None = None, verbose: bool = True,
-          preflight: list[dict] | None = None) -> dict:
+          preflight: list[dict] | None = None, use_ml: bool = True) -> dict:
     site = get_site(system_id)
     truth = None
     if demo:
@@ -64,9 +64,24 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
         source = "pvdaq"
 
     out = model_site(raw, site, reference=reference)
+    single_axis = site.mount == "single_axis"
     daily = daily_performance(out)
     events, d = detect_events(out, daily, site.system_id, price_usd_kwh=DEFAULT_PRICE_USD_KWH,
-                              single_axis=site.mount == "single_axis")
+                              single_axis=single_axis)
+
+    # ML residual layer: trained on the days physics calls healthy, kept only if it beats
+    # physics on held-out data (see solarmon.ml). If adopted, detect again with it.
+    ml_report = {"adopted": False, "reason": "disabled"}
+    if use_ml:
+        from .ml import residual_model
+        ml_expected, ml_report = residual_model(out, site, d.index[d["flag"] == "ok"])
+        if ml_expected is not None:
+            out = out.copy()
+            out["expected_physics_kw"] = out["expected_ac_kw"]
+            out["expected_ac_kw"] = ml_expected
+            daily = daily_performance(out)
+            events, d = detect_events(out, daily, site.system_id, price_usd_kwh=DEFAULT_PRICE_USD_KWH,
+                                      single_axis=single_axis)
 
     # Honest model error: productive intervals on days with no event
     healthy_days = d.index[(d["flag"] == "ok")]
@@ -102,6 +117,7 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
         "price_usd_kwh": DEFAULT_PRICE_USD_KWH,
         "n_events": len(events),
         "ticket_window_days": TICKET_WINDOW_DAYS,
+        "ml": ml_report,
     }
     if preflight is not None:
         meta["preflight"] = preflight
@@ -133,6 +149,8 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
         print(f"[{site.system_id}] {site.name} ({source}): {meta['data_start']} to {meta['data_end']}")
         print(f"  scale {meta['calibration_scale']:.3f}, AC limit {meta['ac_capacity_kw']:.0f} kW, "
               f"nRMSE on healthy days {meta['nrmse_healthy_pct']:.1f}%")
+        print(f"  ML residual model: {'adopted' if ml_report['adopted'] else 'not adopted'} "
+              f"({ml_report.get('reason', '')})")
         for e in events:
             print(f"  {e.start} to {e.end}  {e.label:<26} {e.severity:<8} "
                   f"{e.energy_lost_kwh:>9,.0f} kWh{'  ACTIVE' if e.active else ''}")
