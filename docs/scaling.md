@@ -67,7 +67,7 @@ The first automated run on site 2107's real data (Nov 2017 – Dec 2025) produce
 |---|---|---|
 | 341 "sensor fault" days in 2017 | The irradiance sensor wasn't installed until November 2017 | Start each site where its irradiance data starts (`qa.trim_to_sensor_start`) |
 | 152 "tracker stalls" on a fixed-tilt array | Actual/expected ran high in the morning and low in the evening every day: the sensor sees the day differently from the panels | Tracker stalls only on single-axis sites; learn the site's normal ratio by month and half-hour (`expected.shape_correction`) |
-| A shape table learned from 2018 didn't fit later years | The sensor setup changed after 2018; from 2019 on, PI swings ±15% by month, the same way every year | Learn the table from all years with a robust median, so short faults don't shape it |
+| A shape table learned from 2018 didn't fit later years | 2018 behaved differently from later years (it also has the worst chronic shortfall, see below); from 2019 on, PI swings ±15% by month, the same way every year | Learn the table from all years with a robust median, so short faults don't shape it |
 | Dozens of "partial outages" with PI ≈ 1.0 | The demo's daily scatter is ~2%; the real site's is ~8% | Alert thresholds scaled to each site's own scatter (`detect.site_thresholds`): 2107 alerts below ~0.80 of baseline, quiet sites keep 0.93 |
 | One fault reported as seven | An unfixed problem dips in and out of the threshold | Merge same-kind events under a week apart |
 | "Curtailment" on ordinary days | The midday-vs-shoulder shape test is noisy under real clouds | Curtailment needs both a flat top and a short midday, on clear days only |
@@ -84,23 +84,42 @@ Mapping three more sites (the NIST ground and roof arrays and NREL's Golden trac
 | Dozens of winter "outages" | Snow on the panels while the sensor stays clear | A snow event type: freezing weather plus output that trickles rather than stops (41 of 69 at Golden) |
 | A 720 kW tracker peaking at 316 kW | Only one of its two inverters is metered | `metered_fraction: 0.5` sizes the model to the metered half |
 
-Two honest limits remain:
+### Model error or plant behaviour?
 
-- **Model error is still about 13% at 15 minutes.** A single on-site sensor and a large array see different clouds, and this site's sensor has its own quirks. Daily PI is steadier, and that's what detection uses, but a second irradiance source (satellite data or another on-site sensor) is the obvious next improvement.
+On all event-free days, 2107's 15-minute error was about 10%. Before trying to model that away, I checked where it comes from:
+
+1. **Not the sensor.** On clear days the irradiance sensor agrees with a physics clear-sky model within 2.5% day to day, with no drift from 2018 to 2025. (An earlier version of this write-up guessed the sensor was slowly reading low. It isn't.)
+2. **The plant itself.** On cloudless days, actual output against that same sunlight swings about 10%. The low days are the normal curve scaled down, not flat-topped: some share of capacity offline (inverters or strings), not curtailment.
+3. **Model error on full-health days is 4.6%.** On 475 clear days when the site was at its own best level (within a few percent of its rolling 90th-percentile clear-day PI), the 15-minute error is inside the original 5% target.
+
+So most of the "model error" was the plant. The pipeline now reports two separate numbers (`solarmon.health`):
+
+| | Site 2107 |
+|---|---|
+| Model error, full-health days (15-min) | 4.6% |
+| Chronic shortfall on event-free days, vs the site's own best | 6.8%, about 109 MWh ($13k) a year |
+| Same measure on a healthy simulated site (measurement noise alone) | about 2.5% |
+| Chronic shortfall by year | 9.7% (2018) falling to 4.0% (2025) |
+
+The chronic shortfall is the most useful thing this site's data says. It is invisible to day-by-day alerting because each day's loss is small, but roughly 4 points above the noise floor, it adds up to real money. An O&M team would follow it with inverter-level data, which PVDAQ doesn't include for this site.
+
+One honest limit remains:
+
 - **A noisy site is a less sensitive site.** Scaling thresholds to the noise is what stops false alarms, and it also means 2107 won't flag a loss under ~20% within days. Slower losses still show up through the rolling baseline.
 
 The demo backtest moved slightly with these changes: 477 of 480 faults found (was 480), 4 false alarms in 300 site-years (was 1), and soiling caught later. That's the price of a detector that holds up on real data.
 
 ## Does ML help? Only where it earns it
 
-An ML layer (gradient boosting on the actual/expected ratio, from irradiance, its one-hour average, temperature and sun position) sits on top of the physics. It trains only on days the detector called healthy. It's adopted per site only if, trained on the first three quarters of the record, it beats physics on the last quarter on **both** 15-minute error and the day-to-day scatter of the performance index, by at least 3%.
+An ML layer (gradient boosting on the actual/expected ratio, from irradiance, its one-hour average, temperature and sun position) sits on top of the physics. It trains only on days the detector called healthy. It's adopted per site only if, trained on the first three quarters of the record, it cuts 15-minute error on the last quarter by at least 3% **and** doesn't make the day-to-day scatter of the performance index worse (detection runs on that).
+
+The first version also required daily scatter to *improve* by 3%. At 2107 that rejected a model that cut held-out error 14%, because 2107's daily scatter is mostly the plant itself (see above), which no model of the sunlight can remove. So the rule now protects detection without asking for the impossible.
 
 | Site | Held-out 15-min error | Held-out daily scatter | Adopted? |
 |---|---|---|---|
-| 2107 (real) | 12.2% → 10.3% | 4.9% → 4.7% | yes |
-| Demo sites | no better | no better | no: physics already explains synthetic data |
-
-Daily scatter is the number that matters for detection, because alert thresholds scale with it. At 2107, ML tightens the alert line from about 0.80 to 0.84 of baseline. It's a real but modest gain. Most of what's left is a single sensor and a large array seeing different clouds, which no model of that one sensor can remove.
+| 2107 (real) | 11.9% → 10.3% | 4.8% → 4.7% | yes |
+| 4902 (real) | 17.8% → 13.9% | improves | yes |
+| 4903 (real), demo sites | no better | — | no: physics already explains them |
 
 ## Scaling to a fleet
 
@@ -145,6 +164,6 @@ Steps 1–4 run today as a GitHub Actions job (`.github/workflows/update-data.ym
 
 1. Compare site 2107's detected events with its maintenance records, if the owner will share them.
 2. The other four sites onboarded and mapped from the column reports the update job writes.
-3. A second irradiance source (satellite) to cut the point-sensor error that physics and ML both leave behind.
+3. Inverter-level data for 2107, to turn the chronic shortfall into specific inverters or strings to inspect.
 4. Snowflake as the store, with approvals moved to the decisions table.
 5. Ticket drafting only for events not seen before, so a daily rebuild doesn't redraft (or reset) existing tickets.

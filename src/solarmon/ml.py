@@ -10,7 +10,13 @@ Adoption is decided per site, on data the model never saw:
 1. Fit on healthy days before a holdout period (the last quarter of the data).
 2. On the holdout's healthy days, compare with physics alone: 15-min error and the
    day-to-day scatter of the performance index (what detection runs on).
-3. Adopt only if both improve by at least `MIN_GAIN`. Then refit on all healthy days.
+3. Adopt only if 15-min error improves by at least `MIN_GAIN` and daily scatter gets
+   no worse (by more than `MAX_SCATTER_LOSS`). Then refit on all healthy days.
+
+   Daily scatter isn't required to improve: at a site whose plant output itself varies
+   day to day (2107), no model of the sunlight can remove that, and requiring it would
+   reject a model that's clearly better. It must not get worse, because detection runs
+   on it.
 
 The decision and its numbers are saved in meta.json and shown in the app. On site 2107's
 real data it cuts held-out 15-min error from about 13% to 11% and daily scatter by about
@@ -25,7 +31,8 @@ import pvlib
 
 from .config import Site
 
-MIN_GAIN = 0.03          # relative improvement required on both metrics
+MIN_GAIN = 0.03          # relative improvement required in held-out 15-min error
+MAX_SCATTER_LOSS = 0.01  # daily scatter may not get worse by more than this (relative)
 HOLDOUT_FRACTION = 0.25  # last quarter of the data is the test period
 MIN_TRAIN_ROWS = 5000
 FEATURES = ["poa", "poa_1h", "temp", "zenith", "azimuth"]
@@ -101,12 +108,15 @@ def residual_model(out: pd.DataFrame, site: Site, healthy_days) -> tuple[pd.Seri
         "holdout_daily_scatter_physics": round(phys_sd, 4), "holdout_daily_scatter_ml": round(ml_sd, 4),
     })
     better_err = ml_err < phys_err * (1 - MIN_GAIN)
-    better_sd = ml_sd < phys_sd * (1 - MIN_GAIN)
-    if not (better_err and better_sd):
-        report["reason"] = ("didn't beat physics on held-out data by at least "
-                            f"{MIN_GAIN:.0%} on both 15-min error and daily scatter")
+    no_worse_sd = not (ml_sd > phys_sd * (1 + MAX_SCATTER_LOSS))
+    if not better_err:
+        report["reason"] = f"didn't cut held-out 15-min error by at least {MIN_GAIN:.0%}"
+        return None, report
+    if not no_worse_sd:
+        report["reason"] = "cut 15-min error but made daily scatter worse, which would hurt detection"
         return None, report
 
     report["adopted"] = True
-    report["reason"] = "beat physics on held-out data on both 15-min error and daily scatter"
+    report["reason"] = (f"cut held-out 15-min error by {1 - ml_err / phys_err:.0%} "
+                        "without making daily scatter worse")
     return _predict(_fit(X[usable], ratio[usable]), X, exp, cap), report

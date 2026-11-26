@@ -41,7 +41,7 @@ flowchart LR
 ```
 
 1. **Ingest.** Download a site's files from NREL's public S3 bucket (no AWS account needed).
-2. **Expected output.** NREL's PVWatts model (via [`pvlib`](https://pvlib-python.readthedocs.io/)) turns the site's own plane-of-array irradiance and module temperature into an expected AC power. A single scale factor, fit on a known-good reference window, calibrates it to that site's real-world losses. On top of that, an ML residual model (gradient boosting on irradiance, its one-hour average, temperature and sun position) learns what physics misses. Each site gets it **only if it beats physics on held-out data** (the last quarter of the record) on both 15-minute error and daily scatter. Site 2107 adopts it (held-out error 12.2% → 10.3%); the demo sites don't, because there's nothing systematic left to learn.
+2. **Expected output.** NREL's PVWatts model (via [`pvlib`](https://pvlib-python.readthedocs.io/)) turns the site's own plane-of-array irradiance and module temperature into an expected AC power. A single scale factor, fit on a known-good reference window, calibrates it to that site's real-world losses. On top of that, an ML residual model (gradient boosting on irradiance, its one-hour average, temperature and sun position) learns what physics misses. Each site gets it **only if it beats physics on held-out data** (the last quarter of the record): at least 3% lower 15-minute error, with daily scatter no worse. 2107 and 4902 adopt it; sites where physics already explains the data don't.3%); the demo sites don't, because there's nothing systematic left to learn.
 3. **Performance index (PI).** Daily actual energy ÷ expected energy. A healthy site sits near 1.0 regardless of weather.
 4. **Detection.** First, a correction learned from the site's own history (its normal actual/expected ratio by month and half-hour) removes biases that repeat every day, such as a sensor angled differently from the panels. Each day's PI is then compared with a rolling baseline (the median of recent days, recomputed without flagged days so a long fault doesn't become the new normal), with alert thresholds scaled to how noisy that site is. Runs of flagged days become events, classified by shape:
 
@@ -173,7 +173,7 @@ tests/                   offline tests on synthetic data
   - [x] Validated on the demo site: 2.9% nRMSE on healthy days
   - [x] Real data for site 2107 built by the scheduled job; learned daily-shape correction, sensor-start trim and site-scaled thresholds added after the first run
   - [x] ML residual layer adopted at 2107 on held-out data (12.2% → 10.3% at 15 min)
-  - [ ] A second irradiance source (satellite) to cut the remaining point-sensor error
+  - [x] Model error separated from plant losses: 4.6% on full-health days; 6.8% chronic shortfall (`solarmon.health`)
 - [ ] **Phase 2: Fleet + detection**
   - [x] Underperformance detection and event classification, backtested on injected faults (477/480 found over 300 site-years)
   - [x] Demo histories for all 5 sites, including single-axis tracker physics
