@@ -28,202 +28,194 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4903-2015-01-27-outage",
-    "event_id": "4903-2015-01-27-outage",
+    "ticket_id": "T-4903-2015-01-27-snow",
+    "event_id": "4903-2015-01-27-snow",
     "site_id": 4903,
-    "kind": "outage",
-    "title": "NIST Roof Array: full outage (2015-01-27 to 2015-01-27)",
-    "priority": "P2",
-    "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 1 day(s), 2015-01-27 to 2015-01-27. Estimated cost so far: $19.",
+    "kind": "snow",
+    "title": "NIST Roof Array: snow cover (2015-01-27 to 2015-01-27)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NIST Roof Array (Gaithersburg, MD) over 1 day(s), 2015-01-27 to 2015-01-27. Estimated cost so far: $19.",
     "evidence": [
       "Performance index fell from 1.00 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
-      "Estimated energy lost: 161 kWh (96% of expected), about $19."
+      "Estimated energy lost: 161 kWh (96% of expected), about $19.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Inverter trip (ground fault, over-temperature, grid event)",
-      "Opened AC breaker or disconnect",
-      "Utility grid outage"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
-      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
-      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
-      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Inverter spare fuses",
-      "Insulation-resistance tester (ground-fault trips)"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4903-2015-01-28-partial_outage",
-    "event_id": "4903-2015-01-28-partial_outage",
+    "ticket_id": "T-4903-2015-01-28-snow",
+    "event_id": "4903-2015-01-28-snow",
     "site_id": 4903,
-    "kind": "partial_outage",
-    "title": "NIST Roof Array: partial outage (2015-01-28 to 2015-01-30)",
-    "priority": "P2",
-    "summary": "Partial outage detected at NIST Roof Array (Gaithersburg, MD) over 3 day(s), 2015-01-28 to 2015-01-30. Estimated cost so far: $42.",
+    "kind": "snow",
+    "title": "NIST Roof Array: snow cover (2015-01-28 to 2015-01-30)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NIST Roof Array (Gaithersburg, MD) over 3 day(s), 2015-01-28 to 2015-01-30. Estimated cost so far: $42.",
     "evidence": [
       "Performance index fell from 1.00 in the two weeks before to a median of 0.41 during the event (1.00 = healthy).",
-      "Estimated energy lost: 349 kWh (55% of expected), about $42.",
+      "Estimated energy lost: 348 kWh (55% of expected), about $42.",
       "Roughly 48% of capacity appears offline, from the size of the step.",
-      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "One inverter or inverter module offline",
-      "Blown combiner fuse / open string",
-      "Tripped DC disconnect in one block"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Compare inverter- and combiner-level currents to locate the offline section",
-      "Pull inverter fault logs for the start date",
-      "Inspect combiner-box fuses and string connectors in the affected block",
-      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Combiner fuses (matching rating)",
-      "IV-curve tracer",
-      "MC4 connectors"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4903-2015-02-17-outage",
-    "event_id": "4903-2015-02-17-outage",
+    "ticket_id": "T-4903-2015-02-17-snow",
+    "event_id": "4903-2015-02-17-snow",
     "site_id": 4903,
-    "kind": "outage",
-    "title": "NIST Roof Array: full outage (2015-02-17 to 2015-02-20)",
-    "priority": "P2",
-    "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 4 day(s), 2015-02-17 to 2015-02-20. Estimated cost so far: $167.",
+    "kind": "snow",
+    "title": "NIST Roof Array: snow cover (2015-02-17 to 2015-02-20)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NIST Roof Array (Gaithersburg, MD) over 4 day(s), 2015-02-17 to 2015-02-20. Estimated cost so far: $167.",
     "evidence": [
       "Performance index fell from 0.98 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,390 kWh (98% of expected), about $167."
+      "Estimated energy lost: 1,390 kWh (98% of expected), about $167.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Inverter trip (ground fault, over-temperature, grid event)",
-      "Opened AC breaker or disconnect",
-      "Utility grid outage"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
-      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
-      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
-      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Inverter spare fuses",
-      "Insulation-resistance tester (ground-fault trips)"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4903-2015-02-22-outage",
-    "event_id": "4903-2015-02-22-outage",
+    "ticket_id": "T-4903-2015-02-22-snow",
+    "event_id": "4903-2015-02-22-snow",
     "site_id": 4903,
-    "kind": "outage",
-    "title": "NIST Roof Array: full outage (2015-02-22 to 2015-02-28)",
-    "priority": "P2",
-    "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 7 day(s), 2015-02-22 to 2015-02-28. Estimated cost so far: $252.",
+    "kind": "snow",
+    "title": "NIST Roof Array: snow cover (2015-02-22 to 2015-02-28)",
+    "priority": "P3",
+    "summary": "Snow cover detected at NIST Roof Array (Gaithersburg, MD) over 7 day(s), 2015-02-22 to 2015-02-28. Estimated cost so far: $252.",
     "evidence": [
       "Performance index fell from 0.98 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,103 kWh (98% of expected), about $252."
+      "Estimated energy lost: 2,103 kWh (98% of expected), about $252.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Inverter trip (ground fault, over-temperature, grid event)",
-      "Opened AC breaker or disconnect",
-      "Utility grid outage"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
-      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
-      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
-      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Inverter spare fuses",
-      "Insulation-resistance tester (ground-fault trips)"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4903-2015-03-02-outage",
-    "event_id": "4903-2015-03-02-outage",
+    "ticket_id": "T-4903-2015-03-02-snow",
+    "event_id": "4903-2015-03-02-snow",
     "site_id": 4903,
-    "kind": "outage",
-    "title": "NIST Roof Array: full outage (2015-03-02 to 2015-03-02)",
-    "priority": "P2",
-    "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 1 day(s), 2015-03-02 to 2015-03-02. Estimated cost so far: $42.",
+    "kind": "snow",
+    "title": "NIST Roof Array: snow cover (2015-03-02 to 2015-03-02)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NIST Roof Array (Gaithersburg, MD) over 1 day(s), 2015-03-02 to 2015-03-02. Estimated cost so far: $42.",
     "evidence": [
       "Median performance index during the event: 0.11.",
-      "Estimated energy lost: 348 kWh (89% of expected), about $42."
+      "Estimated energy lost: 348 kWh (89% of expected), about $42.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Inverter trip (ground fault, over-temperature, grid event)",
-      "Opened AC breaker or disconnect",
-      "Utility grid outage"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
-      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
-      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
-      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Inverter spare fuses",
-      "Insulation-resistance tester (ground-fault trips)"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4903-2015-03-06-outage",
-    "event_id": "4903-2015-03-06-outage",
+    "ticket_id": "T-4903-2015-03-06-snow",
+    "event_id": "4903-2015-03-06-snow",
     "site_id": 4903,
-    "kind": "outage",
-    "title": "NIST Roof Array: full outage (2015-03-06 to 2015-03-07)",
-    "priority": "P2",
-    "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 2 day(s), 2015-03-06 to 2015-03-07. Estimated cost so far: $105.",
+    "kind": "snow",
+    "title": "NIST Roof Array: snow cover (2015-03-06 to 2015-03-07)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NIST Roof Array (Gaithersburg, MD) over 2 day(s), 2015-03-06 to 2015-03-07. Estimated cost so far: $105.",
     "evidence": [
       "Median performance index during the event: 0.00.",
-      "Estimated energy lost: 876 kWh (100% of expected), about $105."
+      "Estimated energy lost: 874 kWh (100% of expected), about $105.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Inverter trip (ground fault, over-temperature, grid event)",
-      "Opened AC breaker or disconnect",
-      "Utility grid outage"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
-      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
-      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
-      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Inverter spare fuses",
-      "Insulation-resistance tester (ground-fault trips)"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
@@ -236,7 +228,7 @@
     "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 6 day(s), 2016-01-27 to 2016-02-01. Estimated cost so far: $158.",
     "evidence": [
       "Performance index fell from 0.98 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,321 kWh (99% of expected), about $158."
+      "Estimated energy lost: 1,320 kWh (99% of expected), about $158."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -255,71 +247,69 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4903-2016-02-09-outage",
-    "event_id": "4903-2016-02-09-outage",
+    "ticket_id": "T-4903-2016-02-09-snow",
+    "event_id": "4903-2016-02-09-snow",
     "site_id": 4903,
-    "kind": "outage",
-    "title": "NIST Roof Array: full outage (2016-02-09 to 2016-02-09)",
-    "priority": "P2",
-    "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 1 day(s), 2016-02-09 to 2016-02-09. Estimated cost so far: $12.",
+    "kind": "snow",
+    "title": "NIST Roof Array: snow cover (2016-02-09 to 2016-02-09)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NIST Roof Array (Gaithersburg, MD) over 1 day(s), 2016-02-09 to 2016-02-09. Estimated cost so far: $12.",
     "evidence": [
       "Performance index fell from 0.96 in the two weeks before to a median of 0.08 during the event (1.00 = healthy).",
-      "Estimated energy lost: 97 kWh (93% of expected), about $12."
+      "Estimated energy lost: 97 kWh (93% of expected), about $12.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Inverter trip (ground fault, over-temperature, grid event)",
-      "Opened AC breaker or disconnect",
-      "Utility grid outage"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
-      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
-      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
-      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Inverter spare fuses",
-      "Insulation-resistance tester (ground-fault trips)"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4903-2017-03-14-outage",
-    "event_id": "4903-2017-03-14-outage",
+    "ticket_id": "T-4903-2017-03-14-snow",
+    "event_id": "4903-2017-03-14-snow",
     "site_id": 4903,
-    "kind": "outage",
-    "title": "NIST Roof Array: full outage (2017-03-14 to 2017-03-16)",
-    "priority": "P2",
-    "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 3 day(s), 2017-03-14 to 2017-03-16. Estimated cost so far: $91.",
+    "kind": "snow",
+    "title": "NIST Roof Array: snow cover (2017-03-14 to 2017-03-16)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NIST Roof Array (Gaithersburg, MD) over 3 day(s), 2017-03-14 to 2017-03-16. Estimated cost so far: $92.",
     "evidence": [
       "Performance index fell from 1.00 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
-      "Estimated energy lost: 759 kWh (96% of expected), about $91."
+      "Estimated energy lost: 763 kWh (96% of expected), about $92.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Inverter trip (ground fault, over-temperature, grid event)",
-      "Opened AC breaker or disconnect",
-      "Utility grid outage"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
-      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
-      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
-      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Inverter spare fuses",
-      "Insulation-resistance tester (ground-fault trips)"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
@@ -332,7 +322,7 @@
     "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 3 day(s), 2017-06-02 to 2017-06-04. Estimated cost so far: $230.",
     "evidence": [
       "Performance index fell from 0.99 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,914 kWh (98% of expected), about $230."
+      "Estimated energy lost: 1,916 kWh (98% of expected), about $230."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -351,7 +341,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
@@ -361,10 +351,10 @@
     "kind": "outage",
     "title": "NIST Roof Array: full outage (2017-10-21 to 2017-10-23)",
     "priority": "P2",
-    "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 3 day(s), 2017-10-21 to 2017-10-23. Estimated cost so far: $135.",
+    "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 3 day(s), 2017-10-21 to 2017-10-23. Estimated cost so far: $139.",
     "evidence": [
       "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,129 kWh (98% of expected), about $135."
+      "Estimated energy lost: 1,155 kWh (98% of expected), about $139."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -383,39 +373,38 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4903-2017-12-10-outage",
-    "event_id": "4903-2017-12-10-outage",
+    "ticket_id": "T-4903-2017-12-10-snow",
+    "event_id": "4903-2017-12-10-snow",
     "site_id": 4903,
-    "kind": "outage",
-    "title": "NIST Roof Array: full outage (2017-12-10 to 2017-12-10)",
-    "priority": "P2",
-    "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 1 day(s), 2017-12-10 to 2017-12-10. Estimated cost so far: $13.",
+    "kind": "snow",
+    "title": "NIST Roof Array: snow cover (2017-12-10 to 2017-12-10)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NIST Roof Array (Gaithersburg, MD) over 1 day(s), 2017-12-10 to 2017-12-10. Estimated cost so far: $13.",
     "evidence": [
       "Performance index fell from 0.97 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
-      "Estimated energy lost: 109 kWh (98% of expected), about $13."
+      "Estimated energy lost: 109 kWh (98% of expected), about $13.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Inverter trip (ground fault, over-temperature, grid event)",
-      "Opened AC breaker or disconnect",
-      "Utility grid outage"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
-      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
-      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
-      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Inverter spare fuses",
-      "Insulation-resistance tester (ground-fault trips)"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
@@ -428,7 +417,7 @@
     "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 14 day(s), 2017-12-27 to 2018-01-09. Estimated cost so far: $280.",
     "evidence": [
       "Performance index fell from 0.96 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,334 kWh (100% of expected), about $280."
+      "Estimated energy lost: 2,332 kWh (100% of expected), about $280."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -447,7 +436,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
@@ -460,7 +449,7 @@
     "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 9 day(s), 2018-01-17 to 2018-01-25. Estimated cost so far: $187.",
     "evidence": [
       "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,556 kWh (100% of expected), about $187."
+      "Estimated energy lost: 1,555 kWh (100% of expected), about $187."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -479,7 +468,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "historical"
   },
   {
@@ -492,7 +481,7 @@
     "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 2 day(s), 2018-01-30 to 2018-01-31. Estimated cost so far: $52.",
     "evidence": [
       "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 437 kWh (100% of expected), about $52."
+      "Estimated energy lost: 436 kWh (100% of expected), about $52."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -511,7 +500,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "pending_review"
   },
   {
@@ -543,7 +532,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "pending_review"
   },
   {
@@ -575,7 +564,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "pending_review"
   },
   {
@@ -607,7 +596,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "pending_review"
   },
   {
@@ -620,7 +609,7 @@
     "summary": "Full outage detected at NIST Roof Array (Gaithersburg, MD) over 14 day(s), ongoing. Estimated cost so far: $432.",
     "evidence": [
       "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,601 kWh (100% of expected), about $432."
+      "Estimated energy lost: 3,599 kWh (100% of expected), about $432."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -639,7 +628,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:33:14Z",
+    "drafted_at": "2026-11-26T22:05:39Z",
     "status": "pending_review"
   }
 ]

@@ -12,8 +12,8 @@
     "pi_before": 0.99,
     "pi_during": 0.007,
     "energy_lost_kwh": 226.1,
-    "est_cost_usd": 27.14,
-    "loss_pct": 99.29,
+    "est_cost_usd": 27.13,
+    "loss_pct": 99.289,
     "evidence": {
       "baseline_pi": 0.992,
       "daily_pi": {
@@ -23,44 +23,47 @@
     }
   },
   {
-    "id": "4903-2015-01-27-outage",
-    "label": "Full outage",
+    "id": "4903-2015-01-27-snow",
+    "label": "Snow cover",
     "site_id": 4903,
-    "kind": "outage",
+    "kind": "snow",
     "start": "2015-01-27",
     "end": "2015-01-27",
     "days": 1,
     "active": false,
-    "severity": "high",
+    "severity": "low",
     "pi_before": 1.001,
     "pi_during": 0.045,
-    "energy_lost_kwh": 161.0,
-    "est_cost_usd": 19.31,
-    "loss_pct": 95.856,
+    "energy_lost_kwh": 160.8,
+    "est_cost_usd": 19.3,
+    "loss_pct": 95.853,
     "evidence": {
-      "baseline_pi": 0.999,
+      "baseline_pi": 0.998,
       "daily_pi": {
         "2015-01-27": 0.045
-      }
+      },
+      "coldest_max_temp_c": 0.0,
+      "zero_output_share": 0.21,
+      "reason": "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     }
   },
   {
-    "id": "4903-2015-01-28-partial_outage",
-    "label": "Partial outage",
+    "id": "4903-2015-01-28-snow",
+    "label": "Snow cover",
     "site_id": 4903,
-    "kind": "partial_outage",
+    "kind": "snow",
     "start": "2015-01-28",
     "end": "2015-01-30",
     "days": 3,
     "active": false,
-    "severity": "high",
-    "pi_before": 1.0,
+    "severity": "low",
+    "pi_before": 1.001,
     "pi_during": 0.405,
-    "energy_lost_kwh": 348.8,
-    "est_cost_usd": 41.86,
-    "loss_pct": 54.818,
+    "energy_lost_kwh": 348.5,
+    "est_cost_usd": 41.82,
+    "loss_pct": 54.796,
     "evidence": {
-      "baseline_pi": 1.0,
+      "baseline_pi": 0.999,
       "daily_pi": {
         "2015-01-28": 0.169,
         "2015-01-29": 0.405,
@@ -70,23 +73,25 @@
       "trend_per_day": 0.0,
       "trend_30d_per_day": -0.0105,
       "plateau_frac": 0.042,
-      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
-      "capacity_offline_pct": 47.518
+      "reason": "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts.",
+      "capacity_offline_pct": 47.511,
+      "coldest_max_temp_c": 0.0,
+      "zero_output_share": 0.01
     }
   },
   {
-    "id": "4903-2015-02-17-outage",
-    "label": "Full outage",
+    "id": "4903-2015-02-17-snow",
+    "label": "Snow cover",
     "site_id": 4903,
-    "kind": "outage",
+    "kind": "snow",
     "start": "2015-02-17",
     "end": "2015-02-20",
     "days": 4,
     "active": false,
-    "severity": "high",
+    "severity": "low",
     "pi_before": 0.982,
     "pi_during": 0.021,
-    "energy_lost_kwh": 1390.1,
+    "energy_lost_kwh": 1390.2,
     "est_cost_usd": 166.82,
     "loss_pct": 97.673,
     "evidence": {
@@ -96,23 +101,26 @@
         "2015-02-18": 0.017,
         "2015-02-19": 0.026,
         "2015-02-20": 0.04
-      }
+      },
+      "coldest_max_temp_c": -9.4,
+      "zero_output_share": 0.29,
+      "reason": "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     }
   },
   {
-    "id": "4903-2015-02-22-outage",
-    "label": "Full outage",
+    "id": "4903-2015-02-22-snow",
+    "label": "Snow cover",
     "site_id": 4903,
-    "kind": "outage",
+    "kind": "snow",
     "start": "2015-02-22",
     "end": "2015-02-28",
     "days": 7,
     "active": false,
-    "severity": "high",
+    "severity": "medium",
     "pi_before": 0.984,
     "pi_during": 0.012,
     "energy_lost_kwh": 2102.6,
-    "est_cost_usd": 252.31,
+    "est_cost_usd": 252.32,
     "loss_pct": 98.373,
     "evidence": {
       "baseline_pi": 0.99,
@@ -124,52 +132,61 @@
         "2015-02-26": 0.006,
         "2015-02-27": 0.026,
         "2015-02-28": 0.043
-      }
+      },
+      "coldest_max_temp_c": -7.9,
+      "zero_output_share": 0.53,
+      "reason": "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     }
   },
   {
-    "id": "4903-2015-03-02-outage",
-    "label": "Full outage",
+    "id": "4903-2015-03-02-snow",
+    "label": "Snow cover",
     "site_id": 4903,
-    "kind": "outage",
+    "kind": "snow",
     "start": "2015-03-02",
     "end": "2015-03-02",
     "days": 1,
     "active": false,
-    "severity": "high",
+    "severity": "low",
     "pi_before": null,
     "pi_during": 0.108,
-    "energy_lost_kwh": 348.4,
+    "energy_lost_kwh": 348.3,
     "est_cost_usd": 41.8,
-    "loss_pct": 89.486,
+    "loss_pct": 89.485,
     "evidence": {
       "baseline_pi": 0.99,
       "daily_pi": {
         "2015-03-02": 0.108
-      }
+      },
+      "coldest_max_temp_c": -0.9,
+      "zero_output_share": 0.06,
+      "reason": "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     }
   },
   {
-    "id": "4903-2015-03-06-outage",
-    "label": "Full outage",
+    "id": "4903-2015-03-06-snow",
+    "label": "Snow cover",
     "site_id": 4903,
-    "kind": "outage",
+    "kind": "snow",
     "start": "2015-03-06",
     "end": "2015-03-07",
     "days": 2,
     "active": false,
-    "severity": "high",
+    "severity": "low",
     "pi_before": null,
     "pi_during": 0.004,
-    "energy_lost_kwh": 876.4,
-    "est_cost_usd": 105.17,
-    "loss_pct": 99.663,
+    "energy_lost_kwh": 874.0,
+    "est_cost_usd": 104.87,
+    "loss_pct": 99.662,
     "evidence": {
       "baseline_pi": 0.991,
       "daily_pi": {
         "2015-03-06": 0.001,
         "2015-03-07": 0.006
-      }
+      },
+      "coldest_max_temp_c": -3.0,
+      "zero_output_share": 0.79,
+      "reason": "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     }
   },
   {
@@ -184,8 +201,8 @@
     "severity": "high",
     "pi_before": 0.978,
     "pi_during": 0.0,
-    "energy_lost_kwh": 1320.7,
-    "est_cost_usd": 158.48,
+    "energy_lost_kwh": 1320.5,
+    "est_cost_usd": 158.47,
     "loss_pct": 99.175,
     "evidence": {
       "baseline_pi": 0.987,
@@ -200,49 +217,55 @@
     }
   },
   {
-    "id": "4903-2016-02-09-outage",
-    "label": "Full outage",
+    "id": "4903-2016-02-09-snow",
+    "label": "Snow cover",
     "site_id": 4903,
-    "kind": "outage",
+    "kind": "snow",
     "start": "2016-02-09",
     "end": "2016-02-09",
     "days": 1,
     "active": false,
-    "severity": "high",
+    "severity": "low",
     "pi_before": 0.957,
     "pi_during": 0.083,
     "energy_lost_kwh": 97.3,
     "est_cost_usd": 11.67,
-    "loss_pct": 93.323,
+    "loss_pct": 93.324,
     "evidence": {
-      "baseline_pi": 0.984,
+      "baseline_pi": 0.985,
       "daily_pi": {
         "2016-02-09": 0.083
-      }
+      },
+      "coldest_max_temp_c": 2.3,
+      "zero_output_share": 0.14,
+      "reason": "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     }
   },
   {
-    "id": "4903-2017-03-14-outage",
-    "label": "Full outage",
+    "id": "4903-2017-03-14-snow",
+    "label": "Snow cover",
     "site_id": 4903,
-    "kind": "outage",
+    "kind": "snow",
     "start": "2017-03-14",
     "end": "2017-03-16",
     "days": 3,
     "active": false,
-    "severity": "high",
-    "pi_before": 0.996,
+    "severity": "low",
+    "pi_before": 1.002,
     "pi_during": 0.017,
-    "energy_lost_kwh": 759.0,
-    "est_cost_usd": 91.09,
-    "loss_pct": 95.886,
+    "energy_lost_kwh": 763.3,
+    "est_cost_usd": 91.6,
+    "loss_pct": 95.908,
     "evidence": {
       "baseline_pi": 0.992,
       "daily_pi": {
         "2017-03-14": 0.006,
         "2017-03-15": 0.017,
         "2017-03-16": 0.066
-      }
+      },
+      "coldest_max_temp_c": 2.3,
+      "zero_output_share": 0.51,
+      "reason": "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     }
   },
   {
@@ -256,16 +279,16 @@
     "active": false,
     "severity": "high",
     "pi_before": 0.986,
-    "pi_during": 0.017,
-    "energy_lost_kwh": 1914.2,
-    "est_cost_usd": 229.7,
-    "loss_pct": 97.96,
+    "pi_during": 0.016,
+    "energy_lost_kwh": 1915.7,
+    "est_cost_usd": 229.89,
+    "loss_pct": 97.962,
     "evidence": {
-      "baseline_pi": 0.999,
+      "baseline_pi": 1.0,
       "daily_pi": {
-        "2017-06-02": 0.026,
+        "2017-06-02": 0.027,
         "2017-06-03": 0.0,
-        "2017-06-04": 0.017
+        "2017-06-04": 0.016
       }
     }
   },
@@ -281,9 +304,9 @@
     "severity": "high",
     "pi_before": 0.986,
     "pi_during": 0.0,
-    "energy_lost_kwh": 1129.0,
-    "est_cost_usd": 135.48,
-    "loss_pct": 97.876,
+    "energy_lost_kwh": 1154.9,
+    "est_cost_usd": 138.59,
+    "loss_pct": 97.923,
     "evidence": {
       "baseline_pi": 0.993,
       "daily_pi": {
@@ -294,25 +317,28 @@
     }
   },
   {
-    "id": "4903-2017-12-10-outage",
-    "label": "Full outage",
+    "id": "4903-2017-12-10-snow",
+    "label": "Snow cover",
     "site_id": 4903,
-    "kind": "outage",
+    "kind": "snow",
     "start": "2017-12-10",
     "end": "2017-12-10",
     "days": 1,
     "active": false,
-    "severity": "high",
+    "severity": "low",
     "pi_before": 0.97,
     "pi_during": 0.022,
     "energy_lost_kwh": 109.2,
-    "est_cost_usd": 13.11,
-    "loss_pct": 98.26,
+    "est_cost_usd": 13.1,
+    "loss_pct": 98.259,
     "evidence": {
-      "baseline_pi": 0.989,
+      "baseline_pi": 0.988,
       "daily_pi": {
         "2017-12-10": 0.022
-      }
+      },
+      "coldest_max_temp_c": 2.0,
+      "zero_output_share": 0.5,
+      "reason": "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     }
   },
   {
@@ -327,8 +353,8 @@
     "severity": "high",
     "pi_before": 0.958,
     "pi_during": 0.0,
-    "energy_lost_kwh": 2333.6,
-    "est_cost_usd": 280.03,
+    "energy_lost_kwh": 2332.3,
+    "est_cost_usd": 279.88,
     "loss_pct": 100.0,
     "evidence": {
       "baseline_pi": 0.982,
@@ -362,11 +388,11 @@
     "severity": "high",
     "pi_before": 0.986,
     "pi_during": 0.0,
-    "energy_lost_kwh": 1555.5,
-    "est_cost_usd": 186.66,
+    "energy_lost_kwh": 1554.8,
+    "est_cost_usd": 186.58,
     "loss_pct": 100.0,
     "evidence": {
-      "baseline_pi": 0.98,
+      "baseline_pi": 0.979,
       "daily_pi": {
         "2018-01-17": 0.0,
         "2018-01-18": 0.0,
@@ -392,11 +418,11 @@
     "severity": "high",
     "pi_before": 0.995,
     "pi_during": 0.0,
-    "energy_lost_kwh": 436.6,
-    "est_cost_usd": 52.39,
+    "energy_lost_kwh": 435.7,
+    "est_cost_usd": 52.28,
     "loss_pct": 100.0,
     "evidence": {
-      "baseline_pi": 0.979,
+      "baseline_pi": 0.977,
       "daily_pi": {
         "2018-01-30": 0.0,
         "2018-01-31": 0.0
@@ -419,7 +445,7 @@
     "est_cost_usd": 11.62,
     "loss_pct": 100.0,
     "evidence": {
-      "baseline_pi": 0.978,
+      "baseline_pi": 0.977,
       "daily_pi": {
         "2018-02-06": 0.0
       }
@@ -437,11 +463,11 @@
     "severity": "high",
     "pi_before": 0.986,
     "pi_during": 0.0,
-    "energy_lost_kwh": 451.0,
-    "est_cost_usd": 54.12,
+    "energy_lost_kwh": 450.8,
+    "est_cost_usd": 54.1,
     "loss_pct": 100.0,
     "evidence": {
-      "baseline_pi": 0.977,
+      "baseline_pi": 0.976,
       "daily_pi": {
         "2018-02-08": 0.0,
         "2018-02-09": 0.0
@@ -460,8 +486,8 @@
     "severity": "high",
     "pi_before": 0.986,
     "pi_during": 0.008,
-    "energy_lost_kwh": 379.1,
-    "est_cost_usd": 45.49,
+    "energy_lost_kwh": 379.0,
+    "est_cost_usd": 45.48,
     "loss_pct": 96.823,
     "evidence": {
       "baseline_pi": 0.974,
@@ -483,8 +509,8 @@
     "severity": "critical",
     "pi_before": 1.001,
     "pi_during": 0.0,
-    "energy_lost_kwh": 3601.1,
-    "est_cost_usd": 432.13,
+    "energy_lost_kwh": 3598.9,
+    "est_cost_usd": 431.87,
     "loss_pct": 100.0,
     "evidence": {
       "baseline_pi": 0.986,
