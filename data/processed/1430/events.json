@@ -1,87 +1,3193 @@
 [
   {
-    "id": "1430-2024-04-26-tracker_stall",
+    "id": "1430-2008-12-12-data_gap",
+    "label": "Monitoring data gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "start": "2008-12-12",
+    "end": "2009-01-02",
+    "days": 22,
+    "active": false,
+    "severity": "medium",
+    "pi_before": null,
+    "pi_during": null,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 1.024,
+      "daily_pi": {},
+      "reason": "No meter readings during daylight; output during this window is unknown."
+    }
+  },
+  {
+    "id": "1430-2009-01-04-data_gap",
+    "label": "Monitoring data gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "start": "2009-01-04",
+    "end": "2009-01-24",
+    "days": 21,
+    "active": false,
+    "severity": "medium",
+    "pi_before": null,
+    "pi_during": null,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 1.024,
+      "daily_pi": {},
+      "reason": "No meter readings during daylight; output during this window is unknown."
+    }
+  },
+  {
+    "id": "1430-2009-01-26-data_gap",
+    "label": "Monitoring data gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "start": "2009-01-26",
+    "end": "2009-02-22",
+    "days": 28,
+    "active": false,
+    "severity": "medium",
+    "pi_before": null,
+    "pi_during": null,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 1.024,
+      "daily_pi": {},
+      "reason": "No meter readings during daylight; output during this window is unknown."
+    }
+  },
+  {
+    "id": "1430-2009-02-26-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2009-02-26",
+    "end": "2009-02-26",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.017,
+    "pi_during": 0.041,
+    "energy_lost_kwh": 2251.3,
+    "est_cost_usd": 270.15,
+    "loss_pct": 95.463,
+    "evidence": {
+      "baseline_pi": 1.024,
+      "daily_pi": {
+        "2009-02-26": 0.041
+      }
+    }
+  },
+  {
+    "id": "1430-2009-04-04-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2009-04-04",
+    "end": "2009-04-04",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.024,
+    "pi_during": 0.109,
+    "energy_lost_kwh": 784.7,
+    "est_cost_usd": 94.17,
+    "loss_pct": 89.848,
+    "evidence": {
+      "baseline_pi": 1.014,
+      "daily_pi": {
+        "2009-04-04": 0.109
+      }
+    }
+  },
+  {
+    "id": "1430-2009-04-17-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2009-04-17",
+    "end": "2009-04-17",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.034,
+    "pi_during": 0.073,
+    "energy_lost_kwh": 261.8,
+    "est_cost_usd": 31.42,
+    "loss_pct": 84.812,
+    "evidence": {
+      "baseline_pi": 1.022,
+      "daily_pi": {
+        "2009-04-17": 0.073
+      }
+    }
+  },
+  {
+    "id": "1430-2009-06-01-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2009-06-01",
+    "end": "2009-06-08",
+    "days": 8,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.007,
+    "pi_during": 0.937,
+    "energy_lost_kwh": 2919.0,
+    "est_cost_usd": 350.28,
+    "loss_pct": 20.163,
+    "evidence": {
+      "baseline_pi": 1.022,
+      "daily_pi": {
+        "2009-06-01": 0.613,
+        "2009-06-02": 1.069,
+        "2009-06-03": 1.011,
+        "2009-06-04": 0.557,
+        "2009-06-05": 1.018,
+        "2009-06-06": 0.954,
+        "2009-06-07": 0.464,
+        "2009-06-08": 0.919
+      },
+      "step_drop": 0.383,
+      "trend_per_day": 0.0111,
+      "trend_30d_per_day": -0.0052,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 39.963
+    }
+  },
+  {
+    "id": "1430-2009-06-29-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2009-06-29",
+    "end": "2009-07-05",
+    "days": 7,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.028,
+    "pi_during": 0.992,
+    "energy_lost_kwh": 4432.1,
+    "est_cost_usd": 531.85,
+    "loss_pct": 24.518,
+    "evidence": {
+      "baseline_pi": 1.021,
+      "daily_pi": {
+        "2009-06-29": 0.567,
+        "2009-06-30": 1.041,
+        "2009-07-01": 0.992,
+        "2009-07-02": 0.457,
+        "2009-07-03": 1.01,
+        "2009-07-04": 1.015,
+        "2009-07-05": 0.225
+      },
+      "step_drop": 0.038,
+      "trend_per_day": -0.0369,
+      "trend_30d_per_day": -0.0027,
+      "plateau_frac": 0.0,
+      "decline_began": "2009-06-28",
+      "recovered_to": 0.995,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 1
+    }
+  },
+  {
+    "id": "1430-2009-08-03-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2009-08-03",
+    "end": "2009-08-03",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.993,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 2048.4,
+    "est_cost_usd": 245.81,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 1.012,
+      "daily_pi": {
+        "2009-08-03": 0.0
+      }
+    }
+  },
+  {
+    "id": "1430-2009-08-04-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2009-08-04",
+    "end": "2009-08-07",
+    "days": 4,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.994,
+    "pi_during": 0.933,
+    "energy_lost_kwh": 1411.2,
+    "est_cost_usd": 169.35,
+    "loss_pct": 14.87,
+    "evidence": {
+      "baseline_pi": 1.012,
+      "daily_pi": {
+        "2009-08-04": 0.642,
+        "2009-08-05": 1.029,
+        "2009-08-06": 1.034,
+        "2009-08-07": 0.837
+      },
+      "step_drop": -0.058,
+      "trend_per_day": 0.0582,
+      "trend_30d_per_day": -0.002,
+      "plateau_frac": 0.0,
+      "decline_began": "2009-08-02",
+      "recovered_to": 1.007,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 2
+    }
+  },
+  {
+    "id": "1430-2009-10-19-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2009-10-19",
+    "end": "2009-10-19",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.975,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 1131.1,
+    "est_cost_usd": 135.73,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.987,
+      "daily_pi": {
+        "2009-10-19": 0.0
+      }
+    }
+  },
+  {
+    "id": "1430-2009-10-21-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2009-10-21",
+    "end": "2009-10-25",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.975,
+    "pi_during": 0.903,
+    "energy_lost_kwh": 389.8,
+    "est_cost_usd": 46.78,
+    "loss_pct": 7.516,
+    "evidence": {
+      "baseline_pi": 0.985,
+      "daily_pi": {
+        "2009-10-21": 0.61,
+        "2009-10-22": 0.903,
+        "2009-10-23": 0.978,
+        "2009-10-24": 0.99,
+        "2009-10-25": 0.559
+      },
+      "step_drop": -0.011,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0042,
+      "plateau_frac": 0.0,
+      "decline_began": "2009-10-18",
+      "recovered_to": 0.983,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 3
+    }
+  },
+  {
+    "id": "1430-2009-10-26-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2009-10-26",
+    "end": "2009-10-26",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.978,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 1948.7,
+    "est_cost_usd": 233.85,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.985,
+      "daily_pi": {
+        "2009-10-26": 0.0
+      }
+    }
+  },
+  {
+    "id": "1430-2009-11-06-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2009-11-06",
+    "end": "2009-11-08",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.008,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 3649.7,
+    "est_cost_usd": 437.96,
+    "loss_pct": 95.989,
+    "evidence": {
+      "baseline_pi": 0.985,
+      "daily_pi": {
+        "2009-11-06": 0.0,
+        "2009-11-07": 0.0,
+        "2009-11-08": 0.125
+      }
+    }
+  },
+  {
+    "id": "1430-2009-11-14-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2009-11-14",
+    "end": "2009-11-16",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.023,
+    "pi_during": 0.699,
+    "energy_lost_kwh": 767.8,
+    "est_cost_usd": 92.13,
+    "loss_pct": 30.821,
+    "evidence": {
+      "baseline_pi": 0.984,
+      "daily_pi": {
+        "2009-11-14": 0.699,
+        "2009-11-15": 0.149,
+        "2009-11-16": 0.886
+      },
+      "step_drop": 0.505,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0058,
+      "plateau_frac": 0.059,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 47.423
+    }
+  },
+  {
+    "id": "1430-2009-12-02-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2009-12-02",
+    "end": "2009-12-02",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.988,
+    "pi_during": 0.109,
+    "energy_lost_kwh": 343.4,
+    "est_cost_usd": 41.21,
+    "loss_pct": 92.06,
+    "evidence": {
+      "baseline_pi": 0.985,
+      "daily_pi": {
+        "2009-12-02": 0.109
+      }
+    }
+  },
+  {
+    "id": "1430-2009-12-04-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2009-12-04",
+    "end": "2009-12-04",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.988,
+    "pi_during": 0.045,
+    "energy_lost_kwh": 680.1,
+    "est_cost_usd": 81.61,
+    "loss_pct": 94.258,
+    "evidence": {
+      "baseline_pi": 0.985,
+      "daily_pi": {
+        "2009-12-04": 0.045
+      }
+    }
+  },
+  {
+    "id": "1430-2009-12-07-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2009-12-07",
+    "end": "2009-12-07",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.985,
+    "pi_during": 0.14,
+    "energy_lost_kwh": 664.2,
+    "est_cost_usd": 79.71,
+    "loss_pct": 86.188,
+    "evidence": {
+      "baseline_pi": 0.984,
+      "daily_pi": {
+        "2009-12-07": 0.14
+      }
+    }
+  },
+  {
+    "id": "1430-2009-12-10-tracker_stall",
     "label": "Tracker stall",
     "site_id": 1430,
     "kind": "tracker_stall",
-    "start": "2024-04-26",
-    "end": "2024-05-04",
-    "days": 9,
+    "start": "2009-12-10",
+    "end": "2009-12-11",
+    "days": 2,
     "active": false,
     "severity": "medium",
-    "pi_before": 1.005,
-    "pi_during": 0.773,
-    "energy_lost_kwh": 10751.5,
-    "est_cost_usd": 1290.19,
-    "loss_pct": 22.504,
+    "pi_before": 0.983,
+    "pi_during": 0.899,
+    "energy_lost_kwh": 262.2,
+    "est_cost_usd": 31.46,
+    "loss_pct": 9.742,
     "evidence": {
-      "baseline_pi": 0.998,
+      "baseline_pi": 0.984,
       "daily_pi": {
-        "2024-04-26": 0.802,
-        "2024-04-27": 0.766,
-        "2024-04-28": 0.782,
-        "2024-04-29": 0.758,
-        "2024-04-30": 0.768,
-        "2024-05-01": 0.769,
-        "2024-05-02": 0.787,
-        "2024-05-03": 0.773,
-        "2024-05-04": 0.796
+        "2009-12-10": 0.86,
+        "2009-12-11": 0.938
       },
-      "shape_gap": -0.384,
-      "stalled_days": 9,
+      "shape_gap": -0.166,
+      "stalled_days": 2,
       "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
     }
   },
   {
-    "id": "1430-2024-05-06-tracker_stall",
+    "id": "1430-2009-12-19-tracker_stall",
     "label": "Tracker stall",
     "site_id": 1430,
     "kind": "tracker_stall",
-    "start": "2024-05-06",
-    "end": "2024-05-10",
-    "days": 5,
+    "start": "2009-12-19",
+    "end": "2009-12-20",
+    "days": 2,
     "active": false,
     "severity": "medium",
-    "pi_before": 1.011,
-    "pi_during": 0.788,
-    "energy_lost_kwh": 5584.0,
-    "est_cost_usd": 670.08,
-    "loss_pct": 21.822,
+    "pi_before": 0.957,
+    "pi_during": 0.848,
+    "energy_lost_kwh": 347.2,
+    "est_cost_usd": 41.67,
+    "loss_pct": 14.77,
     "evidence": {
-      "baseline_pi": 0.998,
+      "baseline_pi": 0.983,
       "daily_pi": {
-        "2024-05-06": 0.822,
-        "2024-05-07": 0.765,
-        "2024-05-08": 0.797,
-        "2024-05-09": 0.774,
-        "2024-05-10": 0.788
+        "2009-12-19": 0.847,
+        "2009-12-20": 0.848
       },
-      "shape_gap": -0.385,
+      "shape_gap": -0.393,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2009-12-21-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2009-12-21",
+    "end": "2009-12-23",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.957,
+    "pi_during": 0.867,
+    "energy_lost_kwh": 436.8,
+    "est_cost_usd": 52.41,
+    "loss_pct": 25.217,
+    "evidence": {
+      "baseline_pi": 0.983,
+      "daily_pi": {
+        "2009-12-21": 0.867,
+        "2009-12-22": 1.019,
+        "2009-12-23": 0.171
+      },
+      "step_drop": 0.07,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0044,
+      "plateau_frac": 0.0,
+      "decline_began": "2009-12-13",
+      "recovered_to": 1.025,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 8
+    }
+  },
+  {
+    "id": "1430-2010-01-09-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2010-01-09",
+    "end": "2010-01-15",
+    "days": 7,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.006,
+    "pi_during": 0.924,
+    "energy_lost_kwh": 619.0,
+    "est_cost_usd": 74.28,
+    "loss_pct": 7.224,
+    "evidence": {
+      "baseline_pi": 0.988,
+      "daily_pi": {
+        "2010-01-09": 0.852,
+        "2010-01-10": 0.913,
+        "2010-01-11": 0.919,
+        "2010-01-12": 0.924,
+        "2010-01-13": 0.952,
+        "2010-01-14": 1.001,
+        "2010-01-15": 0.928
+      },
+      "shape_gap": -0.273,
       "stalled_days": 5,
       "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
     }
   },
   {
-    "id": "1430-2024-10-12-outage",
+    "id": "1430-2010-01-30-sensor_fault",
+    "label": "Irradiance sensor fault",
+    "site_id": 1430,
+    "kind": "sensor_fault",
+    "start": "2010-01-30",
+    "end": "2010-02-02",
+    "days": 4,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.968,
+    "pi_during": 1.122,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 0.987,
+      "daily_pi": {
+        "2010-01-30": 1.139,
+        "2010-01-31": 1.084,
+        "2010-02-01": 1.105,
+        "2010-02-02": 1.189
+      },
+      "reason": "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    }
+  },
+  {
+    "id": "1430-2010-02-08-outage",
     "label": "Full outage",
     "site_id": 1430,
     "kind": "outage",
-    "start": "2024-10-12",
-    "end": "2024-10-13",
+    "start": "2010-02-08",
+    "end": "2010-02-09",
     "days": 2,
     "active": false,
     "severity": "high",
-    "pi_before": 1.001,
+    "pi_before": 1.007,
+    "pi_during": 0.066,
+    "energy_lost_kwh": 1403.9,
+    "est_cost_usd": 168.46,
+    "loss_pct": 74.453,
+    "evidence": {
+      "baseline_pi": 0.984,
+      "daily_pi": {
+        "2010-02-08": 0.0,
+        "2010-02-09": 0.133
+      }
+    }
+  },
+  {
+    "id": "1430-2010-02-19-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2010-02-19",
+    "end": "2010-02-21",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.966,
+    "pi_during": 0.018,
+    "energy_lost_kwh": 2057.1,
+    "est_cost_usd": 246.85,
+    "loss_pct": 98.061,
+    "evidence": {
+      "baseline_pi": 0.977,
+      "daily_pi": {
+        "2010-02-19": 0.018,
+        "2010-02-20": 0.0,
+        "2010-02-21": 0.039
+      }
+    }
+  },
+  {
+    "id": "1430-2010-03-19-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2010-03-19",
+    "end": "2010-03-19",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.953,
+    "pi_during": 0.095,
+    "energy_lost_kwh": 781.4,
+    "est_cost_usd": 93.77,
+    "loss_pct": 89.823,
+    "evidence": {
+      "baseline_pi": 0.97,
+      "daily_pi": {
+        "2010-03-19": 0.095
+      }
+    }
+  },
+  {
+    "id": "1430-2010-04-26-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2010-04-26",
+    "end": "2010-04-26",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.98,
+    "pi_during": 0.015,
+    "energy_lost_kwh": 2145.6,
+    "est_cost_usd": 257.48,
+    "loss_pct": 98.529,
+    "evidence": {
+      "baseline_pi": 0.966,
+      "daily_pi": {
+        "2010-04-26": 0.015
+      }
+    }
+  },
+  {
+    "id": "1430-2010-06-02-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2010-06-02",
+    "end": "2010-06-05",
+    "days": 4,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.993,
+    "pi_during": 0.739,
+    "energy_lost_kwh": 1964.9,
+    "est_cost_usd": 235.79,
+    "loss_pct": 28.171,
+    "evidence": {
+      "baseline_pi": 0.972,
+      "daily_pi": {
+        "2010-06-02": 0.878,
+        "2010-06-03": 0.97,
+        "2010-06-04": 0.6,
+        "2010-06-05": 0.58
+      },
+      "step_drop": 0.114,
+      "trend_per_day": -0.1302,
+      "trend_30d_per_day": -0.0043,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 9.6
+    }
+  },
+  {
+    "id": "1430-2010-06-08-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2010-06-08",
+    "end": "2010-06-09",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.986,
     "pi_during": 0.0,
-    "energy_lost_kwh": 7716.5,
-    "est_cost_usd": 925.98,
+    "energy_lost_kwh": 4214.8,
+    "est_cost_usd": 505.78,
     "loss_pct": 100.0,
     "evidence": {
-      "baseline_pi": 0.994,
+      "baseline_pi": 0.972,
       "daily_pi": {
-        "2024-10-12": 0.0,
-        "2024-10-13": 0.0
+        "2010-06-08": 0.0,
+        "2010-06-09": 0.0
       }
+    }
+  },
+  {
+    "id": "1430-2010-06-14-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2010-06-14",
+    "end": "2010-06-16",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.978,
+    "pi_during": 0.471,
+    "energy_lost_kwh": 4126.3,
+    "est_cost_usd": 495.16,
+    "loss_pct": 50.377,
+    "evidence": {
+      "baseline_pi": 0.974,
+      "daily_pi": {
+        "2010-06-14": 0.685,
+        "2010-06-15": 0.471,
+        "2010-06-16": 0.335
+      },
+      "step_drop": 0.134,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0162,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 51.618
+    }
+  },
+  {
+    "id": "1430-2010-10-08-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2010-10-08",
+    "end": "2010-10-31",
+    "days": 24,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.964,
+    "pi_during": 0.897,
+    "energy_lost_kwh": 3818.9,
+    "est_cost_usd": 458.27,
+    "loss_pct": 9.344,
+    "evidence": {
+      "baseline_pi": 0.983,
+      "daily_pi": {
+        "2010-10-08": 0.88,
+        "2010-10-09": 0.916,
+        "2010-10-10": 0.917,
+        "2010-10-11": 0.912,
+        "2010-10-12": 0.903,
+        "2010-10-13": 0.916,
+        "2010-10-14": 0.912,
+        "2010-10-15": 0.907,
+        "2010-10-16": 0.901,
+        "2010-10-17": 0.906,
+        "2010-10-18": 0.896,
+        "2010-10-19": 0.897,
+        "2010-10-20": 0.895,
+        "2010-10-21": 0.889,
+        "2010-10-22": 0.904,
+        "2010-10-23": 0.881,
+        "2010-10-24": 0.901,
+        "2010-10-25": 0.885,
+        "2010-10-26": 0.897,
+        "2010-10-27": 0.888,
+        "2010-10-28": 0.888,
+        "2010-10-29": 0.871,
+        "2010-10-30": 0.877,
+        "2010-10-31": 0.881
+      },
+      "step_drop": 0.041,
+      "trend_per_day": -0.001,
+      "trend_30d_per_day": -0.0019,
+      "plateau_frac": 0.156,
+      "decline_began": "2010-09-28",
+      "recovered_to": 0.915,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation).",
+      "decline_lead_days": 10
+    }
+  },
+  {
+    "id": "1430-2010-11-03-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2010-11-03",
+    "end": "2010-11-03",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.916,
+    "pi_during": 0.046,
+    "energy_lost_kwh": 1392.5,
+    "est_cost_usd": 167.1,
+    "loss_pct": 94.801,
+    "evidence": {
+      "baseline_pi": 0.978,
+      "daily_pi": {
+        "2010-11-03": 0.046
+      }
+    }
+  },
+  {
+    "id": "1430-2010-11-04-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2010-11-04",
+    "end": "2010-11-24",
+    "days": 21,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.916,
+    "pi_during": 0.869,
+    "energy_lost_kwh": 4158.7,
+    "est_cost_usd": 499.04,
+    "loss_pct": 15.684,
+    "evidence": {
+      "baseline_pi": 0.974,
+      "daily_pi": {
+        "2010-11-04": 0.341,
+        "2010-11-05": 0.894,
+        "2010-11-06": 0.894,
+        "2010-11-07": 0.865,
+        "2010-11-08": 0.874,
+        "2010-11-09": 0.894,
+        "2010-11-10": 0.89,
+        "2010-11-11": 0.496,
+        "2010-11-12": 0.878,
+        "2010-11-13": 0.896,
+        "2010-11-14": 0.87,
+        "2010-11-15": 0.808,
+        "2010-11-16": 0.874,
+        "2010-11-17": 0.788,
+        "2010-11-18": 0.874,
+        "2010-11-19": 0.847,
+        "2010-11-20": 0.854,
+        "2010-11-21": 0.869,
+        "2010-11-22": 0.856,
+        "2010-11-23": 0.853,
+        "2010-11-24": 0.844
+      },
+      "step_drop": -0.011,
+      "trend_per_day": 0.0054,
+      "trend_30d_per_day": -0.0017,
+      "plateau_frac": 0.065,
+      "decline_began": "2010-09-28",
+      "recovered_to": 0.878,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation).",
+      "decline_lead_days": 37
+    }
+  },
+  {
+    "id": "1430-2010-11-26-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2010-11-26",
+    "end": "2010-12-22",
+    "days": 27,
+    "active": false,
+    "severity": "medium",
+    "pi_before": null,
+    "pi_during": 0.876,
+    "energy_lost_kwh": 3197.3,
+    "est_cost_usd": 383.67,
+    "loss_pct": 11.722,
+    "evidence": {
+      "baseline_pi": 0.961,
+      "daily_pi": {
+        "2010-11-26": 0.853,
+        "2010-11-27": 0.848,
+        "2010-11-28": 0.856,
+        "2010-11-29": 0.834,
+        "2010-11-30": 0.841,
+        "2010-12-01": 0.867,
+        "2010-12-02": 0.897,
+        "2010-12-03": 0.889,
+        "2010-12-04": 0.899,
+        "2010-12-05": 0.881,
+        "2010-12-06": 0.926,
+        "2010-12-07": 0.881,
+        "2010-12-08": 0.896,
+        "2010-12-09": 0.899,
+        "2010-12-10": 0.876,
+        "2010-12-11": 0.872,
+        "2010-12-12": 0.881,
+        "2010-12-13": 0.87,
+        "2010-12-14": 0.879,
+        "2010-12-15": 0.879,
+        "2010-12-16": 0.845,
+        "2010-12-17": 0.205,
+        "2010-12-18": 0.728,
+        "2010-12-19": 0.871,
+        "2010-12-20": 0.884,
+        "2010-12-21": 0.856,
+        "2010-12-22": 0.878
+      },
+      "step_drop": 0.001,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": 0.002,
+      "plateau_frac": 0.119,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 12.107
+    }
+  },
+  {
+    "id": "1430-2011-01-09-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2011-01-09",
+    "end": "2011-01-11",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.861,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 2994.9,
+    "est_cost_usd": 359.38,
+    "loss_pct": 99.117,
+    "evidence": {
+      "baseline_pi": 0.873,
+      "daily_pi": {
+        "2011-01-09": 0.0,
+        "2011-01-10": 0.0,
+        "2011-01-11": 0.015
+      }
+    }
+  },
+  {
+    "id": "1430-2011-02-01-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2011-02-01",
+    "end": "2011-02-03",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.885,
+    "pi_during": 0.089,
+    "energy_lost_kwh": 3520.3,
+    "est_cost_usd": 422.43,
+    "loss_pct": 91.872,
+    "evidence": {
+      "baseline_pi": 0.876,
+      "daily_pi": {
+        "2011-02-01": 0.089,
+        "2011-02-02": 0.06,
+        "2011-02-03": 0.129
+      }
+    }
+  },
+  {
+    "id": "1430-2011-02-04-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2011-02-04",
+    "end": "2011-02-06",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.885,
+    "pi_during": 0.707,
+    "energy_lost_kwh": 612.9,
+    "est_cost_usd": 73.54,
+    "loss_pct": 28.622,
+    "evidence": {
+      "baseline_pi": 0.876,
+      "daily_pi": {
+        "2011-02-04": 0.707,
+        "2011-02-05": 0.842,
+        "2011-02-06": 0.222
+      },
+      "step_drop": 0.203,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0063,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 19.236
+    }
+  },
+  {
+    "id": "1430-2011-02-08-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2011-02-08",
+    "end": "2011-02-08",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.885,
+    "pi_during": 0.102,
+    "energy_lost_kwh": 766.5,
+    "est_cost_usd": 91.98,
+    "loss_pct": 88.253,
+    "evidence": {
+      "baseline_pi": 0.875,
+      "daily_pi": {
+        "2011-02-08": 0.102
+      }
+    }
+  },
+  {
+    "id": "1430-2011-04-16-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2011-04-16",
+    "end": "2011-04-19",
+    "days": 4,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.922,
+    "pi_during": 0.833,
+    "energy_lost_kwh": 611.3,
+    "est_cost_usd": 73.36,
+    "loss_pct": 6.893,
+    "evidence": {
+      "baseline_pi": 0.904,
+      "daily_pi": {
+        "2011-04-16": 0.83,
+        "2011-04-17": 0.882,
+        "2011-04-18": 0.809,
+        "2011-04-19": 0.835
+      },
+      "step_drop": 0.106,
+      "trend_per_day": -0.0069,
+      "trend_30d_per_day": -0.0021,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 7.987
+    }
+  },
+  {
+    "id": "1430-2011-04-29-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2011-04-29",
+    "end": "2011-05-03",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.882,
+    "pi_during": 0.833,
+    "energy_lost_kwh": 822.2,
+    "est_cost_usd": 98.67,
+    "loss_pct": 7.769,
+    "evidence": {
+      "baseline_pi": 0.905,
+      "daily_pi": {
+        "2011-04-29": 0.823,
+        "2011-04-30": 0.854,
+        "2011-05-01": 0.858,
+        "2011-05-02": 0.833,
+        "2011-05-03": 0.826
+      },
+      "step_drop": 0.024,
+      "trend_per_day": -0.0015,
+      "trend_30d_per_day": -0.0022,
+      "plateau_frac": 0.0,
+      "decline_began": "2011-04-27",
+      "recovered_to": 1.04,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 2
+    }
+  },
+  {
+    "id": "1430-2011-09-17-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2011-09-17",
+    "end": "2011-09-21",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.927,
+    "pi_during": 0.837,
+    "energy_lost_kwh": 726.4,
+    "est_cost_usd": 87.17,
+    "loss_pct": 8.13,
+    "evidence": {
+      "baseline_pi": 0.929,
+      "daily_pi": {
+        "2011-09-17": 0.842,
+        "2011-09-18": 0.817,
+        "2011-09-19": 0.816,
+        "2011-09-20": 0.932,
+        "2011-09-21": 0.837
+      },
+      "step_drop": 0.135,
+      "trend_per_day": 0.0109,
+      "trend_30d_per_day": -0.0018,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 12.036
+    }
+  },
+  {
+    "id": "1430-2011-10-26-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2011-10-26",
+    "end": "2011-10-26",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.0,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 444.9,
+    "est_cost_usd": 53.39,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.944,
+      "daily_pi": {
+        "2011-10-26": 0.0
+      }
+    }
+  },
+  {
+    "id": "1430-2011-12-01-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2011-12-01",
+    "end": "2011-12-05",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.985,
+    "pi_during": 0.886,
+    "energy_lost_kwh": 851.1,
+    "est_cost_usd": 102.13,
+    "loss_pct": 21.263,
+    "evidence": {
+      "baseline_pi": 0.988,
+      "daily_pi": {
+        "2011-12-01": 0.847,
+        "2011-12-02": 1.015,
+        "2011-12-03": 0.886,
+        "2011-12-04": 0.98,
+        "2011-12-05": 0.277
+      },
+      "step_drop": 0.007,
+      "trend_per_day": -0.2143,
+      "trend_30d_per_day": -0.0038,
+      "plateau_frac": 0.0,
+      "decline_began": "2011-11-29",
+      "recovered_to": 0.997,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 2
+    }
+  },
+  {
+    "id": "1430-2012-01-11-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2012-01-11",
+    "end": "2012-01-11",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.965,
+    "pi_during": 0.097,
+    "energy_lost_kwh": 562.5,
+    "est_cost_usd": 67.5,
+    "loss_pct": 91.372,
+    "evidence": {
+      "baseline_pi": 0.983,
+      "daily_pi": {
+        "2012-01-11": 0.097
+      }
+    }
+  },
+  {
+    "id": "1430-2012-02-07-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2012-02-07",
+    "end": "2012-02-07",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.978,
+    "pi_during": 0.077,
+    "energy_lost_kwh": 626.8,
+    "est_cost_usd": 75.22,
+    "loss_pct": 92.848,
+    "evidence": {
+      "baseline_pi": 0.982,
+      "daily_pi": {
+        "2012-02-07": 0.077
+      }
+    }
+  },
+  {
+    "id": "1430-2012-10-25-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2012-10-25",
+    "end": "2012-10-25",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.981,
+    "pi_during": 0.073,
+    "energy_lost_kwh": 304.1,
+    "est_cost_usd": 36.49,
+    "loss_pct": 87.454,
+    "evidence": {
+      "baseline_pi": 0.974,
+      "daily_pi": {
+        "2012-10-25": 0.073
+      }
+    }
+  },
+  {
+    "id": "1430-2012-11-11-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2012-11-11",
+    "end": "2012-11-11",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.978,
+    "pi_during": 0.102,
+    "energy_lost_kwh": 1357.5,
+    "est_cost_usd": 162.89,
+    "loss_pct": 89.231,
+    "evidence": {
+      "baseline_pi": 0.971,
+      "daily_pi": {
+        "2012-11-11": 0.102
+      }
+    }
+  },
+  {
+    "id": "1430-2012-11-23-data_gap",
+    "label": "Monitoring data gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "start": "2012-11-23",
+    "end": "2012-11-23",
+    "days": 1,
+    "active": false,
+    "severity": "low",
+    "pi_before": 0.974,
+    "pi_during": null,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 0.974,
+      "daily_pi": {},
+      "reason": "No meter readings during daylight; output during this window is unknown."
+    }
+  },
+  {
+    "id": "1430-2013-01-12-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2013-01-12",
+    "end": "2013-01-14",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.965,
+    "pi_during": 0.892,
+    "energy_lost_kwh": 338.2,
+    "est_cost_usd": 40.58,
+    "loss_pct": 11.915,
+    "evidence": {
+      "baseline_pi": 0.977,
+      "daily_pi": {
+        "2013-01-12": 0.867,
+        "2013-01-13": 0.935,
+        "2013-01-14": 0.892
+      },
+      "step_drop": 0.072,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0016,
+      "plateau_frac": 0.0,
+      "decline_began": "2013-01-11",
+      "recovered_to": 1.017,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 1
+    }
+  },
+  {
+    "id": "1430-2013-01-29-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2013-01-29",
+    "end": "2013-01-29",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.99,
+    "pi_during": 0.01,
+    "energy_lost_kwh": 785.2,
+    "est_cost_usd": 94.22,
+    "loss_pct": 99.136,
+    "evidence": {
+      "baseline_pi": 0.98,
+      "daily_pi": {
+        "2013-01-29": 0.01
+      }
+    }
+  },
+  {
+    "id": "1430-2013-02-07-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2013-02-07",
+    "end": "2013-02-15",
+    "days": 9,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.973,
+    "pi_during": 0.798,
+    "energy_lost_kwh": 2710.7,
+    "est_cost_usd": 325.29,
+    "loss_pct": 24.398,
+    "evidence": {
+      "baseline_pi": 0.977,
+      "daily_pi": {
+        "2013-02-07": 0.267,
+        "2013-02-08": 0.974,
+        "2013-02-09": 0.962,
+        "2013-02-10": 0.588,
+        "2013-02-11": 0.581,
+        "2013-02-12": 0.98,
+        "2013-02-13": 0.962,
+        "2013-02-14": 0.766,
+        "2013-02-15": 0.798
+      },
+      "step_drop": -0.011,
+      "trend_per_day": 0.0323,
+      "trend_30d_per_day": -0.0063,
+      "plateau_frac": 0.0,
+      "decline_began": "2013-02-02",
+      "recovered_to": 0.988,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 5
+    }
+  },
+  {
+    "id": "1430-2013-02-24-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2013-02-24",
+    "end": "2013-02-26",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.979,
+    "pi_during": 0.793,
+    "energy_lost_kwh": 709.2,
+    "est_cost_usd": 85.11,
+    "loss_pct": 20.159,
+    "evidence": {
+      "baseline_pi": 0.979,
+      "daily_pi": {
+        "2013-02-24": 0.785,
+        "2013-02-25": 0.793,
+        "2013-02-26": 0.921
+      },
+      "shape_gap": -0.34,
+      "stalled_days": 3,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2013-03-02-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2013-03-02",
+    "end": "2013-03-04",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.981,
+    "pi_during": 0.901,
+    "energy_lost_kwh": 264.0,
+    "est_cost_usd": 31.68,
+    "loss_pct": 11.423,
+    "evidence": {
+      "baseline_pi": 0.98,
+      "daily_pi": {
+        "2013-03-02": 0.901,
+        "2013-03-03": 0.965,
+        "2013-03-04": 0.613
+      },
+      "step_drop": -0.024,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": 0.0024,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 1.488
+    }
+  },
+  {
+    "id": "1430-2013-03-23-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2013-03-23",
+    "end": "2013-03-25",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.968,
+    "pi_during": 0.883,
+    "energy_lost_kwh": 574.9,
+    "est_cost_usd": 68.99,
+    "loss_pct": 12.913,
+    "evidence": {
+      "baseline_pi": 0.97,
+      "daily_pi": {
+        "2013-03-23": 0.502,
+        "2013-03-24": 0.909,
+        "2013-03-25": 0.883
+      },
+      "step_drop": 0.072,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": 0.0035,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 7.699
+    }
+  },
+  {
+    "id": "1430-2013-04-15-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2013-04-15",
+    "end": "2013-04-17",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.966,
+    "pi_during": 0.788,
+    "energy_lost_kwh": 583.3,
+    "est_cost_usd": 69.99,
+    "loss_pct": 32.348,
+    "evidence": {
+      "baseline_pi": 0.97,
+      "daily_pi": {
+        "2013-04-15": 0.146,
+        "2013-04-16": 0.841,
+        "2013-04-17": 0.788
+      },
+      "step_drop": 0.179,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0021,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 18.725
+    }
+  },
+  {
+    "id": "1430-2013-04-22-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2013-04-22",
+    "end": "2013-04-23",
+    "days": 2,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.954,
+    "pi_during": 0.665,
+    "energy_lost_kwh": 1127.5,
+    "est_cost_usd": 135.3,
+    "loss_pct": 40.546,
+    "evidence": {
+      "baseline_pi": 0.968,
+      "daily_pi": {
+        "2013-04-22": 0.842,
+        "2013-04-23": 0.488
+      },
+      "shape_gap": -0.653,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2013-06-20-data_gap",
+    "label": "Monitoring data gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "start": "2013-06-20",
+    "end": "2013-06-20",
+    "days": 1,
+    "active": false,
+    "severity": "low",
+    "pi_before": 0.967,
+    "pi_during": null,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 0.963,
+      "daily_pi": {},
+      "reason": "No meter readings during daylight; output during this window is unknown."
+    }
+  },
+  {
+    "id": "1430-2013-11-10-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2013-11-10",
+    "end": "2013-11-12",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.0,
+    "pi_during": 0.933,
+    "energy_lost_kwh": 154.8,
+    "est_cost_usd": 18.58,
+    "loss_pct": 3.457,
+    "evidence": {
+      "baseline_pi": 0.981,
+      "daily_pi": {
+        "2013-11-10": 0.941,
+        "2013-11-11": 0.931,
+        "2013-11-12": 0.933
+      },
+      "shape_gap": -0.143,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2013-11-17-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2013-11-17",
+    "end": "2013-11-18",
+    "days": 2,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.964,
+    "pi_during": 0.92,
+    "energy_lost_kwh": 210.8,
+    "est_cost_usd": 25.29,
+    "loss_pct": 7.116,
+    "evidence": {
+      "baseline_pi": 0.981,
+      "daily_pi": {
+        "2013-11-17": 0.92,
+        "2013-11-18": 0.921
+      },
+      "shape_gap": -0.169,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2013-11-21-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2013-11-21",
+    "end": "2013-11-21",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.933,
+    "pi_during": 0.044,
+    "energy_lost_kwh": 342.8,
+    "est_cost_usd": 41.14,
+    "loss_pct": 94.921,
+    "evidence": {
+      "baseline_pi": 0.981,
+      "daily_pi": {
+        "2013-11-21": 0.044
+      }
+    }
+  },
+  {
+    "id": "1430-2013-11-22-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2013-11-22",
+    "end": "2013-11-26",
+    "days": 5,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.932,
+    "pi_during": 0.824,
+    "energy_lost_kwh": 756.4,
+    "est_cost_usd": 90.77,
+    "loss_pct": 23.827,
+    "evidence": {
+      "baseline_pi": 0.981,
+      "daily_pi": {
+        "2013-11-22": 0.362,
+        "2013-11-23": 0.651,
+        "2013-11-24": 0.824,
+        "2013-11-25": 0.922,
+        "2013-11-26": 0.9
+      },
+      "step_drop": 0.281,
+      "trend_per_day": 0.1373,
+      "trend_30d_per_day": -0.0067,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 33.65
+    }
+  },
+  {
+    "id": "1430-2013-11-29-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2013-11-29",
+    "end": "2013-11-30",
+    "days": 2,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.922,
+    "pi_during": 0.906,
+    "energy_lost_kwh": 237.7,
+    "est_cost_usd": 28.52,
+    "loss_pct": 8.919,
+    "evidence": {
+      "baseline_pi": 0.982,
+      "daily_pi": {
+        "2013-11-29": 0.906,
+        "2013-11-30": 0.905
+      },
+      "shape_gap": -0.186,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2013-12-04-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2013-12-04",
+    "end": "2013-12-05",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.943,
+    "pi_during": 0.05,
+    "energy_lost_kwh": 1858.7,
+    "est_cost_usd": 223.05,
+    "loss_pct": 93.045,
+    "evidence": {
+      "baseline_pi": 0.982,
+      "daily_pi": {
+        "2013-12-04": 0.0,
+        "2013-12-05": 0.099
+      }
+    }
+  },
+  {
+    "id": "1430-2013-12-06-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2013-12-06",
+    "end": "2013-12-08",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.963,
+    "pi_during": 0.432,
+    "energy_lost_kwh": 1956.4,
+    "est_cost_usd": 234.76,
+    "loss_pct": 62.365,
+    "evidence": {
+      "baseline_pi": 0.983,
+      "daily_pi": {
+        "2013-12-06": 0.242,
+        "2013-12-07": 0.432,
+        "2013-12-08": 0.587
+      },
+      "step_drop": 0.486,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0149,
+      "plateau_frac": 0.136,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 56.02
+    }
+  },
+  {
+    "id": "1430-2014-01-04-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2014-01-04",
+    "end": "2014-01-04",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.984,
+    "pi_during": 0.033,
+    "energy_lost_kwh": 407.0,
+    "est_cost_usd": 48.84,
+    "loss_pct": 98.24,
+    "evidence": {
+      "baseline_pi": 0.982,
+      "daily_pi": {
+        "2014-01-04": 0.033
+      }
+    }
+  },
+  {
+    "id": "1430-2014-01-27-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2014-01-27",
+    "end": "2014-01-28",
+    "days": 2,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.002,
+    "pi_during": 0.268,
+    "energy_lost_kwh": 1610.9,
+    "est_cost_usd": 193.3,
+    "loss_pct": 70.388,
+    "evidence": {
+      "baseline_pi": 0.989,
+      "daily_pi": {
+        "2014-01-27": 0.198,
+        "2014-01-28": 0.339
+      },
+      "shape_gap": -0.149,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2014-01-31-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2014-01-31",
+    "end": "2014-02-04",
+    "days": 5,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.003,
+    "pi_during": 0.564,
+    "energy_lost_kwh": 1082.1,
+    "est_cost_usd": 129.85,
+    "loss_pct": 29.365,
+    "evidence": {
+      "baseline_pi": 0.988,
+      "daily_pi": {
+        "2014-01-31": 0.364,
+        "2014-02-02": 0.765,
+        "2014-02-03": 0.93,
+        "2014-02-04": 0.289
+      },
+      "step_drop": 0.23,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0046,
+      "plateau_frac": 0.144,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 22.593
+    }
+  },
+  {
+    "id": "1430-2014-02-05-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2014-02-05",
+    "end": "2014-02-06",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.992,
+    "pi_during": 0.054,
+    "energy_lost_kwh": 3128.7,
+    "est_cost_usd": 375.45,
+    "loss_pct": 94.812,
+    "evidence": {
+      "baseline_pi": 0.986,
+      "daily_pi": {
+        "2014-02-05": 0.058,
+        "2014-02-06": 0.05
+      }
+    }
+  },
+  {
+    "id": "1430-2014-02-07-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2014-02-07",
+    "end": "2014-02-10",
+    "days": 4,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.998,
+    "pi_during": 0.92,
+    "energy_lost_kwh": 429.0,
+    "est_cost_usd": 51.47,
+    "loss_pct": 9.381,
+    "evidence": {
+      "baseline_pi": 0.986,
+      "daily_pi": {
+        "2014-02-07": 0.898,
+        "2014-02-08": 0.967,
+        "2014-02-09": 0.943,
+        "2014-02-10": 0.89
+      },
+      "step_drop": -0.352,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0135,
+      "plateau_frac": 0.0,
+      "decline_began": "2014-01-30",
+      "recovered_to": 0.991,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 8
+    }
+  },
+  {
+    "id": "1430-2014-02-17-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2014-02-17",
+    "end": "2014-02-21",
+    "days": 5,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.979,
+    "pi_during": 0.793,
+    "energy_lost_kwh": 1825.9,
+    "est_cost_usd": 219.1,
+    "loss_pct": 21.054,
+    "evidence": {
+      "baseline_pi": 0.989,
+      "daily_pi": {
+        "2014-02-17": 0.793,
+        "2014-02-18": 0.772,
+        "2014-02-19": 0.797,
+        "2014-02-20": 0.764,
+        "2014-02-21": 0.813
+      },
+      "step_drop": 0.188,
+      "trend_per_day": 0.0032,
+      "trend_30d_per_day": -0.0022,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 19.828
+    }
+  },
+  {
+    "id": "1430-2014-02-23-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2014-02-23",
+    "end": "2014-02-26",
+    "days": 4,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.987,
+    "pi_during": 0.906,
+    "energy_lost_kwh": 750.5,
+    "est_cost_usd": 90.06,
+    "loss_pct": 12.296,
+    "evidence": {
+      "baseline_pi": 0.989,
+      "daily_pi": {
+        "2014-02-23": 0.843,
+        "2014-02-24": 0.997,
+        "2014-02-25": 0.969,
+        "2014-02-26": 0.788
+      },
+      "shape_gap": -0.526,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2014-03-08-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2014-03-08",
+    "end": "2014-03-11",
+    "days": 4,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.988,
+    "pi_during": 0.921,
+    "energy_lost_kwh": 575.1,
+    "est_cost_usd": 69.02,
+    "loss_pct": 8.613,
+    "evidence": {
+      "baseline_pi": 0.991,
+      "daily_pi": {
+        "2014-03-08": 0.86,
+        "2014-03-09": 0.982,
+        "2014-03-10": 0.994,
+        "2014-03-11": 0.767
+      },
+      "step_drop": -0.0,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": 0.0062,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 0.936
+    }
+  },
+  {
+    "id": "1430-2014-03-28-sensor_fault",
+    "label": "Irradiance sensor fault",
+    "site_id": 1430,
+    "kind": "sensor_fault",
+    "start": "2014-03-28",
+    "end": "2014-04-01",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.987,
+    "pi_during": 1.129,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 0.987,
+      "daily_pi": {
+        "2014-03-28": 1.149,
+        "2014-03-29": 1.108,
+        "2014-03-30": 1.077,
+        "2014-03-31": 1.168,
+        "2014-04-01": 1.129
+      },
+      "reason": "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    }
+  },
+  {
+    "id": "1430-2014-08-13-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2014-08-13",
+    "end": "2014-08-14",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.993,
+    "pi_during": 0.139,
+    "energy_lost_kwh": 3130.9,
+    "est_cost_usd": 375.7,
+    "loss_pct": 85.175,
+    "evidence": {
+      "baseline_pi": 0.986,
+      "daily_pi": {
+        "2014-08-13": 0.136,
+        "2014-08-14": 0.143
+      }
+    }
+  },
+  {
+    "id": "1430-2014-08-15-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2014-08-15",
+    "end": "2014-08-29",
+    "days": 15,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.996,
+    "pi_during": 0.908,
+    "energy_lost_kwh": 1846.4,
+    "est_cost_usd": 221.57,
+    "loss_pct": 8.069,
+    "evidence": {
+      "baseline_pi": 0.986,
+      "daily_pi": {
+        "2014-08-15": 0.9,
+        "2014-08-16": 0.924,
+        "2014-08-17": 0.882,
+        "2014-08-18": 0.907,
+        "2014-08-19": 0.945,
+        "2014-08-20": 0.901,
+        "2014-08-21": 0.917,
+        "2014-08-22": 0.984,
+        "2014-08-23": 0.867,
+        "2014-08-24": 0.912,
+        "2014-08-25": 0.907,
+        "2014-08-26": 0.952,
+        "2014-08-27": 0.995,
+        "2014-08-28": 0.886,
+        "2014-08-29": 0.908
+      },
+      "step_drop": 0.097,
+      "trend_per_day": 0.0016,
+      "trend_30d_per_day": -0.0026,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 8.715
+    }
+  },
+  {
+    "id": "1430-2014-09-28-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2014-09-28",
+    "end": "2014-10-04",
+    "days": 7,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.972,
+    "pi_during": 0.883,
+    "energy_lost_kwh": 1015.1,
+    "est_cost_usd": 121.81,
+    "loss_pct": 9.453,
+    "evidence": {
+      "baseline_pi": 0.98,
+      "daily_pi": {
+        "2014-09-28": 0.868,
+        "2014-09-29": 0.969,
+        "2014-09-30": 0.83,
+        "2014-10-01": 0.968,
+        "2014-10-02": 0.883,
+        "2014-10-03": 0.941,
+        "2014-10-04": 0.871
+      },
+      "step_drop": 0.103,
+      "trend_per_day": 0.0071,
+      "trend_30d_per_day": -0.0014,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 11.489
+    }
+  },
+  {
+    "id": "1430-2014-10-28-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2014-10-28",
+    "end": "2014-10-30",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.972,
+    "pi_during": 0.934,
+    "energy_lost_kwh": 168.1,
+    "est_cost_usd": 20.17,
+    "loss_pct": 3.407,
+    "evidence": {
+      "baseline_pi": 0.974,
+      "daily_pi": {
+        "2014-10-28": 0.939,
+        "2014-10-29": 0.925,
+        "2014-10-30": 0.934
+      },
+      "shape_gap": -0.497,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2014-11-11-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2014-11-11",
+    "end": "2014-11-13",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.98,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 2338.7,
+    "est_cost_usd": 280.65,
+    "loss_pct": 99.062,
+    "evidence": {
+      "baseline_pi": 0.972,
+      "daily_pi": {
+        "2014-11-11": 0.081,
+        "2014-11-12": 0.0,
+        "2014-11-13": 0.0
+      }
+    }
+  },
+  {
+    "id": "1430-2014-11-14-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2014-11-14",
+    "end": "2014-11-16",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.982,
+    "pi_during": 0.398,
+    "energy_lost_kwh": 1928.7,
+    "est_cost_usd": 231.45,
+    "loss_pct": 59.244,
+    "evidence": {
+      "baseline_pi": 0.972,
+      "daily_pi": {
+        "2014-11-14": 0.162,
+        "2014-11-15": 0.398,
+        "2014-11-16": 0.614
+      },
+      "step_drop": 0.609,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0138,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 60.07
+    }
+  },
+  {
+    "id": "1430-2014-11-17-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2014-11-17",
+    "end": "2014-11-21",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.98,
+    "pi_during": 0.927,
+    "energy_lost_kwh": 141.6,
+    "est_cost_usd": 16.99,
+    "loss_pct": 3.078,
+    "evidence": {
+      "baseline_pi": 0.972,
+      "daily_pi": {
+        "2014-11-17": 0.937,
+        "2014-11-18": 0.911,
+        "2014-11-19": 1.008,
+        "2014-11-20": 0.927,
+        "2014-11-21": 0.92
+      },
+      "shape_gap": -0.697,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2014-12-22-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2014-12-22",
+    "end": "2014-12-22",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.017,
+    "pi_during": 0.016,
+    "energy_lost_kwh": 229.7,
+    "est_cost_usd": 27.56,
+    "loss_pct": 98.433,
+    "evidence": {
+      "baseline_pi": 0.98,
+      "daily_pi": {
+        "2014-12-22": 0.016
+      }
+    }
+  },
+  {
+    "id": "1430-2014-12-26-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2014-12-26",
+    "end": "2014-12-27",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.025,
+    "pi_during": 0.055,
+    "energy_lost_kwh": 1759.4,
+    "est_cost_usd": 211.13,
+    "loss_pct": 94.614,
+    "evidence": {
+      "baseline_pi": 0.98,
+      "daily_pi": {
+        "2014-12-26": 0.049,
+        "2014-12-27": 0.06
+      }
+    }
+  },
+  {
+    "id": "1430-2014-12-28-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2014-12-28",
+    "end": "2014-12-29",
+    "days": 2,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.031,
+    "pi_during": 0.525,
+    "energy_lost_kwh": 647.7,
+    "est_cost_usd": 77.73,
+    "loss_pct": 37.158,
+    "evidence": {
+      "baseline_pi": 0.98,
+      "daily_pi": {
+        "2014-12-28": 0.796,
+        "2014-12-29": 0.254
+      },
+      "shape_gap": -0.426,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2015-01-04-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2015-01-04",
+    "end": "2015-01-09",
+    "days": 6,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.996,
+    "pi_during": 0.794,
+    "energy_lost_kwh": 921.6,
+    "est_cost_usd": 110.59,
+    "loss_pct": 20.986,
+    "evidence": {
+      "baseline_pi": 0.982,
+      "daily_pi": {
+        "2015-01-04": 0.571,
+        "2015-01-05": 1.024,
+        "2015-01-06": 1.018,
+        "2015-01-07": 0.538,
+        "2015-01-08": 1.021,
+        "2015-01-09": 0.363
+      },
+      "step_drop": -0.246,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0115,
+      "plateau_frac": 0.0,
+      "decline_began": "2015-01-03",
+      "recovered_to": 0.873,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation).",
+      "decline_lead_days": 1
+    }
+  },
+  {
+    "id": "1430-2015-01-21-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2015-01-21",
+    "end": "2015-01-21",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.033,
+    "pi_during": 0.012,
+    "energy_lost_kwh": 393.1,
+    "est_cost_usd": 47.18,
+    "loss_pct": 98.963,
+    "evidence": {
+      "baseline_pi": 0.998,
+      "daily_pi": {
+        "2015-01-21": 0.012
+      }
+    }
+  },
+  {
+    "id": "1430-2015-01-22-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2015-01-22",
+    "end": "2015-01-26",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.033,
+    "pi_during": 0.951,
+    "energy_lost_kwh": 1074.8,
+    "est_cost_usd": 128.97,
+    "loss_pct": 18.543,
+    "evidence": {
+      "baseline_pi": 1.008,
+      "daily_pi": {
+        "2015-01-22": 0.435,
+        "2015-01-23": 1.027,
+        "2015-01-24": 1.006,
+        "2015-01-25": 0.951,
+        "2015-01-26": 0.95
+      },
+      "shape_gap": -0.237,
+      "stalled_days": 3,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2015-02-01-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2015-02-01",
+    "end": "2015-02-01",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.027,
+    "pi_during": 0.053,
+    "energy_lost_kwh": 641.6,
+    "est_cost_usd": 76.99,
+    "loss_pct": 95.516,
+    "evidence": {
+      "baseline_pi": 1.008,
+      "daily_pi": {
+        "2015-02-01": 0.053
+      }
+    }
+  },
+  {
+    "id": "1430-2015-02-02-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2015-02-02",
+    "end": "2015-02-04",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.027,
+    "pi_during": 0.935,
+    "energy_lost_kwh": 570.1,
+    "est_cost_usd": 68.41,
+    "loss_pct": 15.073,
+    "evidence": {
+      "baseline_pi": 1.009,
+      "daily_pi": {
+        "2015-02-02": 0.935,
+        "2015-02-03": 1.029,
+        "2015-02-04": 0.17
+      },
+      "step_drop": -0.03,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0044,
+      "plateau_frac": 0.0,
+      "decline_began": "2015-01-30",
+      "recovered_to": 1.024,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 3
+    }
+  },
+  {
+    "id": "1430-2015-02-16-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2015-02-16",
+    "end": "2015-02-16",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.038,
+    "pi_during": 0.06,
+    "energy_lost_kwh": 721.4,
+    "est_cost_usd": 86.57,
+    "loss_pct": 91.089,
+    "evidence": {
+      "baseline_pi": 1.018,
+      "daily_pi": {
+        "2015-02-16": 0.06
+      }
+    }
+  },
+  {
+    "id": "1430-2015-02-22-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2015-02-22",
+    "end": "2015-02-23",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.038,
+    "pi_during": 0.057,
+    "energy_lost_kwh": 2559.7,
+    "est_cost_usd": 307.17,
+    "loss_pct": 94.27,
+    "evidence": {
+      "baseline_pi": 1.026,
+      "daily_pi": {
+        "2015-02-22": 0.044,
+        "2015-02-23": 0.07
+      }
+    }
+  },
+  {
+    "id": "1430-2015-02-26-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2015-02-26",
+    "end": "2015-02-28",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.038,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 4428.7,
+    "est_cost_usd": 531.44,
+    "loss_pct": 99.219,
+    "evidence": {
+      "baseline_pi": 1.027,
+      "daily_pi": {
+        "2015-02-26": 0.0,
+        "2015-02-27": 0.0,
+        "2015-02-28": 0.017
+      }
+    }
+  },
+  {
+    "id": "1430-2015-03-01-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2015-03-01",
+    "end": "2015-03-04",
+    "days": 4,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.037,
+    "pi_during": 0.515,
+    "energy_lost_kwh": 1373.9,
+    "est_cost_usd": 164.87,
+    "loss_pct": 30.418,
+    "evidence": {
+      "baseline_pi": 1.028,
+      "daily_pi": {
+        "2015-03-01": 0.515,
+        "2015-03-02": 0.952,
+        "2015-03-04": 0.502
+      },
+      "step_drop": -0.433,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.019,
+      "plateau_frac": 0.068,
+      "decline_began": "2015-02-25",
+      "recovered_to": 0.986,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 4
+    }
+  },
+  {
+    "id": "1430-2015-03-10-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2015-03-10",
+    "end": "2015-03-11",
+    "days": 2,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.023,
+    "pi_during": 0.961,
+    "energy_lost_kwh": 325.4,
+    "est_cost_usd": 39.05,
+    "loss_pct": 7.292,
+    "evidence": {
+      "baseline_pi": 1.027,
+      "daily_pi": {
+        "2015-03-10": 0.936,
+        "2015-03-11": 0.986
+      },
+      "shape_gap": -0.211,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2015-03-14-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2015-03-14",
+    "end": "2015-03-15",
+    "days": 2,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.017,
+    "pi_during": 0.949,
+    "energy_lost_kwh": 388.0,
+    "est_cost_usd": 46.56,
+    "loss_pct": 8.145,
+    "evidence": {
+      "baseline_pi": 1.028,
+      "daily_pi": {
+        "2015-03-14": 0.948,
+        "2015-03-15": 0.95
+      },
+      "shape_gap": -0.212,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2015-03-31-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2015-03-31",
+    "end": "2015-04-04",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.034,
+    "pi_during": 0.94,
+    "energy_lost_kwh": 1189.0,
+    "est_cost_usd": 142.68,
+    "loss_pct": 12.527,
+    "evidence": {
+      "baseline_pi": 1.029,
+      "daily_pi": {
+        "2015-03-31": 0.937,
+        "2015-04-01": 0.943,
+        "2015-04-03": 0.832,
+        "2015-04-04": 0.947
+      },
+      "step_drop": 0.097,
+      "trend_per_day": -0.0091,
+      "trend_30d_per_day": 0.0034,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 8.877
+    }
+  },
+  {
+    "id": "1430-2015-04-16-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2015-04-16",
+    "end": "2015-04-18",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.0,
+    "pi_during": 0.954,
+    "energy_lost_kwh": 485.1,
+    "est_cost_usd": 58.22,
+    "loss_pct": 12.56,
+    "evidence": {
+      "baseline_pi": 1.027,
+      "daily_pi": {
+        "2015-04-16": 0.685,
+        "2015-04-17": 0.961,
+        "2015-04-18": 0.954
+      },
+      "step_drop": 0.042,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0019,
+      "plateau_frac": 0.0,
+      "decline_began": "2015-04-11",
+      "recovered_to": 0.979,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 5
+    }
+  },
+  {
+    "id": "1430-2015-11-27-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2015-11-27",
+    "end": "2015-11-30",
+    "days": 4,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.974,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 2438.1,
+    "est_cost_usd": 292.58,
+    "loss_pct": 94.395,
+    "evidence": {
+      "baseline_pi": 0.976,
+      "daily_pi": {
+        "2015-11-27": 0.0,
+        "2015-11-28": 0.0,
+        "2015-11-29": 0.0,
+        "2015-11-30": 0.122
+      }
+    }
+  },
+  {
+    "id": "1430-2015-12-26-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2015-12-26",
+    "end": "2015-12-26",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.936,
+    "pi_during": 0.057,
+    "energy_lost_kwh": 659.8,
+    "est_cost_usd": 79.17,
+    "loss_pct": 96.082,
+    "evidence": {
+      "baseline_pi": 0.967,
+      "daily_pi": {
+        "2015-12-26": 0.057
+      }
+    }
+  },
+  {
+    "id": "1430-2015-12-27-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2015-12-27",
+    "end": "2015-12-29",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.936,
+    "pi_during": 0.736,
+    "energy_lost_kwh": 1289.7,
+    "est_cost_usd": 154.76,
+    "loss_pct": 36.649,
+    "evidence": {
+      "baseline_pi": 0.967,
+      "daily_pi": {
+        "2015-12-27": 0.323,
+        "2015-12-28": 0.736,
+        "2015-12-29": 0.831
+      },
+      "step_drop": 0.199,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": 0.0035,
+      "plateau_frac": 0.115,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 23.85
+    }
+  },
+  {
+    "id": "1430-2016-01-08-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2016-01-08",
+    "end": "2016-01-08",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.961,
+    "pi_during": 0.007,
+    "energy_lost_kwh": 436.7,
+    "est_cost_usd": 52.4,
+    "loss_pct": 99.296,
+    "evidence": {
+      "baseline_pi": 0.966,
+      "daily_pi": {
+        "2016-01-08": 0.007
+      }
+    }
+  },
+  {
+    "id": "1430-2016-02-01-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2016-02-01",
+    "end": "2016-02-02",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.997,
+    "pi_during": 0.072,
+    "energy_lost_kwh": 1371.4,
+    "est_cost_usd": 164.57,
+    "loss_pct": 90.435,
+    "evidence": {
+      "baseline_pi": 0.973,
+      "daily_pi": {
+        "2016-02-01": 0.0,
+        "2016-02-02": 0.145
+      }
+    }
+  },
+  {
+    "id": "1430-2016-08-12-sensor_fault",
+    "label": "Irradiance sensor fault",
+    "site_id": 1430,
+    "kind": "sensor_fault",
+    "start": "2016-08-12",
+    "end": "2016-09-25",
+    "days": 45,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.983,
+    "pi_during": 1.113,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 0.984,
+      "daily_pi": {
+        "2016-08-12": 1.189,
+        "2016-08-13": 1.152,
+        "2016-08-14": 1.145,
+        "2016-08-15": 1.082,
+        "2016-08-16": 1.142,
+        "2016-08-17": 1.176,
+        "2016-08-18": 1.005,
+        "2016-08-19": 1.066,
+        "2016-08-20": 1.14,
+        "2016-08-21": 1.401,
+        "2016-08-22": 1.16,
+        "2016-08-23": 0.998,
+        "2016-08-24": 1.464,
+        "2016-08-25": 1.057,
+        "2016-08-26": 1.123,
+        "2016-08-27": 1.111,
+        "2016-08-28": 1.203,
+        "2016-08-29": 1.019,
+        "2016-08-30": 1.144,
+        "2016-08-31": 1.117,
+        "2016-09-01": 1.138,
+        "2016-09-02": 1.265,
+        "2016-09-03": 1.077,
+        "2016-09-04": 1.014,
+        "2016-09-05": 1.104,
+        "2016-09-06": 1.192,
+        "2016-09-07": 1.119,
+        "2016-09-08": 1.139,
+        "2016-09-09": 1.133,
+        "2016-09-10": 1.133,
+        "2016-09-11": 1.118,
+        "2016-09-12": 1.031,
+        "2016-09-13": 0.998,
+        "2016-09-14": 1.086,
+        "2016-09-15": 1.016,
+        "2016-09-16": 1.103,
+        "2016-09-17": 1.068,
+        "2016-09-18": 1.113,
+        "2016-09-19": 1.102,
+        "2016-09-20": 1.079,
+        "2016-09-21": 1.019,
+        "2016-09-22": 1.085,
+        "2016-09-23": 1.048,
+        "2016-09-24": 1.007,
+        "2016-09-25": 1.115
+      },
+      "reason": "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    }
+  },
+  {
+    "id": "1430-2016-10-15-sensor_fault",
+    "label": "Irradiance sensor fault",
+    "site_id": 1430,
+    "kind": "sensor_fault",
+    "start": "2016-10-15",
+    "end": "2016-10-17",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.049,
+    "pi_during": 1.111,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 1.002,
+      "daily_pi": {
+        "2016-10-15": 1.115,
+        "2016-10-16": 1.102,
+        "2016-10-17": 1.111
+      },
+      "reason": "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    }
+  },
+  {
+    "id": "1430-2016-11-10-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2016-11-10",
+    "end": "2016-11-12",
+    "days": 3,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.068,
+    "pi_during": 1.006,
+    "energy_lost_kwh": 394.4,
+    "est_cost_usd": 47.33,
+    "loss_pct": 8.675,
+    "evidence": {
+      "baseline_pi": 1.054,
+      "daily_pi": {
+        "2016-11-10": 0.909,
+        "2016-11-11": 1.006,
+        "2016-11-12": 1.011
+      },
+      "shape_gap": -0.247,
+      "stalled_days": 3,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2016-11-17-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2016-11-17",
+    "end": "2016-11-17",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.075,
+    "pi_during": 0.076,
+    "energy_lost_kwh": 136.1,
+    "est_cost_usd": 16.33,
+    "loss_pct": 86.586,
+    "evidence": {
+      "baseline_pi": 1.048,
+      "daily_pi": {
+        "2016-11-17": 0.076
+      }
+    }
+  },
+  {
+    "id": "1430-2016-11-24-tracker_stall",
+    "label": "Tracker stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "start": "2016-11-24",
+    "end": "2016-11-25",
+    "days": 2,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.004,
+    "pi_during": 1.003,
+    "energy_lost_kwh": 146.7,
+    "est_cost_usd": 17.61,
+    "loss_pct": 5.035,
+    "evidence": {
+      "baseline_pi": 1.042,
+      "daily_pi": {
+        "2016-11-24": 1.001,
+        "2016-11-25": 1.004
+      },
+      "shape_gap": -0.213,
+      "stalled_days": 2,
+      "reason": "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    }
+  },
+  {
+    "id": "1430-2016-12-07-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2016-12-07",
+    "end": "2016-12-08",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.002,
+    "pi_during": 0.107,
+    "energy_lost_kwh": 1706.7,
+    "est_cost_usd": 204.8,
+    "loss_pct": 89.1,
+    "evidence": {
+      "baseline_pi": 1.038,
+      "daily_pi": {
+        "2016-12-07": 0.077,
+        "2016-12-08": 0.137
+      }
+    }
+  },
+  {
+    "id": "1430-2016-12-17-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2016-12-17",
+    "end": "2016-12-17",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.043,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 764.9,
+    "est_cost_usd": 91.79,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 1.039,
+      "daily_pi": {
+        "2016-12-17": 0.0
+      }
+    }
+  },
+  {
+    "id": "1430-2017-01-05-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2017-01-05",
+    "end": "2017-01-05",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.029,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 475.2,
+    "est_cost_usd": 57.02,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 1.033,
+      "daily_pi": {
+        "2017-01-05": 0.0
+      }
+    }
+  },
+  {
+    "id": "1430-2017-01-15-data_gap",
+    "label": "Monitoring data gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "start": "2017-01-15",
+    "end": "2017-01-15",
+    "days": 1,
+    "active": false,
+    "severity": "low",
+    "pi_before": 1.002,
+    "pi_during": null,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 1.03,
+      "daily_pi": {},
+      "reason": "No meter readings during daylight; output during this window is unknown."
+    }
+  },
+  {
+    "id": "1430-2017-02-23-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2017-02-23",
+    "end": "2017-02-27",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 1.014,
+    "pi_during": 0.826,
+    "energy_lost_kwh": 1442.2,
+    "est_cost_usd": 173.06,
+    "loss_pct": 19.2,
+    "evidence": {
+      "baseline_pi": 1.023,
+      "daily_pi": {
+        "2017-02-23": 0.178,
+        "2017-02-24": 0.361,
+        "2017-02-25": 0.992,
+        "2017-02-26": 1.029,
+        "2017-02-27": 0.826
+      },
+      "step_drop": 0.026,
+      "trend_per_day": 0.14,
+      "trend_30d_per_day": -0.0038,
+      "plateau_frac": 0.0,
+      "decline_began": "2017-02-22",
+      "recovered_to": 0.976,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 1
+    }
+  },
+  {
+    "id": "1430-2017-03-24-partial_outage",
+    "label": "Partial outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "start": "2017-03-24",
+    "end": "2017-03-26",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.985,
+    "pi_during": 0.789,
+    "energy_lost_kwh": 800.4,
+    "est_cost_usd": 96.05,
+    "loss_pct": 23.254,
+    "evidence": {
+      "baseline_pi": 1.008,
+      "daily_pi": {
+        "2017-03-24": 0.755,
+        "2017-03-25": 0.789,
+        "2017-03-26": 0.793
+      },
+      "step_drop": 0.19,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": 0.0005,
+      "plateau_frac": 0.097,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 21.755
+    }
+  },
+  {
+    "id": "1430-2017-04-01-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2017-04-01",
+    "end": "2017-04-04",
+    "days": 4,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.99,
+    "pi_during": 0.891,
+    "energy_lost_kwh": 708.2,
+    "est_cost_usd": 84.98,
+    "loss_pct": 9.587,
+    "evidence": {
+      "baseline_pi": 1.002,
+      "daily_pi": {
+        "2017-04-01": 0.797,
+        "2017-04-02": 0.984,
+        "2017-04-03": 0.986,
+        "2017-04-04": 0.778
+      },
+      "step_drop": -0.023,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0029,
+      "plateau_frac": 0.0,
+      "decline_began": "2017-03-30",
+      "recovered_to": 0.993,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 2
+    }
+  },
+  {
+    "id": "1430-2017-07-28-data_gap",
+    "label": "Monitoring data gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "start": "2017-07-28",
+    "end": "2017-07-31",
+    "days": 4,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.97,
+    "pi_during": null,
+    "energy_lost_kwh": 0.0,
+    "est_cost_usd": 0.0,
+    "loss_pct": null,
+    "evidence": {
+      "baseline_pi": 0.966,
+      "daily_pi": {},
+      "reason": "No meter readings during daylight; output during this window is unknown."
+    }
+  },
+  {
+    "id": "1430-2017-10-05-outage",
+    "label": "Full outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "start": "2017-10-05",
+    "end": "2017-10-05",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.965,
+    "pi_during": 0.134,
+    "energy_lost_kwh": 1394.9,
+    "est_cost_usd": 167.38,
+    "loss_pct": 86.29,
+    "evidence": {
+      "baseline_pi": 0.962,
+      "daily_pi": {
+        "2017-10-05": 0.134
+      }
+    }
+  },
+  {
+    "id": "1430-2017-10-06-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 1430,
+    "kind": "soiling",
+    "start": "2017-10-06",
+    "end": "2017-10-09",
+    "days": 4,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.957,
+    "pi_during": 0.857,
+    "energy_lost_kwh": 772.5,
+    "est_cost_usd": 92.7,
+    "loss_pct": 11.442,
+    "evidence": {
+      "baseline_pi": 0.963,
+      "daily_pi": {
+        "2017-10-06": 0.729,
+        "2017-10-07": 0.993,
+        "2017-10-08": 0.985,
+        "2017-10-09": 0.636
+      },
+      "step_drop": -0.028,
+      "trend_per_day": -0.03,
+      "trend_30d_per_day": -0.0057,
+      "plateau_frac": 0.0,
+      "decline_began": "2017-10-04",
+      "recovered_to": 1.007,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning.",
+      "decline_lead_days": 2
     }
   }
 ]

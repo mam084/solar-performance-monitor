@@ -11,60 +11,359 @@
     "tilt": 0,
     "azimuth": 180
   },
-  "source": "demo",
-  "built_at": "2026-11-26T20:41:11Z",
-  "data_start": "2023-01-01",
-  "data_end": "2024-12-31",
-  "calibration_scale": 0.8792,
-  "ac_capacity_kw": 576.1,
+  "source": "pvdaq",
+  "built_at": "2026-11-26T21:17:52Z",
+  "data_start": "2008-12-09",
+  "data_end": "2017-11-21",
+  "calibration_scale": 0.9435,
+  "ac_capacity_kw": 328.1,
   "reference_window": [
-    "2023-01-01 08:15:00",
-    "2024-01-01 08:15:00"
+    "2009-02-23 12:30:00",
+    "2010-02-23 12:30:00"
   ],
   "trimmed_before": null,
   "shape_correction_range": [
-    0.972,
-    1.024
+    0.659,
+    1.065
   ],
-  "nrmse_healthy_pct": 2.61,
+  "nrmse_healthy_pct": 7.05,
   "price_usd_kwh": 0.12,
-  "n_events": 3,
+  "n_events": 116,
   "ticket_window_days": 45,
   "ml": {
     "adopted": false,
-    "holdout_start": "2024-07-02",
-    "train_rows": 22494,
-    "holdout_nrmse_physics": 2.74,
-    "holdout_nrmse_ml": 2.8,
-    "holdout_daily_scatter_physics": 0.0221,
-    "holdout_daily_scatter_ml": 0.0231,
+    "holdout_start": "2015-08-27",
+    "train_rows": 75275,
+    "holdout_nrmse_physics": 6.41,
+    "holdout_nrmse_ml": 6.16,
+    "holdout_daily_scatter_physics": 0.0171,
+    "holdout_daily_scatter_ml": 0.0175,
     "reason": "didn't beat physics on held-out data by at least 3% on both 15-min error and daily scatter"
   },
-  "backtest": {
-    "faults_injected": 2,
-    "detected": 2,
-    "correct_kind": 2,
-    "false_alarms": 0,
-    "median_delay_days": 0.5,
-    "rows": [
-      {
-        "true_kind": "tracker_stall",
-        "start": "2024-04-25",
-        "end": "2024-05-10",
-        "detected": true,
-        "detected_kind": "tracker_stall",
-        "correct_kind": true,
-        "delay_days": 1
-      },
-      {
-        "true_kind": "outage",
-        "start": "2024-10-12",
-        "end": "2024-10-13",
-        "detected": true,
-        "detected_kind": "outage",
-        "correct_kind": true,
-        "delay_days": 0
-      }
-    ]
-  }
+  "preflight": [
+    {
+      "name": "raw files",
+      "status": "PASS",
+      "detail": "3270 files, 22 MB",
+      "fix": ""
+    },
+    {
+      "name": "column mapping",
+      "status": "WARN",
+      "detail": "not found in any file: wind_speed -> ['metric_5044']",
+      "fix": "correct the names in sites.yaml (python -m solarmon.inspect lists them)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_10.snappy.000.parquet (poa_irradiance) peaks +4.66 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_10.snappy.000: -4.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_11.snappy.000.parquet (poa_irradiance) peaks +9.27 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_11.snappy.000: -9.25` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_12.snappy.000.parquet (poa_irradiance) peaks +0.98 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_12.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_14.snappy.000.parquet (poa_irradiance) peaks +1.71 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_14.snappy.000: -1.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_15.snappy.000.parquet (poa_irradiance) peaks +1.00 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_15.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_17.snappy.000.parquet (poa_irradiance) peaks +0.83 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_17.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_19.snappy.000.parquet (poa_irradiance) peaks +0.81 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_19.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_20.snappy.000.parquet (poa_irradiance) peaks +0.81 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_20.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_21.snappy.000.parquet (poa_irradiance) peaks +0.78 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_21.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_22.snappy.000.parquet (poa_irradiance) peaks +1.59 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_22.snappy.000: -1.5` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_24.snappy.000.parquet (poa_irradiance) peaks +0.89 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_24.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_25.snappy.000.parquet (poa_irradiance) peaks +0.80 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_25.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_26.snappy.000.parquet (poa_irradiance) peaks +1.15 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_26.snappy.000: -1.25` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_29.snappy.000.parquet (poa_irradiance) peaks +0.88 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_29.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_31.snappy.000.parquet (poa_irradiance) peaks +1.07 h from solar noon",
+      "fix": "add `system_1430__date_2008_12_31.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2008_12_09.snappy.000.parquet (poa_irradiance) peaks +8.11 h from solar noon",
+      "fix": "looks like UTC: add `system_1430__date_2008_12_09.snappy.000` to utc_files"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_01.snappy.000.parquet (poa_irradiance) peaks +1.15 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_01.snappy.000: -1.25` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_10.snappy.000.parquet (poa_irradiance) peaks +1.14 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_10.snappy.000: -1.25` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_11.snappy.000.parquet (poa_irradiance) peaks +2.70 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_11.snappy.000: -2.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_12.snappy.000.parquet (poa_irradiance) peaks +1.45 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_12.snappy.000: -1.5` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_15.snappy.000.parquet (poa_irradiance) peaks +1.59 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_15.snappy.000: -1.5` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_16.snappy.000.parquet (poa_irradiance) peaks +0.84 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_16.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_17.snappy.000.parquet (poa_irradiance) peaks +1.03 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_17.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_18.snappy.000.parquet (poa_irradiance) peaks +0.97 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_18.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_19.snappy.000.parquet (poa_irradiance) peaks +0.83 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_19.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_02.snappy.000.parquet (poa_irradiance) peaks +1.25 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_02.snappy.000: -1.25` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_20.snappy.000.parquet (poa_irradiance) peaks +0.83 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_20.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_21.snappy.000.parquet (poa_irradiance) peaks +0.77 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_21.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_22.snappy.000.parquet (poa_irradiance) peaks +1.10 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_22.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_24.snappy.000.parquet (poa_irradiance) peaks +1.47 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_24.snappy.000: -1.5` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_25.snappy.000.parquet (poa_irradiance) peaks +0.94 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_25.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_26.snappy.000.parquet (poa_irradiance) peaks +1.05 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_26.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_27.snappy.000.parquet (poa_irradiance) peaks +0.91 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_27.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_28.snappy.000.parquet (poa_irradiance) peaks +1.05 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_28.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_29.snappy.000.parquet (poa_irradiance) peaks +0.84 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_29.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_03.snappy.000.parquet (poa_irradiance) peaks +1.11 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_03.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_30.snappy.000.parquet (poa_irradiance) peaks +0.80 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_30.snappy.000: -0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_04.snappy.000.parquet (poa_irradiance) peaks +2.09 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_04.snappy.000: -2.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_07.snappy.000.parquet (poa_irradiance) peaks +1.75 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_07.snappy.000: -1.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_01_09.snappy.000.parquet (poa_irradiance) peaks +1.21 h from solar noon",
+      "fix": "add `system_1430__date_2009_01_09.snappy.000: -1.25` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_10_10.snappy.000.parquet (poa_irradiance) peaks -0.92 h from solar noon",
+      "fix": "add `system_1430__date_2009_10_10.snappy.000: 1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_10_10.snappy.000.parquet (ac_power) peaks -0.91 h from solar noon",
+      "fix": "add `system_1430__date_2009_10_10.snappy.000: 1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_10_11.snappy.000.parquet (ac_power) peaks +1.11 h from solar noon",
+      "fix": "add `system_1430__date_2009_10_11.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_10_13.snappy.000.parquet (poa_irradiance) peaks +1.14 h from solar noon",
+      "fix": "add `system_1430__date_2009_10_13.snappy.000: -1.25` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_10_13.snappy.000.parquet (ac_power) peaks +1.10 h from solar noon",
+      "fix": "add `system_1430__date_2009_10_13.snappy.000: -1.0` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_10_15.snappy.000.parquet (poa_irradiance) peaks -0.82 h from solar noon",
+      "fix": "add `system_1430__date_2009_10_15.snappy.000: 0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "system_1430__date_2009_10_18.snappy.000.parquet (poa_irradiance) peaks -0.75 h from solar noon",
+      "fix": "add `system_1430__date_2009_10_18.snappy.000: 0.75` under file_offsets_h (confirm with qa.lag_scan by month)"
+    },
+    {
+      "name": "file clocks",
+      "status": "WARN",
+      "detail": "could not run: cannot convert float NaN to integer",
+      "fix": ""
+    },
+    {
+      "name": "coverage",
+      "status": "WARN",
+      "detail": "2008: 0% power, 2009: 88% power, 2010: 100% power, 2011: 100% power, 2012: 100% power, 2013: 100% power, 2014: 100% power, 2015: 100% power, 2016: 100% power, 2017: 99% power",
+      "fix": "years with < 80% power coverage (2008) will show many data gaps"
+    },
+    {
+      "name": "alignment",
+      "status": "PASS",
+      "detail": "best lag 0 h in every year",
+      "fix": ""
+    },
+    {
+      "name": "calibration",
+      "status": "PASS",
+      "detail": "scale 0.944 on 2009-02-23 to 2010-02-23, AC limit 328 kW",
+      "fix": ""
+    },
+    {
+      "name": "accuracy",
+      "status": "WARN",
+      "detail": "nRMSE on healthy days 7.1% (target < 5%); worst year 2011: 10.5%",
+      "fix": "a single bad year usually means a clock or sensor problem in that year's files"
+    }
+  ]
 }

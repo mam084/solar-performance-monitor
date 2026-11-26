@@ -1,94 +1,796 @@
 [
   {
-    "id": "4902-2024-03-06-outage",
+    "id": "4902-2014-10-25-outage",
     "label": "Full outage",
     "site_id": 4902,
     "kind": "outage",
-    "start": "2024-03-06",
-    "end": "2024-03-06",
-    "days": 1,
+    "start": "2014-10-25",
+    "end": "2014-10-26",
+    "days": 2,
     "active": false,
     "severity": "high",
-    "pi_before": 0.997,
+    "pi_before": 0.966,
     "pi_during": 0.0,
-    "energy_lost_kwh": 1380.5,
-    "est_cost_usd": 165.65,
+    "energy_lost_kwh": 2732.6,
+    "est_cost_usd": 327.91,
     "loss_pct": 100.0,
     "evidence": {
-      "baseline_pi": 0.998,
+      "baseline_pi": 0.962,
       "daily_pi": {
-        "2024-03-06": 0.0
+        "2014-10-25": 0.0,
+        "2014-10-26": 0.0
       }
     }
   },
   {
-    "id": "4902-2024-05-15-sensor_fault",
-    "label": "Irradiance sensor fault",
+    "id": "4902-2015-01-06-outage",
+    "label": "Full outage",
     "site_id": 4902,
-    "kind": "sensor_fault",
-    "start": "2024-05-15",
-    "end": "2024-05-21",
-    "days": 7,
+    "kind": "outage",
+    "start": "2015-01-06",
+    "end": "2015-01-07",
+    "days": 2,
     "active": false,
-    "severity": "medium",
-    "pi_before": 0.985,
-    "pi_during": null,
-    "energy_lost_kwh": 0.0,
-    "est_cost_usd": 0.0,
-    "loss_pct": null,
+    "severity": "high",
+    "pi_before": 0.96,
+    "pi_during": 0.022,
+    "energy_lost_kwh": 1008.2,
+    "est_cost_usd": 120.98,
+    "loss_pct": 97.439,
     "evidence": {
-      "baseline_pi": 0.995,
-      "daily_pi": {},
-      "reason": "The site produced power but the irradiance sensor reported nothing.",
-      "poa_coverage": 0.0
+      "baseline_pi": 0.947,
+      "daily_pi": {
+        "2015-01-06": 0.005,
+        "2015-01-07": 0.039
+      }
     }
   },
   {
-    "id": "4902-2024-09-12-partial_outage",
+    "id": "4902-2015-01-21-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-01-21",
+    "end": "2015-01-21",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.961,
+    "pi_during": 0.029,
+    "energy_lost_kwh": 113.8,
+    "est_cost_usd": 13.66,
+    "loss_pct": 59.084,
+    "evidence": {
+      "baseline_pi": 0.947,
+      "daily_pi": {
+        "2015-01-21": 0.029
+      }
+    }
+  },
+  {
+    "id": "4902-2015-01-27-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-01-27",
+    "end": "2015-01-27",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.938,
+    "pi_during": 0.023,
+    "energy_lost_kwh": 712.8,
+    "est_cost_usd": 85.54,
+    "loss_pct": 97.707,
+    "evidence": {
+      "baseline_pi": 0.947,
+      "daily_pi": {
+        "2015-01-27": 0.023
+      }
+    }
+  },
+  {
+    "id": "4902-2015-01-28-partial_outage",
     "label": "Partial outage",
     "site_id": 4902,
     "kind": "partial_outage",
-    "start": "2024-09-12",
-    "end": "2024-10-02",
-    "days": 21,
+    "start": "2015-01-28",
+    "end": "2015-01-30",
+    "days": 3,
     "active": false,
     "severity": "high",
-    "pi_before": 1.009,
-    "pi_during": 0.755,
-    "energy_lost_kwh": 5149.8,
-    "est_cost_usd": 617.98,
-    "loss_pct": 24.558,
+    "pi_before": 0.937,
+    "pi_during": 0.383,
+    "energy_lost_kwh": 1509.4,
+    "est_cost_usd": 181.13,
+    "loss_pct": 54.849,
     "evidence": {
-      "baseline_pi": 0.995,
+      "baseline_pi": 0.947,
       "daily_pi": {
-        "2024-09-12": 0.763,
-        "2024-09-13": 0.779,
-        "2024-09-14": 0.755,
-        "2024-09-15": 0.761,
-        "2024-09-16": 0.747,
-        "2024-09-17": 0.733,
-        "2024-09-18": 0.739,
-        "2024-09-19": 0.764,
-        "2024-09-20": 0.756,
-        "2024-09-21": 0.731,
-        "2024-09-22": 0.757,
-        "2024-09-23": 0.763,
-        "2024-09-24": 0.76,
-        "2024-09-25": 0.773,
-        "2024-09-26": 0.727,
-        "2024-09-27": 0.739,
-        "2024-09-28": 0.736,
-        "2024-09-29": 0.753,
-        "2024-09-30": 0.774,
-        "2024-10-01": 0.739,
-        "2024-10-02": 0.751
+        "2015-01-28": 0.189,
+        "2015-01-29": 0.383,
+        "2015-01-30": 0.771
       },
-      "step_drop": 0.248,
-      "trend_per_day": -0.0004,
-      "trend_30d_per_day": -0.0066,
-      "plateau_frac": 0.1,
+      "step_drop": 0.378,
+      "trend_per_day": 0.0,
+      "trend_30d_per_day": -0.0133,
+      "plateau_frac": 0.111,
       "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
-      "capacity_offline_pct": 23.306
+      "capacity_offline_pct": 49.252
+    }
+  },
+  {
+    "id": "4902-2015-02-17-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-02-17",
+    "end": "2015-02-18",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.939,
+    "pi_during": 0.037,
+    "energy_lost_kwh": 2849.2,
+    "est_cost_usd": 341.91,
+    "loss_pct": 96.09,
+    "evidence": {
+      "baseline_pi": 0.943,
+      "daily_pi": {
+        "2015-02-17": 0.02,
+        "2015-02-18": 0.055
+      }
+    }
+  },
+  {
+    "id": "4902-2015-02-20-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-02-20",
+    "end": "2015-02-20",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.937,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 1625.0,
+    "est_cost_usd": 195.0,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.94,
+      "daily_pi": {
+        "2015-02-20": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2015-02-24-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-02-24",
+    "end": "2015-02-24",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.943,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 1585.0,
+    "est_cost_usd": 190.2,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.942,
+      "daily_pi": {
+        "2015-02-24": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2015-03-06-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-03-06",
+    "end": "2015-03-06",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.967,
+    "pi_during": 0.004,
+    "energy_lost_kwh": 1733.2,
+    "est_cost_usd": 207.98,
+    "loss_pct": 99.628,
+    "evidence": {
+      "baseline_pi": 0.947,
+      "daily_pi": {
+        "2015-03-06": 0.004
+      }
+    }
+  },
+  {
+    "id": "4902-2015-03-29-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-03-29",
+    "end": "2015-03-29",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.958,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 1812.0,
+    "est_cost_usd": 217.43,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.955,
+      "daily_pi": {
+        "2015-03-29": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2015-04-18-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-04-18",
+    "end": "2015-04-20",
+    "days": 3,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.974,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 4041.8,
+    "est_cost_usd": 485.01,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.961,
+      "daily_pi": {
+        "2015-04-18": 0.0,
+        "2015-04-19": 0.0,
+        "2015-04-20": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2015-05-07-partial_outage",
+    "label": "Partial outage",
+    "site_id": 4902,
+    "kind": "partial_outage",
+    "start": "2015-05-07",
+    "end": "2015-05-15",
+    "days": 9,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.958,
+    "pi_during": 0.89,
+    "energy_lost_kwh": 345.7,
+    "est_cost_usd": 41.49,
+    "loss_pct": 2.883,
+    "evidence": {
+      "baseline_pi": 0.964,
+      "daily_pi": {
+        "2015-05-07": 0.85,
+        "2015-05-08": 0.987,
+        "2015-05-09": 0.84,
+        "2015-05-10": 0.987,
+        "2015-05-11": 0.84,
+        "2015-05-12": 0.894,
+        "2015-05-13": 0.89,
+        "2015-05-14": 1.01,
+        "2015-05-15": 0.874
+      },
+      "step_drop": 0.112,
+      "trend_per_day": 0.0024,
+      "trend_30d_per_day": 0.0057,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 11.607
+    }
+  },
+  {
+    "id": "4902-2015-06-13-partial_outage",
+    "label": "Partial outage",
+    "site_id": 4902,
+    "kind": "partial_outage",
+    "start": "2015-06-13",
+    "end": "2015-06-20",
+    "days": 8,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.951,
+    "pi_during": 0.879,
+    "energy_lost_kwh": 524.5,
+    "est_cost_usd": 62.94,
+    "loss_pct": 5.34,
+    "evidence": {
+      "baseline_pi": 0.966,
+      "daily_pi": {
+        "2015-06-13": 0.875,
+        "2015-06-14": 0.947,
+        "2015-06-15": 0.808,
+        "2015-06-16": 0.829,
+        "2015-06-17": 1.012,
+        "2015-06-18": 0.871,
+        "2015-06-19": 0.886,
+        "2015-06-20": 0.883
+      },
+      "step_drop": 0.087,
+      "trend_per_day": 0.0015,
+      "trend_30d_per_day": -0.0018,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 9.466
+    }
+  },
+  {
+    "id": "4902-2015-08-26-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-08-26",
+    "end": "2015-09-02",
+    "days": 8,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.981,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 9914.6,
+    "est_cost_usd": 1189.75,
+    "loss_pct": 99.163,
+    "evidence": {
+      "baseline_pi": 0.977,
+      "daily_pi": {
+        "2015-08-26": 0.0,
+        "2015-08-27": 0.0,
+        "2015-08-28": 0.0,
+        "2015-08-29": 0.0,
+        "2015-08-30": 0.0,
+        "2015-08-31": 0.0,
+        "2015-09-01": 0.0,
+        "2015-09-02": 0.014
+      }
+    }
+  },
+  {
+    "id": "4902-2015-09-08-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-09-08",
+    "end": "2015-09-08",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.957,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 1351.3,
+    "est_cost_usd": 162.16,
+    "loss_pct": 99.974,
+    "evidence": {
+      "baseline_pi": 0.979,
+      "daily_pi": {
+        "2015-09-08": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2015-10-24-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-10-24",
+    "end": "2015-10-25",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.975,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 1176.0,
+    "est_cost_usd": 141.12,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.976,
+      "daily_pi": {
+        "2015-10-24": 0.0,
+        "2015-10-25": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2015-11-03-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-11-03",
+    "end": "2015-11-06",
+    "days": 4,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.975,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 3767.4,
+    "est_cost_usd": 452.09,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.976,
+      "daily_pi": {
+        "2015-11-03": 0.0,
+        "2015-11-04": 0.0,
+        "2015-11-05": 0.0,
+        "2015-11-06": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2015-11-08-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-11-08",
+    "end": "2015-11-09",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.971,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 1590.4,
+    "est_cost_usd": 190.85,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.976,
+      "daily_pi": {
+        "2015-11-08": 0.0,
+        "2015-11-09": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2015-11-11-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-11-11",
+    "end": "2015-11-18",
+    "days": 8,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.971,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 3465.0,
+    "est_cost_usd": 415.79,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.976,
+      "daily_pi": {
+        "2015-11-11": 0.0,
+        "2015-11-12": 0.0,
+        "2015-11-13": 0.0,
+        "2015-11-14": 0.0,
+        "2015-11-15": 0.0,
+        "2015-11-16": 0.0,
+        "2015-11-17": 0.0,
+        "2015-11-18": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2015-11-20-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-11-20",
+    "end": "2015-11-28",
+    "days": 9,
+    "active": false,
+    "severity": "high",
+    "pi_before": null,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 5259.6,
+    "est_cost_usd": 631.15,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.975,
+      "daily_pi": {
+        "2015-11-20": 0.0,
+        "2015-11-21": 0.0,
+        "2015-11-22": 0.0,
+        "2015-11-23": 0.0,
+        "2015-11-24": 0.0,
+        "2015-11-25": 0.0,
+        "2015-11-26": 0.0,
+        "2015-11-27": 0.0,
+        "2015-11-28": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2015-12-03-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2015-12-03",
+    "end": "2015-12-03",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": null,
+    "pi_during": 0.016,
+    "energy_lost_kwh": 1099.1,
+    "est_cost_usd": 131.89,
+    "loss_pct": 98.429,
+    "evidence": {
+      "baseline_pi": 0.975,
+      "daily_pi": {
+        "2015-12-03": 0.016
+      }
+    }
+  },
+  {
+    "id": "4902-2016-01-24-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2016-01-24",
+    "end": "2016-01-25",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.958,
+    "pi_during": 0.045,
+    "energy_lost_kwh": 2304.6,
+    "est_cost_usd": 276.55,
+    "loss_pct": 95.632,
+    "evidence": {
+      "baseline_pi": 0.952,
+      "daily_pi": {
+        "2016-01-24": 0.005,
+        "2016-01-25": 0.085
+      }
+    }
+  },
+  {
+    "id": "4902-2016-01-26-partial_outage",
+    "label": "Partial outage",
+    "site_id": 4902,
+    "kind": "partial_outage",
+    "start": "2016-01-26",
+    "end": "2016-01-31",
+    "days": 6,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.958,
+    "pi_during": 0.689,
+    "energy_lost_kwh": 1667.6,
+    "est_cost_usd": 200.11,
+    "loss_pct": 28.265,
+    "evidence": {
+      "baseline_pi": 0.947,
+      "daily_pi": {
+        "2016-01-26": 0.274,
+        "2016-01-27": 0.617,
+        "2016-01-28": 0.688,
+        "2016-01-29": 0.691,
+        "2016-01-30": 0.773,
+        "2016-01-31": 0.832
+      },
+      "step_drop": 0.3,
+      "trend_per_day": 0.0994,
+      "trend_30d_per_day": -0.0163,
+      "plateau_frac": 0.273,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 35.184
+    }
+  },
+  {
+    "id": "4902-2016-02-09-partial_outage",
+    "label": "Partial outage",
+    "site_id": 4902,
+    "kind": "partial_outage",
+    "start": "2016-02-09",
+    "end": "2016-02-13",
+    "days": 5,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.938,
+    "pi_during": 0.838,
+    "energy_lost_kwh": 682.1,
+    "est_cost_usd": 81.85,
+    "loss_pct": 14.555,
+    "evidence": {
+      "baseline_pi": 0.941,
+      "daily_pi": {
+        "2016-02-09": 0.229,
+        "2016-02-10": 0.799,
+        "2016-02-11": 0.946,
+        "2016-02-12": 0.931,
+        "2016-02-13": 0.838
+      },
+      "step_drop": 0.132,
+      "trend_per_day": 0.1433,
+      "trend_30d_per_day": -0.0021,
+      "plateau_frac": 0.0,
+      "reason": "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string).",
+      "capacity_offline_pct": 15.084
+    }
+  },
+  {
+    "id": "4902-2016-04-16-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2016-04-16",
+    "end": "2016-04-17",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.997,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 6332.7,
+    "est_cost_usd": 759.92,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 0.968,
+      "daily_pi": {
+        "2016-04-16": 0.0,
+        "2016-04-17": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2016-04-18-soiling",
+    "label": "Soiling / gradual loss",
+    "site_id": 4902,
+    "kind": "soiling",
+    "start": "2016-04-18",
+    "end": "2016-04-27",
+    "days": 10,
+    "active": false,
+    "severity": "medium",
+    "pi_before": 0.997,
+    "pi_during": 0.821,
+    "energy_lost_kwh": 3681.5,
+    "est_cost_usd": 441.78,
+    "loss_pct": 27.703,
+    "evidence": {
+      "baseline_pi": 0.968,
+      "daily_pi": {
+        "2016-04-18": 0.255,
+        "2016-04-19": 0.964,
+        "2016-04-20": 1.015,
+        "2016-04-21": 0.894,
+        "2016-04-22": 0.784,
+        "2016-04-23": 0.829,
+        "2016-04-24": 0.877,
+        "2016-04-25": 0.635,
+        "2016-04-26": 0.335,
+        "2016-04-27": 0.814
+      },
+      "step_drop": 0.014,
+      "trend_per_day": -0.0174,
+      "trend_30d_per_day": -0.0139,
+      "plateau_frac": 0.0,
+      "decline_began": "2016-04-14",
+      "recovered_to": 0.902,
+      "reason": "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation).",
+      "decline_lead_days": 4
+    }
+  },
+  {
+    "id": "4902-2016-05-04-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2016-05-04",
+    "end": "2016-05-04",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 0.996,
+    "pi_during": 0.124,
+    "energy_lost_kwh": 351.5,
+    "est_cost_usd": 42.18,
+    "loss_pct": 65.045,
+    "evidence": {
+      "baseline_pi": 0.969,
+      "daily_pi": {
+        "2016-05-04": 0.124
+      }
+    }
+  },
+  {
+    "id": "4902-2016-10-14-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2016-10-14",
+    "end": "2016-10-17",
+    "days": 4,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.008,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 7966.4,
+    "est_cost_usd": 955.96,
+    "loss_pct": 96.971,
+    "evidence": {
+      "baseline_pi": 0.981,
+      "daily_pi": {
+        "2016-10-14": 0.115,
+        "2016-10-15": 0.0,
+        "2016-10-16": 0.0,
+        "2016-10-17": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2017-05-28-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2017-05-28",
+    "end": "2017-05-29",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.047,
+    "pi_during": 0.056,
+    "energy_lost_kwh": 1769.3,
+    "est_cost_usd": 212.32,
+    "loss_pct": 91.907,
+    "evidence": {
+      "baseline_pi": 1.055,
+      "daily_pi": {
+        "2017-05-28": 0.112,
+        "2017-05-29": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2017-10-21-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2017-10-21",
+    "end": "2017-10-22",
+    "days": 2,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.116,
+    "pi_during": 0.0,
+    "energy_lost_kwh": 2325.1,
+    "est_cost_usd": 279.01,
+    "loss_pct": 100.0,
+    "evidence": {
+      "baseline_pi": 1.062,
+      "daily_pi": {
+        "2017-10-21": 0.0,
+        "2017-10-22": 0.0
+      }
+    }
+  },
+  {
+    "id": "4902-2017-12-10-outage",
+    "label": "Full outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "start": "2017-12-10",
+    "end": "2017-12-10",
+    "days": 1,
+    "active": false,
+    "severity": "high",
+    "pi_before": 1.051,
+    "pi_during": 0.068,
+    "energy_lost_kwh": 486.6,
+    "est_cost_usd": 58.39,
+    "loss_pct": 94.638,
+    "evidence": {
+      "baseline_pi": 1.067,
+      "daily_pi": {
+        "2017-12-10": 0.068
+      }
     }
   }
 ]

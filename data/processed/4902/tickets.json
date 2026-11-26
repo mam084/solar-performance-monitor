@@ -1,15 +1,15 @@
 [
   {
-    "ticket_id": "T-4902-2024-03-06-outage",
-    "event_id": "4902-2024-03-06-outage",
+    "ticket_id": "T-4902-2014-10-25-outage",
+    "event_id": "4902-2014-10-25-outage",
     "site_id": 4902,
     "kind": "outage",
-    "title": "NIST Ground Array: full outage (2024-03-06 to 2024-03-06)",
+    "title": "NIST Ground Array: full outage (2014-10-25 to 2014-10-26)",
     "priority": "P2",
-    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2024-03-06 to 2024-03-06. Estimated cost so far: $166.",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2014-10-25 to 2014-10-26. Estimated cost so far: $328.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,380 kWh (100% of expected), about $166."
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,733 kWh (100% of expected), about $328."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -28,53 +28,117 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:41:06Z",
+    "drafted_at": "2026-11-26T21:25:31Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4902-2024-05-15-sensor_fault",
-    "event_id": "4902-2024-05-15-sensor_fault",
+    "ticket_id": "T-4902-2015-01-06-outage",
+    "event_id": "4902-2015-01-06-outage",
     "site_id": 4902,
-    "kind": "sensor_fault",
-    "title": "NIST Ground Array: irradiance sensor fault (2024-05-15 to 2024-05-21)",
-    "priority": "P3",
-    "summary": "Irradiance sensor fault detected at NIST Ground Array (Gaithersburg, MD) over 7 day(s), 2024-05-15 to 2024-05-21.",
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-01-06 to 2015-01-07)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2015-01-06 to 2015-01-07. Estimated cost so far: $121.",
     "evidence": [
-      "Irradiance was recorded for only 0% of producing intervals.",
-      "The site produced power but the irradiance sensor reported nothing."
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,008 kWh (97% of expected), about $121."
     ],
     "likely_causes": [
-      "Dirty or shaded pyranometer",
-      "Sensor drift / out of calibration",
-      "Sensor knocked out of plane"
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
     ],
     "recommended_actions": [
-      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
-      "Cross-check its readings against a second on-site sensor or satellite irradiance",
-      "Recalibrate or replace the sensor if the offset persists",
-      "Treat performance numbers for this window as unreliable until fixed"
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
     ],
     "parts_and_tools": [
-      "Spare pyranometer / reference cell",
-      "Bubble level and inclinometer"
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:41:06Z",
+    "drafted_at": "2026-11-26T21:25:31Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-4902-2024-09-12-partial_outage",
-    "event_id": "4902-2024-09-12-partial_outage",
+    "ticket_id": "T-4902-2015-01-21-outage",
+    "event_id": "4902-2015-01-21-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-01-21 to 2015-01-21)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-01-21 to 2015-01-21. Estimated cost so far: $14.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.03 during the event (1.00 = healthy).",
+      "Estimated energy lost: 114 kWh (59% of expected), about $14."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-01-27-outage",
+    "event_id": "4902-2015-01-27-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-01-27 to 2015-01-27)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-01-27 to 2015-01-27. Estimated cost so far: $86.",
+    "evidence": [
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
+      "Estimated energy lost: 713 kWh (98% of expected), about $86."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-01-28-partial_outage",
+    "event_id": "4902-2015-01-28-partial_outage",
     "site_id": 4902,
     "kind": "partial_outage",
-    "title": "NIST Ground Array: partial outage (2024-09-12 to 2024-10-02)",
+    "title": "NIST Ground Array: partial outage (2015-01-28 to 2015-01-30)",
     "priority": "P2",
-    "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 21 day(s), 2024-09-12 to 2024-10-02. Estimated cost so far: $618.",
+    "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 3 day(s), 2015-01-28 to 2015-01-30. Estimated cost so far: $181.",
     "evidence": [
-      "Performance index fell from 1.01 in the two weeks before to a median of 0.76 during the event (1.00 = healthy).",
-      "Estimated energy lost: 5,150 kWh (25% of expected), about $618.",
-      "Roughly 23% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.38 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,509 kWh (55% of expected), about $181.",
+      "Roughly 49% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -95,7 +159,853 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:41:06Z",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-02-17-outage",
+    "event_id": "4902-2015-02-17-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-02-17 to 2015-02-18)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2015-02-17 to 2015-02-18. Estimated cost so far: $342.",
+    "evidence": [
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,849 kWh (96% of expected), about $342."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-02-20-outage",
+    "event_id": "4902-2015-02-20-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-02-20 to 2015-02-20)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-02-20 to 2015-02-20. Estimated cost so far: $195.",
+    "evidence": [
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,625 kWh (100% of expected), about $195."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-02-24-outage",
+    "event_id": "4902-2015-02-24-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-02-24 to 2015-02-24)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-02-24 to 2015-02-24. Estimated cost so far: $190.",
+    "evidence": [
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,585 kWh (100% of expected), about $190."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-03-06-outage",
+    "event_id": "4902-2015-03-06-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-03-06 to 2015-03-06)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-03-06 to 2015-03-06. Estimated cost so far: $208.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,733 kWh (100% of expected), about $208."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-03-29-outage",
+    "event_id": "4902-2015-03-29-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-03-29 to 2015-03-29)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-03-29 to 2015-03-29. Estimated cost so far: $217.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,812 kWh (100% of expected), about $217."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-04-18-outage",
+    "event_id": "4902-2015-04-18-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-04-18 to 2015-04-20)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 3 day(s), 2015-04-18 to 2015-04-20. Estimated cost so far: $485.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,042 kWh (100% of expected), about $485."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-05-07-partial_outage",
+    "event_id": "4902-2015-05-07-partial_outage",
+    "site_id": 4902,
+    "kind": "partial_outage",
+    "title": "NIST Ground Array: partial outage (2015-05-07 to 2015-05-15)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 9 day(s), 2015-05-07 to 2015-05-15. Estimated cost so far: $41.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.89 during the event (1.00 = healthy).",
+      "Estimated energy lost: 346 kWh (3% of expected), about $41.",
+      "Roughly 12% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-06-13-partial_outage",
+    "event_id": "4902-2015-06-13-partial_outage",
+    "site_id": 4902,
+    "kind": "partial_outage",
+    "title": "NIST Ground Array: partial outage (2015-06-13 to 2015-06-20)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 8 day(s), 2015-06-13 to 2015-06-20. Estimated cost so far: $63.",
+    "evidence": [
+      "Performance index fell from 0.95 in the two weeks before to a median of 0.88 during the event (1.00 = healthy).",
+      "Estimated energy lost: 524 kWh (5% of expected), about $63.",
+      "Roughly 9% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-08-26-outage",
+    "event_id": "4902-2015-08-26-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-08-26 to 2015-09-02)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 8 day(s), 2015-08-26 to 2015-09-02. Estimated cost so far: $1,190.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 9,915 kWh (99% of expected), about $1,190."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-09-08-outage",
+    "event_id": "4902-2015-09-08-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-09-08 to 2015-09-08)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-09-08 to 2015-09-08. Estimated cost so far: $162.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,351 kWh (100% of expected), about $162."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-10-24-outage",
+    "event_id": "4902-2015-10-24-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-10-24 to 2015-10-25)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2015-10-24 to 2015-10-25. Estimated cost so far: $141.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,176 kWh (100% of expected), about $141."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-11-03-outage",
+    "event_id": "4902-2015-11-03-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-11-03 to 2015-11-06)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 4 day(s), 2015-11-03 to 2015-11-06. Estimated cost so far: $452.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,767 kWh (100% of expected), about $452."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-11-08-outage",
+    "event_id": "4902-2015-11-08-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-11-08 to 2015-11-09)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2015-11-08 to 2015-11-09. Estimated cost so far: $191.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,590 kWh (100% of expected), about $191."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-11-11-outage",
+    "event_id": "4902-2015-11-11-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-11-11 to 2015-11-18)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 8 day(s), 2015-11-11 to 2015-11-18. Estimated cost so far: $416.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,465 kWh (100% of expected), about $416."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-11-20-outage",
+    "event_id": "4902-2015-11-20-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-11-20 to 2015-11-28)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 9 day(s), 2015-11-20 to 2015-11-28. Estimated cost so far: $631.",
+    "evidence": [
+      "Median performance index during the event: 0.00.",
+      "Estimated energy lost: 5,260 kWh (100% of expected), about $631."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2015-12-03-outage",
+    "event_id": "4902-2015-12-03-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2015-12-03 to 2015-12-03)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2015-12-03 to 2015-12-03. Estimated cost so far: $132.",
+    "evidence": [
+      "Median performance index during the event: 0.02.",
+      "Estimated energy lost: 1,099 kWh (98% of expected), about $132."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2016-01-24-outage",
+    "event_id": "4902-2016-01-24-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2016-01-24 to 2016-01-25)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2016-01-24 to 2016-01-25. Estimated cost so far: $277.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,305 kWh (96% of expected), about $277."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2016-01-26-partial_outage",
+    "event_id": "4902-2016-01-26-partial_outage",
+    "site_id": 4902,
+    "kind": "partial_outage",
+    "title": "NIST Ground Array: partial outage (2016-01-26 to 2016-01-31)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 6 day(s), 2016-01-26 to 2016-01-31. Estimated cost so far: $200.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.69 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,668 kWh (28% of expected), about $200.",
+      "Roughly 35% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2016-02-09-partial_outage",
+    "event_id": "4902-2016-02-09-partial_outage",
+    "site_id": 4902,
+    "kind": "partial_outage",
+    "title": "NIST Ground Array: partial outage (2016-02-09 to 2016-02-13)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 5 day(s), 2016-02-09 to 2016-02-13. Estimated cost so far: $82.",
+    "evidence": [
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.84 during the event (1.00 = healthy).",
+      "Estimated energy lost: 682 kWh (15% of expected), about $82.",
+      "Roughly 15% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2016-04-16-outage",
+    "event_id": "4902-2016-04-16-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2016-04-16 to 2016-04-17)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2016-04-16 to 2016-04-17. Estimated cost so far: $760.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 6,333 kWh (100% of expected), about $760."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2016-04-18-soiling",
+    "event_id": "4902-2016-04-18-soiling",
+    "site_id": 4902,
+    "kind": "soiling",
+    "title": "NIST Ground Array: soiling / gradual loss (2016-04-18 to 2016-04-27)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NIST Ground Array (Gaithersburg, MD) over 10 day(s), 2016-04-18 to 2016-04-27. Estimated cost so far: $442.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.82 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,682 kWh (28% of expected), about $442.",
+      "The decline appears to have started around 2016-04-14, 4 days before it crossed the alert threshold.",
+      "Performance recovered to 0.90 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2016-05-04-outage",
+    "event_id": "4902-2016-05-04-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2016-05-04 to 2016-05-04)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2016-05-04 to 2016-05-04. Estimated cost so far: $42.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.12 during the event (1.00 = healthy).",
+      "Estimated energy lost: 352 kWh (65% of expected), about $42."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2016-10-14-outage",
+    "event_id": "4902-2016-10-14-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2016-10-14 to 2016-10-17)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 4 day(s), 2016-10-14 to 2016-10-17. Estimated cost so far: $956.",
+    "evidence": [
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 7,966 kWh (97% of expected), about $956."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2017-05-28-outage",
+    "event_id": "4902-2017-05-28-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2017-05-28 to 2017-05-29)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2017-05-28 to 2017-05-29. Estimated cost so far: $212.",
+    "evidence": [
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,769 kWh (92% of expected), about $212."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2017-10-21-outage",
+    "event_id": "4902-2017-10-21-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2017-10-21 to 2017-10-22)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 2 day(s), 2017-10-21 to 2017-10-22. Estimated cost so far: $279.",
+    "evidence": [
+      "Performance index fell from 1.12 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,325 kWh (100% of expected), about $279."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-4902-2017-12-10-outage",
+    "event_id": "4902-2017-12-10-outage",
+    "site_id": 4902,
+    "kind": "outage",
+    "title": "NIST Ground Array: full outage (2017-12-10 to 2017-12-10)",
+    "priority": "P2",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2017-12-10 to 2017-12-10. Estimated cost so far: $58.",
+    "evidence": [
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
+      "Estimated energy lost: 487 kWh (95% of expected), about $58."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:25:31Z",
     "status": "historical"
   }
 ]

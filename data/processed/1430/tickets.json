@@ -1,83 +1,102 @@
 [
   {
-    "ticket_id": "T-1430-2024-04-26-tracker_stall",
-    "event_id": "1430-2024-04-26-tracker_stall",
+    "ticket_id": "T-1430-2008-12-12-data_gap",
+    "event_id": "1430-2008-12-12-data_gap",
     "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2024-04-26 to 2024-05-04)",
+    "kind": "data_gap",
+    "title": "NREL Mesa 1-axis: monitoring data gap (2008-12-12 to 2009-01-02)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 9 day(s), 2024-04-26 to 2024-05-04. Estimated cost so far: $1,290.",
+    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 22 day(s), 2008-12-12 to 2009-01-02.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.77 during the event (1.00 = healthy).",
-      "Estimated energy lost: 10,752 kWh (23% of expected), about $1,290.",
-      "Morning and evening output ran 38 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+      "No meter readings during daylight; output during this window is unknown."
     ],
     "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
+      "Data-logger power loss",
+      "Network or cellular modem outage",
+      "Logger storage full"
     ],
     "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+      "Check data-logger power and network/modem connectivity",
+      "Back-fill the gap from inverter internal logs or the revenue meter",
+      "Confirm the site was producing during the gap (meter totals)"
     ],
     "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
+      "Spare cellular modem / SIM"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:41:11Z",
+    "drafted_at": "2026-11-26T21:17:52Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2024-05-06-tracker_stall",
-    "event_id": "1430-2024-05-06-tracker_stall",
+    "ticket_id": "T-1430-2009-01-04-data_gap",
+    "event_id": "1430-2009-01-04-data_gap",
     "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2024-05-06 to 2024-05-10)",
+    "kind": "data_gap",
+    "title": "NREL Mesa 1-axis: monitoring data gap (2009-01-04 to 2009-01-24)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2024-05-06 to 2024-05-10. Estimated cost so far: $670.",
+    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 21 day(s), 2009-01-04 to 2009-01-24.",
     "evidence": [
-      "Performance index fell from 1.01 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
-      "Estimated energy lost: 5,584 kWh (22% of expected), about $670.",
-      "Morning and evening output ran 38 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+      "No meter readings during daylight; output during this window is unknown."
     ],
     "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
+      "Data-logger power loss",
+      "Network or cellular modem outage",
+      "Logger storage full"
     ],
     "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+      "Check data-logger power and network/modem connectivity",
+      "Back-fill the gap from inverter internal logs or the revenue meter",
+      "Confirm the site was producing during the gap (meter totals)"
     ],
     "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
+      "Spare cellular modem / SIM"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:41:11Z",
+    "drafted_at": "2026-11-26T21:17:52Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2024-10-12-outage",
-    "event_id": "1430-2024-10-12-outage",
+    "ticket_id": "T-1430-2009-01-26-data_gap",
+    "event_id": "1430-2009-01-26-data_gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "title": "NREL Mesa 1-axis: monitoring data gap (2009-01-26 to 2009-02-22)",
+    "priority": "P3",
+    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 28 day(s), 2009-01-26 to 2009-02-22.",
+    "evidence": [
+      "No meter readings during daylight; output during this window is unknown."
+    ],
+    "likely_causes": [
+      "Data-logger power loss",
+      "Network or cellular modem outage",
+      "Logger storage full"
+    ],
+    "recommended_actions": [
+      "Check data-logger power and network/modem connectivity",
+      "Back-fill the gap from inverter internal logs or the revenue meter",
+      "Confirm the site was producing during the gap (meter totals)"
+    ],
+    "parts_and_tools": [
+      "Spare cellular modem / SIM"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-02-26-outage",
+    "event_id": "1430-2009-02-26-outage",
     "site_id": 1430,
     "kind": "outage",
-    "title": "NREL Mesa 1-axis: full outage (2024-10-12 to 2024-10-13)",
+    "title": "NREL Mesa 1-axis: full outage (2009-02-26 to 2009-02-26)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2024-10-12 to 2024-10-13. Estimated cost so far: $926.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-02-26 to 2009-02-26. Estimated cost so far: $270.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 7,716 kWh (100% of expected), about $926."
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,251 kWh (95% of expected), about $270."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -96,7 +115,3717 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:41:11Z",
+    "drafted_at": "2026-11-26T21:17:52Z",
     "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-04-04-outage",
+    "event_id": "1430-2009-04-04-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2009-04-04 to 2009-04-04)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-04-04 to 2009-04-04. Estimated cost so far: $94.",
+    "evidence": [
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.11 during the event (1.00 = healthy).",
+      "Estimated energy lost: 785 kWh (90% of expected), about $94."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-04-17-outage",
+    "event_id": "1430-2009-04-17-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2009-04-17 to 2009-04-17)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-04-17 to 2009-04-17. Estimated cost so far: $31.",
+    "evidence": [
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
+      "Estimated energy lost: 262 kWh (85% of expected), about $31."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-06-01-partial_outage",
+    "event_id": "1430-2009-06-01-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2009-06-01 to 2009-06-08)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 8 day(s), 2009-06-01 to 2009-06-08. Estimated cost so far: $350.",
+    "evidence": [
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,919 kWh (20% of expected), about $350.",
+      "Roughly 40% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-06-29-soiling",
+    "event_id": "1430-2009-06-29-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2009-06-29 to 2009-07-05)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 7 day(s), 2009-06-29 to 2009-07-05. Estimated cost so far: $532.",
+    "evidence": [
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.99 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,432 kWh (25% of expected), about $532.",
+      "The decline appears to have started around 2009-06-28, 1 days before it crossed the alert threshold.",
+      "Performance recovered to 0.99 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-08-03-outage",
+    "event_id": "1430-2009-08-03-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2009-08-03 to 2009-08-03)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-08-03 to 2009-08-03. Estimated cost so far: $246.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,048 kWh (100% of expected), about $246."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-08-04-soiling",
+    "event_id": "1430-2009-08-04-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2009-08-04 to 2009-08-07)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2009-08-04 to 2009-08-07. Estimated cost so far: $169.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.93 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,411 kWh (15% of expected), about $169.",
+      "The decline appears to have started around 2009-08-02, 2 days before it crossed the alert threshold.",
+      "Performance recovered to 1.01 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-10-19-outage",
+    "event_id": "1430-2009-10-19-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2009-10-19 to 2009-10-19)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-10-19 to 2009-10-19. Estimated cost so far: $136.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,131 kWh (100% of expected), about $136."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-10-21-soiling",
+    "event_id": "1430-2009-10-21-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2009-10-21 to 2009-10-25)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2009-10-21 to 2009-10-25. Estimated cost so far: $47.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
+      "Estimated energy lost: 390 kWh (8% of expected), about $47.",
+      "The decline appears to have started around 2009-10-18, 3 days before it crossed the alert threshold.",
+      "Performance recovered to 0.98 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-10-26-outage",
+    "event_id": "1430-2009-10-26-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2009-10-26 to 2009-10-26)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-10-26 to 2009-10-26. Estimated cost so far: $234.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,949 kWh (100% of expected), about $234."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-11-06-outage",
+    "event_id": "1430-2009-11-06-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2009-11-06 to 2009-11-08)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2009-11-06 to 2009-11-08. Estimated cost so far: $438.",
+    "evidence": [
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,650 kWh (96% of expected), about $438."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-11-14-partial_outage",
+    "event_id": "1430-2009-11-14-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2009-11-14 to 2009-11-16)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2009-11-14 to 2009-11-16. Estimated cost so far: $92.",
+    "evidence": [
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.70 during the event (1.00 = healthy).",
+      "Estimated energy lost: 768 kWh (31% of expected), about $92.",
+      "Roughly 47% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-12-02-outage",
+    "event_id": "1430-2009-12-02-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2009-12-02 to 2009-12-02)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-12-02 to 2009-12-02. Estimated cost so far: $41.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.11 during the event (1.00 = healthy).",
+      "Estimated energy lost: 343 kWh (92% of expected), about $41."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-12-04-outage",
+    "event_id": "1430-2009-12-04-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2009-12-04 to 2009-12-04)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-12-04 to 2009-12-04. Estimated cost so far: $82.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
+      "Estimated energy lost: 680 kWh (94% of expected), about $82."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-12-07-outage",
+    "event_id": "1430-2009-12-07-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2009-12-07 to 2009-12-07)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-12-07 to 2009-12-07. Estimated cost so far: $80.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.14 during the event (1.00 = healthy).",
+      "Estimated energy lost: 664 kWh (86% of expected), about $80."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-12-10-tracker_stall",
+    "event_id": "1430-2009-12-10-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2009-12-10 to 2009-12-11)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2009-12-10 to 2009-12-11. Estimated cost so far: $31.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
+      "Estimated energy lost: 262 kWh (10% of expected), about $31.",
+      "Morning and evening output ran 17 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-12-19-tracker_stall",
+    "event_id": "1430-2009-12-19-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2009-12-19 to 2009-12-20)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2009-12-19 to 2009-12-20. Estimated cost so far: $42.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.85 during the event (1.00 = healthy).",
+      "Estimated energy lost: 347 kWh (15% of expected), about $42.",
+      "Morning and evening output ran 39 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2009-12-21-soiling",
+    "event_id": "1430-2009-12-21-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2009-12-21 to 2009-12-23)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2009-12-21 to 2009-12-23. Estimated cost so far: $52.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.87 during the event (1.00 = healthy).",
+      "Estimated energy lost: 437 kWh (25% of expected), about $52.",
+      "The decline appears to have started around 2009-12-13, 8 days before it crossed the alert threshold.",
+      "Performance recovered to 1.02 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-01-09-tracker_stall",
+    "event_id": "1430-2010-01-09-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2010-01-09 to 2010-01-15)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 7 day(s), 2010-01-09 to 2010-01-15. Estimated cost so far: $74.",
+    "evidence": [
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
+      "Estimated energy lost: 619 kWh (7% of expected), about $74.",
+      "Morning and evening output ran 27 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-01-30-sensor_fault",
+    "event_id": "1430-2010-01-30-sensor_fault",
+    "site_id": 1430,
+    "kind": "sensor_fault",
+    "title": "NREL Mesa 1-axis: irradiance sensor fault (2010-01-30 to 2010-02-02)",
+    "priority": "P3",
+    "summary": "Irradiance sensor fault detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2010-01-30 to 2010-02-02.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 1.12 during the event (1.00 = healthy).",
+      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    ],
+    "likely_causes": [
+      "Dirty or shaded pyranometer",
+      "Sensor drift / out of calibration",
+      "Sensor knocked out of plane"
+    ],
+    "recommended_actions": [
+      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
+      "Cross-check its readings against a second on-site sensor or satellite irradiance",
+      "Recalibrate or replace the sensor if the offset persists",
+      "Treat performance numbers for this window as unreliable until fixed"
+    ],
+    "parts_and_tools": [
+      "Spare pyranometer / reference cell",
+      "Bubble level and inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-02-08-outage",
+    "event_id": "1430-2010-02-08-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2010-02-08 to 2010-02-09)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2010-02-08 to 2010-02-09. Estimated cost so far: $168.",
+    "evidence": [
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,404 kWh (74% of expected), about $168."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-02-19-outage",
+    "event_id": "1430-2010-02-19-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2010-02-19 to 2010-02-21)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2010-02-19 to 2010-02-21. Estimated cost so far: $247.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,057 kWh (98% of expected), about $247."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-03-19-outage",
+    "event_id": "1430-2010-03-19-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2010-03-19 to 2010-03-19)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2010-03-19 to 2010-03-19. Estimated cost so far: $94.",
+    "evidence": [
+      "Performance index fell from 0.95 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
+      "Estimated energy lost: 781 kWh (90% of expected), about $94."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-04-26-outage",
+    "event_id": "1430-2010-04-26-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2010-04-26 to 2010-04-26)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2010-04-26 to 2010-04-26. Estimated cost so far: $257.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,146 kWh (99% of expected), about $257."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-06-02-partial_outage",
+    "event_id": "1430-2010-06-02-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2010-06-02 to 2010-06-05)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2010-06-02 to 2010-06-05. Estimated cost so far: $236.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.74 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,965 kWh (28% of expected), about $236.",
+      "Roughly 10% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-06-08-outage",
+    "event_id": "1430-2010-06-08-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2010-06-08 to 2010-06-09)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2010-06-08 to 2010-06-09. Estimated cost so far: $506.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,215 kWh (100% of expected), about $506."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-06-14-partial_outage",
+    "event_id": "1430-2010-06-14-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2010-06-14 to 2010-06-16)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2010-06-14 to 2010-06-16. Estimated cost so far: $495.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.47 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,126 kWh (50% of expected), about $495.",
+      "Roughly 52% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-10-08-soiling",
+    "event_id": "1430-2010-10-08-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2010-10-08 to 2010-10-31)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 24 day(s), 2010-10-08 to 2010-10-31. Estimated cost so far: $458.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,819 kWh (9% of expected), about $458.",
+      "The decline appears to have started around 2010-09-28, 10 days before it crossed the alert threshold.",
+      "Performance recovered to 0.92 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-11-03-outage",
+    "event_id": "1430-2010-11-03-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2010-11-03 to 2010-11-03)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2010-11-03 to 2010-11-03. Estimated cost so far: $167.",
+    "evidence": [
+      "Performance index fell from 0.92 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,392 kWh (95% of expected), about $167."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-11-04-soiling",
+    "event_id": "1430-2010-11-04-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2010-11-04 to 2010-11-24)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 21 day(s), 2010-11-04 to 2010-11-24. Estimated cost so far: $499.",
+    "evidence": [
+      "Performance index fell from 0.92 in the two weeks before to a median of 0.87 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,159 kWh (16% of expected), about $499.",
+      "The decline appears to have started around 2010-09-28, 37 days before it crossed the alert threshold.",
+      "Performance recovered to 0.88 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2010-11-26-partial_outage",
+    "event_id": "1430-2010-11-26-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2010-11-26 to 2010-12-22)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 27 day(s), 2010-11-26 to 2010-12-22. Estimated cost so far: $384.",
+    "evidence": [
+      "Median performance index during the event: 0.88.",
+      "Estimated energy lost: 3,197 kWh (12% of expected), about $384.",
+      "Roughly 12% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2011-01-09-outage",
+    "event_id": "1430-2011-01-09-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2011-01-09 to 2011-01-11)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2011-01-09 to 2011-01-11. Estimated cost so far: $359.",
+    "evidence": [
+      "Performance index fell from 0.86 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,995 kWh (99% of expected), about $359."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2011-02-01-outage",
+    "event_id": "1430-2011-02-01-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2011-02-01 to 2011-02-03)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2011-02-01 to 2011-02-03. Estimated cost so far: $422.",
+    "evidence": [
+      "Performance index fell from 0.89 in the two weeks before to a median of 0.09 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,520 kWh (92% of expected), about $422."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2011-02-04-partial_outage",
+    "event_id": "1430-2011-02-04-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2011-02-04 to 2011-02-06)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2011-02-04 to 2011-02-06. Estimated cost so far: $74.",
+    "evidence": [
+      "Performance index fell from 0.89 in the two weeks before to a median of 0.71 during the event (1.00 = healthy).",
+      "Estimated energy lost: 613 kWh (29% of expected), about $74.",
+      "Roughly 19% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2011-02-08-outage",
+    "event_id": "1430-2011-02-08-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2011-02-08 to 2011-02-08)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2011-02-08 to 2011-02-08. Estimated cost so far: $92.",
+    "evidence": [
+      "Performance index fell from 0.89 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
+      "Estimated energy lost: 766 kWh (88% of expected), about $92."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2011-04-16-partial_outage",
+    "event_id": "1430-2011-04-16-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2011-04-16 to 2011-04-19)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2011-04-16 to 2011-04-19. Estimated cost so far: $73.",
+    "evidence": [
+      "Performance index fell from 0.92 in the two weeks before to a median of 0.83 during the event (1.00 = healthy).",
+      "Estimated energy lost: 611 kWh (7% of expected), about $73.",
+      "Roughly 8% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2011-04-29-soiling",
+    "event_id": "1430-2011-04-29-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2011-04-29 to 2011-05-03)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2011-04-29 to 2011-05-03. Estimated cost so far: $99.",
+    "evidence": [
+      "Performance index fell from 0.88 in the two weeks before to a median of 0.83 during the event (1.00 = healthy).",
+      "Estimated energy lost: 822 kWh (8% of expected), about $99.",
+      "The decline appears to have started around 2011-04-27, 2 days before it crossed the alert threshold.",
+      "Performance recovered to 1.04 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2011-09-17-partial_outage",
+    "event_id": "1430-2011-09-17-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2011-09-17 to 2011-09-21)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2011-09-17 to 2011-09-21. Estimated cost so far: $87.",
+    "evidence": [
+      "Performance index fell from 0.93 in the two weeks before to a median of 0.84 during the event (1.00 = healthy).",
+      "Estimated energy lost: 726 kWh (8% of expected), about $87.",
+      "Roughly 12% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2011-10-26-outage",
+    "event_id": "1430-2011-10-26-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2011-10-26 to 2011-10-26)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2011-10-26 to 2011-10-26. Estimated cost so far: $53.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 445 kWh (100% of expected), about $53."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2011-12-01-soiling",
+    "event_id": "1430-2011-12-01-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2011-12-01 to 2011-12-05)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2011-12-01 to 2011-12-05. Estimated cost so far: $102.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.89 during the event (1.00 = healthy).",
+      "Estimated energy lost: 851 kWh (21% of expected), about $102.",
+      "The decline appears to have started around 2011-11-29, 2 days before it crossed the alert threshold.",
+      "Performance recovered to 1.00 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2012-01-11-outage",
+    "event_id": "1430-2012-01-11-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2012-01-11 to 2012-01-11)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-01-11 to 2012-01-11. Estimated cost so far: $68.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
+      "Estimated energy lost: 562 kWh (91% of expected), about $68."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2012-02-07-outage",
+    "event_id": "1430-2012-02-07-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2012-02-07 to 2012-02-07)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-02-07 to 2012-02-07. Estimated cost so far: $75.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.08 during the event (1.00 = healthy).",
+      "Estimated energy lost: 627 kWh (93% of expected), about $75."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2012-10-25-outage",
+    "event_id": "1430-2012-10-25-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2012-10-25 to 2012-10-25)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-10-25 to 2012-10-25. Estimated cost so far: $36.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
+      "Estimated energy lost: 304 kWh (87% of expected), about $36."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2012-11-11-outage",
+    "event_id": "1430-2012-11-11-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2012-11-11 to 2012-11-11)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-11-11 to 2012-11-11. Estimated cost so far: $163.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,358 kWh (89% of expected), about $163."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2012-11-23-data_gap",
+    "event_id": "1430-2012-11-23-data_gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "title": "NREL Mesa 1-axis: monitoring data gap (2012-11-23 to 2012-11-23)",
+    "priority": "P4",
+    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-11-23 to 2012-11-23.",
+    "evidence": [
+      "No meter readings during daylight; output during this window is unknown."
+    ],
+    "likely_causes": [
+      "Data-logger power loss",
+      "Network or cellular modem outage",
+      "Logger storage full"
+    ],
+    "recommended_actions": [
+      "Check data-logger power and network/modem connectivity",
+      "Back-fill the gap from inverter internal logs or the revenue meter",
+      "Confirm the site was producing during the gap (meter totals)"
+    ],
+    "parts_and_tools": [
+      "Spare cellular modem / SIM"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-01-12-soiling",
+    "event_id": "1430-2013-01-12-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2013-01-12 to 2013-01-14)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-01-12 to 2013-01-14. Estimated cost so far: $41.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.89 during the event (1.00 = healthy).",
+      "Estimated energy lost: 338 kWh (12% of expected), about $41.",
+      "The decline appears to have started around 2013-01-11, 1 days before it crossed the alert threshold.",
+      "Performance recovered to 1.02 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-01-29-outage",
+    "event_id": "1430-2013-01-29-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2013-01-29 to 2013-01-29)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2013-01-29 to 2013-01-29. Estimated cost so far: $94.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
+      "Estimated energy lost: 785 kWh (99% of expected), about $94."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-02-07-soiling",
+    "event_id": "1430-2013-02-07-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2013-02-07 to 2013-02-15)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 9 day(s), 2013-02-07 to 2013-02-15. Estimated cost so far: $325.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.80 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,711 kWh (24% of expected), about $325.",
+      "The decline appears to have started around 2013-02-02, 5 days before it crossed the alert threshold.",
+      "Performance recovered to 0.99 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-02-24-tracker_stall",
+    "event_id": "1430-2013-02-24-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2013-02-24 to 2013-02-26)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-02-24 to 2013-02-26. Estimated cost so far: $85.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
+      "Estimated energy lost: 709 kWh (20% of expected), about $85.",
+      "Morning and evening output ran 34 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-03-02-partial_outage",
+    "event_id": "1430-2013-03-02-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2013-03-02 to 2013-03-04)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-03-02 to 2013-03-04. Estimated cost so far: $32.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
+      "Estimated energy lost: 264 kWh (11% of expected), about $32.",
+      "Roughly 1% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-03-23-partial_outage",
+    "event_id": "1430-2013-03-23-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2013-03-23 to 2013-03-25)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-03-23 to 2013-03-25. Estimated cost so far: $69.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.88 during the event (1.00 = healthy).",
+      "Estimated energy lost: 575 kWh (13% of expected), about $69.",
+      "Roughly 8% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-04-15-partial_outage",
+    "event_id": "1430-2013-04-15-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2013-04-15 to 2013-04-17)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-04-15 to 2013-04-17. Estimated cost so far: $70.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
+      "Estimated energy lost: 583 kWh (32% of expected), about $70.",
+      "Roughly 19% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-04-22-tracker_stall",
+    "event_id": "1430-2013-04-22-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2013-04-22 to 2013-04-23)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2013-04-22 to 2013-04-23. Estimated cost so far: $135.",
+    "evidence": [
+      "Performance index fell from 0.95 in the two weeks before to a median of 0.67 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,128 kWh (41% of expected), about $135.",
+      "Morning and evening output ran 65 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-06-20-data_gap",
+    "event_id": "1430-2013-06-20-data_gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "title": "NREL Mesa 1-axis: monitoring data gap (2013-06-20 to 2013-06-20)",
+    "priority": "P4",
+    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2013-06-20 to 2013-06-20.",
+    "evidence": [
+      "No meter readings during daylight; output during this window is unknown."
+    ],
+    "likely_causes": [
+      "Data-logger power loss",
+      "Network or cellular modem outage",
+      "Logger storage full"
+    ],
+    "recommended_actions": [
+      "Check data-logger power and network/modem connectivity",
+      "Back-fill the gap from inverter internal logs or the revenue meter",
+      "Confirm the site was producing during the gap (meter totals)"
+    ],
+    "parts_and_tools": [
+      "Spare cellular modem / SIM"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-11-10-tracker_stall",
+    "event_id": "1430-2013-11-10-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2013-11-10 to 2013-11-12)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-11-10 to 2013-11-12. Estimated cost so far: $19.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.93 during the event (1.00 = healthy).",
+      "Estimated energy lost: 155 kWh (3% of expected), about $19.",
+      "Morning and evening output ran 14 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-11-17-tracker_stall",
+    "event_id": "1430-2013-11-17-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2013-11-17 to 2013-11-18)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2013-11-17 to 2013-11-18. Estimated cost so far: $25.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
+      "Estimated energy lost: 211 kWh (7% of expected), about $25.",
+      "Morning and evening output ran 17 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-11-21-outage",
+    "event_id": "1430-2013-11-21-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2013-11-21 to 2013-11-21)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2013-11-21 to 2013-11-21. Estimated cost so far: $41.",
+    "evidence": [
+      "Performance index fell from 0.93 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
+      "Estimated energy lost: 343 kWh (95% of expected), about $41."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-11-22-partial_outage",
+    "event_id": "1430-2013-11-22-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2013-11-22 to 2013-11-26)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2013-11-22 to 2013-11-26. Estimated cost so far: $91.",
+    "evidence": [
+      "Performance index fell from 0.93 in the two weeks before to a median of 0.82 during the event (1.00 = healthy).",
+      "Estimated energy lost: 756 kWh (24% of expected), about $91.",
+      "Roughly 34% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-11-29-tracker_stall",
+    "event_id": "1430-2013-11-29-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2013-11-29 to 2013-11-30)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2013-11-29 to 2013-11-30. Estimated cost so far: $29.",
+    "evidence": [
+      "Performance index fell from 0.92 in the two weeks before to a median of 0.91 during the event (1.00 = healthy).",
+      "Estimated energy lost: 238 kWh (9% of expected), about $29.",
+      "Morning and evening output ran 19 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-12-04-outage",
+    "event_id": "1430-2013-12-04-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2013-12-04 to 2013-12-05)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2013-12-04 to 2013-12-05. Estimated cost so far: $223.",
+    "evidence": [
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,859 kWh (93% of expected), about $223."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-12-06-partial_outage",
+    "event_id": "1430-2013-12-06-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2013-12-06 to 2013-12-08)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-12-06 to 2013-12-08. Estimated cost so far: $235.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.43 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,956 kWh (62% of expected), about $235.",
+      "Roughly 56% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-01-04-outage",
+    "event_id": "1430-2014-01-04-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2014-01-04 to 2014-01-04)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2014-01-04 to 2014-01-04. Estimated cost so far: $49.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.03 during the event (1.00 = healthy).",
+      "Estimated energy lost: 407 kWh (98% of expected), about $49."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-01-27-tracker_stall",
+    "event_id": "1430-2014-01-27-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2014-01-27 to 2014-01-28)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-01-27 to 2014-01-28. Estimated cost so far: $193.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.27 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,611 kWh (70% of expected), about $193.",
+      "Morning and evening output ran 15 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-01-31-partial_outage",
+    "event_id": "1430-2014-01-31-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2014-01-31 to 2014-02-04)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2014-01-31 to 2014-02-04. Estimated cost so far: $130.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.56 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,082 kWh (29% of expected), about $130.",
+      "Roughly 23% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-02-05-outage",
+    "event_id": "1430-2014-02-05-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2014-02-05 to 2014-02-06)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-02-05 to 2014-02-06. Estimated cost so far: $375.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,129 kWh (95% of expected), about $375."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-02-07-soiling",
+    "event_id": "1430-2014-02-07-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2014-02-07 to 2014-02-10)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2014-02-07 to 2014-02-10. Estimated cost so far: $51.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
+      "Estimated energy lost: 429 kWh (9% of expected), about $51.",
+      "The decline appears to have started around 2014-01-30, 8 days before it crossed the alert threshold.",
+      "Performance recovered to 0.99 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-02-17-partial_outage",
+    "event_id": "1430-2014-02-17-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2014-02-17 to 2014-02-21)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2014-02-17 to 2014-02-21. Estimated cost so far: $219.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,826 kWh (21% of expected), about $219.",
+      "Roughly 20% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-02-23-tracker_stall",
+    "event_id": "1430-2014-02-23-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2014-02-23 to 2014-02-26)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2014-02-23 to 2014-02-26. Estimated cost so far: $90.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.91 during the event (1.00 = healthy).",
+      "Estimated energy lost: 750 kWh (12% of expected), about $90.",
+      "Morning and evening output ran 53 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-03-08-partial_outage",
+    "event_id": "1430-2014-03-08-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2014-03-08 to 2014-03-11)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2014-03-08 to 2014-03-11. Estimated cost so far: $69.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
+      "Estimated energy lost: 575 kWh (9% of expected), about $69.",
+      "Roughly 1% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-03-28-sensor_fault",
+    "event_id": "1430-2014-03-28-sensor_fault",
+    "site_id": 1430,
+    "kind": "sensor_fault",
+    "title": "NREL Mesa 1-axis: irradiance sensor fault (2014-03-28 to 2014-04-01)",
+    "priority": "P3",
+    "summary": "Irradiance sensor fault detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2014-03-28 to 2014-04-01.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 1.13 during the event (1.00 = healthy).",
+      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    ],
+    "likely_causes": [
+      "Dirty or shaded pyranometer",
+      "Sensor drift / out of calibration",
+      "Sensor knocked out of plane"
+    ],
+    "recommended_actions": [
+      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
+      "Cross-check its readings against a second on-site sensor or satellite irradiance",
+      "Recalibrate or replace the sensor if the offset persists",
+      "Treat performance numbers for this window as unreliable until fixed"
+    ],
+    "parts_and_tools": [
+      "Spare pyranometer / reference cell",
+      "Bubble level and inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-08-13-outage",
+    "event_id": "1430-2014-08-13-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2014-08-13 to 2014-08-14)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-08-13 to 2014-08-14. Estimated cost so far: $376.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.14 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,131 kWh (85% of expected), about $376."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-08-15-partial_outage",
+    "event_id": "1430-2014-08-15-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2014-08-15 to 2014-08-29)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 15 day(s), 2014-08-15 to 2014-08-29. Estimated cost so far: $222.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.91 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,846 kWh (8% of expected), about $222.",
+      "Roughly 9% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-09-28-partial_outage",
+    "event_id": "1430-2014-09-28-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2014-09-28 to 2014-10-04)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 7 day(s), 2014-09-28 to 2014-10-04. Estimated cost so far: $122.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.88 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,015 kWh (9% of expected), about $122.",
+      "Roughly 11% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-10-28-tracker_stall",
+    "event_id": "1430-2014-10-28-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2014-10-28 to 2014-10-30)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-10-28 to 2014-10-30. Estimated cost so far: $20.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.93 during the event (1.00 = healthy).",
+      "Estimated energy lost: 168 kWh (3% of expected), about $20.",
+      "Morning and evening output ran 50 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-11-11-outage",
+    "event_id": "1430-2014-11-11-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2014-11-11 to 2014-11-13)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-11-11 to 2014-11-13. Estimated cost so far: $281.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,339 kWh (99% of expected), about $281."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-11-14-partial_outage",
+    "event_id": "1430-2014-11-14-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2014-11-14 to 2014-11-16)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-11-14 to 2014-11-16. Estimated cost so far: $231.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.40 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,929 kWh (59% of expected), about $231.",
+      "Roughly 60% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-11-17-tracker_stall",
+    "event_id": "1430-2014-11-17-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2014-11-17 to 2014-11-21)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2014-11-17 to 2014-11-21. Estimated cost so far: $17.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.93 during the event (1.00 = healthy).",
+      "Estimated energy lost: 142 kWh (3% of expected), about $17.",
+      "Morning and evening output ran 70 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-12-22-outage",
+    "event_id": "1430-2014-12-22-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2014-12-22 to 2014-12-22)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2014-12-22 to 2014-12-22. Estimated cost so far: $28.",
+    "evidence": [
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
+      "Estimated energy lost: 230 kWh (98% of expected), about $28."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-12-26-outage",
+    "event_id": "1430-2014-12-26-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2014-12-26 to 2014-12-27)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-12-26 to 2014-12-27. Estimated cost so far: $211.",
+    "evidence": [
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,759 kWh (95% of expected), about $211."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-12-28-tracker_stall",
+    "event_id": "1430-2014-12-28-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2014-12-28 to 2014-12-29)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-12-28 to 2014-12-29. Estimated cost so far: $78.",
+    "evidence": [
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.53 during the event (1.00 = healthy).",
+      "Estimated energy lost: 648 kWh (37% of expected), about $78.",
+      "Morning and evening output ran 43 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-01-04-soiling",
+    "event_id": "1430-2015-01-04-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2015-01-04 to 2015-01-09)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 6 day(s), 2015-01-04 to 2015-01-09. Estimated cost so far: $111.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
+      "Estimated energy lost: 922 kWh (21% of expected), about $111.",
+      "The decline appears to have started around 2015-01-03, 1 days before it crossed the alert threshold.",
+      "Performance recovered to 0.87 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-01-21-outage",
+    "event_id": "1430-2015-01-21-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2015-01-21 to 2015-01-21)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-01-21 to 2015-01-21. Estimated cost so far: $47.",
+    "evidence": [
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
+      "Estimated energy lost: 393 kWh (99% of expected), about $47."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-01-22-tracker_stall",
+    "event_id": "1430-2015-01-22-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2015-01-22 to 2015-01-26)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2015-01-22 to 2015-01-26. Estimated cost so far: $129.",
+    "evidence": [
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,075 kWh (19% of expected), about $129.",
+      "Morning and evening output ran 24 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-02-01-outage",
+    "event_id": "1430-2015-02-01-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2015-02-01 to 2015-02-01)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-02-01 to 2015-02-01. Estimated cost so far: $77.",
+    "evidence": [
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
+      "Estimated energy lost: 642 kWh (96% of expected), about $77."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-02-02-soiling",
+    "event_id": "1430-2015-02-02-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2015-02-02 to 2015-02-04)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2015-02-02 to 2015-02-04. Estimated cost so far: $68.",
+    "evidence": [
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
+      "Estimated energy lost: 570 kWh (15% of expected), about $68.",
+      "The decline appears to have started around 2015-01-30, 3 days before it crossed the alert threshold.",
+      "Performance recovered to 1.02 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-02-16-outage",
+    "event_id": "1430-2015-02-16-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2015-02-16 to 2015-02-16)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-02-16 to 2015-02-16. Estimated cost so far: $87.",
+    "evidence": [
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
+      "Estimated energy lost: 721 kWh (91% of expected), about $87."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-02-22-outage",
+    "event_id": "1430-2015-02-22-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2015-02-22 to 2015-02-23)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2015-02-22 to 2015-02-23. Estimated cost so far: $307.",
+    "evidence": [
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,560 kWh (94% of expected), about $307."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-02-26-outage",
+    "event_id": "1430-2015-02-26-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2015-02-26 to 2015-02-28)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2015-02-26 to 2015-02-28. Estimated cost so far: $531.",
+    "evidence": [
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,429 kWh (99% of expected), about $531."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-03-01-soiling",
+    "event_id": "1430-2015-03-01-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2015-03-01 to 2015-03-04)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2015-03-01 to 2015-03-04. Estimated cost so far: $165.",
+    "evidence": [
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.52 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,374 kWh (30% of expected), about $165.",
+      "The decline appears to have started around 2015-02-25, 4 days before it crossed the alert threshold.",
+      "Performance recovered to 0.99 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-03-10-tracker_stall",
+    "event_id": "1430-2015-03-10-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2015-03-10 to 2015-03-11)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2015-03-10 to 2015-03-11. Estimated cost so far: $39.",
+    "evidence": [
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.96 during the event (1.00 = healthy).",
+      "Estimated energy lost: 325 kWh (7% of expected), about $39.",
+      "Morning and evening output ran 21 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-03-14-tracker_stall",
+    "event_id": "1430-2015-03-14-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2015-03-14 to 2015-03-15)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2015-03-14 to 2015-03-15. Estimated cost so far: $47.",
+    "evidence": [
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
+      "Estimated energy lost: 388 kWh (8% of expected), about $47.",
+      "Morning and evening output ran 21 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-03-31-partial_outage",
+    "event_id": "1430-2015-03-31-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2015-03-31 to 2015-04-04)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2015-03-31 to 2015-04-04. Estimated cost so far: $143.",
+    "evidence": [
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,189 kWh (13% of expected), about $143.",
+      "Roughly 9% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-04-16-soiling",
+    "event_id": "1430-2015-04-16-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2015-04-16 to 2015-04-18)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2015-04-16 to 2015-04-18. Estimated cost so far: $58.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
+      "Estimated energy lost: 485 kWh (13% of expected), about $58.",
+      "The decline appears to have started around 2015-04-11, 5 days before it crossed the alert threshold.",
+      "Performance recovered to 0.98 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-11-27-outage",
+    "event_id": "1430-2015-11-27-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2015-11-27 to 2015-11-30)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2015-11-27 to 2015-11-30. Estimated cost so far: $293.",
+    "evidence": [
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,438 kWh (94% of expected), about $293."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-12-26-outage",
+    "event_id": "1430-2015-12-26-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2015-12-26 to 2015-12-26)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-12-26 to 2015-12-26. Estimated cost so far: $79.",
+    "evidence": [
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
+      "Estimated energy lost: 660 kWh (96% of expected), about $79."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-12-27-partial_outage",
+    "event_id": "1430-2015-12-27-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2015-12-27 to 2015-12-29)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2015-12-27 to 2015-12-29. Estimated cost so far: $155.",
+    "evidence": [
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.74 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,290 kWh (37% of expected), about $155.",
+      "Roughly 24% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-01-08-outage",
+    "event_id": "1430-2016-01-08-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2016-01-08 to 2016-01-08)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2016-01-08 to 2016-01-08. Estimated cost so far: $52.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
+      "Estimated energy lost: 437 kWh (99% of expected), about $52."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-02-01-outage",
+    "event_id": "1430-2016-02-01-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2016-02-01 to 2016-02-02)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2016-02-01 to 2016-02-02. Estimated cost so far: $165.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,371 kWh (90% of expected), about $165."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-08-12-sensor_fault",
+    "event_id": "1430-2016-08-12-sensor_fault",
+    "site_id": 1430,
+    "kind": "sensor_fault",
+    "title": "NREL Mesa 1-axis: irradiance sensor fault (2016-08-12 to 2016-09-25)",
+    "priority": "P3",
+    "summary": "Irradiance sensor fault detected at NREL Mesa 1-axis (Golden, CO) over 45 day(s), 2016-08-12 to 2016-09-25.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 1.11 during the event (1.00 = healthy).",
+      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    ],
+    "likely_causes": [
+      "Dirty or shaded pyranometer",
+      "Sensor drift / out of calibration",
+      "Sensor knocked out of plane"
+    ],
+    "recommended_actions": [
+      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
+      "Cross-check its readings against a second on-site sensor or satellite irradiance",
+      "Recalibrate or replace the sensor if the offset persists",
+      "Treat performance numbers for this window as unreliable until fixed"
+    ],
+    "parts_and_tools": [
+      "Spare pyranometer / reference cell",
+      "Bubble level and inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-10-15-sensor_fault",
+    "event_id": "1430-2016-10-15-sensor_fault",
+    "site_id": 1430,
+    "kind": "sensor_fault",
+    "title": "NREL Mesa 1-axis: irradiance sensor fault (2016-10-15 to 2016-10-17)",
+    "priority": "P3",
+    "summary": "Irradiance sensor fault detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2016-10-15 to 2016-10-17.",
+    "evidence": [
+      "Performance index fell from 1.05 in the two weeks before to a median of 1.11 during the event (1.00 = healthy).",
+      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    ],
+    "likely_causes": [
+      "Dirty or shaded pyranometer",
+      "Sensor drift / out of calibration",
+      "Sensor knocked out of plane"
+    ],
+    "recommended_actions": [
+      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
+      "Cross-check its readings against a second on-site sensor or satellite irradiance",
+      "Recalibrate or replace the sensor if the offset persists",
+      "Treat performance numbers for this window as unreliable until fixed"
+    ],
+    "parts_and_tools": [
+      "Spare pyranometer / reference cell",
+      "Bubble level and inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-11-10-tracker_stall",
+    "event_id": "1430-2016-11-10-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2016-11-10 to 2016-11-12)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2016-11-10 to 2016-11-12. Estimated cost so far: $47.",
+    "evidence": [
+      "Performance index fell from 1.07 in the two weeks before to a median of 1.01 during the event (1.00 = healthy).",
+      "Estimated energy lost: 394 kWh (9% of expected), about $47.",
+      "Morning and evening output ran 25 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-11-17-outage",
+    "event_id": "1430-2016-11-17-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2016-11-17 to 2016-11-17)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2016-11-17 to 2016-11-17. Estimated cost so far: $16.",
+    "evidence": [
+      "Performance index fell from 1.07 in the two weeks before to a median of 0.08 during the event (1.00 = healthy).",
+      "Estimated energy lost: 136 kWh (87% of expected), about $16."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-11-24-tracker_stall",
+    "event_id": "1430-2016-11-24-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2016-11-24 to 2016-11-25)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2016-11-24 to 2016-11-25. Estimated cost so far: $18.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 1.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 147 kWh (5% of expected), about $18.",
+      "Morning and evening output ran 21 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-12-07-outage",
+    "event_id": "1430-2016-12-07-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2016-12-07 to 2016-12-08)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2016-12-07 to 2016-12-08. Estimated cost so far: $205.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.11 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,707 kWh (89% of expected), about $205."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-12-17-outage",
+    "event_id": "1430-2016-12-17-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2016-12-17 to 2016-12-17)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2016-12-17 to 2016-12-17. Estimated cost so far: $92.",
+    "evidence": [
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 765 kWh (100% of expected), about $92."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2017-01-05-outage",
+    "event_id": "1430-2017-01-05-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2017-01-05 to 2017-01-05)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2017-01-05 to 2017-01-05. Estimated cost so far: $57.",
+    "evidence": [
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 475 kWh (100% of expected), about $57."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2017-01-15-data_gap",
+    "event_id": "1430-2017-01-15-data_gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "title": "NREL Mesa 1-axis: monitoring data gap (2017-01-15 to 2017-01-15)",
+    "priority": "P4",
+    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2017-01-15 to 2017-01-15.",
+    "evidence": [
+      "No meter readings during daylight; output during this window is unknown."
+    ],
+    "likely_causes": [
+      "Data-logger power loss",
+      "Network or cellular modem outage",
+      "Logger storage full"
+    ],
+    "recommended_actions": [
+      "Check data-logger power and network/modem connectivity",
+      "Back-fill the gap from inverter internal logs or the revenue meter",
+      "Confirm the site was producing during the gap (meter totals)"
+    ],
+    "parts_and_tools": [
+      "Spare cellular modem / SIM"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2017-02-23-soiling",
+    "event_id": "1430-2017-02-23-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2017-02-23 to 2017-02-27)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2017-02-23 to 2017-02-27. Estimated cost so far: $173.",
+    "evidence": [
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.83 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,442 kWh (19% of expected), about $173.",
+      "The decline appears to have started around 2017-02-22, 1 days before it crossed the alert threshold.",
+      "Performance recovered to 0.98 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2017-03-24-partial_outage",
+    "event_id": "1430-2017-03-24-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2017-03-24 to 2017-03-26)",
+    "priority": "P2",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2017-03-24 to 2017-03-26. Estimated cost so far: $96.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
+      "Estimated energy lost: 800 kWh (23% of expected), about $96.",
+      "Roughly 22% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2017-04-01-soiling",
+    "event_id": "1430-2017-04-01-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2017-04-01 to 2017-04-04)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2017-04-01 to 2017-04-04. Estimated cost so far: $85.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.89 during the event (1.00 = healthy).",
+      "Estimated energy lost: 708 kWh (10% of expected), about $85.",
+      "The decline appears to have started around 2017-03-30, 2 days before it crossed the alert threshold.",
+      "Performance recovered to 0.99 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2017-07-28-data_gap",
+    "event_id": "1430-2017-07-28-data_gap",
+    "site_id": 1430,
+    "kind": "data_gap",
+    "title": "NREL Mesa 1-axis: monitoring data gap (2017-07-28 to 2017-07-31)",
+    "priority": "P3",
+    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2017-07-28 to 2017-07-31.",
+    "evidence": [
+      "No meter readings during daylight; output during this window is unknown."
+    ],
+    "likely_causes": [
+      "Data-logger power loss",
+      "Network or cellular modem outage",
+      "Logger storage full"
+    ],
+    "recommended_actions": [
+      "Check data-logger power and network/modem connectivity",
+      "Back-fill the gap from inverter internal logs or the revenue meter",
+      "Confirm the site was producing during the gap (meter totals)"
+    ],
+    "parts_and_tools": [
+      "Spare cellular modem / SIM"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2017-10-05-outage",
+    "event_id": "1430-2017-10-05-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2017-10-05 to 2017-10-05)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2017-10-05 to 2017-10-05. Estimated cost so far: $167.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.13 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,395 kWh (86% of expected), about $167."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2017-10-06-soiling",
+    "event_id": "1430-2017-10-06-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2017-10-06 to 2017-10-09)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2017-10-06 to 2017-10-09. Estimated cost so far: $93.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.86 during the event (1.00 = healthy).",
+      "Estimated energy lost: 772 kWh (11% of expected), about $93.",
+      "The decline appears to have started around 2017-10-04, 2 days before it crossed the alert threshold.",
+      "Performance recovered to 1.01 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T21:17:52Z",
+    "status": "pending_review"
   }
 ]
