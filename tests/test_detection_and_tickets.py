@@ -140,6 +140,7 @@ def test_pipeline_writes_app_outputs(built):
 
 def test_review_log_keeps_edits_and_history(built):
     d, _ = built
+    drafts_before = (d / "tickets.json").read_text()
     tid = review.load_tickets(d)[0]["ticket_id"]
     with pytest.raises(ValueError):
         review.record(d, tid, "rejected", "matt")  # rejection needs a reason
@@ -151,7 +152,19 @@ def test_review_log_keeps_edits_and_history(built):
     assert t["status"] == "pending_review" and t["priority"] == "P1"  # edit survives reopen
     assert [h["status"] for h in t["history"]] == ["approved", "pending_review"]
     # Drafts on disk are never modified
-    assert json.loads((d / "tickets.json").read_text())[0]["status"] == "pending_review"
+    assert (d / "tickets.json").read_text() == drafts_before
+
+
+def test_only_recent_events_are_queued(built):
+    d, meta = built
+    tickets = json.loads((d / "tickets.json").read_text())
+    events = {e["id"]: e for e in json.loads((d / "events.json").read_text())}
+    cutoff = pd.Timestamp(meta["data_end"]) - pd.Timedelta(days=meta["ticket_window_days"])
+    for t in tickets:
+        e = events[t["event_id"]]
+        recent = e["active"] or pd.Timestamp(e["end"]) >= cutoff
+        assert t["status"] == ("pending_review" if recent else "historical")
+    assert any(t["status"] == "pending_review" for t in tickets)  # the ongoing fault
 
 
 @pytest.mark.parametrize("system_id", [4902, 4903, 1430, 1367])

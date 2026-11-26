@@ -11,7 +11,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-STATUSES = ("pending_review", "approved", "rejected")
+STATUSES = ("pending_review", "approved", "rejected", "historical")
 EDITABLE = ("title", "priority", "summary", "recommended_actions", "parts_and_tools", "safety_notes")
 
 

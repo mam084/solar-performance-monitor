@@ -79,14 +79,18 @@ def describe(df: pd.DataFrame) -> pd.DataFrame:
     })
 
 
-def main(argv=None):
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("system_id", type=int)
-    p.add_argument("--nrows", type=int, default=2000)
-    args = p.parse_args(argv)
+def report(site, nrows: int = 2000) -> str:
+    """Every downloaded file's columns with value ranges, plus a suggested mapping, as text."""
+    import io
+    import contextlib
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        _print_report(site, nrows)
+    return buf.getvalue()
 
-    site = get_site(args.system_id)
-    samples = peek(site, args.nrows)
+
+def _print_report(site, nrows: int) -> None:
+    samples = peek(site, nrows)
     if not samples:
         raise SystemExit(f"No files in {site.raw_dir}. Run `python -m solarmon.ingest download {site.system_id}` first.")
 
@@ -115,6 +119,14 @@ def main(argv=None):
             print(f"      {name}:  # {len(hits)} candidates; ac_power lists are summed, others averaged")
             for h in hits:
                 print(f"        - {h}")
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("system_id", type=int)
+    p.add_argument("--nrows", type=int, default=2000)
+    args = p.parse_args(argv)
+    print(report(get_site(args.system_id), args.nrows))
 
 
 if __name__ == "__main__":

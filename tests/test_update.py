@@ -4,6 +4,8 @@ import dataclasses
 import json
 import shutil
 
+import pandas as pd
+
 import pytest
 
 import sys, pathlib
@@ -87,5 +89,29 @@ def test_failed_preflight_keeps_previous_outputs(bucket, monkeypatch):
     assert (config.DATA_DIR / "processed" / "2107" / "meta.json").read_text() == before
 
 
-def test_unmapped_sites_are_skipped():
-    assert update.update_site(4902)["status"] == "skipped"
+def test_unmapped_site_gets_a_column_report_once(tmp_path, monkeypatch):
+    monkeypatch.setattr(config, "DATA_DIR", tmp_path)
+    site = get_site(4902)
+    calls = []
+
+    def fake_download(system_id, start=None, end=None, **kw):
+        calls.append((start, end))
+        idx = pd.date_range(f"{start} 00:00", periods=96 * 14, freq="15min")
+        df = pd.DataFrame({"measured_on": idx, "ac_power_inv_1": 100.0, "poa_irradiance_wm2": 500.0,
+                           "ambient_temp_c": 20.0})
+        dest = site.raw_dir / f"year={start.year}" / "sample.parquet"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        df.to_parquet(dest)
+
+    monkeypatch.setattr(ingest, "list_prefixes",
+                        lambda prefix, client=None: [prefix + f"year={y}/" for y in (2015, 2016, 2017)])
+    monkeypatch.setattr(ingest, "download_site", fake_download)
+
+    r = update.update_site(4902)
+    assert r["status"] == "skipped" and "column report" in r["detail"]
+    text = (tmp_path / "processed" / "4902" / "inspect.md").read_text()
+    assert "2015, 2016, 2017" in text and "ac_power_inv_1" in text and "suggested mapping" in text
+    assert calls[0][0].year == 2016  # a middle year
+
+    assert "column report" not in update.update_site(4902)["detail"]  # only once
+    assert len(calls) == 1

@@ -71,11 +71,55 @@ def saved_fingerprint(site: Site) -> str | None:
         return None
 
 
+def inspect_path(site: Site) -> Path:
+    return config.DATA_DIR / "processed" / str(site.system_id) / "inspect.md"
+
+
+def inspect_unmapped(site: Site, client=None, sample_days: int = 14) -> bool:
+    """For a site with no mapping yet: download two weeks of data and commit a column report.
+
+    The report (data/processed/<id>/inspect.md) lists which years exist, every column with
+    its value range, and a suggested mapping, which is all it takes to write the site's
+    `columns:` entry without downloading anything locally. Runs once per site.
+    """
+    from datetime import date, timedelta
+
+    from .ingest import download_site, list_prefixes
+    from .inspect import report
+
+    dest = inspect_path(site)
+    if dest.exists():
+        return False
+    lines = [f"# Column report: {site.system_id} {site.name}", ""]
+    if site.source == "basic":
+        base = f"pvdaq/parquet/pvdata/system_id={site.system_id}/"
+        years = sorted(int(p.rstrip("/").split("=")[-1]) for p in list_prefixes(base, client) if "year=" in p)
+        lines.append(f"Years in the bucket: {', '.join(map(str, years)) or 'none found'}")
+        if not years:
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_text("\n".join(lines) + "\n")
+            return True
+        # Mid-summer in a middle year: long days, so every signal shows its range
+        year = years[len(years) // 2]
+        start = date(year, 6, 1)
+        download_site(site.system_id, start=start, end=start + timedelta(days=sample_days - 1))
+        lines.append(f"Sample: {start} to {start + timedelta(days=sample_days - 1)}")
+    else:
+        download_site(site.system_id, include=INCLUDE)
+    lines += ["", "```", report(site).strip(), "```", ""]
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text("\n".join(lines))
+    return True
+
+
 def update_site(system_id: int, force: bool = False, client=None) -> dict:
     """Returns {'site', 'status', 'detail'}; status is skipped | unchanged | blocked | built."""
     site = get_site(system_id)
     if not is_mapped(site):
-        return {"site": system_id, "status": "skipped", "detail": "no column mapping yet (stays on demo data)"}
+        made = inspect_unmapped(site, client)
+        return {"site": system_id, "status": "skipped",
+                "detail": "no column mapping yet (stays on demo data)"
+                          + ("; wrote a column report to map it from" if made else "")}
 
     listing = source_listing(site, client)
     if not listing:

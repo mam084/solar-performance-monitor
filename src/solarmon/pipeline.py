@@ -35,6 +35,9 @@ from .metrics import daily_performance
 from .tickets import draft_ticket
 
 
+TICKET_WINDOW_DAYS = 45  # events that ended longer ago than this are filed as history
+
+
 def processed_dir(system_id: int) -> Path:
     return config.DATA_DIR / "processed" / str(system_id)
 
@@ -72,7 +75,15 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
 
     sd = site_dict(site)
     event_dicts = [e.to_dict() for e in events]
-    tickets = [draft_ticket(e, sd, use_claude=use_claude) for e in event_dicts]
+    # Only recent or ongoing events need someone to act; older ones are history
+    cutoff = out.index.max().normalize() - pd.Timedelta(days=TICKET_WINDOW_DAYS)
+    tickets = []
+    for e in event_dicts:
+        recent = e["active"] or pd.Timestamp(e["end"]) >= cutoff
+        t = draft_ticket(e, sd, use_claude=use_claude and recent)
+        if not recent:
+            t["status"] = "historical"
+        tickets.append(t)
 
     meta = {
         "site": sd,
@@ -90,6 +101,7 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
         "nrmse_healthy_pct": round(nrmse_healthy, 2),
         "price_usd_kwh": DEFAULT_PRICE_USD_KWH,
         "n_events": len(events),
+        "ticket_window_days": TICKET_WINDOW_DAYS,
     }
     if preflight is not None:
         meta["preflight"] = preflight

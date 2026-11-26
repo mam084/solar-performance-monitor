@@ -12,7 +12,7 @@
     "azimuth": 180
   },
   "source": "demo",
-  "built_at": "2026-11-26T20:13:26Z",
+  "built_at": "2026-11-26T20:36:25Z",
   "data_start": "2023-01-01",
   "data_end": "2024-12-31",
   "calibration_scale": 0.879,
@@ -29,6 +29,7 @@
   "nrmse_healthy_pct": 2.66,
   "price_usd_kwh": 0.12,
   "n_events": 3,
+  "ticket_window_days": 45,
   "backtest": {
     "faults_injected": 3,
     "detected": 3,

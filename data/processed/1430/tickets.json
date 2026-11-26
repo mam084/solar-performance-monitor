@@ -30,8 +30,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:13:28Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:36:29Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-1430-2024-05-06-tracker_stall",
@@ -64,8 +64,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:13:28Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:36:29Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-1430-2024-10-12-outage",
@@ -96,7 +96,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:13:28Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:36:29Z",
+    "status": "historical"
   }
 ]

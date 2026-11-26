@@ -29,7 +29,7 @@ ACTUAL, EXPECTED = "#2a78d6", "#eb6834"
 INK, INK_2, MUTED, GRID, AXIS = "#0b0b0b", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
 SEVERITY_COLOR = {"critical": "#d03b3b", "high": "#ec835a", "medium": "#fab219", "low": "#898781"}
 SEVERITY_ICON = {"critical": "🔴", "high": "🟠", "medium": "🟡", "low": "⚪"}
-STATUS_ICON = {"pending_review": "⏳", "approved": "✅", "rejected": "✖️"}
+STATUS_ICON = {"pending_review": "⏳", "approved": "✅", "rejected": "✖️", "historical": "🗄️"}
 PROCESSED = DATA_DIR / "processed"
 
 
@@ -260,9 +260,9 @@ with tab_queue:
 
     top = st.columns([3, 2, 2])
     show = top[0].segmented_control(
-        "Show", ["pending_review", "approved", "rejected", "all"], default="pending_review",
+        "Show", ["pending_review", "approved", "rejected", "historical", "all"], default="pending_review",
         format_func=lambda s: {"pending_review": "Awaiting review", "approved": "Approved",
-                               "rejected": "Rejected", "all": "All"}[s])
+                               "rejected": "Rejected", "historical": "History", "all": "All"}[s])
     approved = [t for t in tickets if t["status"] == "approved"]
     top[1].download_button("Export approved (JSON)", json.dumps(approved, indent=2),
                            file_name=f"approved_tickets_{site_id}.json", disabled=not approved,
@@ -281,7 +281,12 @@ with tab_queue:
     shown.sort(key=lambda t: (not ev_by_id.get(t["event_id"], {}).get("active", False),
                               order.get(t["priority"], 9), t["event_id"]))
     if not shown:
-        st.success("Nothing here. The queue is clear.")
+        n_hist = sum(t["status"] == "historical" for t in tickets)
+        st.success("Nothing here. The queue is clear."
+                   + (f" {n_hist} older event(s) are under History." if n_hist and show == "pending_review" else ""))
+    if show == "historical" and shown:
+        st.caption(f"Events that ended more than {meta.get('ticket_window_days', 45)} days before the latest data. "
+                   "Open one for review if it still needs action.")
 
     for n, t in enumerate(shown):
         ev = ev_by_id.get(t["event_id"], {})
@@ -326,10 +331,14 @@ with tab_queue:
                 changed = {k: v for k, v in edits.items() if v != t.get(k)}
 
                 if locked:
-                    st.markdown(f"**{t['status'].replace('_', ' ').title()}** by {t.get('reviewer')} "
-                                f"at {t.get('reviewed_at')}"
-                                + (f": _{t['review_note']}_" if t.get("review_note") else ""))
-                    if st.button("Reopen for review", key=f"reopen_{tid}"):
+                    if t["status"] == "historical":
+                        st.markdown("**History.** This event ended a while ago, so it wasn't queued for action.")
+                    else:
+                        st.markdown(f"**{t['status'].replace('_', ' ').title()}** by {t.get('reviewer')} "
+                                    f"at {t.get('reviewed_at')}"
+                                    + (f": _{t['review_note']}_" if t.get("review_note") else ""))
+                    if st.button("Open for review" if t["status"] == "historical" else "Reopen for review",
+                                 key=f"reopen_{tid}"):
                         review.record(sdir, tid, "pending_review", reviewer, "Reopened")
                         st.rerun()
                 else:
