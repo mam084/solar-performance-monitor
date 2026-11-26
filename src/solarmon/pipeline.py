@@ -49,7 +49,8 @@ def site_dict(site: Site) -> dict:
 
 def build(system_id: int, demo: bool = False, reference: slice | None = None,
           use_claude: bool = False, out_dir: Path | None = None, verbose: bool = True,
-          preflight: list[dict] | None = None, use_ml: bool = True) -> dict:
+          preflight: list[dict] | None = None, use_ml: bool = True,
+          raw: pd.DataFrame | None = None) -> dict:
     site = get_site(system_id)
     truth = None
     if demo:
@@ -60,7 +61,9 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
     else:
         from .load import load_site
         from .qa import clean, trim_to_sensor_start
-        raw = trim_to_sensor_start(clean(load_site(site), site))
+        if raw is None:  # the update job passes the frame it already loaded for preflight
+            raw = clean(load_site(site), site)
+        raw = trim_to_sensor_start(raw)
         source = "pvdaq"
 
     out = model_site(raw, site, reference=reference)

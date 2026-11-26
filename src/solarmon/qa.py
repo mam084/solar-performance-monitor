@@ -164,3 +164,31 @@ def trim_to_sensor_start(df: pd.DataFrame, min_coverage: float = 0.3) -> pd.Data
     out = df.loc[start:]
     out.attrs = dict(df.attrs, trimmed_before=str(start.date()) if start > df.index[0] else None)
     return out
+
+
+def seasonal_clock(df: pd.DataFrame, site) -> dict:
+    """Where the day's output centre falls vs solar noon, split by daylight-saving season.
+
+    For sites with thousands of daily files, per-file checks are noise (cloudy days move
+    the peak). Monthly medians aren't. A logger on standard time all year shows about
+    -1 h while daylight saving is in force and 0 h otherwise.
+    """
+    import pvlib
+    loc = pvlib.location.Location(site.latitude, site.longitude, site.timezone)
+    rows = []
+    for (y, mo), g in df.groupby([df.index.year, df.index.month]):
+        if len(g) < 96 * 10 or g["poa_irradiance"].clip(lower=0).sum() <= 0:
+            continue
+        h = np.asarray(g.index.hour + g.index.minute / 60 + 7.5 / 60)
+        w = g["poa_irradiance"].clip(lower=0).fillna(0).to_numpy()
+        centre = float((w * h).sum() / w.sum())
+        mid = pd.date_range(pd.Timestamp(year=y, month=mo, day=15), periods=96, freq="15min", tz=site.timezone)
+        el = loc.get_solarposition(mid + pd.Timedelta(minutes=7.5))["apparent_elevation"].clip(lower=0)
+        hh = np.asarray(mid.hour + mid.minute / 60 + 7.5 / 60)
+        noon = float((el.to_numpy() * hh).sum() / el.to_numpy().sum())
+        dst = pd.Timestamp(year=y, month=mo, day=15).tz_localize(site.timezone).dst() != pd.Timedelta(0)
+        rows.append((dst, centre - noon))
+    t = pd.DataFrame(rows, columns=["dst", "offset"])
+    return {"dst_h": float(t.loc[t.dst, "offset"].median()) if t.dst.any() else float("nan"),
+            "standard_h": float(t.loc[~t.dst, "offset"].median()) if (~t.dst).any() else float("nan"),
+            "months": len(t)}

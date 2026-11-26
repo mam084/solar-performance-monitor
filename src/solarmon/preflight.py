@@ -54,8 +54,12 @@ def _columns_in(path) -> set[str]:
     return set(head)
 
 
-def run(site: Site) -> tuple[list[Check], pd.DataFrame | None]:
-    """All checks in order. Stops early only when later checks can't run."""
+def run(site: Site, df: pd.DataFrame | None = None) -> tuple[list[Check], pd.DataFrame | None]:
+    """All checks in order. Stops early only when later checks can't run.
+
+    Pass `df` (the site's cleaned 15-min frame) when the caller already loaded it, to
+    avoid loading the site twice.
+    """
     checks: list[Check] = []
     files = raw_files(site)
     if not files:
@@ -96,28 +100,48 @@ def run(site: Site) -> tuple[list[Check], pd.DataFrame | None]:
                             f"{len(mapped)} signals mapped" + ("" if temp else "; no temperature, model assumes 25 °C"),
                             "" if temp else "map ambient_temp (or module_temp) for a better model"))
 
-    # 3. file clocks
+    # 3. file clocks. Few large files: check each one. Thousands of daily files: one
+    # file's peak is noise, so check monthly medians by daylight-saving season instead
+    # (after loading, below).
     from .qa import file_timing
-    try:
-        timing = file_timing(site)
-        bad = timing[timing["looks_right"] == "CHECK"].reset_index()
-        bad = bad[bad["signal"].isin(["ac_power", "poa_irradiance"])]
-        if bad.empty:
-            checks.append(Check("file clocks", PASS, f"{len(timing)} file/signal pairs peak near solar noon"))
-        for r in bad.itertuples():
-            off = r.offset_h
-            stem = r.file.rsplit(".", 1)[0]
-            if 6 <= abs(off) <= 9:
-                fix = f"looks like UTC: add `{stem}` to utc_files"
-            else:
-                fix = f"add `{stem}: {-round(off * 4) / 4}` under file_offsets_h (confirm with qa.lag_scan by month)"
-            checks.append(Check("file clocks", WARN, f"{r.file} ({r.signal}) peaks {off:+.2f} h from solar noon", fix))
-    except Exception as e:  # noqa: BLE001
-        checks.append(Check("file clocks", WARN, f"could not run: {e}"))
+    many_files = len(files) > 60
+    if not many_files:
+        try:
+            timing = file_timing(site)
+            bad = timing[timing["looks_right"] == "CHECK"].reset_index()
+            bad = bad[bad["signal"].isin(["ac_power", "poa_irradiance"])]
+            if bad.empty:
+                checks.append(Check("file clocks", PASS, f"{len(timing)} file/signal pairs peak near solar noon"))
+            for r in bad.itertuples():
+                off = r.offset_h
+                stem = r.file.rsplit(".", 1)[0]
+                if 6 <= abs(off) <= 9:
+                    fix = f"looks like UTC: add `{stem}` to utc_files"
+                else:
+                    fix = f"add `{stem}: {-round(off * 4) / 4}` under file_offsets_h (confirm with qa.lag_scan by month)"
+                checks.append(Check("file clocks", WARN, f"{r.file} ({r.signal}) peaks {off:+.2f} h from solar noon", fix))
+        except Exception as e:  # noqa: BLE001
+            checks.append(Check("file clocks", WARN, f"could not run: {e}"))
 
     # 4. coverage
-    from .qa import clean
-    df = clean(load_site(site), site)
+    from .qa import clean, seasonal_clock
+    if df is None:
+        df = clean(load_site(site), site)
+    if many_files:
+        try:
+            sc = seasonal_clock(df, site)
+            dst, std = sc["dst_h"], sc["standard_h"]
+            detail = (f"output centre vs solar noon, monthly medians over {sc['months']} months: "
+                      f"{dst:+.2f} h with daylight saving, {std:+.2f} h without")
+            if abs(dst + 1) < 0.35 and abs(std) < 0.35:
+                checks.append(Check("file clocks", WARN, detail, "logger stays on standard time: set `clock: standard`"))
+            elif max(abs(dst), abs(std)) > 0.5:
+                checks.append(Check("file clocks", WARN, detail,
+                                    "a fixed offset remains; check qa.lag_scan by month before adding file_offsets_h"))
+            else:
+                checks.append(Check("file clocks", PASS, detail))
+        except Exception as e:  # noqa: BLE001
+            checks.append(Check("file clocks", WARN, f"could not run the seasonal check: {e}"))
     day = df["poa_irradiance"] > 50
     cov = pd.DataFrame({
         "power": df["ac_power_kw"].notna()[day].groupby(df.index[day].year).mean(),

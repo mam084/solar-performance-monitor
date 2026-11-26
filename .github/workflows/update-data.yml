@@ -52,6 +52,15 @@ jobs:
       - name: Install
         run: pip install -e ".[dev]"
 
+      # Raw files persist between runs, so a rebuild doesn't re-download thousands of
+      # daily files; the downloader only fetches what's missing
+      - name: Restore raw data
+        uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+
       - name: Check NREL and rebuild what changed
         env:
           SITES: ${{ github.event.inputs.sites || 'auto' }}

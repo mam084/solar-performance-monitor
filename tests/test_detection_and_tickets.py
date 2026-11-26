@@ -240,3 +240,21 @@ def test_period_before_irradiance_sensor_is_trimmed():
     t = trim_to_sensor_start(df)
     assert pd.Timestamp("2023-03-25") <= t.index[0] <= pd.Timestamp("2023-04-01")
     assert t.attrs["trimmed_before"] is not None
+
+
+def test_snow_is_told_apart_from_an_outage():
+    """Freezing weather, then output collapses but trickles on: snow, not a dead inverter."""
+    site = get_site(4902)
+    df, _ = make_demo(site, start="2023-09-01", end="2024-04-01", faults=[], seed=2)
+    snow = (df.index >= "2024-01-15") & (df.index < "2024-01-18")
+    df.loc[(df.index >= "2024-01-13") & (df.index < "2024-01-18"), "ambient_temp"] = -4.0
+    df.loc[snow, "ac_power_kw"] *= 0.06  # a trickle through thin snow
+    dead = (df.index >= "2024-03-05") & (df.index < "2024-03-06")
+    df.loc[dead, "ac_power_kw"] = 0.0     # inverter trip on a mild day
+    out = model_site(df, site)
+    events, _ = detect_events(out, daily_performance(out), site.system_id)
+    kinds = {e.start: e.kind for e in events}
+    assert kinds.get("2024-01-15") == "snow", kinds
+    assert kinds.get("2024-03-05") == "outage", kinds
+    snow_ev = next(e for e in events if e.kind == "snow")
+    assert snow_ev.severity == "low" and snow_ev.evidence["coldest_max_temp_c"] <= 3

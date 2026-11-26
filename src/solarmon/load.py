@@ -158,7 +158,13 @@ def load_file(site: Site, path: Path, wanted: set[str], timestamps: str | None =
     timestamps = timestamps or site.timestamps
     head = _read(path, nrows=1).columns
     if {"metric_id", "value"} <= set(head):
-        f = _to_wide(_read(path)).filter(items=wanted)
+        ids = [int(c.split("_", 1)[1]) for c in wanted if c.startswith("metric_") and c[7:].isdigit()]
+        if path.suffix == ".parquet" and ids:
+            # Long-format daily files hold ~100 channels; read only the rows for the ones we use
+            raw = pd.read_parquet(path, filters=[("metric_id", "in", ids)])
+        else:
+            raw = _read(path)
+        f = _to_wide(raw).filter(items=wanted)
     else:
         cols = [c for c in head if c in wanted]
         if not cols:
@@ -170,12 +176,22 @@ def load_file(site: Site, path: Path, wanted: set[str], timestamps: str | None =
         local = f.index.tz_localize("UTC").tz_convert(site.timezone).tz_localize(None)
         f = f.set_axis(local)
         f = f[~f.index.duplicated()]  # the repeated hour when clocks fall back
+    elif site.clock == "standard":
+        f = f.set_axis(standard_to_local(f.index, site.timezone))
+        f = f[~f.index.duplicated()]
     for key, hours in site.file_offsets_h.items():
         if key in path.name:
             f = f.set_axis(f.index + pd.Timedelta(hours=hours))
     if timestamps == "end":
         f = f.set_axis(f.index - _step(f))
     return f
+
+
+def standard_to_local(idx: pd.DatetimeIndex, timezone: str) -> pd.DatetimeIndex:
+    """Timestamps on standard time all year -> the site's wall clock (adds the DST hour)."""
+    jan = pd.Timestamp("2021-01-15", tz=timezone).utcoffset()
+    utc = idx - jan
+    return utc.tz_localize("UTC").tz_convert(timezone).tz_localize(None)
 
 
 def is_utc_file(site: Site, path: Path) -> bool:

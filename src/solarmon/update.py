@@ -205,14 +205,21 @@ def update_site(system_id: int, force: bool = False, client=None) -> dict:
     from .preflight import FAIL, report, run
 
     download_site(system_id, include=INCLUDE if site.source == "prize" else None)
-    checks, _ = run(site)
+    from .load import load_site
+    from .qa import clean
+    df = None
+    try:
+        df = clean(load_site(site), site)  # load once; preflight and build share it
+    except Exception:  # noqa: BLE001 - preflight will report what's wrong
+        pass
+    checks, _ = run(site, df=df)
     print(report(site, checks))
     if any(c.status == FAIL for c in checks):
         bad = "; ".join(f"{c.name}: {c.detail}" + (f" (fix: {c.fix})" if c.fix else "")
                         for c in checks if c.status == FAIL)
         return {"site": system_id, "status": "blocked", "detail": f"preflight failed ({bad}); previous outputs kept"}
 
-    meta = build(system_id, preflight=[dataclasses.asdict(c) for c in checks])
+    meta = build(system_id, preflight=[dataclasses.asdict(c) for c in checks], raw=df)
     manifest_path(site).write_text(json.dumps({
         "fingerprint": fp, "code": code_hash(), "built_at": meta["built_at"],
         "files": len(listing), "total_mb": round(sum(o["size"] for o in listing) / 1e6, 1),

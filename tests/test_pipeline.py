@@ -6,7 +6,7 @@ import pvlib
 import pytest
 
 from solarmon import config, ingest, load
-from solarmon.config import Site
+from solarmon.config import Site, get_site
 from solarmon.expected import expected_ac_kw, pvwatts_ac_kw, rmse_pct
 from solarmon.inspect import guess
 from solarmon.metrics import daily_performance
@@ -244,3 +244,27 @@ def test_file_offset_shifts_one_file(site):
     site.file_offsets_h = {"irr_2024": -1.5}
     f = load.load_file(site, site.raw_dir / "irr_2024.csv", {"poa"})
     assert str(f.index[0]) == "2020-01-10 08:30:00"
+
+
+def test_standard_time_logger_gains_the_dst_hour():
+    from solarmon.load import standard_to_local
+    idx = pd.DatetimeIndex(["2016-01-15 12:00", "2016-07-15 12:00"])
+    local = standard_to_local(idx, "America/New_York")
+    assert list(local.strftime("%H:%M")) == ["12:00", "13:00"]
+
+
+def test_seasonal_clock_spots_a_standard_time_logger():
+    from solarmon.demo import make_demo
+    from solarmon.load import standard_to_local
+    from solarmon.qa import seasonal_clock
+    site = get_site(4902)
+    df, _ = make_demo(site, start="2023-01-01", end="2024-01-01", faults=[], seed=3)
+    ok = seasonal_clock(df, site)
+    assert abs(ok["dst_h"]) < 0.3 and abs(ok["standard_h"]) < 0.3
+    # Pretend the logger was on standard time: under DST everything reads an hour early
+    jan = pd.Timestamp("2021-01-15", tz=site.timezone).utcoffset()
+    utc = df.index.tz_localize(site.timezone, ambiguous="NaT", nonexistent="NaT").tz_convert("UTC")
+    std = df.set_axis((utc + jan).tz_localize(None))
+    std = std[std.index.notna() & ~std.index.duplicated()]
+    bad = seasonal_clock(std, site)
+    assert abs(bad["dst_h"] + 1) < 0.3 and abs(bad["standard_h"]) < 0.3

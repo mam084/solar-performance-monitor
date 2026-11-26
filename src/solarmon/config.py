@@ -40,6 +40,9 @@ class Site:
     file_offsets_h: dict[str, float] = field(default_factory=dict)
     # Inverter AC output limit (kW); inferred from the data's clipping ceiling if unset
     ac_capacity_kw: float | None = None
+    # "local": timestamps follow the site's wall clock (daylight saving included).
+    # "standard": the logger stays on standard time all year (common for research sites).
+    clock: str = "local"
     # Share of the array the mapped power channel covers, e.g. 0.5 when only one of two
     # equal inverters is metered. The model sizes itself to this share of dc_capacity_kw.
     metered_fraction: float = 1.0

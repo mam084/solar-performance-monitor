@@ -51,6 +51,7 @@ KIND_LABELS = {
     "curtailment": "Curtailment / output cap",
     "sensor_fault": "Irradiance sensor fault",
     "tracker_stall": "Tracker stall",
+    "snow": "Snow cover",
     "data_gap": "Monitoring data gap",
 }
 
@@ -105,11 +106,40 @@ def daily_frame(out: pd.DataFrame, daily: pd.DataFrame) -> pd.DataFrame:
         "shape_gap": _shape_gap(out),
         "plateau_frac": _plateau_frac(out),
         "variability": _variability(out),
+        "tmax": (out["ambient_temp"].groupby(day).max() if "ambient_temp" in out
+                 else pd.Series(dtype=float)),
+        "zero_frac": _zero_frac(out, cap),
     })
     cal = pd.date_range(day.min(), day.max(), freq="D")
     d = daily.reindex(cal).join(full.reindex(cal))
     d["poa_coverage"] = d["poa_coverage"].fillna(1.0)
     return d
+
+
+def _zero_frac(out: pd.DataFrame, cap: float) -> pd.Series:
+    """Share of sunny intervals (POA > 100 W/m²) where output is effectively zero."""
+    day = out.index.normalize()
+    sunny = out["poa_irradiance"] > 100
+    off = (out["ac_power_kw"] <= 0.005 * cap) & out["ac_power_kw"].notna()
+    return off[sunny].groupby(day[sunny]).mean()
+
+
+SNOW_MONTHS = (10, 11, 12, 1, 2, 3, 4, 5)
+SNOW_TMAX_C = 3.0      # a day this cold within two days before the event
+SNOW_MAX_ZERO = 0.8    # covered panels still trickle some power; a tripped inverter makes none
+
+
+def _looks_like_snow(d: pd.DataFrame, s, e) -> tuple[bool, dict]:
+    """Snow: freezing weather just before, and low-but-not-zero output while the
+    (cleaned or heated) irradiance sensor still sees sun."""
+    if "tmax" not in d or s.month not in SNOW_MONTHS:
+        return False, {}
+    cold = d.loc[s - pd.Timedelta(days=2): s, "tmax"].min()
+    zero = d.loc[s:e, "zero_frac"].mean()
+    if pd.isna(cold) or pd.isna(zero):
+        return False, {}
+    return bool(cold <= SNOW_TMAX_C and zero < SNOW_MAX_ZERO), {"coldest_max_temp_c": _r(cold, 1),
+                                                                 "zero_output_share": _r(zero, 2)}
 
 
 def _variability(out: pd.DataFrame) -> pd.Series:
@@ -342,6 +372,15 @@ def _build_event(d, s, e, flag, site_id, last_day, price, force_kind: str | None
             }.get(kind, feats.get("reason", ""))
         evidence.update(feats)
 
+    if kind in ("outage", "partial_outage"):
+        snowy, feats = _looks_like_snow(d, s, e)
+        if snowy:
+            kind = "snow"
+            evidence.update(feats)
+            evidence["reason"] = ("Output collapsed but didn't switch off, right after freezing weather, while the "
+                                  "irradiance sensor still saw sun: the panels are most likely covered by snow. "
+                                  "Usually clears on its own as it melts.")
+
     if kind in ("data_gap", "sensor_fault"):
         lost_kwh, loss_pct = 0.0, None  # unknown / no production lost
     else:
@@ -424,6 +463,8 @@ def _severity(kind: str, loss_pct: float | None, days: int, active: bool) -> str
         return "medium"
     if kind == "tracker_stall":
         return "high" if active else "medium"
+    if kind == "snow":
+        return "medium" if days > 5 else "low"
     if kind == "data_gap":
         return "medium" if days >= 3 or active else "low"
     return "low"  # curtailment: usually external, confirm with the utility

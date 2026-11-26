@@ -76,6 +76,15 @@ PLAYBOOK = {
         ],
         "parts": ["Spare tracker motor / controller board", "Inclinometer"],
     },
+    "snow": {
+        "actions": [
+            "No dispatch yet: snow usually slides or melts off within a few days",
+            "Check the forecast; if a thaw is coming, re-check output the day after",
+            "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+            "Do not scrape modules; use only soft tools if clearing is required by contract",
+        ],
+        "parts": ["Soft foam snow rake (only if clearing is required)"],
+    },
     "data_gap": {
         "actions": [
             "Check data-logger power and network/modem connectivity",
@@ -185,6 +194,7 @@ def _likely_causes(kind: str) -> list[str]:
         "sensor_fault": ["Dirty or shaded pyranometer", "Sensor drift / out of calibration", "Sensor knocked out of plane"],
         "tracker_stall": ["Tracker controller fault or lost communications", "Stow mode left active after high wind",
                           "Failed drive motor or row power supply"],
+        "snow": ["Snow or ice covering the modules", "Snow drift against low-tilt rows"],
         "data_gap": ["Data-logger power loss", "Network or cellular modem outage", "Logger storage full"],
     }.get(kind, [])
 

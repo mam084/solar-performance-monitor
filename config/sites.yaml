@@ -63,6 +63,8 @@ sites:
     azimuth: 180
     years_available: [2014, 2018]
     # PVDAQ metrics table (data/processed/4902/inspect.md). 1-min data.
+    # Logged on standard time all year: output centre sits -1 h off solar noon only under DST
+    clock: standard
     columns:
       ac_power: metric_82633        # PwrMtrP_kW_Avg, revenue meter, kW (peaks ~246 kW)
       poa_irradiance: metric_82622  # SEWSPOAIrrad_Wm2_Avg, plane of array, W/m2
@@ -84,6 +86,8 @@ sites:
     azimuth: 180
     years_available: [2014, 2018]
     # PVDAQ metrics table (data/processed/4903/inspect.md). 1-min data.
+    # Logged on standard time all year: output centre sits -1 h off solar noon only under DST
+    clock: standard
     columns:
       ac_power: metric_82754        # PwrMtrP_kW_Avg, revenue meter, kW (peaks ~67 kW)
       poa_irradiance: metric_82743  # SEWSPOAIrrad_Wm2_Avg, plane of array, W/m2
@@ -107,12 +111,15 @@ sites:
     # 720 kW DC on two 333 kW inverters (NREL fact sheet FS-6A4-44785). The power channel
     # peaks ~316 kW, i.e. one inverter's half of the array; it's labelled W but reads kW.
     metered_fraction: 0.5
+    # Standard time all year (DST months run ~1.3 h earlier than winter ones); a further
+    # ~0.7 h lag remains after this and isn't corrected yet
+    clock: standard
     columns:
       ac_power: metric_5074         # ac_power
       poa_irradiance: metric_5041   # poa_irradiance, W/m2
       module_temp: metric_5043      # module_temp, C
       ambient_temp: metric_5042     # ambient_temp, C
-      wind_speed: metric_5044       # wind_speed, m/s
+      wind_speed: null              # metric_5044 is listed in the metadata but absent from the files
 
   1367:
     name: City of Henderson Aquatic Complex
