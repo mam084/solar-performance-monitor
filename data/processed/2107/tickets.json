@@ -28,8 +28,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2017-12-02-sensor_fault",
@@ -60,8 +60,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2017-12-07-sensor_fault",
@@ -93,8 +93,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2017-12-14-sensor_fault",
@@ -126,8 +126,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2017-12-20-sensor_fault",
@@ -159,8 +159,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-03-27-sensor_fault",
@@ -191,8 +191,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-03-31-sensor_fault",
@@ -223,8 +223,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-04-05-partial_outage",
@@ -258,8 +258,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-04-08-outage",
@@ -290,8 +290,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-04-09-soiling",
@@ -324,8 +324,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-04-13-sensor_fault",
@@ -357,8 +357,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-07-31-soiling",
@@ -391,8 +391,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-08-11-partial_outage",
@@ -426,8 +426,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-09-25-partial_outage",
@@ -461,8 +461,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-10-02-sensor_fault",
@@ -493,8 +493,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-10-17-sensor_fault",
@@ -525,8 +525,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2018-11-13-soiling",
@@ -559,8 +559,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2019-02-22-outage",
@@ -591,8 +591,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2019-07-26-sensor_fault",
@@ -623,8 +623,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2020-01-09-outage",
@@ -655,8 +655,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2020-01-18-outage",
@@ -687,8 +687,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2020-11-11-partial_outage",
@@ -722,8 +722,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2021-07-16-data_gap",
@@ -751,8 +751,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2021-09-18-partial_outage",
@@ -786,8 +786,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2021-10-20-outage",
@@ -818,8 +818,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2022-05-09-partial_outage",
@@ -853,8 +853,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2022-06-08-sensor_fault",
@@ -885,8 +885,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2022-08-07-sensor_fault",
@@ -917,8 +917,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2022-10-23-sensor_fault",
@@ -949,8 +949,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2023-03-18-outage",
@@ -981,8 +981,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2023-05-12-data_gap",
@@ -1010,8 +1010,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2023-07-01-partial_outage",
@@ -1045,8 +1045,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2023-07-26-partial_outage",
@@ -1080,8 +1080,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2023-11-02-sensor_fault",
@@ -1112,8 +1112,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2024-11-02-sensor_fault",
@@ -1144,8 +1144,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2025-05-06-partial_outage",
@@ -1179,8 +1179,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2025-08-04-partial_outage",
@@ -1214,8 +1214,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2025-08-25-sensor_fault",
@@ -1246,8 +1246,8 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   },
   {
     "ticket_id": "T-2107-2025-09-11-sensor_fault",
@@ -1278,7 +1278,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:17:25Z",
-    "status": "pending_review"
+    "drafted_at": "2026-11-26T20:37:42Z",
+    "status": "historical"
   }
 ]
