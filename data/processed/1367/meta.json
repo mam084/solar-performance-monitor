@@ -12,7 +12,7 @@
     "azimuth": 172
   },
   "source": "demo",
-  "built_at": "2026-11-26T20:41:14Z",
+  "built_at": "2026-11-26T22:53:49Z",
   "data_start": "2023-01-01",
   "data_end": "2024-12-31",
   "calibration_scale": 0.8795,
@@ -38,7 +38,18 @@
     "holdout_nrmse_ml": 3.31,
     "holdout_daily_scatter_physics": 0.025,
     "holdout_daily_scatter_ml": 0.0257,
-    "reason": "didn't beat physics on held-out data by at least 3% on both 15-min error and daily scatter"
+    "reason": "didn't cut held-out 15-min error by at least 3%"
+  },
+  "health": {
+    "nrmse_full_health_pct": 2.46,
+    "full_health_days": 320,
+    "chronic_shortfall_pct": 3.95,
+    "chronic_shortfall_mwh_per_year": 18.8,
+    "chronic_shortfall_usd_per_year": 2256,
+    "chronic_shortfall_by_year_pct": {
+      "2023": 2.5,
+      "2024": 5.4
+    }
   },
   "backtest": {
     "faults_injected": 2,

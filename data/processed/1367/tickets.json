@@ -8,7 +8,7 @@
     "priority": "P3",
     "summary": "Irradiance sensor fault detected at City of Henderson Aquatic Complex (Henderson, NV) over 20 day(s), 2024-02-06 to 2024-02-25.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 1.12 during the event (1.00 = healthy).",
+      "The site produced 99% of its expected output in the two weeks before, and 112% during this problem (100% = producing what the weather allows).",
       "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
     ],
     "likely_causes": [
@@ -28,7 +28,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:41:14Z",
+    "drafted_at": "2026-11-26T22:53:49Z",
     "status": "historical"
   },
   {
@@ -40,9 +40,9 @@
     "priority": "P3",
     "summary": "Soiling / gradual loss detected at City of Henderson Aquatic Complex (Henderson, NV) over 14 day(s), ongoing. Estimated cost so far: $96.",
     "evidence": [
-      "Performance index fell from 0.95 in the two weeks before to a median of 0.91 during the event (1.00 = healthy).",
-      "Estimated energy lost: 802 kWh (8% of expected), about $96.",
-      "The decline appears to have started around 2024-12-14, 4 days before it crossed the alert threshold.",
+      "The site produced 95% of its expected output in the two weeks before, and 91% during this problem (100% = producing what the weather allows).",
+      "About 802 kWh lost (8% of what was expected over these days), worth roughly $96 at $0.12/kWh.",
+      "The slide seems to have started around 2024-12-14, 4 days before it was big enough to raise an alert.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
     ],
     "likely_causes": [
@@ -61,7 +61,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T20:41:14Z",
+    "drafted_at": "2026-11-26T22:53:49Z",
     "status": "pending_review"
   }
 ]

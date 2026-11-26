@@ -136,21 +136,26 @@ def evidence_packet(event: dict, site: dict) -> dict:
 def _evidence_lines(event: dict) -> list[str]:
     ev = event.get("evidence", {})
     lines = []
-    if event.get("pi_before") is not None and event.get("pi_during") is not None:
-        lines.append(f"Performance index fell from {event['pi_before']:.2f} in the two weeks before "
-                     f"to a median of {event['pi_during']:.2f} during the event (1.00 = healthy).")
-    elif event.get("pi_during") is not None:
-        lines.append(f"Median performance index during the event: {event['pi_during']:.2f}.")
+    before, during = event.get("pi_before"), event.get("pi_during")
+    if before is not None and during is not None:
+        lines.append(f"The site produced {before:.0%} of its expected output in the two weeks before, "
+                     f"and {during:.0%} during this problem (100% = producing what the weather allows).")
+    elif during is not None:
+        lines.append(f"During this problem the site produced {during:.0%} of its expected output "
+                     "(100% = producing what the weather allows).")
+    if ev.get("coldest_max_temp_c") is not None:
+        lines.append(f"It started right after freezing weather (a day that peaked at {ev['coldest_max_temp_c']:.0f} °C), "
+                     "and output trickled on rather than stopping.")
     if event.get("energy_lost_kwh"):
-        lines.append(f"Estimated energy lost: {event['energy_lost_kwh']:,.0f} kWh "
-                     f"({event.get('loss_pct') or 0:.0f}% of expected), about ${event['est_cost_usd']:,.0f}.")
+        lines.append(f"About {event['energy_lost_kwh']:,.0f} kWh lost ({event.get('loss_pct') or 0:.0f}% of what was "
+                     f"expected over these days), worth roughly ${event['est_cost_usd']:,.0f} at $0.12/kWh.")
     if ev.get("capacity_offline_pct") is not None:
-        lines.append(f"Roughly {ev['capacity_offline_pct']:.0f}% of capacity appears offline, from the size of the step.")
+        lines.append(f"The size of the drop suggests roughly {ev['capacity_offline_pct']:.0f}% of the array went offline.")
     if ev.get("decline_began"):
-        lines.append(f"The decline appears to have started around {ev['decline_began']}, "
-                     f"{ev.get('decline_lead_days', '?')} days before it crossed the alert threshold.")
+        lines.append(f"The slide seems to have started around {ev['decline_began']}, "
+                     f"{ev.get('decline_lead_days', '?')} days before it was big enough to raise an alert.")
     if ev.get("recovered_to") is not None:
-        lines.append(f"Performance recovered to {ev['recovered_to']:.2f} of baseline in the week after.")
+        lines.append(f"In the week after, output recovered to {ev['recovered_to']:.0%} of the site's normal level.")
     if ev.get("shape_gap") is not None and event["kind"] == "tracker_stall":
         lines.append(f"Morning and evening output ran {-100 * ev['shape_gap']:.0f} points further below "
                      "expectation than midday output.")
@@ -158,10 +163,14 @@ def _evidence_lines(event: dict) -> list[str]:
         lines.append(f"On clear days, output sat pinned at one level for {100 * ev['plateau_frac']:.0f}% of the "
                      "high-output hours while expected output kept rising above it.")
     if ev.get("poa_coverage") is not None:
-        lines.append(f"Irradiance was recorded for only {100 * ev['poa_coverage']:.0f}% of producing intervals.")
+        lines.append(f"The sunlight sensor reported for only {100 * ev['poa_coverage']:.0f}% of the time the site "
+                     "was producing power.")
     if ev.get("reason"):
         lines.append(ev["reason"])
     return lines
+
+
+evidence_lines = _evidence_lines  # public name, used by the app
 
 
 def template_ticket(event: dict, site: dict) -> dict:
