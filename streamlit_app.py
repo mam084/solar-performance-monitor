@@ -247,6 +247,10 @@ with tab_site:
                f"{ml.get('reason', 'not evaluated')}.{detail}")
 
     warns = [c for c in meta.get("preflight", []) if c["status"] != "PASS"]
+    # Preflight judges accuracy before the ML layer; the final model's number is what counts
+    final = (meta.get("health") or {}).get("nrmse_full_health_pct")
+    if final is not None and final < 5:
+        warns = [c for c in warns if c["name"] != "accuracy"]
     if warns:
         with st.expander(f"⚠️ {len(warns)} data check(s) need attention for this site"):
             for c in warns:

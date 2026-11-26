@@ -4,15 +4,15 @@ Compares each solar site's **actual** output with the output its **weather says 
 
 Built on NREL's public [PVDAQ](https://data.openei.org/submissions/4568) dataset: real production and on-site weather sensor data from PV systems across the US.
 
-> **Status: v0.4.** The full loop runs end to end: physics baseline, ML residual layer, fault detection and classification, agent-drafted tickets, and a Streamlit approval queue. **Four of the five sites run on real PVDAQ data**, refreshed automatically by a scheduled job; site 1367 stays on a labelled **demo dataset** until its irradiance channel can be trusted. See the [roadmap](#roadmap).
+> **Status: v0.4.** The full loop runs end to end: physics baseline, ML residual layer, fault detection and classification, agent-drafted tickets, and a Streamlit approval queue. **Four of the five sites run on real PVDAQ data**, all within the 5% model-error target on full-health days (a healthy site's chronic shortfall from measurement noise alone is ~2.5%), refreshed automatically by a scheduled job; site 1367 stays on a labelled **demo dataset** until its irradiance channel can be trusted. See the [roadmap](#roadmap).
 
-| Site | Data | Model error, healthy days | Events | Notes |
-|---|---|---|---|---|
-| 2107 Farm Solar Array, CA (fixed) | 2017–2025 | 9.9% (ML adopted) | 42 | sensor dropouts; 80-day partial outage in 2025 |
-| 4902 NIST Ground, MD (fixed) | 2014–2018 | 7.8% (ML adopted) | 31 | 8 snow events; logger on standard time |
-| 4903 NIST Roof, MD (fixed) | 2014–2018 | 4.0% | 20 | 9 snow events |
-| 1430 NREL Mesa, CO (tracker) | 2008–2017 | 7.1% | 114 | 41 snow events; one of two inverters metered |
-| 1367 Henderson, NV (fixed) | demo | 2.8% | 2 | POA channel unusable, see `config/sites.yaml` |
+| Site | Data | Model error, full-health days | Chronic shortfall | Events | Notes |
+|---|---|---|---|---|---|
+| 2107 Farm Solar Array, CA (fixed) | 2018–2025 | 4.5% (ML adopted) | 6.8%, ~108 MWh/yr | 40 | sensor dropouts; 80-day partial outage in 2025 |
+| 4902 NIST Ground, MD (fixed) | 2014–2018 | 3.3% (ML adopted) | 2.5% | 31 | 8 snow events; logger on standard time |
+| 4903 NIST Roof, MD (fixed) | 2014–2018 | 2.7% | 2.1% | 20 | 9 snow events |
+| 1430 NREL Mesa, CO (tracker) | 2009–2017 | 4.4% (ML adopted) | 3.0% | 112 | 41 snow events; one of two inverters metered |
+| 1367 Henderson, NV (fixed) | demo | — | — | 2 | POA channel unusable, see `config/sites.yaml` |
 
 **What it does on the demo fleet:**
 
