@@ -74,6 +74,16 @@ The first automated run on site 2107's real data (Nov 2017 – Dec 2025) produce
 
 After the fixes the same data gives about 40 events. Spot checks against the raw 15-minute data back them up: days with zero output in full sun, weeks-long irradiance dropouts, and a summer-2025 stretch where the site ran 8–20% short for two months.
 
+Mapping three more sites (the NIST ground and roof arrays and NREL's Golden tracker) taught four more lessons:
+
+| What happened | Cause | Fix |
+|---|---|---|
+| Columns named `metric_82633` | Basic PVDAQ sites name channels by id | The update job looks up PVDAQ's metrics table and commits a column report per site |
+| A clean site failed preflight | Its files are long format (one row per timestamp and metric), so the channels aren't headers | Preflight and the loader read metric ids; the loader reads only the 5 mapped ids of ~100 |
+| Every summer an hour early | NIST loggers stay on standard time all year | `clock: standard` per site; preflight checks clocks by daylight-saving season, not per file |
+| Dozens of winter "outages" | Snow on the panels while the sensor stays clear | A snow event type: freezing weather plus output that trickles rather than stops (41 of 69 at Golden) |
+| A 720 kW tracker peaking at 316 kW | Only one of its two inverters is metered | `metered_fraction: 0.5` sizes the model to the metered half |
+
 Two honest limits remain:
 
 - **Model error is still about 13% at 15 minutes.** A single on-site sensor and a large array see different clouds, and this site's sensor has its own quirks. Daily PI is steadier, and that's what detection uses, but a second irradiance source (satellite data or another on-site sensor) is the obvious next improvement.

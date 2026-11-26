@@ -4,11 +4,19 @@ Compares each solar site's **actual** output with the output its **weather says 
 
 Built on NREL's public [PVDAQ](https://data.openei.org/submissions/4568) dataset: real production and on-site weather sensor data from PV systems across the US.
 
-> **Status: v0.3.** The full loop runs end to end: physics baseline, fault detection and classification, agent-drafted tickets, and a Streamlit approval queue. **Site 2107 runs on real PVDAQ data** (Nov 2017 – Dec 2025), refreshed automatically by a scheduled job. The other four sites run on a labelled **demo dataset** (physics-based weather for each site's location and mounting, with injected faults) until their columns are mapped. See the [roadmap](#roadmap).
+> **Status: v0.4.** The full loop runs end to end: physics baseline, ML residual layer, fault detection and classification, agent-drafted tickets, and a Streamlit approval queue. **Four of the five sites run on real PVDAQ data**, refreshed automatically by a scheduled job; site 1367 stays on a labelled **demo dataset** until its irradiance channel can be trusted. See the [roadmap](#roadmap).
+
+| Site | Data | Model error, healthy days | Events | Notes |
+|---|---|---|---|---|
+| 2107 Farm Solar Array, CA (fixed) | 2017–2025 | 9.9% (ML adopted) | 42 | sensor dropouts; 80-day partial outage in 2025 |
+| 4902 NIST Ground, MD (fixed) | 2014–2018 | 7.8% (ML adopted) | 31 | 8 snow events; logger on standard time |
+| 4903 NIST Roof, MD (fixed) | 2014–2018 | 4.0% | 20 | 9 snow events |
+| 1430 NREL Mesa, CO (tracker) | 2008–2017 | 7.1% | 114 | 41 snow events; one of two inverters metered |
+| 1367 Henderson, NV (fixed) | demo | 2.8% | 2 | POA channel unusable, see `config/sites.yaml` |
 
 **What it does on the demo fleet:**
 
-- **Real data, site 2107:** about 40 events over eight years: outages, irradiance-sensor dropouts, and a two-month partial outage in summer 2025. 15-min model error on healthy days is about 13%; daily PI, which detection uses, scatters about 8%. See [what the real data taught us](docs/scaling.md#what-the-real-data-taught-us)
+- **Real data:** four sites, 2008–2025. See the table above and [what the real data taught us](docs/scaling.md#what-the-real-data-taught-us)
 - **Demo fleet:** 2.6–2.9% nRMSE on healthy days. Backtest over 300 simulated site-years (5 sites × 30 weather seeds × 2 years): **477 of 480** injected faults found, **474** labelled correctly, **4** false alarms. Abrupt faults are flagged the day they start; soiling about 5 weeks in, with the start of the slide traced back
 - Recognises seven fault types, including tracker stalls on the single-axis site
 - Drafts a maintenance ticket per event (template offline, Claude with an API key). Recent and ongoing events go to the review queue; older ones are filed under History. Every approve / edit / reject is logged with who did it
@@ -43,7 +51,8 @@ flowchart LR
    | Partial outage | Abrupt step down, then flat (an inverter, string or fuse) |
    | Soiling / gradual loss | Slow slide over weeks, often reset by rain or a wash |
    | Curtailment | Normal mornings and evenings, capped at midday on sunny days |
-   | Tracker stall | The reverse: fine at midday, short in the morning and evening (rows parked flat) |
+   | Tracker stall | The reverse: fine at midday, short in the morning and evening (rows parked flat); tracker sites only |
+   | Snow cover | Output collapses but trickles on, right after freezing weather; low severity, no dispatch |
    | Irradiance sensor fault | Output *above* what the sensor allows, or no sensor data |
    | Monitoring data gap | No meter readings in daylight |
 
@@ -169,7 +178,7 @@ tests/                   offline tests on synthetic data
   - [x] Underperformance detection and event classification, backtested on injected faults (477/480 found over 300 site-years)
   - [x] Demo histories for all 5 sites, including single-axis tracker physics
   - [ ] Backtest on real, logged events at site 2107
-  - [ ] All 5 sites ingested and mapped
+  - [x] 4 of 5 sites on real data (1367's irradiance channel is unusable)
   - [x] ML residual model (gradient boosting), adopted per site only if it beats physics on held-out data
   - [x] Column reports for unmapped sites written by the update job (`data/processed/<id>/inspect.md`)
 - [x] **Phase 3: Ticket agent + approval UI**
