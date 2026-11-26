@@ -1,14 +1,14 @@
 [
   {
-    "ticket_id": "T-2107-2017-11-03-sensor_fault",
-    "event_id": "2107-2017-11-03-sensor_fault",
+    "ticket_id": "T-2107-2018-01-17-sensor_fault",
+    "event_id": "2107-2018-01-17-sensor_fault",
     "site_id": 2107,
     "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2017-11-03 to 2017-11-29)",
+    "title": "Farm Solar Array: irradiance sensor fault (2018-01-17 to 2018-01-22)",
     "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 27 day(s), 2017-11-03 to 2017-11-29.",
+    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 6 day(s), 2018-01-17 to 2018-01-22.",
     "evidence": [
-      "Irradiance was recorded for only 6% of producing intervals.",
+      "Irradiance was recorded for only 7% of producing intervals.",
       "The site produced power but the irradiance sensor reported nothing."
     ],
     "likely_causes": [
@@ -28,138 +28,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2017-12-02-sensor_fault",
-    "event_id": "2107-2017-12-02-sensor_fault",
-    "site_id": 2107,
-    "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2017-12-02 to 2017-12-04)",
-    "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2017-12-02 to 2017-12-04.",
-    "evidence": [
-      "Irradiance was recorded for only 1% of producing intervals.",
-      "The site produced power but the irradiance sensor reported nothing."
-    ],
-    "likely_causes": [
-      "Dirty or shaded pyranometer",
-      "Sensor drift / out of calibration",
-      "Sensor knocked out of plane"
-    ],
-    "recommended_actions": [
-      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
-      "Cross-check its readings against a second on-site sensor or satellite irradiance",
-      "Recalibrate or replace the sensor if the offset persists",
-      "Treat performance numbers for this window as unreliable until fixed"
-    ],
-    "parts_and_tools": [
-      "Spare pyranometer / reference cell",
-      "Bubble level and inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2017-12-07-sensor_fault",
-    "event_id": "2107-2017-12-07-sensor_fault",
-    "site_id": 2107,
-    "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2017-12-07 to 2017-12-12)",
-    "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 6 day(s), 2017-12-07 to 2017-12-12.",
-    "evidence": [
-      "Median performance index during the event: 0.76.",
-      "Irradiance was recorded for only 6% of producing intervals.",
-      "The site produced power but the irradiance sensor reported nothing."
-    ],
-    "likely_causes": [
-      "Dirty or shaded pyranometer",
-      "Sensor drift / out of calibration",
-      "Sensor knocked out of plane"
-    ],
-    "recommended_actions": [
-      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
-      "Cross-check its readings against a second on-site sensor or satellite irradiance",
-      "Recalibrate or replace the sensor if the offset persists",
-      "Treat performance numbers for this window as unreliable until fixed"
-    ],
-    "parts_and_tools": [
-      "Spare pyranometer / reference cell",
-      "Bubble level and inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2017-12-14-sensor_fault",
-    "event_id": "2107-2017-12-14-sensor_fault",
-    "site_id": 2107,
-    "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2017-12-14 to 2017-12-17)",
-    "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2017-12-14 to 2017-12-17.",
-    "evidence": [
-      "Median performance index during the event: 0.46.",
-      "Irradiance was recorded for only 2% of producing intervals.",
-      "The site produced power but the irradiance sensor reported nothing."
-    ],
-    "likely_causes": [
-      "Dirty or shaded pyranometer",
-      "Sensor drift / out of calibration",
-      "Sensor knocked out of plane"
-    ],
-    "recommended_actions": [
-      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
-      "Cross-check its readings against a second on-site sensor or satellite irradiance",
-      "Recalibrate or replace the sensor if the offset persists",
-      "Treat performance numbers for this window as unreliable until fixed"
-    ],
-    "parts_and_tools": [
-      "Spare pyranometer / reference cell",
-      "Bubble level and inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2017-12-20-sensor_fault",
-    "event_id": "2107-2017-12-20-sensor_fault",
-    "site_id": 2107,
-    "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2017-12-20 to 2018-01-22)",
-    "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 34 day(s), 2017-12-20 to 2018-01-22.",
-    "evidence": [
-      "Median performance index during the event: 1.05.",
-      "Irradiance was recorded for only 2% of producing intervals.",
-      "The site produced power but the irradiance sensor reported nothing."
-    ],
-    "likely_causes": [
-      "Dirty or shaded pyranometer",
-      "Sensor drift / out of calibration",
-      "Sensor knocked out of plane"
-    ],
-    "recommended_actions": [
-      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
-      "Cross-check its readings against a second on-site sensor or satellite irradiance",
-      "Recalibrate or replace the sensor if the offset persists",
-      "Treat performance numbers for this window as unreliable until fixed"
-    ],
-    "parts_and_tools": [
-      "Spare pyranometer / reference cell",
-      "Bubble level and inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -191,7 +60,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -223,7 +92,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -233,11 +102,11 @@
     "kind": "partial_outage",
     "title": "Farm Solar Array: partial outage (2018-04-05 to 2018-04-07)",
     "priority": "P2",
-    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2018-04-05 to 2018-04-07. Estimated cost so far: $251.",
+    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2018-04-05 to 2018-04-07. Estimated cost so far: $253.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.72 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,092 kWh (33% of expected), about $251.",
-      "Roughly 33% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.78 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,110 kWh (34% of expected), about $253.",
+      "Roughly 32% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -258,7 +127,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -268,10 +137,10 @@
     "kind": "outage",
     "title": "Farm Solar Array: full outage (2018-04-08 to 2018-04-08)",
     "priority": "P2",
-    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 1 day(s), 2018-04-08 to 2018-04-08. Estimated cost so far: $611.",
+    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 1 day(s), 2018-04-08 to 2018-04-08. Estimated cost so far: $624.",
     "evidence": [
-      "Performance index fell from 0.88 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
-      "Estimated energy lost: 5,095 kWh (99% of expected), about $611."
+      "Performance index fell from 0.90 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
+      "Estimated energy lost: 5,203 kWh (99% of expected), about $624."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -290,7 +159,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -300,12 +169,12 @@
     "kind": "soiling",
     "title": "Farm Solar Array: soiling / gradual loss (2018-04-09 to 2018-04-11)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2018-04-09 to 2018-04-11. Estimated cost so far: $588.",
+    "summary": "Soiling / gradual loss detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2018-04-09 to 2018-04-11. Estimated cost so far: $609.",
     "evidence": [
-      "Performance index fell from 0.86 in the two weeks before to a median of 0.73 during the event (1.00 = healthy).",
-      "Estimated energy lost: 4,896 kWh (57% of expected), about $588.",
-      "The decline appears to have started around 2018-04-04, 5 days before it crossed the alert threshold.",
-      "Performance recovered to 0.73 of baseline in the week after.",
+      "Performance index fell from 0.89 in the two weeks before to a median of 0.77 during the event (1.00 = healthy).",
+      "Estimated energy lost: 5,074 kWh (58% of expected), about $609.",
+      "The decline appears to have started around 2018-04-06, 3 days before it crossed the alert threshold.",
+      "Performance recovered to 0.72 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
     ],
     "likely_causes": [
@@ -324,7 +193,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -336,7 +205,7 @@
     "priority": "P3",
     "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 10 day(s), 2018-04-13 to 2018-04-22.",
     "evidence": [
-      "Performance index fell from 0.87 in the two weeks before to a median of 0.51 during the event (1.00 = healthy).",
+      "Performance index fell from 0.92 in the two weeks before to a median of 0.54 during the event (1.00 = healthy).",
       "Irradiance was recorded for only 4% of producing intervals.",
       "The site produced power but the irradiance sensor reported nothing."
     ],
@@ -357,7 +226,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -367,10 +236,10 @@
     "kind": "soiling",
     "title": "Farm Solar Array: soiling / gradual loss (2018-07-31 to 2018-08-07)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at Farm Solar Array (Arbuckle, CA) over 8 day(s), 2018-07-31 to 2018-08-07. Estimated cost so far: $409.",
+    "summary": "Soiling / gradual loss detected at Farm Solar Array (Arbuckle, CA) over 8 day(s), 2018-07-31 to 2018-08-07. Estimated cost so far: $481.",
     "evidence": [
-      "Performance index fell from 0.92 in the two weeks before to a median of 0.84 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,406 kWh (13% of expected), about $409.",
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.88 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,012 kWh (15% of expected), about $481.",
       "The decline appears to have started around 2018-07-29, 2 days before it crossed the alert threshold.",
       "Performance recovered to 0.99 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
@@ -391,7 +260,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -401,10 +270,10 @@
     "kind": "partial_outage",
     "title": "Farm Solar Array: partial outage (2018-08-11 to 2018-08-14)",
     "priority": "P2",
-    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2018-08-11 to 2018-08-14. Estimated cost so far: $315.",
+    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2018-08-11 to 2018-08-14. Estimated cost so far: $334.",
     "evidence": [
-      "Performance index fell from 0.93 in the two weeks before to a median of 0.75 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,629 kWh (17% of expected), about $315.",
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,780 kWh (17% of expected), about $334.",
       "Roughly 17% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
@@ -426,7 +295,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -438,8 +307,8 @@
     "priority": "P2",
     "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2018-09-25 to 2018-09-27. Estimated cost so far: $300.",
     "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.75 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,503 kWh (20% of expected), about $300.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.80 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,497 kWh (20% of expected), about $300.",
       "Roughly 19% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
@@ -461,7 +330,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -469,11 +338,11 @@
     "event_id": "2107-2018-10-02-sensor_fault",
     "site_id": 2107,
     "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2018-10-02 to 2018-10-24)",
+    "title": "Farm Solar Array: irradiance sensor fault (2018-10-02 to 2018-10-13)",
     "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 23 day(s), 2018-10-02 to 2018-10-24.",
+    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 12 day(s), 2018-10-02 to 2018-10-13.",
     "evidence": [
-      "Performance index fell from 0.90 in the two weeks before to a median of 1.10 during the event (1.00 = healthy).",
+      "Performance index fell from 0.95 in the two weeks before to a median of 1.17 during the event (1.00 = healthy).",
       "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
     ],
     "likely_causes": [
@@ -493,19 +362,19 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-2107-2018-11-01-sensor_fault",
-    "event_id": "2107-2018-11-01-sensor_fault",
+    "ticket_id": "T-2107-2018-10-17-sensor_fault",
+    "event_id": "2107-2018-10-17-sensor_fault",
     "site_id": 2107,
     "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2018-11-01 to 2018-11-03)",
+    "title": "Farm Solar Array: irradiance sensor fault (2018-10-17 to 2018-10-19)",
     "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2018-11-01 to 2018-11-03.",
+    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2018-10-17 to 2018-10-19.",
     "evidence": [
-      "Performance index fell from 0.91 in the two weeks before to a median of 1.09 during the event (1.00 = healthy).",
+      "Performance index fell from 1.03 in the two weeks before to a median of 1.16 during the event (1.00 = healthy).",
       "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
     ],
     "likely_causes": [
@@ -525,7 +394,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -535,10 +404,10 @@
     "kind": "soiling",
     "title": "Farm Solar Array: soiling / gradual loss (2018-11-13 to 2018-11-16)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2018-11-13 to 2018-11-16. Estimated cost so far: $157.",
+    "summary": "Soiling / gradual loss detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2018-11-13 to 2018-11-16. Estimated cost so far: $158.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.84 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,304 kWh (15% of expected), about $157.",
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.89 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,316 kWh (15% of expected), about $158.",
       "The decline appears to have started around 2018-11-11, 2 days before it crossed the alert threshold.",
       "Performance recovered to 1.02 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
@@ -559,7 +428,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -569,10 +438,10 @@
     "kind": "outage",
     "title": "Farm Solar Array: full outage (2019-02-22 to 2019-02-23)",
     "priority": "P2",
-    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 2 day(s), 2019-02-22 to 2019-02-23. Estimated cost so far: $729.",
+    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 2 day(s), 2019-02-22 to 2019-02-23. Estimated cost so far: $745.",
     "evidence": [
-      "Performance index fell from 0.88 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 6,073 kWh (100% of expected), about $729."
+      "Performance index fell from 0.90 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 6,209 kWh (100% of expected), about $745."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -591,19 +460,19 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-2107-2019-07-25-sensor_fault",
-    "event_id": "2107-2019-07-25-sensor_fault",
+    "ticket_id": "T-2107-2019-07-26-sensor_fault",
+    "event_id": "2107-2019-07-26-sensor_fault",
     "site_id": 2107,
     "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2019-07-25 to 2019-07-30)",
+    "title": "Farm Solar Array: irradiance sensor fault (2019-07-26 to 2019-07-30)",
     "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 6 day(s), 2019-07-25 to 2019-07-30.",
+    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 5 day(s), 2019-07-26 to 2019-07-30.",
     "evidence": [
-      "Performance index fell from 1.04 in the two weeks before to a median of 1.17 during the event (1.00 = healthy).",
+      "Performance index fell from 1.17 in the two weeks before to a median of 1.25 during the event (1.00 = healthy).",
       "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
     ],
     "likely_causes": [
@@ -623,42 +492,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2019-11-11-partial_outage",
-    "event_id": "2107-2019-11-11-partial_outage",
-    "site_id": 2107,
-    "kind": "partial_outage",
-    "title": "Farm Solar Array: partial outage (2019-11-11 to 2019-11-13)",
-    "priority": "P2",
-    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2019-11-11 to 2019-11-13. Estimated cost so far: $148.",
-    "evidence": [
-      "Performance index fell from 1.06 in the two weeks before to a median of 0.85 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,234 kWh (15% of expected), about $148.",
-      "Roughly 19% of capacity appears offline, from the size of the step.",
-      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
-    ],
-    "likely_causes": [
-      "One inverter or inverter module offline",
-      "Blown combiner fuse / open string",
-      "Tripped DC disconnect in one block"
-    ],
-    "recommended_actions": [
-      "Compare inverter- and combiner-level currents to locate the offline section",
-      "Pull inverter fault logs for the start date",
-      "Inspect combiner-box fuses and string connectors in the affected block",
-      "Run IV-curve traces on suspect strings; replace failed fuses or components"
-    ],
-    "parts_and_tools": [
-      "Combiner fuses (matching rating)",
-      "IV-curve tracer",
-      "MC4 connectors"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -668,10 +502,10 @@
     "kind": "outage",
     "title": "Farm Solar Array: full outage (2020-01-09 to 2020-01-09)",
     "priority": "P2",
-    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 1 day(s), 2020-01-09 to 2020-01-09. Estimated cost so far: $180.",
+    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 1 day(s), 2020-01-09 to 2020-01-09. Estimated cost so far: $186.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,498 kWh (100% of expected), about $180."
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,551 kWh (100% of expected), about $186."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -690,7 +524,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -700,10 +534,10 @@
     "kind": "outage",
     "title": "Farm Solar Array: full outage (2020-01-18 to 2020-01-18)",
     "priority": "P2",
-    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 1 day(s), 2020-01-18 to 2020-01-18. Estimated cost so far: $404.",
+    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 1 day(s), 2020-01-18 to 2020-01-18. Estimated cost so far: $400.",
     "evidence": [
-      "Performance index fell from 1.02 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,363 kWh (100% of expected), about $404."
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,335 kWh (100% of expected), about $400."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -722,75 +556,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2020-05-11-soiling",
-    "event_id": "2107-2020-05-11-soiling",
-    "site_id": 2107,
-    "kind": "soiling",
-    "title": "Farm Solar Array: soiling / gradual loss (2020-05-11 to 2020-05-14)",
-    "priority": "P3",
-    "summary": "Soiling / gradual loss detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2020-05-11 to 2020-05-14. Estimated cost so far: $200.",
-    "evidence": [
-      "Performance index fell from 0.95 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,669 kWh (14% of expected), about $200.",
-      "The decline appears to have started around 2020-05-10, 1 days before it crossed the alert threshold.",
-      "Performance recovered to 0.96 of baseline in the week after.",
-      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
-    ],
-    "likely_causes": [
-      "Dust or pollen build-up during a dry spell",
-      "Bird droppings",
-      "Gradual module degradation"
-    ],
-    "recommended_actions": [
-      "Visually inspect a sample of modules and photograph the soiling",
-      "Compare against the decline start date and the last rain or wash",
-      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
-      "After cleaning, confirm the performance index returns to its baseline"
-    ],
-    "parts_and_tools": [
-      "Wash crew / water truck (deionised water)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2020-10-20-soiling",
-    "event_id": "2107-2020-10-20-soiling",
-    "site_id": 2107,
-    "kind": "soiling",
-    "title": "Farm Solar Array: soiling / gradual loss (2020-10-20 to 2020-10-23)",
-    "priority": "P3",
-    "summary": "Soiling / gradual loss detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2020-10-20 to 2020-10-23. Estimated cost so far: $260.",
-    "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.91 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,169 kWh (13% of expected), about $260.",
-      "The decline appears to have started around 2020-10-14, 6 days before it crossed the alert threshold.",
-      "Performance recovered to 0.93 of baseline in the week after.",
-      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
-    ],
-    "likely_causes": [
-      "Dust or pollen build-up during a dry spell",
-      "Bird droppings",
-      "Gradual module degradation"
-    ],
-    "recommended_actions": [
-      "Visually inspect a sample of modules and photograph the soiling",
-      "Compare against the decline start date and the last rain or wash",
-      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
-      "After cleaning, confirm the performance index returns to its baseline"
-    ],
-    "parts_and_tools": [
-      "Wash crew / water truck (deionised water)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -800,10 +566,10 @@
     "kind": "partial_outage",
     "title": "Farm Solar Array: partial outage (2020-11-11 to 2020-11-13)",
     "priority": "P2",
-    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2020-11-11 to 2020-11-13. Estimated cost so far: $183.",
+    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2020-11-11 to 2020-11-13. Estimated cost so far: $181.",
     "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.75 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,527 kWh (23% of expected), about $183.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.78 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,509 kWh (22% of expected), about $181.",
       "Roughly 16% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
@@ -825,7 +591,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -854,7 +620,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -864,10 +630,10 @@
     "kind": "partial_outage",
     "title": "Farm Solar Array: partial outage (2021-09-18 to 2021-09-21)",
     "priority": "P2",
-    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2021-09-18 to 2021-09-21. Estimated cost so far: $433.",
+    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2021-09-18 to 2021-09-21. Estimated cost so far: $460.",
     "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.78 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,612 kWh (19% of expected), about $433.",
+      "Performance index fell from 1.09 in the two weeks before to a median of 0.83 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,829 kWh (20% of expected), about $460.",
       "Roughly 26% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
@@ -889,7 +655,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -899,10 +665,10 @@
     "kind": "outage",
     "title": "Farm Solar Array: full outage (2021-10-20 to 2021-10-21)",
     "priority": "P2",
-    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 2 day(s), 2021-10-20 to 2021-10-21. Estimated cost so far: $1,911.",
+    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 2 day(s), 2021-10-20 to 2021-10-21. Estimated cost so far: $2,419.",
     "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.11 during the event (1.00 = healthy).",
-      "Estimated energy lost: 15,929 kWh (89% of expected), about $1,911."
+      "Performance index fell from 1.08 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
+      "Estimated energy lost: 20,158 kWh (91% of expected), about $2,419."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -921,41 +687,42 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-2107-2022-05-09-soiling",
-    "event_id": "2107-2022-05-09-soiling",
+    "ticket_id": "T-2107-2022-05-09-partial_outage",
+    "event_id": "2107-2022-05-09-partial_outage",
     "site_id": 2107,
-    "kind": "soiling",
-    "title": "Farm Solar Array: soiling / gradual loss (2022-05-09 to 2022-05-14)",
+    "kind": "partial_outage",
+    "title": "Farm Solar Array: partial outage (2022-05-09 to 2022-05-14)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at Farm Solar Array (Arbuckle, CA) over 6 day(s), 2022-05-09 to 2022-05-14. Estimated cost so far: $447.",
+    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 6 day(s), 2022-05-09 to 2022-05-14. Estimated cost so far: $429.",
     "evidence": [
-      "Performance index fell from 1.06 in the two weeks before to a median of 0.91 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,728 kWh (12% of expected), about $447.",
-      "The decline appears to have started around 2022-05-08, 1 days before it crossed the alert threshold.",
-      "Performance recovered to 1.02 of baseline in the week after.",
-      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
+      "Performance index fell from 1.11 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,576 kWh (12% of expected), about $429.",
+      "Roughly 3% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
-      "Dust or pollen build-up during a dry spell",
-      "Bird droppings",
-      "Gradual module degradation"
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
     ],
     "recommended_actions": [
-      "Visually inspect a sample of modules and photograph the soiling",
-      "Compare against the decline start date and the last rain or wash",
-      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
-      "After cleaning, confirm the performance index returns to its baseline"
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
     ],
     "parts_and_tools": [
-      "Wash crew / water truck (deionised water)"
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -987,71 +754,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2022-08-18-sensor_fault",
-    "event_id": "2107-2022-08-18-sensor_fault",
-    "site_id": 2107,
-    "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2022-08-18 to 2022-08-21)",
-    "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2022-08-18 to 2022-08-21.",
-    "evidence": [
-      "Performance index fell from 1.05 in the two weeks before to a median of 1.06 during the event (1.00 = healthy).",
-      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
-    ],
-    "likely_causes": [
-      "Dirty or shaded pyranometer",
-      "Sensor drift / out of calibration",
-      "Sensor knocked out of plane"
-    ],
-    "recommended_actions": [
-      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
-      "Cross-check its readings against a second on-site sensor or satellite irradiance",
-      "Recalibrate or replace the sensor if the offset persists",
-      "Treat performance numbers for this window as unreliable until fixed"
-    ],
-    "parts_and_tools": [
-      "Spare pyranometer / reference cell",
-      "Bubble level and inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2022-09-04-sensor_fault",
-    "event_id": "2107-2022-09-04-sensor_fault",
-    "site_id": 2107,
-    "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2022-09-04 to 2022-09-06)",
-    "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2022-09-04 to 2022-09-06.",
-    "evidence": [
-      "Performance index fell from 0.90 in the two weeks before to a median of 1.13 during the event (1.00 = healthy).",
-      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
-    ],
-    "likely_causes": [
-      "Dirty or shaded pyranometer",
-      "Sensor drift / out of calibration",
-      "Sensor knocked out of plane"
-    ],
-    "recommended_actions": [
-      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
-      "Cross-check its readings against a second on-site sensor or satellite irradiance",
-      "Recalibrate or replace the sensor if the offset persists",
-      "Treat performance numbers for this window as unreliable until fixed"
-    ],
-    "parts_and_tools": [
-      "Spare pyranometer / reference cell",
-      "Bubble level and inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -1083,7 +786,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -1093,10 +796,10 @@
     "kind": "outage",
     "title": "Farm Solar Array: full outage (2023-03-18 to 2023-03-19)",
     "priority": "P2",
-    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 2 day(s), 2023-03-18 to 2023-03-19. Estimated cost so far: $496.",
+    "summary": "Full outage detected at Farm Solar Array (Arbuckle, CA) over 2 day(s), 2023-03-18 to 2023-03-19. Estimated cost so far: $474.",
     "evidence": [
-      "Performance index fell from 1.04 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 4,132 kWh (100% of expected), about $496."
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,953 kWh (100% of expected), about $474."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -1115,7 +818,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -1144,89 +847,20 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-2107-2023-05-30-soiling",
-    "event_id": "2107-2023-05-30-soiling",
-    "site_id": 2107,
-    "kind": "soiling",
-    "title": "Farm Solar Array: soiling / gradual loss (2023-05-30 to 2023-06-02)",
-    "priority": "P3",
-    "summary": "Soiling / gradual loss detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2023-05-30 to 2023-06-02. Estimated cost so far: $328.",
-    "evidence": [
-      "Performance index fell from 1.06 in the two weeks before to a median of 0.93 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,736 kWh (13% of expected), about $328.",
-      "The decline appears to have started around 2023-05-24, 6 days before it crossed the alert threshold.",
-      "Performance recovered to 0.94 of baseline in the week after.",
-      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
-    ],
-    "likely_causes": [
-      "Dust or pollen build-up during a dry spell",
-      "Bird droppings",
-      "Gradual module degradation"
-    ],
-    "recommended_actions": [
-      "Visually inspect a sample of modules and photograph the soiling",
-      "Compare against the decline start date and the last rain or wash",
-      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
-      "After cleaning, confirm the performance index returns to its baseline"
-    ],
-    "parts_and_tools": [
-      "Wash crew / water truck (deionised water)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2023-06-30-partial_outage",
-    "event_id": "2107-2023-06-30-partial_outage",
+    "ticket_id": "T-2107-2023-07-01-partial_outage",
+    "event_id": "2107-2023-07-01-partial_outage",
     "site_id": 2107,
     "kind": "partial_outage",
-    "title": "Farm Solar Array: partial outage (2023-06-30 to 2023-07-11)",
+    "title": "Farm Solar Array: partial outage (2023-07-01 to 2023-07-11)",
     "priority": "P2",
-    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 12 day(s), 2023-06-30 to 2023-07-11. Estimated cost so far: $2,099.",
+    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 11 day(s), 2023-07-01 to 2023-07-11. Estimated cost so far: $1,936.",
     "evidence": [
-      "Performance index fell from 1.12 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
-      "Estimated energy lost: 17,492 kWh (30% of expected), about $2,099.",
-      "Roughly 18% of capacity appears offline, from the size of the step.",
-      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
-    ],
-    "likely_causes": [
-      "One inverter or inverter module offline",
-      "Blown combiner fuse / open string",
-      "Tripped DC disconnect in one block"
-    ],
-    "recommended_actions": [
-      "Compare inverter- and combiner-level currents to locate the offline section",
-      "Pull inverter fault logs for the start date",
-      "Inspect combiner-box fuses and string connectors in the affected block",
-      "Run IV-curve traces on suspect strings; replace failed fuses or components"
-    ],
-    "parts_and_tools": [
-      "Combiner fuses (matching rating)",
-      "IV-curve tracer",
-      "MC4 connectors"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2023-07-26-partial_outage",
-    "event_id": "2107-2023-07-26-partial_outage",
-    "site_id": 2107,
-    "kind": "partial_outage",
-    "title": "Farm Solar Array: partial outage (2023-07-26 to 2023-07-29)",
-    "priority": "P2",
-    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2023-07-26 to 2023-07-29. Estimated cost so far: $469.",
-    "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.84 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,912 kWh (21% of expected), about $469.",
+      "Performance index fell from 1.11 in the two weeks before to a median of 0.85 during the event (1.00 = healthy).",
+      "Estimated energy lost: 16,135 kWh (30% of expected), about $1,936.",
       "Roughly 19% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
@@ -1248,7 +882,42 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-2107-2023-07-26-partial_outage",
+    "event_id": "2107-2023-07-26-partial_outage",
+    "site_id": 2107,
+    "kind": "partial_outage",
+    "title": "Farm Solar Array: partial outage (2023-07-26 to 2023-07-28)",
+    "priority": "P2",
+    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2023-07-26 to 2023-07-28. Estimated cost so far: $353.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,941 kWh (21% of expected), about $353.",
+      "Roughly 18% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
@@ -1280,89 +949,19 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-2107-2025-05-06-partial_outage",
-    "event_id": "2107-2025-05-06-partial_outage",
-    "site_id": 2107,
-    "kind": "partial_outage",
-    "title": "Farm Solar Array: partial outage (2025-05-06 to 2025-08-20)",
-    "priority": "P2",
-    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 107 day(s), 2025-05-06 to 2025-08-20. Estimated cost so far: $10,410.",
-    "evidence": [
-      "Performance index fell from 1.07 in the two weeks before to a median of 0.86 during the event (1.00 = healthy).",
-      "Estimated energy lost: 86,751 kWh (16% of expected), about $10,410.",
-      "Roughly 21% of capacity appears offline, from the size of the step.",
-      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
-    ],
-    "likely_causes": [
-      "One inverter or inverter module offline",
-      "Blown combiner fuse / open string",
-      "Tripped DC disconnect in one block"
-    ],
-    "recommended_actions": [
-      "Compare inverter- and combiner-level currents to locate the offline section",
-      "Pull inverter fault logs for the start date",
-      "Inspect combiner-box fuses and string connectors in the affected block",
-      "Run IV-curve traces on suspect strings; replace failed fuses or components"
-    ],
-    "parts_and_tools": [
-      "Combiner fuses (matching rating)",
-      "IV-curve tracer",
-      "MC4 connectors"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2025-09-07-partial_outage",
-    "event_id": "2107-2025-09-07-partial_outage",
-    "site_id": 2107,
-    "kind": "partial_outage",
-    "title": "Farm Solar Array: partial outage (2025-09-07 to 2025-09-09)",
-    "priority": "P2",
-    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 3 day(s), 2025-09-07 to 2025-09-09. Estimated cost so far: $348.",
-    "evidence": [
-      "Performance index fell from 1.05 in the two weeks before to a median of 0.74 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,898 kWh (30% of expected), about $348.",
-      "Roughly 25% of capacity appears offline, from the size of the step.",
-      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
-    ],
-    "likely_causes": [
-      "One inverter or inverter module offline",
-      "Blown combiner fuse / open string",
-      "Tripped DC disconnect in one block"
-    ],
-    "recommended_actions": [
-      "Compare inverter- and combiner-level currents to locate the offline section",
-      "Pull inverter fault logs for the start date",
-      "Inspect combiner-box fuses and string connectors in the affected block",
-      "Run IV-curve traces on suspect strings; replace failed fuses or components"
-    ],
-    "parts_and_tools": [
-      "Combiner fuses (matching rating)",
-      "IV-curve tracer",
-      "MC4 connectors"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-2107-2025-09-11-sensor_fault",
-    "event_id": "2107-2025-09-11-sensor_fault",
+    "ticket_id": "T-2107-2024-11-02-sensor_fault",
+    "event_id": "2107-2024-11-02-sensor_fault",
     "site_id": 2107,
     "kind": "sensor_fault",
-    "title": "Farm Solar Array: irradiance sensor fault (2025-09-11 to 2025-10-04)",
+    "title": "Farm Solar Array: irradiance sensor fault (2024-11-02 to 2024-11-05)",
     "priority": "P3",
-    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 24 day(s), 2025-09-11 to 2025-10-04.",
+    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 4 day(s), 2024-11-02 to 2024-11-05.",
     "evidence": [
-      "Performance index fell from 1.05 in the two weeks before to a median of 1.05 during the event (1.00 = healthy).",
+      "Performance index fell from 1.07 in the two weeks before to a median of 1.11 during the event (1.00 = healthy).",
       "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
     ],
     "likely_causes": [
@@ -1382,7 +981,141 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:21Z",
+    "drafted_at": "2026-11-26T22:30:34Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-2107-2025-05-06-partial_outage",
+    "event_id": "2107-2025-05-06-partial_outage",
+    "site_id": 2107,
+    "kind": "partial_outage",
+    "title": "Farm Solar Array: partial outage (2025-05-06 to 2025-07-24)",
+    "priority": "P2",
+    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 80 day(s), 2025-05-06 to 2025-07-24. Estimated cost so far: $7,355.",
+    "evidence": [
+      "Performance index fell from 1.14 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
+      "Estimated energy lost: 61,295 kWh (15% of expected), about $7,355.",
+      "Roughly 19% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:30:34Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-2107-2025-08-04-partial_outage",
+    "event_id": "2107-2025-08-04-partial_outage",
+    "site_id": 2107,
+    "kind": "partial_outage",
+    "title": "Farm Solar Array: partial outage (2025-08-04 to 2025-08-16)",
+    "priority": "P2",
+    "summary": "Partial outage detected at Farm Solar Array (Arbuckle, CA) over 13 day(s), 2025-08-04 to 2025-08-16. Estimated cost so far: $1,259.",
+    "evidence": [
+      "Performance index fell from 1.11 in the two weeks before to a median of 0.80 during the event (1.00 = healthy).",
+      "Estimated energy lost: 10,491 kWh (19% of expected), about $1,259.",
+      "Roughly 23% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:30:34Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-2107-2025-08-25-sensor_fault",
+    "event_id": "2107-2025-08-25-sensor_fault",
+    "site_id": 2107,
+    "kind": "sensor_fault",
+    "title": "Farm Solar Array: irradiance sensor fault (2025-08-25 to 2025-09-01)",
+    "priority": "P3",
+    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 8 day(s), 2025-08-25 to 2025-09-01.",
+    "evidence": [
+      "Performance index fell from 1.06 in the two weeks before to a median of 1.11 during the event (1.00 = healthy).",
+      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    ],
+    "likely_causes": [
+      "Dirty or shaded pyranometer",
+      "Sensor drift / out of calibration",
+      "Sensor knocked out of plane"
+    ],
+    "recommended_actions": [
+      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
+      "Cross-check its readings against a second on-site sensor or satellite irradiance",
+      "Recalibrate or replace the sensor if the offset persists",
+      "Treat performance numbers for this window as unreliable until fixed"
+    ],
+    "parts_and_tools": [
+      "Spare pyranometer / reference cell",
+      "Bubble level and inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:30:34Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-2107-2025-09-11-sensor_fault",
+    "event_id": "2107-2025-09-11-sensor_fault",
+    "site_id": 2107,
+    "kind": "sensor_fault",
+    "title": "Farm Solar Array: irradiance sensor fault (2025-09-11 to 2025-10-06)",
+    "priority": "P3",
+    "summary": "Irradiance sensor fault detected at Farm Solar Array (Arbuckle, CA) over 26 day(s), 2025-09-11 to 2025-10-06.",
+    "evidence": [
+      "Performance index fell from 0.81 in the two weeks before to a median of 1.08 during the event (1.00 = healthy).",
+      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    ],
+    "likely_causes": [
+      "Dirty or shaded pyranometer",
+      "Sensor drift / out of calibration",
+      "Sensor knocked out of plane"
+    ],
+    "recommended_actions": [
+      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
+      "Cross-check its readings against a second on-site sensor or satellite irradiance",
+      "Recalibrate or replace the sensor if the offset persists",
+      "Treat performance numbers for this window as unreliable until fixed"
+    ],
+    "parts_and_tools": [
+      "Spare pyranometer / reference cell",
+      "Bubble level and inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:30:34Z",
     "status": "historical"
   }
 ]

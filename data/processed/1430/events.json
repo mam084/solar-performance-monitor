@@ -1,54 +1,12 @@
 [
   {
-    "id": "1430-2008-12-12-data_gap",
+    "id": "1430-2009-02-13-data_gap",
     "label": "Monitoring data gap",
     "site_id": 1430,
     "kind": "data_gap",
-    "start": "2008-12-12",
-    "end": "2009-01-02",
-    "days": 22,
-    "active": false,
-    "severity": "medium",
-    "pi_before": null,
-    "pi_during": null,
-    "energy_lost_kwh": 0.0,
-    "est_cost_usd": 0.0,
-    "loss_pct": null,
-    "evidence": {
-      "baseline_pi": 1.023,
-      "daily_pi": {},
-      "reason": "No meter readings during daylight; output during this window is unknown."
-    }
-  },
-  {
-    "id": "1430-2009-01-04-data_gap",
-    "label": "Monitoring data gap",
-    "site_id": 1430,
-    "kind": "data_gap",
-    "start": "2009-01-04",
-    "end": "2009-01-24",
-    "days": 21,
-    "active": false,
-    "severity": "medium",
-    "pi_before": null,
-    "pi_during": null,
-    "energy_lost_kwh": 0.0,
-    "est_cost_usd": 0.0,
-    "loss_pct": null,
-    "evidence": {
-      "baseline_pi": 1.023,
-      "daily_pi": {},
-      "reason": "No meter readings during daylight; output during this window is unknown."
-    }
-  },
-  {
-    "id": "1430-2009-01-26-data_gap",
-    "label": "Monitoring data gap",
-    "site_id": 1430,
-    "kind": "data_gap",
-    "start": "2009-01-26",
+    "start": "2009-02-13",
     "end": "2009-02-22",
-    "days": 28,
+    "days": 10,
     "active": false,
     "severity": "medium",
     "pi_before": null,

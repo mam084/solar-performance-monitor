@@ -12,33 +12,50 @@
     "azimuth": 180
   },
   "source": "pvdaq",
-  "built_at": "2026-11-26T21:53:21Z",
-  "data_start": "2017-11-02",
+  "built_at": "2026-11-26T22:30:34Z",
+  "data_start": "2018-01-17",
   "data_end": "2025-12-31",
-  "calibration_scale": 0.8186,
+  "calibration_scale": 0.8226,
   "ac_capacity_kw": 705.9,
   "reference_window": [
-    "2017-12-01 08:00:00",
-    "2018-12-01 08:00:00"
+    "2018-01-23 09:00:00",
+    "2019-01-23 09:00:00"
   ],
-  "trimmed_before": "2017-11-02",
+  "trimmed_before": "2018-01-17",
   "shape_correction_range": [
-    0.565,
+    0.568,
     1.444
   ],
-  "nrmse_healthy_pct": 9.88,
+  "nrmse_healthy_pct": 12.67,
   "price_usd_kwh": 0.12,
-  "n_events": 42,
+  "n_events": 34,
   "ticket_window_days": 45,
   "ml": {
-    "adopted": true,
-    "holdout_start": "2023-12-17",
-    "train_rows": 70599,
-    "holdout_nrmse_physics": 12.17,
-    "holdout_nrmse_ml": 10.33,
-    "holdout_daily_scatter_physics": 0.0493,
-    "holdout_daily_scatter_ml": 0.0475,
-    "reason": "beat physics on held-out data on both 15-min error and daily scatter"
+    "adopted": false,
+    "holdout_start": "2024-01-05",
+    "train_rows": 70682,
+    "holdout_nrmse_physics": 11.9,
+    "holdout_nrmse_ml": 10.25,
+    "holdout_daily_scatter_physics": 0.0483,
+    "holdout_daily_scatter_ml": 0.0472,
+    "reason": "didn't beat physics on held-out data by at least 3% on both 15-min error and daily scatter"
+  },
+  "health": {
+    "nrmse_full_health_pct": 5.02,
+    "full_health_days": 439,
+    "chronic_shortfall_pct": 8.0,
+    "chronic_shortfall_mwh_per_year": 129.4,
+    "chronic_shortfall_usd_per_year": 15531,
+    "chronic_shortfall_by_year_pct": {
+      "2018": 10.2,
+      "2019": 8.5,
+      "2020": 8.8,
+      "2021": 8.1,
+      "2022": 8.8,
+      "2023": 6.1,
+      "2024": 6.8,
+      "2025": 6.5
+    }
   },
   "preflight": [
     {
@@ -74,13 +91,13 @@
     {
       "name": "calibration",
       "status": "PASS",
-      "detail": "scale 0.819 on 2017-12-01 to 2018-12-01, AC limit 706 kW",
+      "detail": "scale 0.823 on 2018-01-23 to 2019-01-23, AC limit 706 kW",
       "fix": ""
     },
     {
       "name": "accuracy",
       "status": "WARN",
-      "detail": "nRMSE on healthy days 12.9% (target < 5%); worst year 2017: 16.1%",
+      "detail": "model error on full-health days 5.0% (target < 5%); nRMSE on all event-free days 12.7%; worst year 2023: 13.9%",
       "fix": "a single bad year usually means a clock or sensor problem in that year's files"
     }
   ]

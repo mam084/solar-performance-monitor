@@ -1,12 +1,12 @@
 [
   {
-    "ticket_id": "T-1430-2008-12-12-data_gap",
-    "event_id": "1430-2008-12-12-data_gap",
+    "ticket_id": "T-1430-2009-02-13-data_gap",
+    "event_id": "1430-2009-02-13-data_gap",
     "site_id": 1430,
     "kind": "data_gap",
-    "title": "NREL Mesa 1-axis: monitoring data gap (2008-12-12 to 2009-01-02)",
+    "title": "NREL Mesa 1-axis: monitoring data gap (2009-02-13 to 2009-02-22)",
     "priority": "P3",
-    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 22 day(s), 2008-12-12 to 2009-01-02.",
+    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 10 day(s), 2009-02-13 to 2009-02-22.",
     "evidence": [
       "No meter readings during daylight; output during this window is unknown."
     ],
@@ -25,65 +25,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2009-01-04-data_gap",
-    "event_id": "1430-2009-01-04-data_gap",
-    "site_id": 1430,
-    "kind": "data_gap",
-    "title": "NREL Mesa 1-axis: monitoring data gap (2009-01-04 to 2009-01-24)",
-    "priority": "P3",
-    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 21 day(s), 2009-01-04 to 2009-01-24.",
-    "evidence": [
-      "No meter readings during daylight; output during this window is unknown."
-    ],
-    "likely_causes": [
-      "Data-logger power loss",
-      "Network or cellular modem outage",
-      "Logger storage full"
-    ],
-    "recommended_actions": [
-      "Check data-logger power and network/modem connectivity",
-      "Back-fill the gap from inverter internal logs or the revenue meter",
-      "Confirm the site was producing during the gap (meter totals)"
-    ],
-    "parts_and_tools": [
-      "Spare cellular modem / SIM"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2009-01-26-data_gap",
-    "event_id": "1430-2009-01-26-data_gap",
-    "site_id": 1430,
-    "kind": "data_gap",
-    "title": "NREL Mesa 1-axis: monitoring data gap (2009-01-26 to 2009-02-22)",
-    "priority": "P3",
-    "summary": "Monitoring data gap detected at NREL Mesa 1-axis (Golden, CO) over 28 day(s), 2009-01-26 to 2009-02-22.",
-    "evidence": [
-      "No meter readings during daylight; output during this window is unknown."
-    ],
-    "likely_causes": [
-      "Data-logger power loss",
-      "Network or cellular modem outage",
-      "Logger storage full"
-    ],
-    "recommended_actions": [
-      "Check data-logger power and network/modem connectivity",
-      "Back-fill the gap from inverter internal logs or the revenue meter",
-      "Confirm the site was producing during the gap (meter totals)"
-    ],
-    "parts_and_tools": [
-      "Spare cellular modem / SIM"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -115,7 +57,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -146,7 +88,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -177,7 +119,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -212,7 +154,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -246,7 +188,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -278,7 +220,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -312,7 +254,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -344,7 +286,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -378,7 +320,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -410,7 +352,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -442,7 +384,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -474,7 +416,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -505,7 +447,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -536,7 +478,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -567,7 +509,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -601,7 +543,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -635,7 +577,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -669,7 +611,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -703,7 +645,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -735,7 +677,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -766,7 +708,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -797,7 +739,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -828,7 +770,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -860,7 +802,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -892,7 +834,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -927,7 +869,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -959,7 +901,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -994,7 +936,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1028,7 +970,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1060,7 +1002,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1094,7 +1036,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1128,7 +1070,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1160,7 +1102,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1195,7 +1137,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1227,7 +1169,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1258,7 +1200,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1289,7 +1231,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1321,7 +1263,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1352,7 +1294,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1387,7 +1329,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1421,7 +1363,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1456,7 +1398,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1488,7 +1430,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1522,7 +1464,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1554,7 +1496,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1585,7 +1527,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1616,7 +1558,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1647,7 +1589,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1676,7 +1618,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1710,7 +1652,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1741,7 +1683,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1775,7 +1717,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1809,7 +1751,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1841,7 +1783,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1873,7 +1815,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1907,7 +1849,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1936,7 +1878,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -1970,7 +1912,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2001,7 +1943,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2033,7 +1975,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2067,7 +2009,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2098,7 +2040,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2130,7 +2072,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2162,7 +2104,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2196,7 +2138,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2228,7 +2170,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2259,7 +2201,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2293,7 +2235,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2328,7 +2270,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2362,7 +2304,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2394,7 +2336,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2426,7 +2368,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2461,7 +2403,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2496,7 +2438,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2530,7 +2472,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2561,7 +2503,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2596,7 +2538,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2627,7 +2569,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2658,7 +2600,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2692,7 +2634,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2726,7 +2668,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2757,7 +2699,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2791,7 +2733,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2822,7 +2764,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2856,7 +2798,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2887,7 +2829,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2918,7 +2860,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2949,7 +2891,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -2983,7 +2925,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3017,7 +2959,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3051,7 +2993,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3086,7 +3028,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3118,7 +3060,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3149,7 +3091,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3181,7 +3123,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3213,7 +3155,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3244,7 +3186,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3276,7 +3218,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3308,7 +3250,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3342,7 +3284,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3373,7 +3315,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3404,7 +3346,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3436,7 +3378,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3468,7 +3410,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3497,7 +3439,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3531,7 +3473,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3566,7 +3508,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3600,7 +3542,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3629,7 +3571,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3661,7 +3603,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "historical"
   },
   {
@@ -3695,7 +3637,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T21:53:08Z",
+    "drafted_at": "2026-11-26T22:30:29Z",
     "status": "pending_review"
   }
 ]

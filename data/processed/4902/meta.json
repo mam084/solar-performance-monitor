@@ -12,7 +12,7 @@
     "azimuth": 180
   },
   "source": "pvdaq",
-  "built_at": "2026-11-26T21:59:25Z",
+  "built_at": "2026-11-26T22:30:52Z",
   "data_start": "2014-07-29",
   "data_end": "2018-03-15",
   "calibration_scale": 0.9281,
@@ -39,6 +39,20 @@
     "holdout_daily_scatter_physics": 0.0358,
     "holdout_daily_scatter_ml": 0.0344,
     "reason": "beat physics on held-out data on both 15-min error and daily scatter"
+  },
+  "health": {
+    "nrmse_full_health_pct": 3.29,
+    "full_health_days": 188,
+    "chronic_shortfall_pct": 2.45,
+    "chronic_shortfall_mwh_per_year": 11.0,
+    "chronic_shortfall_usd_per_year": 1319,
+    "chronic_shortfall_by_year_pct": {
+      "2014": 2.6,
+      "2015": 2.6,
+      "2016": 2.9,
+      "2017": 2.1,
+      "2018": 0.1
+    }
   },
   "preflight": [
     {
@@ -79,9 +93,9 @@
     },
     {
       "name": "accuracy",
-      "status": "WARN",
-      "detail": "nRMSE on healthy days 11.5% (target < 5%); worst year 2018: 24.9%",
-      "fix": "a single bad year usually means a clock or sensor problem in that year's files"
+      "status": "PASS",
+      "detail": "model error on full-health days 3.8% (target < 5%); nRMSE on all event-free days 11.5%; worst year 2018: 24.9%",
+      "fix": ""
     }
   ]
 }

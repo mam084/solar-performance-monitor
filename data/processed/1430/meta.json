@@ -12,8 +12,8 @@
     "azimuth": 180
   },
   "source": "pvdaq",
-  "built_at": "2026-11-26T21:53:08Z",
-  "data_start": "2008-12-09",
+  "built_at": "2026-11-26T22:30:29Z",
+  "data_start": "2009-02-13",
   "data_end": "2017-11-21",
   "calibration_scale": 0.9435,
   "ac_capacity_kw": 328.1,
@@ -21,24 +21,42 @@
     "2009-02-23 12:30:00",
     "2010-02-23 12:30:00"
   ],
-  "trimmed_before": null,
+  "trimmed_before": "2009-02-13",
   "shape_correction_range": [
     0.68,
     1.065
   ],
   "nrmse_healthy_pct": 7.06,
   "price_usd_kwh": 0.12,
-  "n_events": 114,
+  "n_events": 112,
   "ticket_window_days": 45,
   "ml": {
     "adopted": false,
-    "holdout_start": "2015-08-27",
-    "train_rows": 75267,
-    "holdout_nrmse_physics": 6.45,
-    "holdout_nrmse_ml": 6.23,
-    "holdout_daily_scatter_physics": 0.0176,
+    "holdout_start": "2015-09-12",
+    "train_rows": 75948,
+    "holdout_nrmse_physics": 6.51,
+    "holdout_nrmse_ml": 6.26,
+    "holdout_daily_scatter_physics": 0.018,
     "holdout_daily_scatter_ml": 0.0176,
     "reason": "didn't beat physics on held-out data by at least 3% on both 15-min error and daily scatter"
+  },
+  "health": {
+    "nrmse_full_health_pct": 4.75,
+    "full_health_days": 311,
+    "chronic_shortfall_pct": 3.52,
+    "chronic_shortfall_mwh_per_year": 25.5,
+    "chronic_shortfall_usd_per_year": 3055,
+    "chronic_shortfall_by_year_pct": {
+      "2009": 0.8,
+      "2010": 3.6,
+      "2011": 3.2,
+      "2012": 3.1,
+      "2013": 2.7,
+      "2014": 5.7,
+      "2015": 4.2,
+      "2016": 2.8,
+      "2017": 5.6
+    }
   },
   "preflight": [
     {
@@ -79,9 +97,9 @@
     },
     {
       "name": "accuracy",
-      "status": "WARN",
-      "detail": "nRMSE on healthy days 7.1% (target < 5%); worst year 2011: 10.5%",
-      "fix": "a single bad year usually means a clock or sensor problem in that year's files"
+      "status": "PASS",
+      "detail": "model error on full-health days 4.8% (target < 5%); nRMSE on all event-free days 7.1%; worst year 2011: 10.5%",
+      "fix": ""
     }
   ]
 }
