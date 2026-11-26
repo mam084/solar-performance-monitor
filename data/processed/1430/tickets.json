@@ -25,7 +25,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -35,10 +35,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2009-02-26 to 2009-02-26)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-02-26 to 2009-02-26. Estimated cost so far: $270.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-02-26 to 2009-02-26. Estimated cost so far: $269.",
     "evidence": [
-      "Performance index fell from 1.02 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,249 kWh (95% of expected), about $270."
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,238 kWh (95% of expected), about $269."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -57,7 +57,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -67,10 +67,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2009-04-04 to 2009-04-04)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-04-04 to 2009-04-04. Estimated cost so far: $95.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-04-04 to 2009-04-04. Estimated cost so far: $88.",
     "evidence": [
-      "Performance index fell from 1.02 in the two weeks before to a median of 0.11 during the event (1.00 = healthy).",
-      "Estimated energy lost: 788 kWh (90% of expected), about $95.",
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.12 during the event (1.00 = healthy).",
+      "Estimated energy lost: 738 kWh (89% of expected), about $88.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -88,7 +88,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -98,10 +98,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2009-04-17 to 2009-04-17)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-04-17 to 2009-04-17. Estimated cost so far: $31.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-04-17 to 2009-04-17. Estimated cost so far: $28.",
     "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
-      "Estimated energy lost: 262 kWh (85% of expected), about $31.",
+      "Performance index fell from 1.06 in the two weeks before to a median of 0.08 during the event (1.00 = healthy).",
+      "Estimated energy lost: 234 kWh (83% of expected), about $28.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -119,7 +119,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -129,10 +129,10 @@
     "kind": "partial_outage",
     "title": "NREL Mesa 1-axis: partial outage (2009-06-01 to 2009-06-08)",
     "priority": "P2",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 8 day(s), 2009-06-01 to 2009-06-08. Estimated cost so far: $349.",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 8 day(s), 2009-06-01 to 2009-06-08. Estimated cost so far: $329.",
     "evidence": [
-      "Performance index fell from 1.01 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,912 kWh (20% of expected), about $349.",
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.96 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,744 kWh (19% of expected), about $329.",
       "Roughly 40% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
@@ -154,7 +154,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -164,10 +164,10 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2009-06-29 to 2009-07-05)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 7 day(s), 2009-06-29 to 2009-07-05. Estimated cost so far: $532.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 7 day(s), 2009-06-29 to 2009-07-05. Estimated cost so far: $525.",
     "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.99 during the event (1.00 = healthy).",
-      "Estimated energy lost: 4,432 kWh (25% of expected), about $532.",
+      "Performance index fell from 1.05 in the two weeks before to a median of 1.02 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,379 kWh (24% of expected), about $525.",
       "The decline appears to have started around 2009-06-28, 1 days before it crossed the alert threshold.",
       "Performance recovered to 0.99 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
@@ -188,7 +188,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -198,10 +198,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2009-08-03 to 2009-08-03)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-08-03 to 2009-08-03. Estimated cost so far: $246.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-08-03 to 2009-08-03. Estimated cost so far: $244.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,048 kWh (100% of expected), about $246."
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,029 kWh (100% of expected), about $244."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -220,7 +220,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -230,12 +230,12 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2009-08-04 to 2009-08-07)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2009-08-04 to 2009-08-07. Estimated cost so far: $169.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2009-08-04 to 2009-08-07. Estimated cost so far: $168.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.93 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,411 kWh (15% of expected), about $169.",
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,397 kWh (15% of expected), about $168.",
       "The decline appears to have started around 2009-08-02, 2 days before it crossed the alert threshold.",
-      "Performance recovered to 1.01 of baseline in the week after.",
+      "Performance recovered to 1.00 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
     ],
     "likely_causes": [
@@ -254,7 +254,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -264,10 +264,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2009-10-19 to 2009-10-19)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-10-19 to 2009-10-19. Estimated cost so far: $136.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-10-19 to 2009-10-19. Estimated cost so far: $137.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,131 kWh (100% of expected), about $136."
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,146 kWh (100% of expected), about $137."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -286,7 +286,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -296,11 +296,11 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2009-10-21 to 2009-10-25)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2009-10-21 to 2009-10-25. Estimated cost so far: $47.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2009-10-21 to 2009-10-25. Estimated cost so far: $37.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
-      "Estimated energy lost: 390 kWh (8% of expected), about $47.",
-      "The decline appears to have started around 2009-10-18, 3 days before it crossed the alert threshold.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.93 during the event (1.00 = healthy).",
+      "Estimated energy lost: 310 kWh (6% of expected), about $37.",
+      "The decline appears to have started around 2009-10-17, 4 days before it crossed the alert threshold.",
       "Performance recovered to 0.98 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
     ],
@@ -320,7 +320,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -330,10 +330,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2009-10-26 to 2009-10-26)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-10-26 to 2009-10-26. Estimated cost so far: $234.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-10-26 to 2009-10-26. Estimated cost so far: $231.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,949 kWh (100% of expected), about $234."
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,925 kWh (100% of expected), about $231."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -352,7 +352,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -362,10 +362,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2009-11-06 to 2009-11-08)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2009-11-06 to 2009-11-08. Estimated cost so far: $438.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2009-11-06 to 2009-11-08. Estimated cost so far: $439.",
     "evidence": [
-      "Performance index fell from 1.01 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,652 kWh (96% of expected), about $438."
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,662 kWh (96% of expected), about $439."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -384,7 +384,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -394,10 +394,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2009-11-14 to 2009-11-16)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2009-11-14 to 2009-11-16. Estimated cost so far: $92.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2009-11-14 to 2009-11-16. Estimated cost so far: $82.",
     "evidence": [
-      "Performance index fell from 1.02 in the two weeks before to a median of 0.70 during the event (1.00 = healthy).",
-      "Estimated energy lost: 768 kWh (31% of expected), about $92.",
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.76 during the event (1.00 = healthy).",
+      "Estimated energy lost: 682 kWh (28% of expected), about $82.",
       "Roughly 47% of capacity appears offline, from the size of the step.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
@@ -416,7 +416,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -426,10 +426,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2009-12-02 to 2009-12-02)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-12-02 to 2009-12-02. Estimated cost so far: $41.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-12-02 to 2009-12-02. Estimated cost so far: $36.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.11 during the event (1.00 = healthy).",
-      "Estimated energy lost: 344 kWh (92% of expected), about $41.",
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.12 during the event (1.00 = healthy).",
+      "Estimated energy lost: 297 kWh (91% of expected), about $36.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -447,7 +447,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -457,10 +457,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2009-12-04 to 2009-12-04)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-12-04 to 2009-12-04. Estimated cost so far: $82.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-12-04 to 2009-12-04. Estimated cost so far: $78.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
-      "Estimated energy lost: 680 kWh (94% of expected), about $82.",
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
+      "Estimated energy lost: 652 kWh (94% of expected), about $78.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -478,7 +478,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -488,10 +488,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2009-12-07 to 2009-12-07)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-12-07 to 2009-12-07. Estimated cost so far: $80.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2009-12-07 to 2009-12-07. Estimated cost so far: $78.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.14 during the event (1.00 = healthy).",
-      "Estimated energy lost: 665 kWh (86% of expected), about $80.",
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.14 during the event (1.00 = healthy).",
+      "Estimated energy lost: 651 kWh (86% of expected), about $78.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -509,41 +509,39 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2009-12-10-tracker_stall",
-    "event_id": "1430-2009-12-10-tracker_stall",
+    "ticket_id": "T-1430-2009-12-08-snow",
+    "event_id": "1430-2009-12-08-snow",
     "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2009-12-10 to 2009-12-11)",
-    "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2009-12-10 to 2009-12-11. Estimated cost so far: $32.",
+    "kind": "snow",
+    "title": "NREL Mesa 1-axis: snow cover (2009-12-08 to 2009-12-10)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2009-12-08 to 2009-12-10. Estimated cost so far: $123.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
-      "Estimated energy lost: 264 kWh (10% of expected), about $32.",
-      "Morning and evening output ran 17 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.58 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,028 kWh (38% of expected), about $123.",
+      "Roughly 42% of capacity appears offline, from the size of the step.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -553,11 +551,11 @@
     "kind": "tracker_stall",
     "title": "NREL Mesa 1-axis: tracker stall (2009-12-19 to 2009-12-20)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2009-12-19 to 2009-12-20. Estimated cost so far: $42.",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2009-12-19 to 2009-12-20. Estimated cost so far: $41.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.85 during the event (1.00 = healthy).",
-      "Estimated energy lost: 347 kWh (15% of expected), about $42.",
-      "Morning and evening output ran 39 points further below expectation than midday output.",
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.86 during the event (1.00 = healthy).",
+      "Estimated energy lost: 343 kWh (15% of expected), about $41.",
+      "Morning and evening output ran 19 points further below expectation than midday output.",
       "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
     ],
     "likely_causes": [
@@ -577,7 +575,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -587,12 +585,12 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2009-12-21 to 2009-12-23)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2009-12-21 to 2009-12-23. Estimated cost so far: $52.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2009-12-21 to 2009-12-23. Estimated cost so far: $48.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.87 during the event (1.00 = healthy).",
-      "Estimated energy lost: 437 kWh (25% of expected), about $52.",
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.88 during the event (1.00 = healthy).",
+      "Estimated energy lost: 397 kWh (24% of expected), about $48.",
       "The decline appears to have started around 2009-12-13, 8 days before it crossed the alert threshold.",
-      "Performance recovered to 1.02 of baseline in the week after.",
+      "Performance recovered to 1.03 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
     ],
     "likely_causes": [
@@ -611,41 +609,39 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2010-01-09-tracker_stall",
-    "event_id": "1430-2010-01-09-tracker_stall",
+    "ticket_id": "T-1430-2010-01-04-snow",
+    "event_id": "1430-2010-01-04-snow",
     "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2010-01-09 to 2010-01-15)",
+    "kind": "snow",
+    "title": "NREL Mesa 1-axis: snow cover (2010-01-04 to 2010-01-12)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 7 day(s), 2010-01-09 to 2010-01-15. Estimated cost so far: $75.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 9 day(s), 2010-01-04 to 2010-01-12. Estimated cost so far: $188.",
     "evidence": [
-      "Performance index fell from 1.01 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
-      "Estimated energy lost: 624 kWh (7% of expected), about $75.",
-      "Morning and evening output ran 27 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.93 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,563 kWh (15% of expected), about $188.",
+      "Roughly 8% of capacity appears offline, from the size of the step.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -657,7 +653,7 @@
     "priority": "P3",
     "summary": "Irradiance sensor fault detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2010-01-30 to 2010-02-02.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 1.12 during the event (1.00 = healthy).",
+      "Performance index fell from 0.99 in the two weeks before to a median of 1.16 during the event (1.00 = healthy).",
       "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
     ],
     "likely_causes": [
@@ -677,7 +673,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -687,10 +683,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2010-02-08 to 2010-02-09)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2010-02-08 to 2010-02-09. Estimated cost so far: $169.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2010-02-08 to 2010-02-09. Estimated cost so far: $159.",
     "evidence": [
-      "Performance index fell from 1.01 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,408 kWh (75% of expected), about $169.",
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,328 kWh (73% of expected), about $159.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -708,7 +704,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -718,10 +714,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2010-02-19 to 2010-02-21)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2010-02-19 to 2010-02-21. Estimated cost so far: $247.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2010-02-19 to 2010-02-21. Estimated cost so far: $231.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,061 kWh (98% of expected), about $247.",
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,923 kWh (98% of expected), about $231.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -739,7 +735,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -749,10 +745,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2010-03-19 to 2010-03-19)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2010-03-19 to 2010-03-19. Estimated cost so far: $94.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2010-03-19 to 2010-03-19. Estimated cost so far: $91.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.09 during the event (1.00 = healthy).",
-      "Estimated energy lost: 784 kWh (90% of expected), about $94.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
+      "Estimated energy lost: 758 kWh (90% of expected), about $91.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -770,39 +766,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2010-03-24-snow",
-    "event_id": "1430-2010-03-24-snow",
-    "site_id": 1430,
-    "kind": "snow",
-    "title": "NREL Mesa 1-axis: snow cover (2010-03-24 to 2010-03-27)",
-    "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2010-03-24 to 2010-03-27. Estimated cost so far: $78.",
-    "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
-      "Estimated energy lost: 647 kWh (9% of expected), about $78.",
-      "Roughly 4% of capacity appears offline, from the size of the step.",
-      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
-    ],
-    "likely_causes": [
-      "Snow or ice covering the modules",
-      "Snow drift against low-tilt rows"
-    ],
-    "recommended_actions": [
-      "No dispatch yet: snow usually slides or melts off within a few days",
-      "Check the forecast; if a thaw is coming, re-check output the day after",
-      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
-      "Do not scrape modules; use only soft tools if clearing is required by contract"
-    ],
-    "parts_and_tools": [
-      "Soft foam snow rake (only if clearing is required)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -812,10 +776,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2010-04-26 to 2010-04-26)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2010-04-26 to 2010-04-26. Estimated cost so far: $258.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2010-04-26 to 2010-04-26. Estimated cost so far: $249.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,148 kWh (99% of expected), about $258."
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,075 kWh (98% of expected), about $249."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -834,7 +798,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -844,11 +808,11 @@
     "kind": "partial_outage",
     "title": "NREL Mesa 1-axis: partial outage (2010-06-02 to 2010-06-05)",
     "priority": "P2",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2010-06-02 to 2010-06-05. Estimated cost so far: $235.",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2010-06-02 to 2010-06-05. Estimated cost so far: $226.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.74 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,955 kWh (28% of expected), about $235.",
-      "Roughly 10% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.77 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,880 kWh (27% of expected), about $226.",
+      "Roughly 9% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -869,7 +833,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -881,8 +845,8 @@
     "priority": "P2",
     "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2010-06-08 to 2010-06-09. Estimated cost so far: $505.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 4,212 kWh (100% of expected), about $505."
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,207 kWh (100% of expected), about $505."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -901,7 +865,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -913,8 +877,8 @@
     "priority": "P2",
     "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2010-06-14 to 2010-06-16. Estimated cost so far: $496.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.47 during the event (1.00 = healthy).",
-      "Estimated energy lost: 4,130 kWh (50% of expected), about $496.",
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.48 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,136 kWh (50% of expected), about $496.",
       "Roughly 52% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
@@ -936,22 +900,22 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2010-10-08-soiling",
-    "event_id": "1430-2010-10-08-soiling",
+    "ticket_id": "T-1430-2010-10-07-soiling",
+    "event_id": "1430-2010-10-07-soiling",
     "site_id": 1430,
     "kind": "soiling",
-    "title": "NREL Mesa 1-axis: soiling / gradual loss (2010-10-08 to 2010-11-01)",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2010-10-07 to 2010-11-02)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 25 day(s), 2010-10-08 to 2010-11-01. Estimated cost so far: $476.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 27 day(s), 2010-10-07 to 2010-11-02. Estimated cost so far: $510.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,970 kWh (9% of expected), about $476.",
-      "The decline appears to have started around 2010-09-28, 10 days before it crossed the alert threshold.",
-      "Performance recovered to 0.90 of baseline in the week after.",
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,249 kWh (9% of expected), about $510.",
+      "The decline appears to have started around 2010-09-28, 9 days before it crossed the alert threshold.",
+      "Performance recovered to 0.89 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
     ],
     "likely_causes": [
@@ -970,7 +934,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -980,10 +944,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2010-11-03 to 2010-11-03)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2010-11-03 to 2010-11-03. Estimated cost so far: $168.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2010-11-03 to 2010-11-03. Estimated cost so far: $166.",
     "evidence": [
       "Median performance index during the event: 0.05.",
-      "Estimated energy lost: 1,404 kWh (95% of expected), about $168."
+      "Estimated energy lost: 1,386 kWh (95% of expected), about $166."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -1002,57 +966,22 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2010-11-05-tracker_stall",
-    "event_id": "1430-2010-11-05-tracker_stall",
-    "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2010-11-05 to 2010-11-06)",
-    "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2010-11-05 to 2010-11-06. Estimated cost so far: $41.",
-    "evidence": [
-      "Median performance index during the event: 0.89.",
-      "Estimated energy lost: 342 kWh (10% of expected), about $41.",
-      "Morning and evening output ran 16 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
-    ],
-    "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
-    ],
-    "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
-    ],
-    "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2010-11-07-soiling",
-    "event_id": "1430-2010-11-07-soiling",
+    "ticket_id": "T-1430-2010-11-04-soiling",
+    "event_id": "1430-2010-11-04-soiling",
     "site_id": 1430,
     "kind": "soiling",
-    "title": "NREL Mesa 1-axis: soiling / gradual loss (2010-11-07 to 2010-11-11)",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2010-11-04 to 2010-12-14)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2010-11-07 to 2010-11-11. Estimated cost so far: $87.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 41 day(s), 2010-11-04 to 2010-12-14. Estimated cost so far: $695.",
     "evidence": [
-      "Median performance index during the event: 0.87.",
-      "Estimated energy lost: 725 kWh (14% of expected), about $87.",
-      "The decline appears to have started around 2010-09-28, 40 days before it crossed the alert threshold.",
-      "Performance recovered to 0.90 of baseline in the week after.",
-      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
+      "Median performance index during the event: 0.89.",
+      "Estimated energy lost: 5,796 kWh (12% of expected), about $695.",
+      "Roughly 10% of capacity appears offline, from the size of the step.",
+      "A slow slide that crossed the alert threshold more than once, the signature of dust or pollen build-up (or gradual degradation)."
     ],
     "likely_causes": [
       "Dust or pollen build-up during a dry spell",
@@ -1070,74 +999,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2010-11-13-snow",
-    "event_id": "1430-2010-11-13-snow",
-    "site_id": 1430,
-    "kind": "snow",
-    "title": "NREL Mesa 1-axis: snow cover (2010-11-13 to 2010-11-22)",
-    "priority": "P3",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 10 day(s), 2010-11-13 to 2010-11-22. Estimated cost so far: $187.",
-    "evidence": [
-      "Median performance index during the event: 0.86.",
-      "Estimated energy lost: 1,560 kWh (13% of expected), about $187.",
-      "Roughly 11% of capacity appears offline, from the size of the step.",
-      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
-    ],
-    "likely_causes": [
-      "Snow or ice covering the modules",
-      "Snow drift against low-tilt rows"
-    ],
-    "recommended_actions": [
-      "No dispatch yet: snow usually slides or melts off within a few days",
-      "Check the forecast; if a thaw is coming, re-check output the day after",
-      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
-      "Do not scrape modules; use only soft tools if clearing is required by contract"
-    ],
-    "parts_and_tools": [
-      "Soft foam snow rake (only if clearing is required)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2010-11-28-partial_outage",
-    "event_id": "1430-2010-11-28-partial_outage",
-    "site_id": 1430,
-    "kind": "partial_outage",
-    "title": "NREL Mesa 1-axis: partial outage (2010-11-28 to 2010-12-15)",
-    "priority": "P3",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 18 day(s), 2010-11-28 to 2010-12-15. Estimated cost so far: $202.",
-    "evidence": [
-      "Median performance index during the event: 0.88.",
-      "Estimated energy lost: 1,683 kWh (10% of expected), about $202.",
-      "Roughly 12% of capacity appears offline, from the size of the step.",
-      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
-    ],
-    "likely_causes": [
-      "One inverter or inverter module offline",
-      "Blown combiner fuse / open string",
-      "Tripped DC disconnect in one block"
-    ],
-    "recommended_actions": [
-      "Compare inverter- and combiner-level currents to locate the offline section",
-      "Pull inverter fault logs for the start date",
-      "Inspect combiner-box fuses and string connectors in the affected block",
-      "Run IV-curve traces on suspect strings; replace failed fuses or components"
-    ],
-    "parts_and_tools": [
-      "Combiner fuses (matching rating)",
-      "IV-curve tracer",
-      "MC4 connectors"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1145,13 +1007,13 @@
     "event_id": "1430-2010-12-17-snow",
     "site_id": 1430,
     "kind": "snow",
-    "title": "NREL Mesa 1-axis: snow cover (2010-12-17 to 2010-12-21)",
+    "title": "NREL Mesa 1-axis: snow cover (2010-12-17 to 2010-12-19)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2010-12-17 to 2010-12-21. Estimated cost so far: $104.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2010-12-17 to 2010-12-19. Estimated cost so far: $75.",
     "evidence": [
-      "Performance index fell from 0.90 in the two weeks before to a median of 0.86 during the event (1.00 = healthy).",
-      "Estimated energy lost: 870 kWh (20% of expected), about $104.",
-      "Roughly 9% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 0.92 in the two weeks before to a median of 0.75 during the event (1.00 = healthy).",
+      "Estimated energy lost: 626 kWh (25% of expected), about $75.",
+      "Roughly 15% of capacity appears offline, from the size of the step.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1169,7 +1031,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1179,10 +1041,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2011-01-09 to 2011-01-11)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2011-01-09 to 2011-01-11. Estimated cost so far: $360.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2011-01-09 to 2011-01-11. Estimated cost so far: $351.",
     "evidence": [
-      "Performance index fell from 0.86 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,003 kWh (99% of expected), about $360.",
+      "Performance index fell from 0.89 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,927 kWh (99% of expected), about $351.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1200,7 +1062,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1208,12 +1070,12 @@
     "event_id": "1430-2011-02-01-snow",
     "site_id": 1430,
     "kind": "snow",
-    "title": "NREL Mesa 1-axis: snow cover (2011-02-01 to 2011-02-03)",
+    "title": "NREL Mesa 1-axis: snow cover (2011-02-01 to 2011-02-02)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2011-02-01 to 2011-02-03. Estimated cost so far: $423.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2011-02-01 to 2011-02-02. Estimated cost so far: $340.",
     "evidence": [
-      "Performance index fell from 0.89 in the two weeks before to a median of 0.09 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,525 kWh (92% of expected), about $423.",
+      "Performance index fell from 0.91 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,837 kWh (93% of expected), about $340.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1231,21 +1093,21 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2011-02-04-snow",
-    "event_id": "1430-2011-02-04-snow",
+    "ticket_id": "T-1430-2011-02-03-snow",
+    "event_id": "1430-2011-02-03-snow",
     "site_id": 1430,
     "kind": "snow",
-    "title": "NREL Mesa 1-axis: snow cover (2011-02-04 to 2011-02-06)",
+    "title": "NREL Mesa 1-axis: snow cover (2011-02-03 to 2011-02-06)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2011-02-04 to 2011-02-06. Estimated cost so far: $74.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2011-02-03 to 2011-02-06. Estimated cost so far: $129.",
     "evidence": [
-      "Performance index fell from 0.89 in the two weeks before to a median of 0.71 during the event (1.00 = healthy).",
-      "Estimated energy lost: 616 kWh (29% of expected), about $74.",
-      "Roughly 19% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 0.91 in the two weeks before to a median of 0.48 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,073 kWh (40% of expected), about $129.",
+      "Roughly 18% of capacity appears offline, from the size of the step.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1263,7 +1125,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1275,8 +1137,8 @@
     "priority": "P4",
     "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2011-02-08 to 2011-02-08. Estimated cost so far: $92.",
     "evidence": [
-      "Performance index fell from 0.89 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
-      "Estimated energy lost: 767 kWh (88% of expected), about $92.",
+      "Performance index fell from 0.91 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
+      "Estimated energy lost: 766 kWh (88% of expected), about $92.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1294,7 +1156,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1302,13 +1164,13 @@
     "event_id": "1430-2011-04-16-partial_outage",
     "site_id": 1430,
     "kind": "partial_outage",
-    "title": "NREL Mesa 1-axis: partial outage (2011-04-16 to 2011-04-19)",
+    "title": "NREL Mesa 1-axis: partial outage (2011-04-16 to 2011-04-18)",
     "priority": "P3",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2011-04-16 to 2011-04-19. Estimated cost so far: $77.",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2011-04-16 to 2011-04-18. Estimated cost so far: $44.",
     "evidence": [
-      "Performance index fell from 0.92 in the two weeks before to a median of 0.83 during the event (1.00 = healthy).",
-      "Estimated energy lost: 644 kWh (7% of expected), about $77.",
-      "Roughly 8% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 0.95 in the two weeks before to a median of 0.86 during the event (1.00 = healthy).",
+      "Estimated energy lost: 371 kWh (6% of expected), about $44.",
+      "Roughly 7% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -1329,41 +1191,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2011-04-29-soiling",
-    "event_id": "1430-2011-04-29-soiling",
-    "site_id": 1430,
-    "kind": "soiling",
-    "title": "NREL Mesa 1-axis: soiling / gradual loss (2011-04-29 to 2011-05-03)",
-    "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2011-04-29 to 2011-05-03. Estimated cost so far: $102.",
-    "evidence": [
-      "Performance index fell from 0.88 in the two weeks before to a median of 0.83 during the event (1.00 = healthy).",
-      "Estimated energy lost: 853 kWh (8% of expected), about $102.",
-      "The decline appears to have started around 2011-04-27, 2 days before it crossed the alert threshold.",
-      "Performance recovered to 1.04 of baseline in the week after.",
-      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
-    ],
-    "likely_causes": [
-      "Dust or pollen build-up during a dry spell",
-      "Bird droppings",
-      "Gradual module degradation"
-    ],
-    "recommended_actions": [
-      "Visually inspect a sample of modules and photograph the soiling",
-      "Compare against the decline start date and the last rain or wash",
-      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
-      "After cleaning, confirm the performance index returns to its baseline"
-    ],
-    "parts_and_tools": [
-      "Wash crew / water truck (deionised water)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1373,11 +1201,11 @@
     "kind": "partial_outage",
     "title": "NREL Mesa 1-axis: partial outage (2011-09-17 to 2011-09-21)",
     "priority": "P3",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2011-09-17 to 2011-09-21. Estimated cost so far: $87.",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2011-09-17 to 2011-09-21. Estimated cost so far: $94.",
     "evidence": [
-      "Performance index fell from 0.93 in the two weeks before to a median of 0.84 during the event (1.00 = healthy).",
-      "Estimated energy lost: 726 kWh (8% of expected), about $87.",
-      "Roughly 12% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.85 during the event (1.00 = healthy).",
+      "Estimated energy lost: 779 kWh (9% of expected), about $94.",
+      "Roughly 13% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -1398,7 +1226,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1408,10 +1236,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2011-10-26 to 2011-10-26)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2011-10-26 to 2011-10-26. Estimated cost so far: $53.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2011-10-26 to 2011-10-26. Estimated cost so far: $48.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 445 kWh (100% of expected), about $53."
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 397 kWh (100% of expected), about $48."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -1430,21 +1258,21 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2011-12-01-soiling",
-    "event_id": "1430-2011-12-01-soiling",
+    "ticket_id": "T-1430-2011-11-28-soiling",
+    "event_id": "1430-2011-11-28-soiling",
     "site_id": 1430,
     "kind": "soiling",
-    "title": "NREL Mesa 1-axis: soiling / gradual loss (2011-12-01 to 2011-12-05)",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2011-11-28 to 2011-12-05)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2011-12-01 to 2011-12-05. Estimated cost so far: $102.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 8 day(s), 2011-11-28 to 2011-12-05. Estimated cost so far: $93.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.89 during the event (1.00 = healthy).",
-      "Estimated energy lost: 851 kWh (21% of expected), about $102.",
-      "The decline appears to have started around 2011-11-29, 2 days before it crossed the alert threshold.",
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.96 during the event (1.00 = healthy).",
+      "Estimated energy lost: 777 kWh (12% of expected), about $93.",
+      "The decline appears to have started around 2011-11-27, 1 days before it crossed the alert threshold.",
       "Performance recovered to 1.00 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
     ],
@@ -1464,7 +1292,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1474,10 +1302,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2012-01-11 to 2012-01-11)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-01-11 to 2012-01-11. Estimated cost so far: $68.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-01-11 to 2012-01-11. Estimated cost so far: $63.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
-      "Estimated energy lost: 563 kWh (91% of expected), about $68."
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
+      "Estimated energy lost: 521 kWh (91% of expected), about $63."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -1496,7 +1324,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1506,10 +1334,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2012-02-07 to 2012-02-07)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-02-07 to 2012-02-07. Estimated cost so far: $75.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-02-07 to 2012-02-07. Estimated cost so far: $70.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.08 during the event (1.00 = healthy).",
-      "Estimated energy lost: 627 kWh (93% of expected), about $75.",
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.08 during the event (1.00 = healthy).",
+      "Estimated energy lost: 586 kWh (92% of expected), about $70.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1527,7 +1355,42 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2012-10-19-partial_outage",
+    "event_id": "1430-2012-10-19-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2012-10-19 to 2012-10-23)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2012-10-19 to 2012-10-23. Estimated cost so far: $103.",
+    "evidence": [
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.88 during the event (1.00 = healthy).",
+      "Estimated energy lost: 860 kWh (12% of expected), about $103.",
+      "Roughly 11% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1537,10 +1400,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2012-10-25 to 2012-10-25)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-10-25 to 2012-10-25. Estimated cost so far: $36.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-10-25 to 2012-10-25. Estimated cost so far: $32.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
-      "Estimated energy lost: 304 kWh (87% of expected), about $36.",
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.08 during the event (1.00 = healthy).",
+      "Estimated energy lost: 263 kWh (86% of expected), about $32.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1558,7 +1421,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1568,10 +1431,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2012-11-11 to 2012-11-11)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-11-11 to 2012-11-11. Estimated cost so far: $163.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2012-11-11 to 2012-11-11. Estimated cost so far: $158.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.10 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,361 kWh (89% of expected), about $163.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.11 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,314 kWh (89% of expected), about $158.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1589,7 +1452,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1618,54 +1481,21 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2013-01-12-soiling",
-    "event_id": "1430-2013-01-12-soiling",
-    "site_id": 1430,
-    "kind": "soiling",
-    "title": "NREL Mesa 1-axis: soiling / gradual loss (2013-01-12 to 2013-01-14)",
-    "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-01-12 to 2013-01-14. Estimated cost so far: $41.",
-    "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.89 during the event (1.00 = healthy).",
-      "Estimated energy lost: 338 kWh (12% of expected), about $41.",
-      "The decline appears to have started around 2013-01-11, 1 days before it crossed the alert threshold.",
-      "Performance recovered to 1.02 of baseline in the week after.",
-      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
-    ],
-    "likely_causes": [
-      "Dust or pollen build-up during a dry spell",
-      "Bird droppings",
-      "Gradual module degradation"
-    ],
-    "recommended_actions": [
-      "Visually inspect a sample of modules and photograph the soiling",
-      "Compare against the decline start date and the last rain or wash",
-      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
-      "After cleaning, confirm the performance index returns to its baseline"
-    ],
-    "parts_and_tools": [
-      "Wash crew / water truck (deionised water)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2013-01-29-snow",
-    "event_id": "1430-2013-01-29-snow",
+    "ticket_id": "T-1430-2013-01-12-snow",
+    "event_id": "1430-2013-01-12-snow",
     "site_id": 1430,
     "kind": "snow",
-    "title": "NREL Mesa 1-axis: snow cover (2013-01-29 to 2013-01-29)",
+    "title": "NREL Mesa 1-axis: snow cover (2013-01-12 to 2013-01-14)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2013-01-29 to 2013-01-29. Estimated cost so far: $94.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-01-12 to 2013-01-14. Estimated cost so far: $34.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
-      "Estimated energy lost: 786 kWh (99% of expected), about $94.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.89 during the event (1.00 = healthy).",
+      "Estimated energy lost: 282 kWh (10% of expected), about $34.",
+      "Roughly 11% of capacity appears offline, from the size of the step.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1683,7 +1513,38 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2013-01-29-snow",
+    "event_id": "1430-2013-01-29-snow",
+    "site_id": 1430,
+    "kind": "snow",
+    "title": "NREL Mesa 1-axis: snow cover (2013-01-29 to 2013-01-29)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2013-01-29 to 2013-01-29. Estimated cost so far: $91.",
+    "evidence": [
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
+      "Estimated energy lost: 758 kWh (99% of expected), about $91.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
+    ],
+    "likely_causes": [
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
+    ],
+    "recommended_actions": [
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
+    ],
+    "parts_and_tools": [
+      "Soft foam snow rake (only if clearing is required)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1693,10 +1554,10 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2013-02-07 to 2013-02-15)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 9 day(s), 2013-02-07 to 2013-02-15. Estimated cost so far: $326.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 9 day(s), 2013-02-07 to 2013-02-15. Estimated cost so far: $295.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.80 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,715 kWh (24% of expected), about $326.",
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.83 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,458 kWh (23% of expected), about $295.",
       "The decline appears to have started around 2013-02-02, 5 days before it crossed the alert threshold.",
       "Performance recovered to 0.99 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
@@ -1717,7 +1578,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1727,11 +1588,11 @@
     "kind": "tracker_stall",
     "title": "NREL Mesa 1-axis: tracker stall (2013-02-24 to 2013-02-26)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-02-24 to 2013-02-26. Estimated cost so far: $85.",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-02-24 to 2013-02-26. Estimated cost so far: $72.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
-      "Estimated energy lost: 709 kWh (20% of expected), about $85.",
-      "Morning and evening output ran 34 points further below expectation than midday output.",
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.83 during the event (1.00 = healthy).",
+      "Estimated energy lost: 603 kWh (18% of expected), about $72.",
+      "Morning and evening output ran 27 points further below expectation than midday output.",
       "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
     ],
     "likely_causes": [
@@ -1751,7 +1612,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1761,11 +1622,11 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2013-03-23 to 2013-03-25)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-03-23 to 2013-03-25. Estimated cost so far: $71.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-03-23 to 2013-03-25. Estimated cost so far: $60.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.88 during the event (1.00 = healthy).",
-      "Estimated energy lost: 590 kWh (13% of expected), about $71.",
-      "Roughly 8% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
+      "Estimated energy lost: 502 kWh (11% of expected), about $60.",
+      "Roughly 7% of capacity appears offline, from the size of the step.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1783,7 +1644,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1793,11 +1654,11 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2013-04-15 to 2013-04-17)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-04-15 to 2013-04-17. Estimated cost so far: $70.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-04-15 to 2013-04-17. Estimated cost so far: $59.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
-      "Estimated energy lost: 582 kWh (32% of expected), about $70.",
-      "Roughly 19% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.83 during the event (1.00 = healthy).",
+      "Estimated energy lost: 491 kWh (29% of expected), about $59.",
+      "Roughly 16% of capacity appears offline, from the size of the step.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1815,7 +1676,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1825,11 +1686,11 @@
     "kind": "tracker_stall",
     "title": "NREL Mesa 1-axis: tracker stall (2013-04-22 to 2013-04-23)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2013-04-22 to 2013-04-23. Estimated cost so far: $135.",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2013-04-22 to 2013-04-23. Estimated cost so far: $121.",
     "evidence": [
-      "Performance index fell from 0.95 in the two weeks before to a median of 0.67 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,124 kWh (40% of expected), about $135.",
-      "Morning and evening output ran 65 points further below expectation than midday output.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.70 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,011 kWh (38% of expected), about $121.",
+      "Morning and evening output ran 66 points further below expectation than midday output.",
       "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
     ],
     "likely_causes": [
@@ -1849,7 +1710,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1878,41 +1739,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2013-11-10-tracker_stall",
-    "event_id": "1430-2013-11-10-tracker_stall",
-    "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2013-11-10 to 2013-11-18)",
-    "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 9 day(s), 2013-11-10 to 2013-11-18. Estimated cost so far: $66.",
-    "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.93 during the event (1.00 = healthy).",
-      "Estimated energy lost: 554 kWh (4% of expected), about $66.",
-      "Morning and evening output ran 21 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
-    ],
-    "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
-    ],
-    "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
-    ],
-    "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1922,10 +1749,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2013-11-21 to 2013-11-21)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2013-11-21 to 2013-11-21. Estimated cost so far: $41.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2013-11-21 to 2013-11-21. Estimated cost so far: $36.",
     "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
-      "Estimated energy lost: 343 kWh (95% of expected), about $41.",
+      "Performance index fell from 0.95 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
+      "Estimated energy lost: 298 kWh (94% of expected), about $36.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1943,7 +1770,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -1951,13 +1778,13 @@
     "event_id": "1430-2013-11-22-snow",
     "site_id": 1430,
     "kind": "snow",
-    "title": "NREL Mesa 1-axis: snow cover (2013-11-22 to 2013-11-26)",
-    "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2013-11-22 to 2013-11-26. Estimated cost so far: $91.",
+    "title": "NREL Mesa 1-axis: snow cover (2013-11-22 to 2013-11-30)",
+    "priority": "P3",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 9 day(s), 2013-11-22 to 2013-11-30. Estimated cost so far: $121.",
     "evidence": [
-      "Performance index fell from 0.93 in the two weeks before to a median of 0.82 during the event (1.00 = healthy).",
-      "Estimated energy lost: 760 kWh (24% of expected), about $91.",
-      "Roughly 34% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 0.94 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,008 kWh (12% of expected), about $121.",
+      "Roughly 31% of capacity appears offline, from the size of the step.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -1975,41 +1802,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2013-11-29-tracker_stall",
-    "event_id": "1430-2013-11-29-tracker_stall",
-    "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2013-11-29 to 2013-11-30)",
-    "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2013-11-29 to 2013-11-30. Estimated cost so far: $29.",
-    "evidence": [
-      "Performance index fell from 0.92 in the two weeks before to a median of 0.91 during the event (1.00 = healthy).",
-      "Estimated energy lost: 238 kWh (9% of expected), about $29.",
-      "Morning and evening output ran 19 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
-    ],
-    "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
-    ],
-    "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
-    ],
-    "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2019,10 +1812,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2013-12-04 to 2013-12-05)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2013-12-04 to 2013-12-05. Estimated cost so far: $223.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2013-12-04 to 2013-12-05. Estimated cost so far: $213.",
     "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,858 kWh (93% of expected), about $223.",
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,775 kWh (93% of expected), about $213.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2040,7 +1833,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2050,10 +1843,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2013-12-06 to 2013-12-08)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-12-06 to 2013-12-08. Estimated cost so far: $235.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2013-12-06 to 2013-12-08. Estimated cost so far: $215.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.43 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,955 kWh (62% of expected), about $235.",
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.44 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,788 kWh (60% of expected), about $215.",
       "Roughly 56% of capacity appears offline, from the size of the step.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
@@ -2072,7 +1865,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2082,10 +1875,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2014-01-04 to 2014-01-04)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2014-01-04 to 2014-01-04. Estimated cost so far: $49.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2014-01-04 to 2014-01-04. Estimated cost so far: $44.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.03 during the event (1.00 = healthy).",
-      "Estimated energy lost: 407 kWh (98% of expected), about $49."
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.04 during the event (1.00 = healthy).",
+      "Estimated energy lost: 364 kWh (98% of expected), about $44."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -2104,41 +1897,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2014-01-27-tracker_stall",
-    "event_id": "1430-2014-01-27-tracker_stall",
-    "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2014-01-27 to 2014-01-28)",
-    "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-01-27 to 2014-01-28. Estimated cost so far: $193.",
-    "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.27 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,610 kWh (70% of expected), about $193.",
-      "Morning and evening output ran 15 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
-    ],
-    "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
-    ],
-    "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
-    ],
-    "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2148,11 +1907,11 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2014-01-31 to 2014-02-04)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2014-01-31 to 2014-02-04. Estimated cost so far: $130.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2014-01-31 to 2014-02-04. Estimated cost so far: $113.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.56 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,080 kWh (29% of expected), about $130.",
-      "Roughly 23% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.59 during the event (1.00 = healthy).",
+      "Estimated energy lost: 941 kWh (27% of expected), about $113.",
+      "Roughly 21% of capacity appears offline, from the size of the step.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2170,7 +1929,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2180,10 +1939,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2014-02-05 to 2014-02-06)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-02-05 to 2014-02-06. Estimated cost so far: $375.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-02-05 to 2014-02-06. Estimated cost so far: $361.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,126 kWh (95% of expected), about $375.",
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,004 kWh (95% of expected), about $361.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2201,7 +1960,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2211,12 +1970,12 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2014-02-07 to 2014-02-10)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2014-02-07 to 2014-02-10. Estimated cost so far: $51.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2014-02-07 to 2014-02-10. Estimated cost so far: $34.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
-      "Estimated energy lost: 427 kWh (9% of expected), about $51.",
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.96 during the event (1.00 = healthy).",
+      "Estimated energy lost: 282 kWh (6% of expected), about $34.",
       "The decline appears to have started around 2014-01-30, 8 days before it crossed the alert threshold.",
-      "Performance recovered to 0.99 of baseline in the week after.",
+      "Performance recovered to 1.00 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
     ],
     "likely_causes": [
@@ -2235,7 +1994,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2245,10 +2004,10 @@
     "kind": "partial_outage",
     "title": "NREL Mesa 1-axis: partial outage (2014-02-17 to 2014-02-21)",
     "priority": "P2",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2014-02-17 to 2014-02-21. Estimated cost so far: $219.",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2014-02-17 to 2014-02-21. Estimated cost so far: $209.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,824 kWh (21% of expected), about $219.",
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.81 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,744 kWh (20% of expected), about $209.",
       "Roughly 20% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
@@ -2270,41 +2029,74 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2014-02-23-tracker_stall",
-    "event_id": "1430-2014-02-23-tracker_stall",
+    "ticket_id": "T-1430-2014-02-26-snow",
+    "event_id": "1430-2014-02-26-snow",
     "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2014-02-23 to 2014-02-26)",
-    "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2014-02-23 to 2014-02-26. Estimated cost so far: $90.",
+    "kind": "snow",
+    "title": "NREL Mesa 1-axis: snow cover (2014-02-26 to 2014-03-02)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2014-02-26 to 2014-03-02. Estimated cost so far: $82.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.91 during the event (1.00 = healthy).",
-      "Estimated energy lost: 750 kWh (12% of expected), about $90.",
-      "Morning and evening output ran 53 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
+      "Estimated energy lost: 687 kWh (9% of expected), about $82.",
+      "Roughly 0% of capacity appears offline, from the size of the step.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-03-08-partial_outage",
+    "event_id": "1430-2014-03-08-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2014-03-08 to 2014-03-11)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2014-03-08 to 2014-03-11. Estimated cost so far: $60.",
+    "evidence": [
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
+      "Estimated energy lost: 496 kWh (8% of expected), about $60.",
+      "Roughly 1% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2316,7 +2108,7 @@
     "priority": "P3",
     "summary": "Irradiance sensor fault detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2014-03-28 to 2014-04-01.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 1.13 during the event (1.00 = healthy).",
+      "Performance index fell from 1.01 in the two weeks before to a median of 1.17 during the event (1.00 = healthy).",
       "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
     ],
     "likely_causes": [
@@ -2336,7 +2128,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2346,10 +2138,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2014-08-13 to 2014-08-14)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-08-13 to 2014-08-14. Estimated cost so far: $376.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-08-13 to 2014-08-14. Estimated cost so far: $373.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.14 during the event (1.00 = healthy).",
-      "Estimated energy lost: 3,131 kWh (85% of expected), about $376."
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.14 during the event (1.00 = healthy).",
+      "Estimated energy lost: 3,107 kWh (85% of expected), about $373."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -2368,7 +2160,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2376,13 +2168,13 @@
     "event_id": "1430-2014-08-15-partial_outage",
     "site_id": 1430,
     "kind": "partial_outage",
-    "title": "NREL Mesa 1-axis: partial outage (2014-08-15 to 2014-08-29)",
+    "title": "NREL Mesa 1-axis: partial outage (2014-08-15 to 2014-08-23)",
     "priority": "P3",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 15 day(s), 2014-08-15 to 2014-08-29. Estimated cost so far: $222.",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 9 day(s), 2014-08-15 to 2014-08-23. Estimated cost so far: $119.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.91 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,846 kWh (8% of expected), about $222.",
-      "Roughly 9% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
+      "Estimated energy lost: 990 kWh (7% of expected), about $119.",
+      "Roughly 7% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -2403,7 +2195,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2411,13 +2203,13 @@
     "event_id": "1430-2014-09-28-partial_outage",
     "site_id": 1430,
     "kind": "partial_outage",
-    "title": "NREL Mesa 1-axis: partial outage (2014-09-28 to 2014-10-04)",
+    "title": "NREL Mesa 1-axis: partial outage (2014-09-28 to 2014-10-15)",
     "priority": "P3",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 7 day(s), 2014-09-28 to 2014-10-04. Estimated cost so far: $122.",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 18 day(s), 2014-09-28 to 2014-10-15. Estimated cost so far: $207.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.88 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,015 kWh (9% of expected), about $122.",
-      "Roughly 11% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,724 kWh (7% of expected), about $207.",
+      "Roughly 12% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -2438,7 +2230,41 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-10-23-tracker_stall",
+    "event_id": "1430-2014-10-23-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2014-10-23 to 2014-10-25)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-10-23 to 2014-10-25. Estimated cost so far: $24.",
+    "evidence": [
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
+      "Estimated energy lost: 196 kWh (4% of expected), about $24.",
+      "Morning and evening output ran 29 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2448,11 +2274,11 @@
     "kind": "tracker_stall",
     "title": "NREL Mesa 1-axis: tracker stall (2014-10-28 to 2014-10-30)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-10-28 to 2014-10-30. Estimated cost so far: $20.",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-10-28 to 2014-10-30. Estimated cost so far: $19.",
     "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.93 during the event (1.00 = healthy).",
-      "Estimated energy lost: 168 kWh (3% of expected), about $20.",
-      "Morning and evening output ran 50 points further below expectation than midday output.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
+      "Estimated energy lost: 161 kWh (3% of expected), about $19.",
+      "Morning and evening output ran 42 points further below expectation than midday output.",
       "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
     ],
     "likely_causes": [
@@ -2472,7 +2298,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2482,10 +2308,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2014-11-11 to 2014-11-13)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-11-11 to 2014-11-13. Estimated cost so far: $281.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-11-11 to 2014-11-13. Estimated cost so far: $264.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,340 kWh (99% of expected), about $281.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,200 kWh (99% of expected), about $264.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2503,7 +2329,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2513,11 +2339,11 @@
     "kind": "partial_outage",
     "title": "NREL Mesa 1-axis: partial outage (2014-11-14 to 2014-11-16)",
     "priority": "P2",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-11-14 to 2014-11-16. Estimated cost so far: $232.",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-11-14 to 2014-11-16. Estimated cost so far: $217.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.40 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,933 kWh (59% of expected), about $232.",
-      "Roughly 60% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.43 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,812 kWh (58% of expected), about $217.",
+      "Roughly 59% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -2538,7 +2364,42 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2014-11-26-partial_outage",
+    "event_id": "1430-2014-11-26-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2014-11-26 to 2014-11-28)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-11-26 to 2014-11-28. Estimated cost so far: $40.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.91 during the event (1.00 = healthy).",
+      "Estimated energy lost: 330 kWh (14% of expected), about $40.",
+      "Roughly 14% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2548,10 +2409,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2014-12-22 to 2014-12-22)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2014-12-22 to 2014-12-22. Estimated cost so far: $28.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2014-12-22 to 2014-12-22. Estimated cost so far: $25.",
     "evidence": [
-      "Performance index fell from 1.02 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
-      "Estimated energy lost: 230 kWh (98% of expected), about $28.",
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.02 during the event (1.00 = healthy).",
+      "Estimated energy lost: 212 kWh (98% of expected), about $25.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2569,7 +2430,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2579,10 +2440,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2014-12-26 to 2014-12-27)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-12-26 to 2014-12-27. Estimated cost so far: $211.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-12-26 to 2014-12-27. Estimated cost so far: $202.",
     "evidence": [
-      "Performance index fell from 1.02 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,761 kWh (95% of expected), about $211.",
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,687 kWh (94% of expected), about $202.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2600,41 +2461,39 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2014-12-28-tracker_stall",
-    "event_id": "1430-2014-12-28-tracker_stall",
+    "ticket_id": "T-1430-2014-12-29-snow",
+    "event_id": "1430-2014-12-29-snow",
     "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2014-12-28 to 2014-12-29)",
-    "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2014-12-28 to 2014-12-29. Estimated cost so far: $78.",
+    "kind": "snow",
+    "title": "NREL Mesa 1-axis: snow cover (2014-12-29 to 2014-12-31)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2014-12-29 to 2014-12-31. Estimated cost so far: $172.",
     "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.53 during the event (1.00 = healthy).",
-      "Estimated energy lost: 649 kWh (37% of expected), about $78.",
-      "Morning and evening output ran 43 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.26 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,431 kWh (53% of expected), about $172.",
+      "Roughly 74% of capacity appears offline, from the size of the step.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
     ],
     "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
     ],
     "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
+      "Soft foam snow rake (only if clearing is required)"
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2644,12 +2503,12 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2015-01-04 to 2015-01-09)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 6 day(s), 2015-01-04 to 2015-01-09. Estimated cost so far: $111.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 6 day(s), 2015-01-04 to 2015-01-09. Estimated cost so far: $96.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
-      "Estimated energy lost: 923 kWh (21% of expected), about $111.",
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.80 during the event (1.00 = healthy).",
+      "Estimated energy lost: 803 kWh (19% of expected), about $96.",
       "The decline appears to have started around 2015-01-03, 1 days before it crossed the alert threshold.",
-      "Performance recovered to 0.87 of baseline in the week after.",
+      "Performance recovered to 0.88 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
     ],
     "likely_causes": [
@@ -2668,7 +2527,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2678,10 +2537,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2015-01-21 to 2015-01-21)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-01-21 to 2015-01-21. Estimated cost so far: $47.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-01-21 to 2015-01-21. Estimated cost so far: $42.",
     "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
-      "Estimated energy lost: 393 kWh (99% of expected), about $47.",
+      "Performance index fell from 1.06 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
+      "Estimated energy lost: 351 kWh (99% of expected), about $42.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2699,41 +2558,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2015-01-22-tracker_stall",
-    "event_id": "1430-2015-01-22-tracker_stall",
-    "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2015-01-22 to 2015-01-26)",
-    "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2015-01-22 to 2015-01-26. Estimated cost so far: $129.",
-    "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,075 kWh (19% of expected), about $129.",
-      "Morning and evening output ran 24 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
-    ],
-    "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
-    ],
-    "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
-    ],
-    "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2743,10 +2568,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2015-02-01 to 2015-02-01)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-02-01 to 2015-02-01. Estimated cost so far: $77.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-02-01 to 2015-02-01. Estimated cost so far: $71.",
     "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.05 during the event (1.00 = healthy).",
-      "Estimated energy lost: 642 kWh (96% of expected), about $77.",
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
+      "Estimated energy lost: 595 kWh (95% of expected), about $71.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2764,7 +2589,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2772,12 +2597,12 @@
     "event_id": "1430-2015-02-02-soiling",
     "site_id": 1430,
     "kind": "soiling",
-    "title": "NREL Mesa 1-axis: soiling / gradual loss (2015-02-02 to 2015-02-04)",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2015-02-02 to 2015-02-05)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2015-02-02 to 2015-02-04. Estimated cost so far: $68.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2015-02-02 to 2015-02-05. Estimated cost so far: $73.",
     "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
-      "Estimated energy lost: 570 kWh (15% of expected), about $68.",
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
+      "Estimated energy lost: 606 kWh (12% of expected), about $73.",
       "The decline appears to have started around 2015-01-30, 3 days before it crossed the alert threshold.",
       "Performance recovered to 1.02 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
@@ -2798,7 +2623,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2808,10 +2633,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2015-02-16 to 2015-02-16)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-02-16 to 2015-02-16. Estimated cost so far: $87.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-02-16 to 2015-02-16. Estimated cost so far: $82.",
     "evidence": [
-      "Performance index fell from 1.04 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
-      "Estimated energy lost: 721 kWh (91% of expected), about $87.",
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
+      "Estimated energy lost: 680 kWh (91% of expected), about $82.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2829,7 +2654,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2839,10 +2664,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2015-02-22 to 2015-02-23)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2015-02-22 to 2015-02-23. Estimated cost so far: $307.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2015-02-22 to 2015-02-23. Estimated cost so far: $296.",
     "evidence": [
-      "Performance index fell from 1.04 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,560 kWh (94% of expected), about $307.",
+      "Performance index fell from 1.06 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,469 kWh (94% of expected), about $296.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2860,7 +2685,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2870,10 +2695,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2015-02-26 to 2015-02-28)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2015-02-26 to 2015-02-28. Estimated cost so far: $531.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2015-02-26 to 2015-02-28. Estimated cost so far: $505.",
     "evidence": [
-      "Performance index fell from 1.04 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 4,429 kWh (99% of expected), about $531.",
+      "Performance index fell from 1.06 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 4,207 kWh (99% of expected), about $505.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -2891,7 +2716,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2901,10 +2726,10 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2015-03-01 to 2015-03-04)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2015-03-01 to 2015-03-04. Estimated cost so far: $158.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2015-03-01 to 2015-03-04. Estimated cost so far: $127.",
     "evidence": [
-      "Performance index fell from 1.04 in the two weeks before to a median of 0.52 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,314 kWh (29% of expected), about $158.",
+      "Performance index fell from 1.06 in the two weeks before to a median of 0.55 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,061 kWh (25% of expected), about $127.",
       "The decline appears to have started around 2015-02-25, 4 days before it crossed the alert threshold.",
       "Performance recovered to 0.98 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
@@ -2925,7 +2750,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -2935,10 +2760,10 @@
     "kind": "tracker_stall",
     "title": "NREL Mesa 1-axis: tracker stall (2015-03-10 to 2015-03-11)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2015-03-10 to 2015-03-11. Estimated cost so far: $44.",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2015-03-10 to 2015-03-11. Estimated cost so far: $45.",
     "evidence": [
-      "Performance index fell from 1.02 in the two weeks before to a median of 0.95 during the event (1.00 = healthy).",
-      "Estimated energy lost: 370 kWh (8% of expected), about $44.",
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.96 during the event (1.00 = healthy).",
+      "Estimated energy lost: 376 kWh (8% of expected), about $45.",
       "Morning and evening output ran 20 points further below expectation than midday output.",
       "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
     ],
@@ -2959,41 +2784,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2015-03-14-tracker_stall",
-    "event_id": "1430-2015-03-14-tracker_stall",
-    "site_id": 1430,
-    "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2015-03-14 to 2015-03-15)",
-    "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2015-03-14 to 2015-03-15. Estimated cost so far: $52.",
-    "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
-      "Estimated energy lost: 433 kWh (9% of expected), about $52.",
-      "Morning and evening output ran 22 points further below expectation than midday output.",
-      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
-    ],
-    "likely_causes": [
-      "Tracker controller fault or lost communications",
-      "Stow mode left active after high wind",
-      "Failed drive motor or row power supply"
-    ],
-    "recommended_actions": [
-      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
-      "Compare reported vs commanded row angles to find which rows are stuck",
-      "Clear any wind or snow stow left active; reset the controller",
-      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
-    ],
-    "parts_and_tools": [
-      "Spare tracker motor / controller board",
-      "Inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3003,10 +2794,10 @@
     "kind": "partial_outage",
     "title": "NREL Mesa 1-axis: partial outage (2015-03-31 to 2015-04-04)",
     "priority": "P3",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2015-03-31 to 2015-04-04. Estimated cost so far: $144.",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2015-03-31 to 2015-04-04. Estimated cost so far: $131.",
     "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,202 kWh (13% of expected), about $144.",
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,092 kWh (12% of expected), about $131.",
       "Roughly 10% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
@@ -3028,243 +2819,21 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
-    "ticket_id": "T-1430-2015-11-27-outage",
-    "event_id": "1430-2015-11-27-outage",
-    "site_id": 1430,
-    "kind": "outage",
-    "title": "NREL Mesa 1-axis: full outage (2015-11-27 to 2015-11-30)",
-    "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2015-11-27 to 2015-11-30. Estimated cost so far: $293.",
-    "evidence": [
-      "Performance index fell from 0.97 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 2,443 kWh (94% of expected), about $293."
-    ],
-    "likely_causes": [
-      "Inverter trip (ground fault, over-temperature, grid event)",
-      "Opened AC breaker or disconnect",
-      "Utility grid outage"
-    ],
-    "recommended_actions": [
-      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
-      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
-      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
-      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
-    ],
-    "parts_and_tools": [
-      "Inverter spare fuses",
-      "Insulation-resistance tester (ground-fault trips)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2015-12-26-snow",
-    "event_id": "1430-2015-12-26-snow",
-    "site_id": 1430,
-    "kind": "snow",
-    "title": "NREL Mesa 1-axis: snow cover (2015-12-26 to 2015-12-26)",
-    "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-12-26 to 2015-12-26. Estimated cost so far: $79.",
-    "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
-      "Estimated energy lost: 660 kWh (96% of expected), about $79.",
-      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
-    ],
-    "likely_causes": [
-      "Snow or ice covering the modules",
-      "Snow drift against low-tilt rows"
-    ],
-    "recommended_actions": [
-      "No dispatch yet: snow usually slides or melts off within a few days",
-      "Check the forecast; if a thaw is coming, re-check output the day after",
-      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
-      "Do not scrape modules; use only soft tools if clearing is required by contract"
-    ],
-    "parts_and_tools": [
-      "Soft foam snow rake (only if clearing is required)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2015-12-27-snow",
-    "event_id": "1430-2015-12-27-snow",
-    "site_id": 1430,
-    "kind": "snow",
-    "title": "NREL Mesa 1-axis: snow cover (2015-12-27 to 2015-12-29)",
-    "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2015-12-27 to 2015-12-29. Estimated cost so far: $155.",
-    "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.74 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,290 kWh (37% of expected), about $155.",
-      "Roughly 24% of capacity appears offline, from the size of the step.",
-      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
-    ],
-    "likely_causes": [
-      "Snow or ice covering the modules",
-      "Snow drift against low-tilt rows"
-    ],
-    "recommended_actions": [
-      "No dispatch yet: snow usually slides or melts off within a few days",
-      "Check the forecast; if a thaw is coming, re-check output the day after",
-      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
-      "Do not scrape modules; use only soft tools if clearing is required by contract"
-    ],
-    "parts_and_tools": [
-      "Soft foam snow rake (only if clearing is required)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2016-01-08-outage",
-    "event_id": "1430-2016-01-08-outage",
-    "site_id": 1430,
-    "kind": "outage",
-    "title": "NREL Mesa 1-axis: full outage (2016-01-08 to 2016-01-08)",
-    "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2016-01-08 to 2016-01-08. Estimated cost so far: $52.",
-    "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
-      "Estimated energy lost: 437 kWh (99% of expected), about $52."
-    ],
-    "likely_causes": [
-      "Inverter trip (ground fault, over-temperature, grid event)",
-      "Opened AC breaker or disconnect",
-      "Utility grid outage"
-    ],
-    "recommended_actions": [
-      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
-      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
-      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
-      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
-    ],
-    "parts_and_tools": [
-      "Inverter spare fuses",
-      "Insulation-resistance tester (ground-fault trips)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2016-02-01-snow",
-    "event_id": "1430-2016-02-01-snow",
-    "site_id": 1430,
-    "kind": "snow",
-    "title": "NREL Mesa 1-axis: snow cover (2016-02-01 to 2016-02-02)",
-    "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2016-02-01 to 2016-02-02. Estimated cost so far: $165.",
-    "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.07 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,372 kWh (90% of expected), about $165.",
-      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
-    ],
-    "likely_causes": [
-      "Snow or ice covering the modules",
-      "Snow drift against low-tilt rows"
-    ],
-    "recommended_actions": [
-      "No dispatch yet: snow usually slides or melts off within a few days",
-      "Check the forecast; if a thaw is coming, re-check output the day after",
-      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
-      "Do not scrape modules; use only soft tools if clearing is required by contract"
-    ],
-    "parts_and_tools": [
-      "Soft foam snow rake (only if clearing is required)"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2016-08-12-sensor_fault",
-    "event_id": "1430-2016-08-12-sensor_fault",
-    "site_id": 1430,
-    "kind": "sensor_fault",
-    "title": "NREL Mesa 1-axis: irradiance sensor fault (2016-08-12 to 2016-09-25)",
-    "priority": "P3",
-    "summary": "Irradiance sensor fault detected at NREL Mesa 1-axis (Golden, CO) over 45 day(s), 2016-08-12 to 2016-09-25.",
-    "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 1.11 during the event (1.00 = healthy).",
-      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
-    ],
-    "likely_causes": [
-      "Dirty or shaded pyranometer",
-      "Sensor drift / out of calibration",
-      "Sensor knocked out of plane"
-    ],
-    "recommended_actions": [
-      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
-      "Cross-check its readings against a second on-site sensor or satellite irradiance",
-      "Recalibrate or replace the sensor if the offset persists",
-      "Treat performance numbers for this window as unreliable until fixed"
-    ],
-    "parts_and_tools": [
-      "Spare pyranometer / reference cell",
-      "Bubble level and inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2016-10-15-sensor_fault",
-    "event_id": "1430-2016-10-15-sensor_fault",
-    "site_id": 1430,
-    "kind": "sensor_fault",
-    "title": "NREL Mesa 1-axis: irradiance sensor fault (2016-10-15 to 2016-10-17)",
-    "priority": "P3",
-    "summary": "Irradiance sensor fault detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2016-10-15 to 2016-10-17.",
-    "evidence": [
-      "Performance index fell from 1.05 in the two weeks before to a median of 1.11 during the event (1.00 = healthy).",
-      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
-    ],
-    "likely_causes": [
-      "Dirty or shaded pyranometer",
-      "Sensor drift / out of calibration",
-      "Sensor knocked out of plane"
-    ],
-    "recommended_actions": [
-      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
-      "Cross-check its readings against a second on-site sensor or satellite irradiance",
-      "Recalibrate or replace the sensor if the offset persists",
-      "Treat performance numbers for this window as unreliable until fixed"
-    ],
-    "parts_and_tools": [
-      "Spare pyranometer / reference cell",
-      "Bubble level and inclinometer"
-    ],
-    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
-    "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
-    "status": "historical"
-  },
-  {
-    "ticket_id": "T-1430-2016-11-10-tracker_stall",
-    "event_id": "1430-2016-11-10-tracker_stall",
+    "ticket_id": "T-1430-2015-04-05-tracker_stall",
+    "event_id": "1430-2015-04-05-tracker_stall",
     "site_id": 1430,
     "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2016-11-10 to 2016-11-11)",
+    "title": "NREL Mesa 1-axis: tracker stall (2015-04-05 to 2015-04-06)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2016-11-10 to 2016-11-11. Estimated cost so far: $36.",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2015-04-05 to 2015-04-06. Estimated cost so far: $53.",
     "evidence": [
-      "Performance index fell from 1.05 in the two weeks before to a median of 0.96 during the event (1.00 = healthy).",
-      "Estimated energy lost: 296 kWh (10% of expected), about $36.",
-      "Morning and evening output ran 31 points further below expectation than midday output.",
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.96 during the event (1.00 = healthy).",
+      "Estimated energy lost: 440 kWh (8% of expected), about $53.",
+      "Morning and evening output ran 17 points further below expectation than midday output.",
       "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
     ],
     "likely_causes": [
@@ -3284,7 +2853,432 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-10-24-partial_outage",
+    "event_id": "1430-2015-10-24-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2015-10-24 to 2015-10-26)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2015-10-24 to 2015-10-26. Estimated cost so far: $44.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
+      "Estimated energy lost: 368 kWh (9% of expected), about $44.",
+      "Roughly 8% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-11-27-outage",
+    "event_id": "1430-2015-11-27-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2015-11-27 to 2015-11-30)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2015-11-27 to 2015-11-30. Estimated cost so far: $272.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,266 kWh (94% of expected), about $272."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-12-13-snow",
+    "event_id": "1430-2015-12-13-snow",
+    "site_id": 1430,
+    "kind": "snow",
+    "title": "NREL Mesa 1-axis: snow cover (2015-12-13 to 2015-12-16)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2015-12-13 to 2015-12-16. Estimated cost so far: $98.",
+    "evidence": [
+      "Performance index fell from 0.99 in the two weeks before to a median of 0.71 during the event (1.00 = healthy).",
+      "Estimated energy lost: 817 kWh (23% of expected), about $98.",
+      "Roughly 13% of capacity appears offline, from the size of the step.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
+    ],
+    "likely_causes": [
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
+    ],
+    "recommended_actions": [
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
+    ],
+    "parts_and_tools": [
+      "Soft foam snow rake (only if clearing is required)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-12-26-snow",
+    "event_id": "1430-2015-12-26-snow",
+    "site_id": 1430,
+    "kind": "snow",
+    "title": "NREL Mesa 1-axis: snow cover (2015-12-26 to 2015-12-26)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2015-12-26 to 2015-12-26. Estimated cost so far: $74.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.06 during the event (1.00 = healthy).",
+      "Estimated energy lost: 619 kWh (96% of expected), about $74.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
+    ],
+    "likely_causes": [
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
+    ],
+    "recommended_actions": [
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
+    ],
+    "parts_and_tools": [
+      "Soft foam snow rake (only if clearing is required)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2015-12-27-snow",
+    "event_id": "1430-2015-12-27-snow",
+    "site_id": 1430,
+    "kind": "snow",
+    "title": "NREL Mesa 1-axis: snow cover (2015-12-27 to 2015-12-29)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2015-12-27 to 2015-12-29. Estimated cost so far: $143.",
+    "evidence": [
+      "Performance index fell from 0.96 in the two weeks before to a median of 0.77 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,190 kWh (35% of expected), about $143.",
+      "Roughly 22% of capacity appears offline, from the size of the step.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
+    ],
+    "likely_causes": [
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
+    ],
+    "recommended_actions": [
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
+    ],
+    "parts_and_tools": [
+      "Soft foam snow rake (only if clearing is required)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-01-08-outage",
+    "event_id": "1430-2016-01-08-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2016-01-08 to 2016-01-08)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2016-01-08 to 2016-01-08. Estimated cost so far: $49.",
+    "evidence": [
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.01 during the event (1.00 = healthy).",
+      "Estimated energy lost: 405 kWh (99% of expected), about $49."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-02-01-outage",
+    "event_id": "1430-2016-02-01-outage",
+    "site_id": 1430,
+    "kind": "outage",
+    "title": "NREL Mesa 1-axis: full outage (2016-02-01 to 2016-02-01)",
+    "priority": "P2",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2016-02-01 to 2016-02-01. Estimated cost so far: $55.",
+    "evidence": [
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 455 kWh (100% of expected), about $55."
+    ],
+    "likely_causes": [
+      "Inverter trip (ground fault, over-temperature, grid event)",
+      "Opened AC breaker or disconnect",
+      "Utility grid outage"
+    ],
+    "recommended_actions": [
+      "Check SCADA / inverter alarm log for the trip code and time of the first fault",
+      "Confirm grid availability with the utility before dispatch (rule out a feeder outage)",
+      "If alarms allow, attempt one remote reset; otherwise dispatch a technician",
+      "On site: inspect inverter, AC disconnect and breakers; follow lockout/tagout"
+    ],
+    "parts_and_tools": [
+      "Inverter spare fuses",
+      "Insulation-resistance tester (ground-fault trips)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-02-02-snow",
+    "event_id": "1430-2016-02-02-snow",
+    "site_id": 1430,
+    "kind": "snow",
+    "title": "NREL Mesa 1-axis: snow cover (2016-02-02 to 2016-02-04)",
+    "priority": "P4",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2016-02-02 to 2016-02-04. Estimated cost so far: $253.",
+    "evidence": [
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.39 during the event (1.00 = healthy).",
+      "Estimated energy lost: 2,112 kWh (53% of expected), about $253.",
+      "Roughly 61% of capacity appears offline, from the size of the step.",
+      "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
+    ],
+    "likely_causes": [
+      "Snow or ice covering the modules",
+      "Snow drift against low-tilt rows"
+    ],
+    "recommended_actions": [
+      "No dispatch yet: snow usually slides or melts off within a few days",
+      "Check the forecast; if a thaw is coming, re-check output the day after",
+      "Dispatch only if output stays low two sunny days after the thaw (possible ice or snow damage)",
+      "Do not scrape modules; use only soft tools if clearing is required by contract"
+    ],
+    "parts_and_tools": [
+      "Soft foam snow rake (only if clearing is required)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-08-12-sensor_fault",
+    "event_id": "1430-2016-08-12-sensor_fault",
+    "site_id": 1430,
+    "kind": "sensor_fault",
+    "title": "NREL Mesa 1-axis: irradiance sensor fault (2016-08-12 to 2016-09-11)",
+    "priority": "P3",
+    "summary": "Irradiance sensor fault detected at NREL Mesa 1-axis (Golden, CO) over 31 day(s), 2016-08-12 to 2016-09-11.",
+    "evidence": [
+      "Performance index fell from 1.01 in the two weeks before to a median of 1.16 during the event (1.00 = healthy).",
+      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    ],
+    "likely_causes": [
+      "Dirty or shaded pyranometer",
+      "Sensor drift / out of calibration",
+      "Sensor knocked out of plane"
+    ],
+    "recommended_actions": [
+      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
+      "Cross-check its readings against a second on-site sensor or satellite irradiance",
+      "Recalibrate or replace the sensor if the offset persists",
+      "Treat performance numbers for this window as unreliable until fixed"
+    ],
+    "parts_and_tools": [
+      "Spare pyranometer / reference cell",
+      "Bubble level and inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-09-16-sensor_fault",
+    "event_id": "1430-2016-09-16-sensor_fault",
+    "site_id": 1430,
+    "kind": "sensor_fault",
+    "title": "NREL Mesa 1-axis: irradiance sensor fault (2016-09-16 to 2016-09-19)",
+    "priority": "P3",
+    "summary": "Irradiance sensor fault detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2016-09-16 to 2016-09-19.",
+    "evidence": [
+      "Performance index fell from 1.06 in the two weeks before to a median of 1.12 during the event (1.00 = healthy).",
+      "Output is above what the measured irradiance allows, so the irradiance sensor is most likely reading low (dirty, drifting or misaligned)."
+    ],
+    "likely_causes": [
+      "Dirty or shaded pyranometer",
+      "Sensor drift / out of calibration",
+      "Sensor knocked out of plane"
+    ],
+    "recommended_actions": [
+      "Clean the plane-of-array pyranometer and check its level and tilt alignment",
+      "Cross-check its readings against a second on-site sensor or satellite irradiance",
+      "Recalibrate or replace the sensor if the offset persists",
+      "Treat performance numbers for this window as unreliable until fixed"
+    ],
+    "parts_and_tools": [
+      "Spare pyranometer / reference cell",
+      "Bubble level and inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-10-27-partial_outage",
+    "event_id": "1430-2016-10-27-partial_outage",
+    "site_id": 1430,
+    "kind": "partial_outage",
+    "title": "NREL Mesa 1-axis: partial outage (2016-10-27 to 2016-10-30)",
+    "priority": "P3",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2016-10-27 to 2016-10-30. Estimated cost so far: $44.",
+    "evidence": [
+      "Performance index fell from 1.04 in the two weeks before to a median of 0.94 during the event (1.00 = healthy).",
+      "Estimated energy lost: 364 kWh (9% of expected), about $44.",
+      "Roughly 12% of capacity appears offline, from the size of the step.",
+      "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
+    ],
+    "likely_causes": [
+      "One inverter or inverter module offline",
+      "Blown combiner fuse / open string",
+      "Tripped DC disconnect in one block"
+    ],
+    "recommended_actions": [
+      "Compare inverter- and combiner-level currents to locate the offline section",
+      "Pull inverter fault logs for the start date",
+      "Inspect combiner-box fuses and string connectors in the affected block",
+      "Run IV-curve traces on suspect strings; replace failed fuses or components"
+    ],
+    "parts_and_tools": [
+      "Combiner fuses (matching rating)",
+      "IV-curve tracer",
+      "MC4 connectors"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-11-10-tracker_stall",
+    "event_id": "1430-2016-11-10-tracker_stall",
+    "site_id": 1430,
+    "kind": "tracker_stall",
+    "title": "NREL Mesa 1-axis: tracker stall (2016-11-10 to 2016-11-11)",
+    "priority": "P3",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2016-11-10 to 2016-11-11. Estimated cost so far: $35.",
+    "evidence": [
+      "Performance index fell from 1.06 in the two weeks before to a median of 0.97 during the event (1.00 = healthy).",
+      "Estimated energy lost: 288 kWh (10% of expected), about $35.",
+      "Morning and evening output ran 25 points further below expectation than midday output.",
+      "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
+    ],
+    "likely_causes": [
+      "Tracker controller fault or lost communications",
+      "Stow mode left active after high wind",
+      "Failed drive motor or row power supply"
+    ],
+    "recommended_actions": [
+      "Check the tracker controller (TCU/NCU) for alarms, stow commands and lost communications",
+      "Compare reported vs commanded row angles to find which rows are stuck",
+      "Clear any wind or snow stow left active; reset the controller",
+      "On site: inspect drive motors, slew gears and row power supplies on stuck rows"
+    ],
+    "parts_and_tools": [
+      "Spare tracker motor / controller board",
+      "Inclinometer"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
+    "status": "historical"
+  },
+  {
+    "ticket_id": "T-1430-2016-11-13-soiling",
+    "event_id": "1430-2016-11-13-soiling",
+    "site_id": 1430,
+    "kind": "soiling",
+    "title": "NREL Mesa 1-axis: soiling / gradual loss (2016-11-13 to 2016-11-16)",
+    "priority": "P3",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2016-11-13 to 2016-11-16. Estimated cost so far: $51.",
+    "evidence": [
+      "Performance index fell from 1.06 in the two weeks before to a median of 0.98 during the event (1.00 = healthy).",
+      "Estimated energy lost: 426 kWh (8% of expected), about $51.",
+      "The decline appears to have started around 2016-11-09, 4 days before it crossed the alert threshold.",
+      "Performance recovered to 0.96 of baseline in the week after.",
+      "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation)."
+    ],
+    "likely_causes": [
+      "Dust or pollen build-up during a dry spell",
+      "Bird droppings",
+      "Gradual module degradation"
+    ],
+    "recommended_actions": [
+      "Visually inspect a sample of modules and photograph the soiling",
+      "Compare against the decline start date and the last rain or wash",
+      "Schedule a wash if the recoverable energy outweighs the cleaning cost; check the rain forecast first",
+      "After cleaning, confirm the performance index returns to its baseline"
+    ],
+    "parts_and_tools": [
+      "Wash crew / water truck (deionised water)"
+    ],
+    "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
+    "drafted_by": "template",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3294,10 +3288,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2016-11-17 to 2016-11-17)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2016-11-17 to 2016-11-17. Estimated cost so far: $16.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2016-11-17 to 2016-11-17. Estimated cost so far: $13.",
     "evidence": [
-      "Performance index fell from 1.03 in the two weeks before to a median of 0.08 during the event (1.00 = healthy).",
-      "Estimated energy lost: 136 kWh (87% of expected), about $16.",
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.09 during the event (1.00 = healthy).",
+      "Estimated energy lost: 110 kWh (84% of expected), about $13.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -3315,7 +3309,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3325,10 +3319,10 @@
     "kind": "snow",
     "title": "NREL Mesa 1-axis: snow cover (2016-12-07 to 2016-12-08)",
     "priority": "P4",
-    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2016-12-07 to 2016-12-08. Estimated cost so far: $204.",
+    "summary": "Snow cover detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2016-12-07 to 2016-12-08. Estimated cost so far: $198.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.11 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,704 kWh (89% of expected), about $204.",
+      "Performance index fell from 1.02 in the two weeks before to a median of 0.11 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,646 kWh (89% of expected), about $198.",
       "Output collapsed but didn't switch off, right after freezing weather, while the irradiance sensor still saw sun: the panels are most likely covered by snow. Usually clears on its own as it melts."
     ],
     "likely_causes": [
@@ -3346,7 +3340,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3356,10 +3350,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2016-12-17 to 2016-12-17)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2016-12-17 to 2016-12-17. Estimated cost so far: $92.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2016-12-17 to 2016-12-17. Estimated cost so far: $84.",
     "evidence": [
-      "Performance index fell from 1.04 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 763 kWh (100% of expected), about $92."
+      "Performance index fell from 1.05 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 704 kWh (100% of expected), about $84."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -3378,7 +3372,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3388,10 +3382,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2017-01-05 to 2017-01-05)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2017-01-05 to 2017-01-05. Estimated cost so far: $57.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2017-01-05 to 2017-01-05. Estimated cost so far: $53.",
     "evidence": [
       "Performance index fell from 1.03 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 475 kWh (100% of expected), about $57."
+      "Estimated energy lost: 439 kWh (100% of expected), about $53."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -3410,7 +3404,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3439,7 +3433,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3449,12 +3443,12 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2017-02-23 to 2017-02-27)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2017-02-23 to 2017-02-27. Estimated cost so far: $173.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2017-02-23 to 2017-02-27. Estimated cost so far: $143.",
     "evidence": [
-      "Performance index fell from 1.01 in the two weeks before to a median of 0.83 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,442 kWh (19% of expected), about $173.",
+      "Performance index fell from 1.03 in the two weeks before to a median of 0.84 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,193 kWh (16% of expected), about $143.",
       "The decline appears to have started around 2017-02-22, 1 days before it crossed the alert threshold.",
-      "Performance recovered to 0.98 of baseline in the week after.",
+      "Performance recovered to 0.99 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
     ],
     "likely_causes": [
@@ -3473,7 +3467,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3483,11 +3477,11 @@
     "kind": "partial_outage",
     "title": "NREL Mesa 1-axis: partial outage (2017-03-24 to 2017-03-26)",
     "priority": "P2",
-    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2017-03-24 to 2017-03-26. Estimated cost so far: $100.",
+    "summary": "Partial outage detected at NREL Mesa 1-axis (Golden, CO) over 3 day(s), 2017-03-24 to 2017-03-26. Estimated cost so far: $91.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.78 during the event (1.00 = healthy).",
-      "Estimated energy lost: 830 kWh (24% of expected), about $100.",
-      "Roughly 23% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.81 during the event (1.00 = healthy).",
+      "Estimated energy lost: 758 kWh (22% of expected), about $91.",
+      "Roughly 22% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -3508,7 +3502,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3518,12 +3512,12 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2017-04-01 to 2017-04-04)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2017-04-01 to 2017-04-04. Estimated cost so far: $89.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2017-04-01 to 2017-04-04. Estimated cost so far: $74.",
     "evidence": [
-      "Performance index fell from 0.98 in the two weeks before to a median of 0.89 during the event (1.00 = healthy).",
-      "Estimated energy lost: 742 kWh (10% of expected), about $89.",
-      "The decline appears to have started around 2017-03-10, 22 days before it crossed the alert threshold.",
-      "Performance recovered to 0.99 of baseline in the week after.",
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.92 during the event (1.00 = healthy).",
+      "Estimated energy lost: 613 kWh (8% of expected), about $74.",
+      "The decline appears to have started around 2017-03-28, 4 days before it crossed the alert threshold.",
+      "Performance recovered to 1.00 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
     ],
     "likely_causes": [
@@ -3542,7 +3536,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3571,7 +3565,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3581,10 +3575,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2017-10-05 to 2017-10-05)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2017-10-05 to 2017-10-05. Estimated cost so far: $167.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 1 day(s), 2017-10-05 to 2017-10-05. Estimated cost so far: $168.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.13 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,395 kWh (86% of expected), about $167."
+      "Performance index fell from 0.98 in the two weeks before to a median of 0.14 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,402 kWh (86% of expected), about $168."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -3603,7 +3597,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "historical"
   },
   {
@@ -3613,12 +3607,12 @@
     "kind": "soiling",
     "title": "NREL Mesa 1-axis: soiling / gradual loss (2017-10-06 to 2017-10-09)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2017-10-06 to 2017-10-09. Estimated cost so far: $93.",
+    "summary": "Soiling / gradual loss detected at NREL Mesa 1-axis (Golden, CO) over 4 day(s), 2017-10-06 to 2017-10-09. Estimated cost so far: $90.",
     "evidence": [
-      "Performance index fell from 0.96 in the two weeks before to a median of 0.86 during the event (1.00 = healthy).",
-      "Estimated energy lost: 772 kWh (11% of expected), about $93.",
+      "Performance index fell from 0.97 in the two weeks before to a median of 0.87 during the event (1.00 = healthy).",
+      "Estimated energy lost: 748 kWh (11% of expected), about $90.",
       "The decline appears to have started around 2017-10-04, 2 days before it crossed the alert threshold.",
-      "Performance recovered to 1.01 of baseline in the week after.",
+      "Performance recovered to 1.00 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
     ],
     "likely_causes": [
@@ -3637,7 +3631,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-26T22:30:29Z",
+    "drafted_at": "2026-11-26T22:34:21Z",
     "status": "pending_review"
   }
 ]

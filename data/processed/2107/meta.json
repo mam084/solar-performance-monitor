@@ -12,7 +12,7 @@
     "azimuth": 180
   },
   "source": "pvdaq",
-  "built_at": "2026-11-26T22:30:34Z",
+  "built_at": "2026-11-26T22:34:26Z",
   "data_start": "2018-01-17",
   "data_end": "2025-12-31",
   "calibration_scale": 0.8226,
@@ -26,35 +26,35 @@
     0.568,
     1.444
   ],
-  "nrmse_healthy_pct": 12.67,
+  "nrmse_healthy_pct": 9.82,
   "price_usd_kwh": 0.12,
-  "n_events": 34,
+  "n_events": 40,
   "ticket_window_days": 45,
   "ml": {
-    "adopted": false,
+    "adopted": true,
     "holdout_start": "2024-01-05",
     "train_rows": 70682,
     "holdout_nrmse_physics": 11.9,
     "holdout_nrmse_ml": 10.25,
     "holdout_daily_scatter_physics": 0.0483,
     "holdout_daily_scatter_ml": 0.0472,
-    "reason": "didn't beat physics on held-out data by at least 3% on both 15-min error and daily scatter"
+    "reason": "cut held-out 15-min error by 14% without making daily scatter worse"
   },
   "health": {
-    "nrmse_full_health_pct": 5.02,
-    "full_health_days": 439,
-    "chronic_shortfall_pct": 8.0,
-    "chronic_shortfall_mwh_per_year": 129.4,
-    "chronic_shortfall_usd_per_year": 15531,
+    "nrmse_full_health_pct": 4.53,
+    "full_health_days": 479,
+    "chronic_shortfall_pct": 6.76,
+    "chronic_shortfall_mwh_per_year": 108.3,
+    "chronic_shortfall_usd_per_year": 12997,
     "chronic_shortfall_by_year_pct": {
-      "2018": 10.2,
-      "2019": 8.5,
-      "2020": 8.8,
-      "2021": 8.1,
-      "2022": 8.8,
-      "2023": 6.1,
-      "2024": 6.8,
-      "2025": 6.5
+      "2018": 9.6,
+      "2019": 7.5,
+      "2020": 7.7,
+      "2021": 7.7,
+      "2022": 7.4,
+      "2023": 4.3,
+      "2024": 5.4,
+      "2025": 4.0
     }
   },
   "preflight": [

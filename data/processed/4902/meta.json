@@ -12,7 +12,7 @@
     "azimuth": 180
   },
   "source": "pvdaq",
-  "built_at": "2026-11-26T22:30:52Z",
+  "built_at": "2026-11-26T22:34:43Z",
   "data_start": "2014-07-29",
   "data_end": "2018-03-15",
   "calibration_scale": 0.9281,
@@ -38,7 +38,7 @@
     "holdout_nrmse_ml": 13.85,
     "holdout_daily_scatter_physics": 0.0358,
     "holdout_daily_scatter_ml": 0.0344,
-    "reason": "beat physics on held-out data on both 15-min error and daily scatter"
+    "reason": "cut held-out 15-min error by 22% without making daily scatter worse"
   },
   "health": {
     "nrmse_full_health_pct": 3.29,

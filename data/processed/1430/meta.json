@@ -12,7 +12,7 @@
     "azimuth": 180
   },
   "source": "pvdaq",
-  "built_at": "2026-11-26T22:30:29Z",
+  "built_at": "2026-11-26T22:34:21Z",
   "data_start": "2009-02-13",
   "data_end": "2017-11-21",
   "calibration_scale": 0.9435,
@@ -26,36 +26,36 @@
     0.68,
     1.065
   ],
-  "nrmse_healthy_pct": 7.06,
+  "nrmse_healthy_pct": 6.41,
   "price_usd_kwh": 0.12,
   "n_events": 112,
   "ticket_window_days": 45,
   "ml": {
-    "adopted": false,
+    "adopted": true,
     "holdout_start": "2015-09-12",
     "train_rows": 75948,
     "holdout_nrmse_physics": 6.51,
     "holdout_nrmse_ml": 6.26,
     "holdout_daily_scatter_physics": 0.018,
     "holdout_daily_scatter_ml": 0.0176,
-    "reason": "didn't beat physics on held-out data by at least 3% on both 15-min error and daily scatter"
+    "reason": "cut held-out 15-min error by 4% without making daily scatter worse"
   },
   "health": {
-    "nrmse_full_health_pct": 4.75,
-    "full_health_days": 311,
-    "chronic_shortfall_pct": 3.52,
-    "chronic_shortfall_mwh_per_year": 25.5,
-    "chronic_shortfall_usd_per_year": 3055,
+    "nrmse_full_health_pct": 4.38,
+    "full_health_days": 320,
+    "chronic_shortfall_pct": 3.02,
+    "chronic_shortfall_mwh_per_year": 21.7,
+    "chronic_shortfall_usd_per_year": 2604,
     "chronic_shortfall_by_year_pct": {
-      "2009": 0.8,
-      "2010": 3.6,
-      "2011": 3.2,
-      "2012": 3.1,
-      "2013": 2.7,
-      "2014": 5.7,
-      "2015": 4.2,
-      "2016": 2.8,
-      "2017": 5.6
+      "2009": 0.3,
+      "2010": 3.0,
+      "2011": 3.5,
+      "2012": 2.4,
+      "2013": 2.1,
+      "2014": 4.9,
+      "2015": 3.7,
+      "2016": 2.3,
+      "2017": 4.9
     }
   },
   "preflight": [
