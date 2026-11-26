@@ -24,7 +24,7 @@ flowchart LR
 - It's explainable to a technician: "the sensor saw 900 W/m² and the array made 75% of what that should give".
 - It already gets within about 3% at the 15-minute level on healthy days, so an ML residual model (phase 2) will be judged against a strong baseline, not a weak one.
 
-**Detection compares a site to itself.** Each day's performance index is divided by a rolling baseline: the 75th percentile of the last 90 days, recomputed with flagged days left out so a long fault never becomes the new normal. That absorbs slow degradation and per-site quirks without a per-site threshold.
+**Detection compares a site to itself.** A correction learned from the site's history (its normal actual/expected ratio by month and half-hour) removes biases that repeat every day. Each day's performance index is then divided by a rolling baseline: the median of the last 90 days, recomputed with flagged days left out so a long fault never becomes the new normal. Alert thresholds are scaled to the site's own day-to-day scatter, so a noisy site doesn't drown its operators in alarms.
 
 **The shape of a loss says what caused it.** Six patterns are cheap to tell apart from daily and 15-minute data:
 
@@ -49,15 +49,37 @@ All numbers below are on the demo fleet. Its weather is physics-based (each site
 
 | | Result |
 |---|---|
-| Model error on healthy days (15-min nRMSE) | 2.8–3.1% at every site (target < 5%) |
-| Faults found | 480 of 480 over 300 simulated site-years (5 sites × 30 weather seeds × 2 years) |
-| Labelled correctly | 478 of 480 |
-| False alarms | 1 in 300 site-years |
-| Detection delay | same day for abrupt faults; ~3 weeks for soiling, with the start of the slide traced back |
+| Model error on healthy days (15-min nRMSE) | 2.6–2.9% at every site (target < 5%) |
+| Faults found | 477 of 480 over 300 simulated site-years (5 sites × 30 weather seeds × 2 years) |
+| Labelled correctly | 474 of 480 |
+| False alarms | 4 in 300 site-years |
+| Detection delay | same day for abrupt faults; ~5 weeks for soiling, with the start of the slide traced back |
 
 Reproduce with `python -m solarmon.backtest --seeds 30 --site all`.
 
 **What these numbers don't show yet.** Synthetic faults are cleaner than real ones. Real data brings sensor dropouts, clock errors and faults that overlap. The next milestone is running site 2107's seven years of real PVDAQ data through `preflight` and `pipeline build` and checking the events against what's visible in the record. Expect the false-alarm rate to rise and the thresholds to need tuning.
+
+## What the real data taught us
+
+The first automated run on site 2107's real data (Nov 2017 – Dec 2025) produced 275 events and a 17% model error. Almost all of those events were wrong, and each wrong group pointed to something the demo data hadn't exercised:
+
+| What happened | Cause | Fix |
+|---|---|---|
+| 341 "sensor fault" days in 2017 | The irradiance sensor wasn't installed until November 2017 | Start each site where its irradiance data starts (`qa.trim_to_sensor_start`) |
+| 152 "tracker stalls" on a fixed-tilt array | Actual/expected ran high in the morning and low in the evening every day: the sensor sees the day differently from the panels | Tracker stalls only on single-axis sites; learn the site's normal ratio by month and half-hour (`expected.shape_correction`) |
+| A shape table learned from 2018 didn't fit later years | The sensor setup changed after 2018; from 2019 on, PI swings ±15% by month, the same way every year | Learn the table from all years with a robust median, so short faults don't shape it |
+| Dozens of "partial outages" with PI ≈ 1.0 | The demo's daily scatter is ~2%; the real site's is ~8% | Alert thresholds scaled to each site's own scatter (`detect.site_thresholds`): 2107 alerts below ~0.80 of baseline, quiet sites keep 0.93 |
+| One fault reported as seven | An unfixed problem dips in and out of the threshold | Merge same-kind events under a week apart |
+| "Curtailment" on ordinary days | The midday-vs-shoulder shape test is noisy under real clouds | Curtailment needs both a flat top and a short midday, on clear days only |
+
+After the fixes the same data gives about 40 events. Spot checks against the raw 15-minute data back them up: days with zero output in full sun, weeks-long irradiance dropouts, and a summer-2025 stretch where the site ran 8–20% short for two months.
+
+Two honest limits remain:
+
+- **Model error is still about 13% at 15 minutes.** A single on-site sensor and a large array see different clouds, and this site's sensor has its own quirks. Daily PI is steadier, and that's what detection uses, but a second irradiance source (satellite data or another on-site sensor) is the obvious next improvement.
+- **A noisy site is a less sensitive site.** Scaling thresholds to the noise is what stops false alarms, and it also means 2107 won't flag a loss under ~20% within days. Slower losses still show up through the rolling baseline.
+
+The demo backtest moved slightly with these changes: 477 of 480 faults found (was 480), 4 false alarms in 300 site-years (was 1), and soiling caught later. That's the price of a detector that holds up on real data.
 
 ## Scaling to a fleet
 

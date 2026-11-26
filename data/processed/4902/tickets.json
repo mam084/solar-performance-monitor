@@ -6,10 +6,10 @@
     "kind": "outage",
     "title": "NIST Ground Array: full outage (2024-03-06 to 2024-03-06)",
     "priority": "P2",
-    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2024-03-06 to 2024-03-06. Estimated cost so far: $165.",
+    "summary": "Full outage detected at NIST Ground Array (Gaithersburg, MD) over 1 day(s), 2024-03-06 to 2024-03-06. Estimated cost so far: $166.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 1,375 kWh (100% of expected), about $165."
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 1,380 kWh (100% of expected), about $166."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -28,7 +28,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-24T23:19:01Z",
+    "drafted_at": "2026-11-26T20:13:26Z",
     "status": "pending_review"
   },
   {
@@ -60,7 +60,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-24T23:19:01Z",
+    "drafted_at": "2026-11-26T20:13:26Z",
     "status": "pending_review"
   },
   {
@@ -70,11 +70,11 @@
     "kind": "partial_outage",
     "title": "NIST Ground Array: partial outage (2024-09-12 to 2024-10-02)",
     "priority": "P2",
-    "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 21 day(s), 2024-09-12 to 2024-10-02. Estimated cost so far: $707.",
+    "summary": "Partial outage detected at NIST Ground Array (Gaithersburg, MD) over 21 day(s), 2024-09-12 to 2024-10-02. Estimated cost so far: $618.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.74 during the event (1.00 = healthy).",
-      "Estimated energy lost: 5,891 kWh (27% of expected), about $707.",
-      "Roughly 26% of capacity appears offline, from the size of the step.",
+      "Performance index fell from 1.01 in the two weeks before to a median of 0.76 during the event (1.00 = healthy).",
+      "Estimated energy lost: 5,150 kWh (25% of expected), about $618.",
+      "Roughly 23% of capacity appears offline, from the size of the step.",
       "Performance stepped down abruptly and stayed flat, the signature of a share of the array going offline (an inverter, a combiner or a string)."
     ],
     "likely_causes": [
@@ -95,7 +95,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-24T23:19:01Z",
+    "drafted_at": "2026-11-26T20:13:26Z",
     "status": "pending_review"
   }
 ]

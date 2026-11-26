@@ -1,16 +1,16 @@
 [
   {
-    "ticket_id": "T-1430-2024-04-25-tracker_stall",
-    "event_id": "1430-2024-04-25-tracker_stall",
+    "ticket_id": "T-1430-2024-04-26-tracker_stall",
+    "event_id": "1430-2024-04-26-tracker_stall",
     "site_id": 1430,
     "kind": "tracker_stall",
-    "title": "NREL Mesa 1-axis: tracker stall (2024-04-25 to 2024-05-04)",
+    "title": "NREL Mesa 1-axis: tracker stall (2024-04-26 to 2024-05-04)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 10 day(s), 2024-04-25 to 2024-05-04. Estimated cost so far: $1,374.",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 9 day(s), 2024-04-26 to 2024-05-04. Estimated cost so far: $1,290.",
     "evidence": [
-      "Performance index fell from 1.00 in the two weeks before to a median of 0.78 during the event (1.00 = healthy).",
-      "Estimated energy lost: 11,451 kWh (23% of expected), about $1,374.",
-      "Morning and evening output ran 39 points further below expectation than midday output.",
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.77 during the event (1.00 = healthy).",
+      "Estimated energy lost: 10,752 kWh (23% of expected), about $1,290.",
+      "Morning and evening output ran 38 points further below expectation than midday output.",
       "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
     ],
     "likely_causes": [
@@ -30,7 +30,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-24T23:19:01Z",
+    "drafted_at": "2026-11-26T20:13:28Z",
     "status": "pending_review"
   },
   {
@@ -40,11 +40,11 @@
     "kind": "tracker_stall",
     "title": "NREL Mesa 1-axis: tracker stall (2024-05-06 to 2024-05-10)",
     "priority": "P3",
-    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2024-05-06 to 2024-05-10. Estimated cost so far: $680.",
+    "summary": "Tracker stall detected at NREL Mesa 1-axis (Golden, CO) over 5 day(s), 2024-05-06 to 2024-05-10. Estimated cost so far: $670.",
     "evidence": [
       "Performance index fell from 1.01 in the two weeks before to a median of 0.79 during the event (1.00 = healthy).",
-      "Estimated energy lost: 5,670 kWh (22% of expected), about $680.",
-      "Morning and evening output ran 39 points further below expectation than midday output.",
+      "Estimated energy lost: 5,584 kWh (22% of expected), about $670.",
+      "Morning and evening output ran 38 points further below expectation than midday output.",
       "Output holds up at midday but falls short in the morning and evening, the signature of tracker rows that stopped following the sun (parked or stuck)."
     ],
     "likely_causes": [
@@ -64,7 +64,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-24T23:19:01Z",
+    "drafted_at": "2026-11-26T20:13:28Z",
     "status": "pending_review"
   },
   {
@@ -74,10 +74,10 @@
     "kind": "outage",
     "title": "NREL Mesa 1-axis: full outage (2024-10-12 to 2024-10-13)",
     "priority": "P2",
-    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2024-10-12 to 2024-10-13. Estimated cost so far: $949.",
+    "summary": "Full outage detected at NREL Mesa 1-axis (Golden, CO) over 2 day(s), 2024-10-12 to 2024-10-13. Estimated cost so far: $926.",
     "evidence": [
-      "Performance index fell from 0.99 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
-      "Estimated energy lost: 7,904 kWh (100% of expected), about $949."
+      "Performance index fell from 1.00 in the two weeks before to a median of 0.00 during the event (1.00 = healthy).",
+      "Estimated energy lost: 7,716 kWh (100% of expected), about $926."
     ],
     "likely_causes": [
       "Inverter trip (ground fault, over-temperature, grid event)",
@@ -96,7 +96,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-24T23:19:01Z",
+    "drafted_at": "2026-11-26T20:13:28Z",
     "status": "pending_review"
   }
 ]

@@ -12,7 +12,7 @@
     "azimuth": 172
   },
   "source": "demo",
-  "built_at": "2026-11-24T23:19:00Z",
+  "built_at": "2026-11-26T20:13:30Z",
   "data_start": "2023-01-01",
   "data_end": "2024-12-31",
   "calibration_scale": 0.8795,
@@ -21,7 +21,12 @@
     "2023-01-01 08:00:00",
     "2024-01-01 08:00:00"
   ],
-  "nrmse_healthy_pct": 2.88,
+  "trimmed_before": null,
+  "shape_correction_range": [
+    0.945,
+    1.024
+  ],
+  "nrmse_healthy_pct": 2.81,
   "price_usd_kwh": 0.12,
   "n_events": 2,
   "backtest": {
@@ -29,7 +34,7 @@
     "detected": 2,
     "correct_kind": 2,
     "false_alarms": 0,
-    "median_delay_days": 5.0,
+    "median_delay_days": 16.5,
     "rows": [
       {
         "true_kind": "sensor_fault",
@@ -38,7 +43,7 @@
         "detected": true,
         "detected_kind": "sensor_fault",
         "correct_kind": true,
-        "delay_days": 0
+        "delay_days": 1
       },
       {
         "true_kind": "soiling",
@@ -47,7 +52,7 @@
         "detected": true,
         "detected_kind": "soiling",
         "correct_kind": true,
-        "delay_days": 10
+        "delay_days": 32
       }
     ]
   }

@@ -4,12 +4,12 @@ Compares each solar site's **actual** output with the output its **weather says 
 
 Built on NREL's public [PVDAQ](https://data.openei.org/submissions/4568) dataset: real production and on-site weather sensor data from PV systems across the US.
 
-> **Status: v0.2, first live version.** The full loop runs end to end: physics baseline, fault detection and classification, agent-drafted tickets, and a Streamlit approval queue. The hosted app currently runs on a labelled **demo dataset** for all five sites (physics-based weather for each site's location and mounting, with injected faults); real PVDAQ data swaps in with one command. See the [roadmap](#roadmap).
+> **Status: v0.3.** The full loop runs end to end: physics baseline, fault detection and classification, agent-drafted tickets, and a Streamlit approval queue. **Site 2107 runs on real PVDAQ data** (Nov 2017 – Dec 2025), refreshed automatically by a scheduled job. The other four sites run on a labelled **demo dataset** (physics-based weather for each site's location and mounting, with injected faults) until their columns are mapped. See the [roadmap](#roadmap).
 
 **What it does on the demo fleet:**
 
-- Predicts 15-minute output within **2.8–3.1% nRMSE** on healthy days at every site (target was < 5%)
-- Backtest over 300 simulated site-years (5 sites × 30 weather seeds × 2 years): **480 of 480** injected faults found, **478** labelled correctly, **1** false alarm. Abrupt faults are flagged the day they start; soiling about 3 weeks in, with the start of the slide traced back
+- **Real data, site 2107:** about 40 events over eight years: outages, irradiance-sensor dropouts, and a two-month partial outage in summer 2025. 15-min model error on healthy days is about 13%; daily PI, which detection uses, scatters about 8%. See [what the real data taught us](docs/scaling.md#what-the-real-data-taught-us)
+- **Demo fleet:** 2.6–2.9% nRMSE on healthy days. Backtest over 300 simulated site-years (5 sites × 30 weather seeds × 2 years): **477 of 480** injected faults found, **474** labelled correctly, **4** false alarms. Abrupt faults are flagged the day they start; soiling about 5 weeks in, with the start of the slide traced back
 - Recognises seven fault types, including tracker stalls on the single-axis site
 - Drafts a maintenance ticket per event (template offline, Claude with an API key) and logs every approve / edit / reject with who did it
 
@@ -35,7 +35,7 @@ flowchart LR
 1. **Ingest.** Download a site's files from NREL's public S3 bucket (no AWS account needed).
 2. **Expected output.** NREL's PVWatts model (via [`pvlib`](https://pvlib-python.readthedocs.io/)) turns the site's own plane-of-array irradiance and module temperature into an expected AC power. A single scale factor, fit on a known-good reference window, calibrates it to that site's real-world losses. *(Phase 2 adds an ML model on the residuals to learn site-specific quirks the physics misses.)*
 3. **Performance index (PI).** Daily actual energy ÷ expected energy. A healthy site sits near 1.0 regardless of weather.
-4. **Detection.** Each day's PI is compared with a rolling baseline (75th percentile of recent PI, recomputed without flagged days so a long fault doesn't become the new normal). Runs of flagged days become events, classified by shape:
+4. **Detection.** First, a correction learned from the site's own history (its normal actual/expected ratio by month and half-hour) removes biases that repeat every day, such as a sensor angled differently from the panels. Each day's PI is then compared with a rolling baseline (the median of recent days, recomputed without flagged days so a long fault doesn't become the new normal), with alert thresholds scaled to how noisy that site is. Runs of flagged days become events, classified by shape:
 
    | Event | Signature |
    |---|---|
@@ -161,9 +161,10 @@ tests/                   offline tests on synthetic data
   - [x] Repo, ingestion, and loader for both PVDAQ data layouts
   - [x] PVWatts expected-output model with calibration, plus a daily performance index
   - [x] Validated on the demo site: 2.9% nRMSE on healthy days
-  - [ ] Run `preflight 2107`, then `pipeline build 2107` on the real data and confirm < 5% nRMSE (pin down the Jan 2024 irradiance offset first, see `config/sites.yaml`)
+  - [x] Real data for site 2107 built by the scheduled job; learned daily-shape correction, sensor-start trim and site-scaled thresholds added after the first run
+  - [ ] Bring real-data model error down (13% at 15 min): a second irradiance source or the ML residual model
 - [ ] **Phase 2: Fleet + detection**
-  - [x] Underperformance detection and event classification, backtested on injected faults (480/480 found over 300 site-years)
+  - [x] Underperformance detection and event classification, backtested on injected faults (477/480 found over 300 site-years)
   - [x] Demo histories for all 5 sites, including single-axis tracker physics
   - [ ] Backtest on real, logged events at site 2107
   - [ ] All 5 sites ingested and mapped

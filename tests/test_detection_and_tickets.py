@@ -10,7 +10,7 @@ from solarmon import config, review
 from solarmon.config import get_site
 from solarmon.demo import make_demo
 from solarmon.detect import backtest, detect_events, false_alarms
-from solarmon.expected import expected_ac_kw
+from solarmon.expected import model_site
 from solarmon.metrics import daily_performance
 from solarmon.tickets import TICKET_SCHEMA, claude_ticket, draft_ticket, template_ticket
 
@@ -19,8 +19,9 @@ from solarmon.tickets import TICKET_SCHEMA, claude_ticket, draft_ticket, templat
 def demo_run():
     site = get_site(2107)
     df, faults = make_demo(site)
-    out = expected_ac_kw(df, site)
-    events, daily = detect_events(out, daily_performance(out), site.system_id)
+    out = model_site(df, site)
+    events, daily = detect_events(out, daily_performance(out), site.system_id,
+                                  single_axis=site.mount == "single_axis")
     truth = pd.DataFrame([f.__dict__ for f in faults])
     return site, events, daily, truth
 
@@ -65,8 +66,9 @@ def test_sensor_and_gap_events_claim_no_lost_energy(demo_run):
 def test_healthy_site_raises_no_events():
     site = get_site(2107)
     df, _ = make_demo(site, start="2023-01-01", end="2024-01-01", faults=[], seed=3)
-    out = expected_ac_kw(df, site)
-    events, _ = detect_events(out, daily_performance(out), site.system_id)
+    out = model_site(df, site)
+    events, _ = detect_events(out, daily_performance(out), site.system_id,
+                                  single_axis=site.mount == "single_axis")
     assert events == []
 
 
@@ -157,8 +159,9 @@ def test_every_fleet_site_demo_is_detected_and_labelled(system_id):
     """Each site has its own climate and faults; 1430 is a single-axis tracker."""
     site = get_site(system_id)
     df, faults = make_demo(site)
-    out = expected_ac_kw(df, site)
-    events, _ = detect_events(out, daily_performance(out), site.system_id)
+    out = model_site(df, site)
+    events, _ = detect_events(out, daily_performance(out), site.system_id,
+                                  single_axis=site.mount == "single_axis")
     truth = pd.DataFrame([f.__dict__ for f in faults])
     bt = backtest(events, truth)
     assert bt["correct_kind"].all(), bt
@@ -168,10 +171,59 @@ def test_every_fleet_site_demo_is_detected_and_labelled(system_id):
 def test_tracker_stall_ticket_uses_tracker_playbook():
     site = get_site(1430)
     df, _ = make_demo(site)
-    out = expected_ac_kw(df, site)
-    events, _ = detect_events(out, daily_performance(out), site.system_id)
+    out = model_site(df, site)
+    events, _ = detect_events(out, daily_performance(out), site.system_id,
+                                  single_axis=site.mount == "single_axis")
     stall = next(e for e in events if e.kind == "tracker_stall").to_dict()
     from solarmon.pipeline import site_dict
     t = template_ticket(stall, site_dict(site))
     assert any("tracker controller" in a.lower() for a in t["recommended_actions"])
     assert stall["evidence"]["shape_gap"] < -0.12
+
+
+# ----------------------------------------------------------------------------- lessons from real data (site 2107)
+
+def test_tracker_stall_only_on_tracker_sites():
+    site = get_site(1430)
+    df, _ = make_demo(site)
+    out = model_site(df, site)
+    events, _ = detect_events(out, daily_performance(out), site.system_id, single_axis=False)
+    assert not any(e.kind == "tracker_stall" for e in events)
+
+
+def test_shape_correction_absorbs_a_repeating_daily_bias():
+    """A sensor that sees the morning differently from the panels: same bias every day."""
+    import numpy as np
+    from solarmon.expected import expected_ac_kw, rmse_pct
+    site = get_site(2107)
+    df, _ = make_demo(site, start="2023-01-01", end="2024-01-01", faults=[], seed=4)
+    hour = df.index.hour + df.index.minute / 60
+    df["ac_power_kw"] *= 1 + 0.25 * np.clip((13 - hour) / 6, -1, 1)  # +25% at 7am, -25% at 7pm
+    raw = expected_ac_kw(df, site)
+    corrected = model_site(df, site)
+    err = lambda o: rmse_pct(o["ac_power_kw"], o["expected_ac_kw"], o["poa_irradiance"])  # noqa: E731
+    assert err(corrected) < 0.6 * err(raw)
+    events, _ = detect_events(corrected, daily_performance(corrected), site.system_id)
+    assert events == []
+
+
+def test_thresholds_widen_for_noisy_sites():
+    import numpy as np
+    from solarmon.detect import HIGH_DEV, LOW_DEV, site_thresholds
+    rng = np.random.default_rng(0)
+    quiet = pd.Series(rng.normal(1, 0.02, 400))
+    noisy = pd.Series(rng.normal(1, 0.08, 400))
+    assert site_thresholds(quiet) == (LOW_DEV, HIGH_DEV)
+    lo, hi = site_thresholds(noisy)
+    assert 0.75 < lo < 0.85 and 1.15 < hi < 1.25
+
+
+def test_period_before_irradiance_sensor_is_trimmed():
+    import numpy as np
+    from solarmon.qa import trim_to_sensor_start
+    site = get_site(2107)
+    df, _ = make_demo(site, start="2023-01-01", end="2023-08-01", faults=[], seed=1)
+    df.loc[:"2023-03-31", "poa_irradiance"] = np.nan  # sensor installed in April
+    t = trim_to_sensor_start(df)
+    assert pd.Timestamp("2023-03-25") <= t.index[0] <= pd.Timestamp("2023-04-01")
+    assert t.attrs["trimmed_before"] is not None

@@ -125,13 +125,14 @@ def run(site: Site) -> tuple[list[Check], pd.DataFrame | None]:
 
     # 6. calibration + accuracy
     from .detect import detect_events
-    from .expected import expected_ac_kw, rmse_pct
+    from .expected import model_site, rmse_pct
+    from .qa import trim_to_sensor_start
     from .metrics import daily_performance
     import contextlib
     import io
     with warnings.catch_warnings(), contextlib.redirect_stdout(io.StringIO()):
         warnings.simplefilter("ignore")
-        out = expected_ac_kw(df, site)  # its scale warning is reported below instead
+        out = model_site(trim_to_sensor_start(df), site)  # scale warning is reported below instead
     scale = out.attrs["scale"]
     checks.append(Check("calibration", PASS if 0.75 <= scale <= 1.05 else WARN,
                         f"scale {scale:.3f} on {out.attrs['reference'][0][:10]} to {out.attrs['reference'][1][:10]}, "
@@ -139,11 +140,12 @@ def run(site: Site) -> tuple[list[Check], pd.DataFrame | None]:
                         "" if 0.75 <= scale <= 1.05 else
                         "unusual: check power units, the POA column, or dc_capacity_kw; "
                         "or pick a healthier window with --reference"))
-    _, d = detect_events(out, daily_performance(out), site.system_id)
+    _, d = detect_events(out, daily_performance(out), site.system_id, single_axis=site.mount == "single_axis")
     healthy = pd.Series(out.index.normalize().isin(d.index[d["flag"] == "ok"]), index=out.index)
     nrmse = rmse_pct(out["ac_power_kw"], out["expected_ac_kw"], out["poa_irradiance"], only=healthy)
     by_year = {y: rmse_pct(g["ac_power_kw"], g["expected_ac_kw"], g["poa_irradiance"], only=healthy.loc[g.index])
                for y, g in out.groupby(out.index.year) if healthy.loc[g.index].any()}
+    by_year = {y: v for y, v in by_year.items() if pd.notna(v)}
     worst = max(by_year, key=by_year.get) if by_year else None
     checks.append(Check("accuracy", PASS if nrmse < 5 else WARN,
                         f"nRMSE on healthy days {nrmse:.1f}% (target < 5%)"

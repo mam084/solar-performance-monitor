@@ -1,17 +1,17 @@
 [
   {
-    "ticket_id": "T-4903-2024-04-27-soiling",
-    "event_id": "4903-2024-04-27-soiling",
+    "ticket_id": "T-4903-2024-05-01-soiling",
+    "event_id": "4903-2024-05-01-soiling",
     "site_id": 4903,
     "kind": "soiling",
-    "title": "NIST Roof Array: soiling / gradual loss (2024-04-27 to 2024-05-15)",
+    "title": "NIST Roof Array: soiling / gradual loss (2024-05-01 to 2024-05-15)",
     "priority": "P3",
-    "summary": "Soiling / gradual loss detected at NIST Roof Array (Gaithersburg, MD) over 19 day(s), 2024-04-27 to 2024-05-15. Estimated cost so far: $80.",
+    "summary": "Soiling / gradual loss detected at NIST Roof Array (Gaithersburg, MD) over 15 day(s), 2024-05-01 to 2024-05-15. Estimated cost so far: $61.",
     "evidence": [
-      "Performance index fell from 0.94 in the two weeks before to a median of 0.90 during the event (1.00 = healthy).",
-      "Estimated energy lost: 670 kWh (10% of expected), about $80.",
-      "The decline appears to have started around 2024-04-04, 23 days before it crossed the alert threshold.",
-      "Performance recovered to 1.00 of baseline in the week after.",
+      "Performance index fell from 0.95 in the two weeks before to a median of 0.88 during the event (1.00 = healthy).",
+      "Estimated energy lost: 505 kWh (10% of expected), about $61.",
+      "The decline appears to have started around 2024-04-14, 17 days before it crossed the alert threshold.",
+      "Performance recovered to 1.01 of baseline in the week after.",
       "A slow, steady slide in performance with no sudden step, the signature of dust or pollen build-up (or gradual degradation), followed by a sharp recovery consistent with rain or cleaning."
     ],
     "likely_causes": [
@@ -30,7 +30,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-24T23:19:02Z",
+    "drafted_at": "2026-11-26T20:13:27Z",
     "status": "pending_review"
   },
   {
@@ -59,7 +59,7 @@
     ],
     "safety_notes": "Follow site lockout/tagout and arc-flash procedures before opening any DC or AC enclosure.",
     "drafted_by": "template",
-    "drafted_at": "2026-11-24T23:19:02Z",
+    "drafted_at": "2026-11-26T20:13:27Z",
     "status": "pending_review"
   }
 ]

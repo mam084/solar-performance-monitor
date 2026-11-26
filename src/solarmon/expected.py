@@ -143,3 +143,61 @@ def rmse_pct(actual: pd.Series, expected: pd.Series, poa: pd.Series,
         mask &= only.reindex(mask.index, fill_value=False)
     err = actual[mask] - expected[mask]
     return float(np.sqrt((err**2).mean()) / expected[mask].mean() * 100)
+
+
+def _shape_key(idx: pd.DatetimeIndex) -> np.ndarray:
+    """Month and half-hour of day, e.g. 714 = July, 07:00-07:29."""
+    return np.asarray(idx.month * 100 + idx.hour * 2 + idx.minute // 30)
+
+
+def shape_correction(out: pd.DataFrame, min_samples: int = 8, clip: tuple = (0.6, 1.6),
+                     window: tuple | None = None) -> tuple[pd.Series, dict]:
+    """Learn the site's normal actual/expected ratio by month and half-hour.
+
+    Learned over `window` (default: all the data, a robust median per bin, so short faults
+    don't shape it). Using all years matters on real sites: at 2107 the sensor setup
+    changed after 2018, and a table from 2018 alone misfits every later year.
+
+    Real sites rarely match physics exactly through the day: the irradiance sensor may face a
+    slightly different direction than the modules, nearby rows or trees shade the array at low
+    sun, or the morning and evening have different soiling. Those biases repeat every year, so
+    a table learned on known-good data removes them without hiding new faults. On site 2107
+    it removes a steady morning-high / evening-low drift and a repeating seasonal swing.
+
+    The table is normalised to an energy-weighted mean of 1, so it reshapes the curve
+    without undoing the calibration scale. Returns (factor per interval, table).
+    """
+    start, end = window or (out.index[0], out.index[-1])
+    ref = out.loc[start:end]
+    prod = (ref["poa_irradiance"] > 200) & ref["ac_power_kw"].notna() & (ref["expected_ac_kw"] > 0)
+    ratio = (ref["ac_power_kw"] / ref["expected_ac_kw"]).where(prod)
+    ratio = ratio.where(ratio.between(0.3, 2.5))  # outages and junk don't define "normal"
+    key = _shape_key(ref.index)
+    grouped = ratio.groupby(key)
+    table = grouped.median()[grouped.count() >= min_samples].clip(*clip)
+    if table.empty:
+        return pd.Series(1.0, index=out.index), {}
+    weight = ref["expected_ac_kw"].where(prod).groupby(key).sum().reindex(table.index).fillna(0)
+    if weight.sum() > 0:
+        table = table / np.average(table, weights=weight)
+    factor = pd.Series(_shape_key(out.index), index=out.index).map(table).fillna(1.0).clip(*clip)
+    return factor, {int(k): round(float(v), 4) for k, v in table.items()}
+
+
+def apply_shape_correction(out: pd.DataFrame) -> pd.DataFrame:
+    """Multiply expected output by the learned shape table (re-applying the inverter limit)."""
+    factor, table = shape_correction(out)
+    out = out.copy()
+    out["expected_ac_kw"] = (out["expected_ac_kw"] * factor).clip(upper=out.attrs["ac_capacity_kw"])
+    out.attrs["shape_table"] = table
+    return out
+
+
+def model_site(df: pd.DataFrame, site: Site, reference: slice | None = None) -> pd.DataFrame:
+    """Everything between clean data and the performance index: physics, calibration,
+    and the site's learned daily shape. Used by the pipeline, preflight and backtest alike."""
+    import warnings
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", RuntimeWarning)  # pvlib on night-time zeros
+        out = expected_ac_kw(df, site, reference=reference)
+    return apply_shape_correction(out)

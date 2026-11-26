@@ -30,7 +30,7 @@ import pandas as pd
 from . import config
 from .config import Site, get_site
 from .detect import DEFAULT_PRICE_USD_KWH, backtest, detect_events, false_alarms
-from .expected import expected_ac_kw, rmse_pct
+from .expected import model_site, rmse_pct
 from .metrics import daily_performance
 from .tickets import draft_ticket
 
@@ -56,15 +56,14 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
         source = "demo"
     else:
         from .load import load_site
-        from .qa import clean
-        raw = clean(load_site(site), site)
+        from .qa import clean, trim_to_sensor_start
+        raw = trim_to_sensor_start(clean(load_site(site), site))
         source = "pvdaq"
 
-    with warnings.catch_warnings():
-        warnings.simplefilter("ignore", RuntimeWarning)  # pvlib on night-time zeros
-        out = expected_ac_kw(raw, site, reference=reference)
+    out = model_site(raw, site, reference=reference)
     daily = daily_performance(out)
-    events, d = detect_events(out, daily, site.system_id, price_usd_kwh=DEFAULT_PRICE_USD_KWH)
+    events, d = detect_events(out, daily, site.system_id, price_usd_kwh=DEFAULT_PRICE_USD_KWH,
+                              single_axis=site.mount == "single_axis")
 
     # Honest model error: productive intervals on days with no event
     healthy_days = d.index[(d["flag"] == "ok")]
@@ -84,6 +83,10 @@ def build(system_id: int, demo: bool = False, reference: slice | None = None,
         "calibration_scale": round(out.attrs["scale"], 4),
         "ac_capacity_kw": round(out.attrs["ac_capacity_kw"], 1),
         "reference_window": out.attrs["reference"],
+        "trimmed_before": raw.attrs.get("trimmed_before"),
+        "shape_correction_range": ([round(min(out.attrs["shape_table"].values()), 3),
+                                    round(max(out.attrs["shape_table"].values()), 3)]
+                                   if out.attrs.get("shape_table") else None),
         "nrmse_healthy_pct": round(nrmse_healthy, 2),
         "price_usd_kwh": DEFAULT_PRICE_USD_KWH,
         "n_events": len(events),

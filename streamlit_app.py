@@ -372,9 +372,12 @@ with tab_method:
    site's real-world losses; the inverter's AC limit is kept so clipping isn't flagged as a fault.
 2. **Performance index.** Daily actual ÷ expected energy over productive hours. Cloudy days
    don't move it, because the model sees the same clouds.
-3. **Detection.** Each day is compared with a rolling baseline (75th percentile of recent PI,
-   recomputed without flagged days so a long fault doesn't become the new normal). Runs of
-   flagged days become events, classified by shape:
+3. **Detection.** A correction learned from the site's own history (its normal actual/expected
+   ratio by month and half-hour) first removes biases that repeat every day, such as an irradiance
+   sensor angled differently from the panels. Each day is then compared with a rolling baseline
+   (the median of recent days, recomputed without flagged days so a long fault doesn't become the
+   new normal), with alert thresholds scaled to how noisy the site is. Runs of flagged days become
+   events, classified by shape:
 
 | Event | Signature |
 |---|---|

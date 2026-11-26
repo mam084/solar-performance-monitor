@@ -19,7 +19,7 @@ import pandas as pd
 from .config import get_site
 from .demo import make_demo
 from .detect import backtest, detect_events, false_alarms
-from .expected import expected_ac_kw
+from .expected import model_site
 from .metrics import daily_performance
 
 
@@ -28,10 +28,9 @@ def run(system_id: int = 2107, seeds: int = 30) -> tuple[pd.DataFrame, list]:
     rows, alarms = [], []
     for seed in range(1, seeds + 1):
         df, faults = make_demo(site, seed=seed)
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore", RuntimeWarning)
-            out = expected_ac_kw(df, site)
-        events, _ = detect_events(out, daily_performance(out), site.system_id)
+        out = model_site(df, site)
+        events, _ = detect_events(out, daily_performance(out), site.system_id,
+                                  single_axis=site.mount == "single_axis")
         truth = pd.DataFrame([f.__dict__ for f in faults])
         bt = backtest(events, truth)
         bt["seed"] = seed

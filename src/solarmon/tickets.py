@@ -145,9 +145,9 @@ def _evidence_lines(event: dict) -> list[str]:
     if ev.get("shape_gap") is not None and event["kind"] == "tracker_stall":
         lines.append(f"Morning and evening output ran {-100 * ev['shape_gap']:.0f} points further below "
                      "expectation than midday output.")
-    if ev.get("shape_gap") is not None and event["kind"] == "curtailment":
-        lines.append(f"Midday output ran {100 * ev['shape_gap']:.0f} points further below expectation "
-                     "than morning and evening output.")
+    if ev.get("plateau_frac") is not None and event["kind"] == "curtailment":
+        lines.append(f"On clear days, output sat pinned at one level for {100 * ev['plateau_frac']:.0f}% of the "
+                     "high-output hours while expected output kept rising above it.")
     if ev.get("poa_coverage") is not None:
         lines.append(f"Irradiance was recorded for only {100 * ev['poa_coverage']:.0f}% of producing intervals.")
     if ev.get("reason"):

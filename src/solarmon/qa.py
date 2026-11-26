@@ -146,3 +146,21 @@ def file_timing(site: Site) -> pd.DataFrame:
                 "offset_h": round(offset, 2), "looks_right": "yes" if ok else "CHECK",
             })
     return pd.DataFrame(rows).set_index(["file", "signal"])
+
+
+def trim_to_sensor_start(df: pd.DataFrame, min_coverage: float = 0.3) -> pd.DataFrame:
+    """Drop the stretch before the irradiance sensor came online.
+
+    Some sites logged power for months before their irradiance sensor was installed
+    (site 2107: all of 2017 until November). That period can't be modelled, and left in
+    it reads as one long sensor fault. Starts at the first week with irradiance in at
+    least `min_coverage` of intervals.
+    """
+    cov = df["poa_irradiance"].notna().resample("D").mean().rolling(7, min_periods=7).mean()
+    ok = cov[cov >= min_coverage]
+    if ok.empty:
+        return df
+    start = ok.index[0] - pd.Timedelta(days=6)
+    out = df.loc[start:]
+    out.attrs = dict(df.attrs, trimmed_before=str(start.date()) if start > df.index[0] else None)
+    return out
