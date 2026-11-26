@@ -37,6 +37,23 @@ class Check:
     fix: str = ""
 
 
+def _columns_in(path) -> set[str]:
+    """Channel names in one raw file. Long-format files (measured_on, metric_id, value)
+    hold their channels as rows, named metric_<id> the way the loader names them."""
+    if path.suffix == ".parquet":
+        import pyarrow.parquet as pq
+        head = pq.read_schema(path).names
+        if {"metric_id", "value"} <= set(head):
+            ids = pd.read_parquet(path, columns=["metric_id"])["metric_id"].unique()
+            return {f"metric_{i}" for i in ids}
+        return set(head)
+    head = pd.read_csv(path, nrows=0).columns
+    if {"metric_id", "value"} <= set(head):
+        ids = pd.read_csv(path, usecols=["metric_id"])["metric_id"].unique()
+        return {f"metric_{i}" for i in ids}
+    return set(head)
+
+
 def run(site: Site) -> tuple[list[Check], pd.DataFrame | None]:
     """All checks in order. Stops early only when later checks can't run."""
     checks: list[Check] = []
@@ -57,12 +74,13 @@ def run(site: Site) -> tuple[list[Check], pd.DataFrame | None]:
                             f"python -m solarmon.inspect {site.system_id}, then fill `columns:` in sites.yaml"))
         return checks, None
     present = set()
-    for p in files:
+    # Basic sites have thousands of daily files with the same channels: a spread of them is enough
+    sample = files if len(files) <= 60 else files[:: max(1, len(files) // 40)]
+    for p in sample:
         try:
-            head = pd.read_parquet(p).columns if p.suffix == ".parquet" else pd.read_csv(p, nrows=0).columns
+            present.update(_columns_in(p))
         except Exception:  # noqa: BLE001 - unreadable files show up in inspect
             continue
-        present.update(head)
     wanted = {name: ([v] if isinstance(v, str) else list(v)) for name, v in mapped.items()}
     absent = {name: [c for c in cols if c not in present] for name, cols in wanted.items()}
     absent = {k: v for k, v in absent.items() if v}

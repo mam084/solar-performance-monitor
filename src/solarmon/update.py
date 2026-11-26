@@ -208,7 +208,8 @@ def update_site(system_id: int, force: bool = False, client=None) -> dict:
     checks, _ = run(site)
     print(report(site, checks))
     if any(c.status == FAIL for c in checks):
-        bad = "; ".join(f"{c.name}: {c.detail}" for c in checks if c.status == FAIL)
+        bad = "; ".join(f"{c.name}: {c.detail}" + (f" (fix: {c.fix})" if c.fix else "")
+                        for c in checks if c.status == FAIL)
         return {"site": system_id, "status": "blocked", "detail": f"preflight failed ({bad}); previous outputs kept"}
 
     meta = build(system_id, preflight=[dataclasses.asdict(c) for c in checks])
@@ -242,9 +243,18 @@ def main(argv=None) -> int:
         try:
             results.append(update_site(sid, force=args.force))
         except Exception as e:  # noqa: BLE001 - one bad site mustn't stop the rest
-            results.append({"site": sid, "status": "blocked", "detail": f"{type(e).__name__}: {e}"})
+            import traceback
+            where = traceback.extract_tb(e.__traceback__)[-1]
+            results.append({"site": sid, "status": "blocked",
+                            "detail": f"{type(e).__name__}: {str(e)[:300]} "
+                                      f"(at {Path(where.filename).name}:{where.lineno})"})
     md = summary_markdown(results)
     print(md)
+    # Keep the latest run's results in the repo too, next to the data they describe
+    log = config.DATA_DIR / "processed" / "update_log.md"
+    log.parent.mkdir(parents=True, exist_ok=True)
+    from datetime import datetime, timezone
+    log.write_text(f"_Last run: {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC_\n\n" + md)
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
             f.write(md)

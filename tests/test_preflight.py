@@ -58,3 +58,19 @@ def test_correct_config_is_ready(site):
     s = statuses(checks)
     assert all(v == PASS for v in s.values()), report(site, checks)
     assert "Ready" in report(site, checks)
+
+
+def test_long_format_basic_site_columns_are_found(tmp_path, monkeypatch):
+    """Basic PVDAQ sites store one row per (timestamp, metric_id, value)."""
+    monkeypatch.setattr(config, "DATA_DIR", tmp_path)
+    site = dataclasses.replace(get_site(4902))
+    idx = pd.date_range("2016-06-03", periods=96, freq="15min")
+    rows = []
+    for col, val in site.mapped_columns.items():
+        mid = int(val.split("_")[1])
+        rows.append(pd.DataFrame({"measured_on": idx, "metric_id": mid, "value": 1.0}))
+    d = site.raw_dir / "year=2016" / "month=6" / "day=3"
+    d.mkdir(parents=True)
+    pd.concat(rows).to_parquet(d / "system_4902__date_2016_06_03.parquet")
+    from solarmon.preflight import _columns_in
+    assert set(site.mapped_columns.values()) <= _columns_in(d / "system_4902__date_2016_06_03.parquet")
